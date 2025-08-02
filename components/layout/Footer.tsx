@@ -52,7 +52,8 @@ const Footer = () => {
       ref={footerRef}
       className="bg-black text-white relative flex flex-col w-full h-full justify-between lg:h-screen select-none"
     >
-      <div className="container mx-auto flex flex-col md:flex-row justify-between w-full gap-4 pb-24 pt-8 px-4">
+      <div className="w-full max-w-7xl mx-auto px-4">
+        <div className="flex flex-col md:flex-row justify-between w-full gap-4 pb-24 pt-8">
         <div className="space-y-2">
           <ul className="flex flex-wrap gap-4">
             <li><a href="/terms" className="text-sm hover:text-pink-400">Terms & Policies</a></li>
@@ -87,11 +88,13 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className=" w-full flex mt-4 items-center justify-center   ">
-          <h1 className="text-center text-3xl md:text-5xl lg:text-[10rem] font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-700 to-neutral-900 select-none">
-            Pumki UI
-          </h1>
-        </div>
+      </div>
+      
+      <div className="w-full flex mt-4 items-center justify-center px-4">
+        <h1 className="text-center text-3xl md:text-5xl lg:text-[8rem] xl:text-[10rem] font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-700 to-neutral-900 select-none max-w-7xl">
+          Pumki UI
+        </h1>
+      </div>
 
       <div id="waveContainer" aria-hidden="true" style={{ overflow: "hidden", height: 200 }}>
         <div>
