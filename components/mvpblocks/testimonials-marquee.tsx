@@ -242,15 +242,24 @@ export default function Testimonials() {
         <div className="absolute top-20 -left-20 z-10 h-64 w-64 rounded-full bg-pink-500/5 blur-3xl" />
         <div className="absolute -right-20 bottom-20 z-10 h-64 w-64 rounded-full bg-pink-500/5 blur-3xl" />
 
+        <motion.h1
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                className="from-primary/10 via-foreground/85 to-foreground/50 bg-gradient-to-tl bg-clip-text text-center text-4xl tracking-tighter text-balance text-transparent sm:text-5xl md:text-6xl lg:text-7xl"
+            >
+                What Our Users Are Saying
+        </motion.h1>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="text-foreground mb-4 text-center text-4xl leading-[1.2] font-bold tracking-tighter md:text-5xl">
+          {/* <h2 className="text-foreground mb-4 text-center text-4xl leading-[1.2] font-bold tracking-tighter md:text-5xl">
             What Our Users Are Saying
-          </h2>
-          <h3 className="text-muted-foreground mx-auto mb-8 max-w-lg text-center text-lg font-medium tracking-tight text-balance">
+          </h2> */}
+          
+          <h3 className="text-muted-foreground mx-auto mt-4 mb-8 max-w-2xl text-center text-lg font-medium tracking-tight text-balance">
             Don&apos;t just take our word for it. Here&apos;s what{' '}
             <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
               real developers

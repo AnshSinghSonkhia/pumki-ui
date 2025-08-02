@@ -86,7 +86,8 @@ export default function Navbar() {
           <div className="flex items-center gap-6">
             <a href="#" className="flex items-center gap-2 text-primary hover:text-primary/90 cursor-pointer">
               <img src="/icon-no-bg.png" alt="Pumki UI Logo" className="h-8 w-8" />
-              <span className="font-bold text-xl tracking-tight text-white cursor-pointer">Pumki UI</span>
+              {/* <span className="font-bold text-xl tracking-tight text-white cursor-pointer">Pumki UI</span> */}
+              <span className="from-primary/10 via-foreground/85 to-foreground/50 bg-gradient-to-tl bg-clip-text text-2xl tracking-tight font-bold text-balance text-transparent cursor-pointer pt-1">Pumki UI</span>
             </a>
             {/* Navigation menu */}
             <NavigationMenu className="h-full *:h-full max-md:hidden">
