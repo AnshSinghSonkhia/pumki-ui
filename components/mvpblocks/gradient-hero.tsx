@@ -81,6 +81,7 @@ export default function GradientHero() {
             <Button
               size="lg"
               className="group bg-primary text-primary-foreground hover:shadow-primary/30 relative overflow-hidden rounded-full px-6 shadow-lg transition-all duration-300 cursor-pointer"
+              onClick={() => window.location.href = '/docs'}
             >
               <span className="relative z-10 flex items-center">
                 Get Started
@@ -93,6 +94,7 @@ export default function GradientHero() {
               variant="outline"
               size="lg"
               className="border-border bg-background/50 flex items-center gap-2 rounded-full backdrop-blur-sm cursor-pointer"
+              onClick={() => window.location.href = '/docs'}
             >
               {/* <Github className="h-4 w-4" /> */}
               Browse Components

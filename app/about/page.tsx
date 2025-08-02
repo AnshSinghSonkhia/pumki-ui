@@ -335,14 +335,14 @@ export default function About() {
             //       'Expanded operations to serve clients across 20+ countries worldwide.',
             //   },
               {
-                year: 'Jul, 2025',
+                year: 'Aug, 2025',
                 title: 'Launched MVP',
                 description:
                   'We released the first version of Pumki UI, empowering developers to build beautiful interfaces faster and more efficiently.',
               },
               {
-                year: 'Apr, 2025',
-                title: 'R&D Started',
+                year: 'Jul, 2025',
+                title: 'Research & Development Phase',
                 description:
                   'Pumki UI was founded with a mission to help teams ship stunning UIs from one library, not ten.',
               },

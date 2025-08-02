@@ -1,8 +1,12 @@
 import React from 'react'
+import NotFoundPage from "@/components/page-not-found";
+
 
 const NotFound = () => {
   return (
-    <div>not-found</div>
+    <div className="flex w-full h-screen justify-center items-center">
+      <NotFoundPage />
+    </div>
   )
 }
 
