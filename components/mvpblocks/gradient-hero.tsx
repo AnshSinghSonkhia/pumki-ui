@@ -91,8 +91,8 @@ export default function GradientHero() {
               size="lg"
               className="border-border bg-background/50 flex items-center gap-2 rounded-full backdrop-blur-sm cursor-pointer"
             >
-              <Github className="h-4 w-4" />
-              Star on GitHub
+              {/* <Github className="h-4 w-4" /> */}
+              Browse Components
             </Button>
           </motion.div>
 

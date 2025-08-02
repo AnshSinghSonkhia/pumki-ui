@@ -11,6 +11,7 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover"
+import { Github } from "lucide-react"
 
 // Navigation links array to be used in both desktop and mobile menus
 // const navigationLinks = [
@@ -111,16 +112,24 @@ export default function Navbar() {
           {/* <Button asChild variant="ghost" size="sm" className="text-sm">
             <a href="#">Sign In</a>
           </Button> */}
+          {/* <Button
+            variant="rainbow"
+            size="sm"
+            className="group hover:shadow-primary/30 relative overflow-hidden rounded-full px-6 shadow-lg transition-all duration-300 cursor-pointer"
+          >
+            <span className="relative z-10 flex items-center gap-2">
+              <Github className="h-4 w-4" />
+              GitHub
+            </span>
+          </Button> */}
           <Button
-                        size="sm"
-                        className="group bg-primary text-primary-foreground hover:shadow-primary/30 relative overflow-hidden rounded-full px-6 shadow-lg transition-all duration-300 cursor-pointer"
-                      >
-                        <span className="relative z-10 flex items-center">
-                          GitHub
-                          {/* <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" /> */}
-                        </span>
-                        <span className="from-primary via-primary/90 to-primary/80 absolute inset-0 z-0 bg-gradient-to-r opacity-0 transition-opacity duration-300 group-hover:opacity-100"></span>
-                      </Button>
+                variant="outline"
+                size="lg"
+                className="border-border bg-background/50 flex items-center gap-2 rounded-full backdrop-blur-sm cursor-pointer"
+                >
+                <Github className="h-4 w-4" />
+                Star on GitHub
+            </Button>
           {/* <Button asChild size="sm" className="text-sm">
             <a href="#">GitHub</a>
           </Button> */}
