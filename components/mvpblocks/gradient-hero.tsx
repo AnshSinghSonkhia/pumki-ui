@@ -7,7 +7,7 @@ import { Button } from '@/components/ui/button';
 
 import { Ripple } from "@/components/magicui/ripple";
 import { cn } from '@/lib/utils';
-import Navbar from "@/components/Navbar";
+import Navbar from "@/components/landing/Navbar";
 
 export default function GradientHero() {
   return (
@@ -35,7 +35,10 @@ export default function GradientHero() {
             transition={{ duration: 0.5 }}
             className="mx-auto mb-6 flex justify-center"
           >
-            <div className="border-border bg-background/80 inline-flex items-center rounded-full border px-3 py-1 text-sm backdrop-blur-sm cursor-pointer">
+            <div 
+              className="border-border bg-background/80 inline-flex items-center rounded-full border px-3 py-1 text-sm backdrop-blur-sm cursor-pointer hover:bg-background/90 transition-colors duration-200"
+              onClick={() => window.location.href = '/docs'}
+            >
               <span className="bg-primary mr-2 rounded-full px-2 py-0.5 text-xs font-semibold text-white">
                 New
               </span>

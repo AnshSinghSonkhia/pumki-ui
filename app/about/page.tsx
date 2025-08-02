@@ -7,7 +7,7 @@ import { Spotlight } from '@/components/mvpblocks/spotlight';
 import { useTheme } from 'next-themes';
 import { cn } from '@/lib/utils';
 import { Badge } from '@/components/ui/badge';
-import Navbar from "@/components/Navbar";
+import Navbar from "@/components/landing/aboutNavbar";
 import { ChevronRight } from 'lucide-react';
 
 import {
@@ -396,7 +396,7 @@ export default function About() {
           </motion.h3>
 
           <div className="grid gap-8 md:grid-cols-2">
-            {/* Team Member 2 */}
+            {/* Team Member 1 */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -410,13 +410,21 @@ export default function About() {
               />
               
               {/* Avatar */}
-              <div className="relative z-20 mx-auto mb-6 h-24 w-24 overflow-hidden rounded-full border-4 border-blue-500/20 shadow-lg">
-                <img
-                  src="/ansh.png"
-                  alt="Ansh Singh Sonkhia"
-                  className="h-full w-full object-cover"
-                />
-              </div>
+              <a
+                href="https://www.linkedin.com/in/anshsinghsonkhia"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block"
+                title="View LinkedIn profile"
+              >
+                <div className="relative z-20 mx-auto mb-6 h-24 w-24 overflow-hidden rounded-full border-4 border-blue-500/20 shadow-lg">
+                  <img
+                    src="/ansh.png"
+                    alt="Ansh Singh Sonkhia"
+                    className="h-full w-full object-cover"
+                  />
+                </div>
+              </a>
 
               {/* Name */}
               <h4 className="mb-2 text-xl font-bold tracking-tight text-foreground">
@@ -434,7 +442,7 @@ export default function About() {
               </p>
             </motion.div>
             
-            {/* Team Member 1 */}
+            {/* Team Member 2 */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -448,13 +456,21 @@ export default function About() {
               />
               
               {/* Avatar */}
-              <div className="relative z-20 mx-auto mb-6 h-24 w-24 overflow-hidden rounded-full border-4 border-primary/20 shadow-lg">
-                <img
-                  src="/logo-pumkiui.png"
-                  alt="Mr. Pumki"
-                  className="h-full w-full object-cover"
-                />
-              </div>
+              <a
+                href="https://www.linkedin.com/company/pumpkiui"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block"
+                title="View LinkedIn profile"
+              >
+                <div className="relative z-20 mx-auto mb-6 h-24 w-24 overflow-hidden rounded-full border-4 border-primary/20 shadow-lg">
+                  <img
+                    src="/logo-pumkiui.png"
+                    alt="Mr. Pumki"
+                    className="h-full w-full object-cover"
+                  />
+                </div>
+              </a>
 
               {/* Name */}
               <h4 className="mb-2 text-xl font-bold tracking-tight text-foreground">
