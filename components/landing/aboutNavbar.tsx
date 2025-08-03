@@ -36,7 +36,7 @@ export default function Navbar() {
             {/* Mobile menu trigger */}
             <Popover>
               <PopoverTrigger asChild>
-                <Button className="group size-8" variant="ghost" size="icon">
+                <Button className="group size-8" variant="ghost" size="icon" aria-label="Toggle menu">
                   <svg
                     className="pointer-events-none"
                     width={16}
@@ -64,14 +64,14 @@ export default function Navbar() {
                   </svg>
                 </Button>
               </PopoverTrigger>
-              <PopoverContent align="start" className="w-36 p-1 md:hidden">
+              <PopoverContent align="start" className="w-64 p-4 md:hidden">
                 <NavigationMenu className="max-w-none *:w-full">
-                  <NavigationMenuList className="flex-col items-start gap-0 md:gap-2">
+                  <NavigationMenuList className="flex-col items-start gap-2">
                     {navigationLinks.map((link, index) => (
                       <NavigationMenuItem key={index} className="w-full">
                         <NavigationMenuLink
                           href={link.href}
-                          className="py-1.5"
+                          className="w-full rounded-md py-2 px-4 hover:bg-accent hover:text-accent-foreground transition-colors"
                         >
                           {link.label}
                         </NavigationMenuLink>

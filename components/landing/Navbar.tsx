@@ -1,3 +1,7 @@
+"use client"
+
+import { useState } from "react"
+import Link from "next/link"
 import Logo from "@/components/logo"
 import { Button } from "@/components/ui/button"
 import {
@@ -28,6 +32,8 @@ const navigationLinks = [
 ]
 
 export default function Navbar() {
+  const [open, setOpen] = useState(false)
+
   return (
     <header className="border-b px-4 md:px-6">
       <div className="flex h-16 justify-between gap-4">
@@ -35,9 +41,14 @@ export default function Navbar() {
         <div className="flex gap-2">
           <div className="flex items-center md:hidden">
             {/* Mobile menu trigger */}
-            <Popover>
+            <Popover open={open} onOpenChange={setOpen}>
               <PopoverTrigger asChild>
-                <Button className="group size-8" variant="ghost" size="icon">
+                <Button 
+                  className="group size-8 z-50" 
+                  variant="ghost" 
+                  size="icon"
+                  onClick={() => console.log('Hamburger clicked', !open)}
+                >
                   <svg
                     className="pointer-events-none"
                     width={16}
@@ -65,41 +76,41 @@ export default function Navbar() {
                   </svg>
                 </Button>
               </PopoverTrigger>
-              <PopoverContent align="start" className="w-36 p-1 md:hidden">
-                <NavigationMenu className="max-w-none *:w-full">
-                  <NavigationMenuList className="flex-col items-start gap-0 md:gap-2">
-                    {navigationLinks.map((link, index) => (
-                      <NavigationMenuItem key={index} className="w-full">
-                        <NavigationMenuLink
-                          href={link.href}
-                          className="py-1.5"
-                        >
-                          {link.label}
-                        </NavigationMenuLink>
-                      </NavigationMenuItem>
-                    ))}
-                  </NavigationMenuList>
-                </NavigationMenu>
+              <PopoverContent align="start" className="w-64 p-4 md:hidden">
+                <nav className="space-y-2">
+                  {navigationLinks.map((link, index) => (
+                    <Link
+                      key={index}
+                      href={link.href}
+                      onClick={() => setOpen(false)}
+                      className="block w-full rounded-md py-2 px-4 hover:bg-accent hover:text-accent-foreground transition-colors"
+                    >
+                      {link.label}
+                    </Link>
+                  ))}
+                </nav>
               </PopoverContent>
             </Popover>
           </div>
           {/* Main nav */}
-          <div className="flex items-center gap-6">
-            <a href="/" className="flex items-center gap-2 text-primary hover:text-primary/90 cursor-pointer">
+          <div className="flex items-center gap-6 z-50">
+            <Link href="/" className="flex items-center gap-2 text-primary hover:text-primary/90 cursor-pointer">
               <img src="/icon-no-bg.png" alt="Pumki UI Logo" className="h-8 w-8 cursor-pointer" />
               {/* <span className="font-bold text-xl tracking-tight text-white cursor-pointer">Pumki UI</span> */}
               <span className="from-primary/10 via-foreground/85 to-foreground/50 bg-gradient-to-tl bg-clip-text text-2xl tracking-tight font-bold text-balance text-transparent cursor-pointer pt-1">Pumki UI</span>
-            </a>
+            </Link>
             {/* Navigation menu */}
             <NavigationMenu className="h-full *:h-full max-md:hidden">
               <NavigationMenuList className="h-full gap-2">
                 {navigationLinks.map((link, index) => (
                   <NavigationMenuItem key={index} className="h-full">
                     <NavigationMenuLink
-                      href={link.href}
+                      asChild
                       className="text-muted-foreground hover:text-primary border-b-primary hover:border-b-primary data-[active]:border-b-primary h-full justify-center rounded-none border-y-2 border-transparent py-1.5 font-medium hover:bg-transparent data-[active]:bg-transparent!"
                     >
-                      {link.label}
+                      <Link href={link.href}>
+                        {link.label}
+                      </Link>
                     </NavigationMenuLink>
                   </NavigationMenuItem>
                 ))}
