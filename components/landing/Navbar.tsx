@@ -35,7 +35,7 @@ export default function Navbar() {
   const [open, setOpen] = useState(false)
 
   return (
-    <header className="border-b px-4 md:px-6">
+    <header className="relative z-50 border-b px-4 md:px-6">
       <div className="flex h-16 justify-between gap-4">
         {/* Left side */}
         <div className="flex gap-2">
@@ -44,7 +44,7 @@ export default function Navbar() {
             <Popover open={open} onOpenChange={setOpen}>
               <PopoverTrigger asChild>
                 <Button 
-                  className="group size-8 z-50" 
+                  className="group size-8" 
                   variant="ghost" 
                   size="icon"
                   onClick={() => console.log('Hamburger clicked', !open)}
@@ -76,7 +76,7 @@ export default function Navbar() {
                   </svg>
                 </Button>
               </PopoverTrigger>
-              <PopoverContent align="start" className="w-64 p-4 md:hidden">
+              <PopoverContent align="start" className="z-50 w-64 p-4 md:hidden">
                 <nav className="space-y-2">
                   {navigationLinks.map((link, index) => (
                     <Link
@@ -93,7 +93,7 @@ export default function Navbar() {
             </Popover>
           </div>
           {/* Main nav */}
-          <div className="flex items-center gap-6 z-50">
+          <div className="flex items-center gap-6">
             <Link href="/" className="flex items-center gap-2 text-primary hover:text-primary/90 cursor-pointer">
               <img src="/icon-no-bg.png" alt="Pumki UI Logo" className="h-8 w-8 cursor-pointer" />
               {/* <span className="font-bold text-xl tracking-tight text-white cursor-pointer">Pumki UI</span> */}

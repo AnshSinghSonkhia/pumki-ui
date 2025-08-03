@@ -1,5 +1,6 @@
 "use client"
 import React, { useEffect, useRef, useState } from "react";
+import { StickyArrow } from "@/components/ui/sticky-arrow";
 
 const Footer = () => {
   const waveRefs = useRef<(HTMLDivElement | null)[]>([]);
@@ -51,6 +52,7 @@ const Footer = () => {
     <footer
       ref={footerRef}
       className="bg-black text-white relative flex flex-col w-full h-full justify-between lg:h-screen select-none"
+      data-sticky-arrow-container-footer
     >
       <div className="w-full max-w-7xl mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between w-full gap-4 pb-24 pt-8">
@@ -81,6 +83,7 @@ const Footer = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="font-semibold hover:text-pink-400 transition-colors"
+                  data-sticky-arrow-target-footer
                 >
                   <span> </span> <span className="underline">Ansh Singh Sonkhia</span>
                 </a>
@@ -114,6 +117,13 @@ const Footer = () => {
           ))}
         </div>
       </div>
+
+      {/* Sticky Arrow Animation for Footer */}
+      <StickyArrow 
+        targetSelector="[data-sticky-arrow-target-footer]"
+        containerSelector="[data-sticky-arrow-container-footer]"
+        arrowColor="rgb(244, 114, 182)" // pink-400
+      />
     </footer>
   );
 };

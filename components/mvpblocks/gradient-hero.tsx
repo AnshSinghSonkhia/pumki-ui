@@ -6,12 +6,13 @@ import { ArrowRight, ChevronRight, ExternalLink, Github } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 import { Ripple } from "@/components/magicui/ripple";
+import { StickyArrow } from "@/components/ui/sticky-arrow";
 import { cn } from '@/lib/utils';
 import Navbar from "@/components/landing/Navbar";
 
 export default function GradientHero() {
   return (
-    <div className="bg-background relative w-full overflow-hidden">
+    <div className="bg-background relative w-full overflow-hidden" data-sticky-arrow-container>
       {/* Background gradient */}
       <div className="absolute inset-0 z-0">
         <div className="from-primary/20 via-background to-background absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))]" />
@@ -84,6 +85,7 @@ export default function GradientHero() {
               size="lg"
               className="group bg-primary text-primary-foreground hover:shadow-primary/30 relative overflow-hidden rounded-full px-6 shadow-lg transition-all duration-300 cursor-pointer"
               onClick={() => window.location.href = '/docs'}
+              data-sticky-arrow-target
             >
               <span className="relative z-10 flex items-center">
                 Get Started
@@ -97,6 +99,7 @@ export default function GradientHero() {
               size="lg"
               className="border-border bg-background/50 flex items-center gap-2 rounded-full backdrop-blur-sm cursor-pointer"
               onClick={() => window.location.href = '/docs'}
+              data-sticky-arrow-target
             >
               {/* <Github className="h-4 w-4" /> */}
               Browse Components
@@ -147,6 +150,9 @@ export default function GradientHero() {
           </motion.div>
         </div>
       </div>
+
+      {/* Sticky Arrow Animation */}
+      <StickyArrow />
     </div>
   );
 }
