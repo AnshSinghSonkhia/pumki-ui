@@ -11,21 +11,21 @@ import { Lightning } from '@/components/landing/lightning';
 // Combined component for 404 page
 export default function NotFoundPage() {
   return (
-    <div className="w-full h-screen bg-background overflow-x-hidden flex justify-center items-center relative">
+    <div className="w-full h-screen bg-background overflow-hidden flex justify-center items-center relative">
       {/* Background gradient matching your theme */}
-      <div className="absolute inset-0 z-0">
+      <div className="absolute inset-0 z-0 overflow-hidden">
         <div className="from-primary/20 via-background to-background absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))]" />
         <div className="bg-primary/5 absolute top-0 left-1/2 -z-10 h-[1000px] w-[1000px] -translate-x-1/2 rounded-full blur-3xl" />
         <div className="bg-accent/10 absolute bottom-0 right-1/4 -z-10 h-[800px] w-[800px] rounded-full blur-3xl" />
       </div>
       
       {/* Grid pattern */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#8882_1px,transparent_1px),linear-gradient(to_bottom,#8882_1px,transparent_1px)] bg-[size:16px_16px] opacity-15" />
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#8882_1px,transparent_1px),linear-gradient(to_bottom,#8882_1px,transparent_1px)] bg-[size:16px_16px] opacity-15 overflow-hidden" />
       
       <MessageDisplay />
       <CharactersAnimation />
       {/* <CircleAnimation /> */}
-      <div className="absolute inset-0 w-full h-full pointer-events-none" style={{ zIndex: 0 }}>
+      <div className="absolute inset-0 w-full h-full pointer-events-none overflow-hidden" style={{ zIndex: 0 }}>
         <Hyperspeed 
           effectOptions={{
             distortion: 'turbulentDistortion',
@@ -52,7 +52,7 @@ export default function NotFoundPage() {
           }}
         />
       </div>
-      <div className="absolute inset-0 w-full h-full pointer-events-none" style={{ zIndex: 1 }}>
+      <div className="absolute inset-0 w-full h-full pointer-events-none overflow-hidden" style={{ zIndex: 1 }}>
         <Lightning 
           hue={280}
           xOffset={0}
