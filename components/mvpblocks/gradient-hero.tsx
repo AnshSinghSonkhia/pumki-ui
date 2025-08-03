@@ -20,7 +20,7 @@ export default function GradientHero() {
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#8882_1px,transparent_1px),linear-gradient(to_bottom,#8882_1px,transparent_1px)] bg-[size:16px_16px] opacity-15" />
 
       {/* Ripple effect overlay */}
-      <div className="pointer-events-none absolute left-0 top-60 z-10 h-[500px] w-full overflow-hidden">
+      <div className="pointer-events-none absolute left-0 top-60 z-10 h-[800px] w-full overflow-hidden">
         <Ripple />
       </div>
 

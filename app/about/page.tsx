@@ -9,6 +9,8 @@ import { cn } from '@/lib/utils';
 import { Badge } from '@/components/ui/badge';
 import Navbar from "@/components/landing/aboutNavbar";
 import { ChevronRight } from 'lucide-react';
+import { GradientBars } from '@/components/ui/gradient-bars';
+import { TextReveal } from '@/components/ui/text-reveal';
 
 import {
   Users,
@@ -150,6 +152,10 @@ export default function About() {
         <div className="from-primary/10 via-background/90 to-background/80 absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))]" />
         <div className="bg-primary/10 absolute top-0 left-1/2 -z-10 h-[1000px] w-[1000px] -translate-x-1/2 rounded-full blur-3xl" />
       </div>
+
+      <div className="flex h-full w-full flex-col items-center justify-center">
+                <GradientBars />
+            </div>
 
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#8882_1px,transparent_1px),linear-gradient(to_bottom,#8882_1px,transparent_1px)] bg-[size:16px_16px] opacity-10" />
 
@@ -384,6 +390,7 @@ export default function About() {
           </div>
         </div>
 
+            
         {/* Team Section */}
         <div className="relative mx-auto max-w-4xl mt-20">
           <motion.h3
@@ -441,18 +448,18 @@ export default function About() {
                 A solopreneur software engineer who loves building things that feel as good as they look. Ansh created PumkiUI to help developers ship stunning UIs without juggling ten different libraries. Clean code, thoughtful design, and fast shipping, that's his thing.
               </p>
             </motion.div>
-            
+
             {/* Team Member 2 */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.2, ease: 'easeOut' }}
+              transition={{ duration: 0.7, delay: 0.4, ease: 'easeOut' }}
               className="group relative overflow-hidden rounded-2xl border border-border/30 bg-card p-8 text-center shadow-lg shadow-black/[0.03] transition-all duration-300 hover:shadow-xl hover:shadow-black/[0.08]"
             >
               <Spotlight
-                gradientFirst="radial-gradient(68.54% 68.72% at 55.02% 31.46%, hsla(336, 100%, 50%, 0.08) 0, hsla(341, 100%, 55%, 0.04) 50%, hsla(336, 100%, 45%, 0) 80%)"
-                gradientSecond="radial-gradient(50% 50% at 50% 50%, hsla(333, 100%, 85%, 0.08) 0, hsla(335, 100%, 55%, 0.04) 80%, transparent 100%)"
-                gradientThird="radial-gradient(50% 50% at 50% 50%, hsla(332, 100%, 85%, 0.06) 0, hsla(327, 100%, 85%, 0.06) 80%, transparent 100%)"
+                gradientFirst="radial-gradient(68.54% 68.72% at 55.02% 31.46%, hsla(216, 100%, 50%, 0.08) 0, hsla(221, 100%, 55%, 0.04) 50%, hsla(216, 100%, 45%, 0) 80%)"
+                gradientSecond="radial-gradient(50% 50% at 50% 50%, hsla(213, 100%, 85%, 0.08) 0, hsla(215, 100%, 55%, 0.04) 80%, transparent 100%)"
+                gradientThird="radial-gradient(50% 50% at 50% 50%, hsla(212, 100%, 85%, 0.06) 0, hsla(207, 100%, 85%, 0.06) 80%, transparent 100%)"
               />
               
               {/* Avatar */}
@@ -463,7 +470,7 @@ export default function About() {
                 className="block"
                 title="View LinkedIn profile"
               >
-                <div className="relative z-20 mx-auto mb-6 h-24 w-24 overflow-hidden rounded-full border-4 border-primary/20 shadow-lg">
+                <div className="relative z-20 mx-auto mb-6 h-24 w-24 overflow-hidden rounded-full border-4 border-blue-500/20 shadow-lg">
                   <img
                     src="/logo-pumkiui.png"
                     alt="Mr. Pumki"
@@ -478,15 +485,61 @@ export default function About() {
               </h4>
 
               {/* Position */}
-              <p className="mb-4 text-sm font-medium text-primary">
+              <p className="mb-4 text-sm font-medium text-blue-500">
                 Mascot & Chief Delight Officer
               </p>
 
               {/* About */}
               <p className="text-muted-foreground text-sm leading-relaxed">
-               The fluffy-headed genius behind the smiles. With big sparkling eyes and a heart full of cozy vibes, he's here to make UI building feel less like work and more like magic. Always curious, always cheerful. Pumki reminds us that great design can be both powerful and playful.
+                The fluffy-headed genius behind the smiles. With big sparkling eyes and a heart full of cozy vibes, he's here to make UI building feel less like work and more like magic. Always curious, always cheerful. Pumki reminds us that great design can be both powerful and playful.
               </p>
             </motion.div>
+            
+            {/* Team Member 3 */}
+            {/* <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.2, ease: 'easeOut' }}
+              className="group relative overflow-hidden rounded-2xl border border-border/30 bg-card p-8 text-center shadow-lg shadow-black/[0.03] transition-all duration-300 hover:shadow-xl hover:shadow-black/[0.08]"
+            >
+              <Spotlight
+                gradientFirst="radial-gradient(68.54% 68.72% at 55.02% 31.46%, hsla(336, 100%, 50%, 0.08) 0, hsla(341, 100%, 55%, 0.04) 50%, hsla(336, 100%, 45%, 0) 80%)"
+                gradientSecond="radial-gradient(50% 50% at 50% 50%, hsla(333, 100%, 85%, 0.08) 0, hsla(335, 100%, 55%, 0.04) 80%, transparent 100%)"
+                gradientThird="radial-gradient(50% 50% at 50% 50%, hsla(332, 100%, 85%, 0.06) 0, hsla(327, 100%, 85%, 0.06) 80%, transparent 100%)"
+              /> */}
+              
+              {/* Avatar */}
+              {/* <a
+                href="https://www.linkedin.com/company/pumpkiui"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block"
+                title="View LinkedIn profile"
+              >
+                <div className="relative z-20 mx-auto mb-6 h-24 w-24 overflow-hidden rounded-full border-4 border-primary/20 shadow-lg">
+                  <img
+                    src="/logo-pumkiui.png"
+                    alt="Mr. Pumki"
+                    className="h-full w-full object-cover"
+                  />
+                </div>
+              </a> */}
+
+              {/* Name */}
+              {/* <h4 className="mb-2 text-xl font-bold tracking-tight text-foreground">
+                Pumki - The Cutie
+              </h4> */}
+
+              {/* Position */}
+              {/* <p className="mb-4 text-sm font-medium text-primary">
+                Mascot & Chief Delight Officer
+              </p> */}
+
+              {/* About */}
+              {/* <p className="text-muted-foreground text-sm leading-relaxed">
+               The fluffy-headed genius behind the smiles. With big sparkling eyes and a heart full of cozy vibes, he's here to make UI building feel less like work and more like magic. Always curious, always cheerful. Pumki reminds us that great design can be both powerful and playful.
+              </p>
+            </motion.div> */}
           </div>
         </div>
       </div>

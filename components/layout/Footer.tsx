@@ -56,8 +56,8 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between w-full gap-4 pb-24 pt-8">
         <div className="space-y-2">
           <ul className="flex flex-wrap gap-4">
-            <li><a href="/terms" className="text-sm hover:text-pink-400">Terms & Policies</a></li>
-            <li><a href="/privacy" className="text-sm hover:text-pink-400">Privacy Policy</a></li>
+            <li><a href="/showcase" className="text-sm hover:text-pink-400">Showcase</a></li>
+            <li><a href="/sponsors" className="text-sm hover:text-pink-400">Sponsors</a></li>
           </ul>
           
           <p className="text-sm mt-4 text-gray-600 dark:text-gray-400 flex items-center gap-x-1">
