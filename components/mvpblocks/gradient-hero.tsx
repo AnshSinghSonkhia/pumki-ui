@@ -6,7 +6,7 @@ import { ArrowRight, ChevronRight, ExternalLink, Github } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 import { Ripple } from "@/components/magicui/ripple";
-import { StickyArrow } from "@/components/ui/sticky-arrow";
+import { StickyArrow } from "@/components/landing/sticky-arrow";
 import { cn } from '@/lib/utils';
 import Navbar from "@/components/landing/Navbar";
 

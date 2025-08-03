@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 // Removed Star import as it's no longer used
 // import { Star } from 'lucide-react';
 import { Marquee } from '@/components/ui/marquee';
+import { Lightning } from '@/components/landing/lightning';
 
 export function Highlight({
   children,
@@ -236,8 +237,23 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section className="relative w-full py-10">
-      <div className="container mx-auto px-4">
+    <section className="relative w-full py-10 overflow-hidden">
+      {/* Lightning Background */}
+      <div className="absolute inset-0 opacity-60">
+        <Lightning
+          hue={300} // Purple-pink hue to match the theme
+          xOffset={0}
+          speed={0.8}
+          intensity={0.8}
+          size={1.5}
+          className="absolute inset-0"
+        />
+      </div>
+      
+      {/* Dark overlay to ensure text readability */}
+      <div className="absolute inset-0 bg-background/80"></div>
+      
+      <div className="container mx-auto px-4 relative z-10">
         {/* Decorative elements */}
         <div className="absolute top-20 -left-20 z-10 h-64 w-64 rounded-full bg-pink-500/5 blur-3xl" />
         <div className="absolute -right-20 bottom-20 z-10 h-64 w-64 rounded-full bg-pink-500/5 blur-3xl" />
