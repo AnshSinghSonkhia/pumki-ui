@@ -8,6 +8,7 @@ import { useTheme } from 'next-themes';
 import { cn } from '@/lib/utils';
 import { Badge } from '@/components/ui/badge';
 import Navbar from "@/components/landing/aboutNavbar";
+import { Lightning } from "@/components/landing/lightning";
 import { ChevronRight } from 'lucide-react';
 import { GradientBars } from '@/components/ui/gradient-bars';
 import { TextReveal } from '@/components/ui/text-reveal';
@@ -146,6 +147,17 @@ export default function About() {
         <Navbar />
 
     <section className="relative w-full overflow-hidden py-16 md:py-24">
+      {/* Lightning Background */}
+      <div className="absolute inset-0 opacity-30 pointer-events-none">
+        <Lightning
+          hue={270}
+          xOffset={0}
+          speed={0.5}
+          intensity={0.8}
+          size={1.5}
+          className="absolute inset-0"
+        />
+      </div>
 
        {/* Background gradient */}
       <div className="absolute inset-0 z-0">
@@ -164,9 +176,11 @@ export default function About() {
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#8882_1px,transparent_1px),linear-gradient(to_bottom,#8882_1px,transparent_1px)] bg-[size:16px_16px] opacity-15" />
 
       {/* Ripple effect overlay */}
+      {/**
       <div className="pointer-events-none absolute left-0 top-40 z-10 h-[800px] w-full overflow-hidden">
         <Ripple />
       </div>
+      */}
 
       <div className="relative z-10 container mx-auto max-w-6xl px-4 md:px-6">
         {/* Header Section with Badge */}
