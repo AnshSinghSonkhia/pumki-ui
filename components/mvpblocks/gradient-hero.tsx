@@ -57,7 +57,14 @@ export default function GradientHero() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="from-primary/10 via-foreground/85 to-foreground/50 bg-gradient-to-tl bg-clip-text text-center text-4xl tracking-tighter text-balance text-transparent sm:text-5xl md:text-6xl lg:text-7xl"
           >
-            Ship stunning UIs from one library, not ten.
+            Ship stunning UIs from one library,{' '}
+            <span className="relative inline-block">
+              <span className="absolute inset-0 bg-gradient-to-r from-primary/20 via-primary/30 to-accent/20 blur-xl transform scale-110 opacity-80"></span>
+              <span className="absolute inset-0 bg-gradient-to-br from-primary/15 via-accent/15 to-primary/10 rounded-lg transform -skew-x-12 -rotate-1"></span>
+              <span className="relative from-primary/10 via-foreground/85 to-foreground/50 bg-gradient-to-tl bg-clip-text text-transparent px-3 py-1 rounded-md border border-primary/20 backdrop-blur-sm shadow-lg">
+                not ten
+              </span>
+            </span>
           </motion.h1>
 
           {/* Description */}
