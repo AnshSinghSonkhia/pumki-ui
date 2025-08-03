@@ -5,6 +5,8 @@ import { useEffect, useRef, useState } from "react";
 import { Button } from '@/components/ui/button';
 import { ArrowLeft, Home } from 'lucide-react';
 import { useRouter } from 'next/navigation';
+import { Component as Hyperspeed } from '@/components/landing/hyperspeed';
+import { Lightning } from '@/components/landing/lightning';
 
 // Combined component for 404 page
 export default function NotFoundPage() {
@@ -22,7 +24,44 @@ export default function NotFoundPage() {
       
       <MessageDisplay />
       <CharactersAnimation />
-      <CircleAnimation />
+      {/* <CircleAnimation /> */}
+      <div className="absolute inset-0 w-full h-full pointer-events-none" style={{ zIndex: 0 }}>
+        <Hyperspeed 
+          effectOptions={{
+            distortion: 'turbulentDistortion',
+            length: 300,
+            roadWidth: 8,
+            islandWidth: 1.5,
+            lanesPerRoad: 3,
+            fov: 80,
+            fovSpeedUp: 120,
+            speedUp: 1.5,
+            carLightsFade: 0.6,
+            totalSideLightSticks: 15,
+            lightPairsPerRoadWay: 25,
+            colors: {
+              roadColor: 0x0a0a0a,
+              islandColor: 0x0c0c0c,
+              background: 0x000000,
+              shoulderLines: 0x00ffff,
+              brokenLines: 0x00ff44,
+              leftCars: [0xff0066, 0xff3366, 0xff6600],
+              rightCars: [0x00ccff, 0x0066ff, 0x6600ff],
+              sticks: 0x00ffff,
+            }
+          }}
+        />
+      </div>
+      <div className="absolute inset-0 w-full h-full pointer-events-none" style={{ zIndex: 1 }}>
+        <Lightning 
+          hue={280}
+          xOffset={0}
+          speed={0.9}
+          intensity={0.9}
+          size={2}
+          className="opacity-60"
+        />
+      </div>
     </div>
   );
 }
@@ -55,13 +94,13 @@ function MessageDisplay() {
           isVisible ? 'opacity-100' : 'opacity-0'
         }`}
       >
-        <div className="text-[35px] font-semibold text-foreground m-[1%] font-['FreeSet']">
+        <div className="text-[35px] font-semibold from-primary/20 via-foreground/90 to-accent/60 bg-gradient-to-br bg-clip-text text-transparent font-['FreeSet']">
           Page Not Found
         </div>
         <div className="text-[80px] font-bold from-primary/20 via-foreground/90 to-accent/60 bg-gradient-to-br bg-clip-text text-transparent m-[1%] font-['FreeSet']">
           404
         </div>
-        <div className="text-[20px] w-1/2 min-w-[40%] text-center text-muted-foreground m-[1%] font-['Gilroy']">
+        <div className="text-[20px] w-1/2 min-w-[40%] text-center text-accent-foreground m-[1%] font-['Gilroy']">
           The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.
         </div>
         <div className="flex gap-6 mt-8">
@@ -69,7 +108,7 @@ function MessageDisplay() {
             onClick={handleGoBack}
             variant="outline"
             size="lg"
-            className="border-border bg-background/50 flex items-center gap-2 rounded-full backdrop-blur-sm hover:bg-background/70 transition-all duration-300 group"
+            className="border-border bg-background/50 flex items-center gap-2 rounded-full backdrop-blur-sm hover:bg-background/70 transition-all duration-300 group cursor-pointer"
           >
             <ArrowLeft className="h-4 w-4 transition-transform duration-300 group-hover:-translate-x-1" />
             Go Back
@@ -77,7 +116,7 @@ function MessageDisplay() {
           <Button
             onClick={handleGoHome}
             size="lg"
-            className="group bg-primary text-primary-foreground hover:shadow-primary/30 relative overflow-hidden rounded-full px-8 shadow-lg transition-all duration-300"
+            className="group bg-primary text-primary-foreground hover:shadow-primary/30 relative overflow-hidden rounded-full px-8 shadow-lg transition-all duration-300 cursor-pointer"
           >
             <span className="relative z-10 flex items-center">
               <Home className="mr-2 h-4 w-4" />
@@ -105,41 +144,107 @@ function CharactersAnimation() {
   const charactersRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // Define stick figures with their properties
+    // Define floating icons with their properties
     const stickFigures: StickFigure[] = [
       {
         top: '0%',
-        src: 'https://raw.githubusercontent.com/RicardoYare/imagenes/9ef29f5bbe075b1d1230a996d87bca313b9b6a63/sticks/stick0.svg',
+        // src: 'https://raw.githubusercontent.com/RicardoYare/imagenes/9ef29f5bbe075b1d1230a996d87bca313b9b6a63/sticks/stick0.svg',
+        src: '/icon-no-bg.png',
         transform: 'rotateZ(-90deg)',
         speedX: 1500,
       },
       {
         top: '10%',
-        src: 'https://raw.githubusercontent.com/RicardoYare/imagenes/9ef29f5bbe075b1d1230a996d87bca313b9b6a63/sticks/stick1.svg',
+        // src: 'https://raw.githubusercontent.com/RicardoYare/imagenes/9ef29f5bbe075b1d1230a996d87bca313b9b6a63/sticks/stick1.svg',
+        src: '/icon-no-bg.png',
         speedX: 3000,
         speedRotation: 2000,
       },
       {
         top: '20%',
-        src: 'https://raw.githubusercontent.com/RicardoYare/imagenes/9ef29f5bbe075b1d1230a996d87bca313b9b6a63/sticks/stick2.svg',
+        // src: 'https://raw.githubusercontent.com/RicardoYare/imagenes/9ef29f5bbe075b1d1230a996d87bca313b9b6a63/sticks/stick2.svg',
+        src: '/icon-no-bg.png',
         speedX: 5000,
         speedRotation: 1000,
       },
       {
         top: '25%',
-        src: 'https://raw.githubusercontent.com/RicardoYare/imagenes/9ef29f5bbe075b1d1230a996d87bca313b9b6a63/sticks/stick0.svg',
+        // src: 'https://raw.githubusercontent.com/RicardoYare/imagenes/9ef29f5bbe075b1d1230a996d87bca313b9b6a63/sticks/stick0.svg',
+        src: '/icon-no-bg.png',
         speedX: 2500,
         speedRotation: 1500,
       },
       {
         top: '35%',
-        src: 'https://raw.githubusercontent.com/RicardoYare/imagenes/9ef29f5bbe075b1d1230a996d87bca313b9b6a63/sticks/stick0.svg',
+        // src: 'https://raw.githubusercontent.com/RicardoYare/imagenes/9ef29f5bbe075b1d1230a996d87bca313b9b6a63/sticks/stick0.svg',
+        src: '/icon-no-bg.png',
         speedX: 2000,
         speedRotation: 300,
       },
       {
+        top: '40%',
+        src: '/icon-no-bg.png',
+        speedX: 4500,
+        speedRotation: 1800,
+      },
+      {
+        top: '45%',
+        src: '/icon-no-bg.png',
+        speedX: 3500,
+        speedRotation: 800,
+      },
+      {
+        top: '50%',
+        src: '/icon-no-bg.png',
+        speedX: 2800,
+        speedRotation: 1200,
+      },
+      {
+        top: '55%',
+        src: '/icon-no-bg.png',
+        speedX: 4000,
+        speedRotation: 600,
+      },
+      {
+        top: '60%',
+        src: '/icon-no-bg.png',
+        speedX: 3200,
+        speedRotation: 1600,
+      },
+      {
+        top: '65%',
+        src: '/icon-no-bg.png',
+        speedX: 2200,
+        speedRotation: 900,
+      },
+      {
+        top: '70%',
+        src: '/icon-no-bg.png',
+        speedX: 3800,
+        speedRotation: 1400,
+      },
+      {
+        top: '75%',
+        src: '/icon-no-bg.png',
+        speedX: 2600,
+        speedRotation: 700,
+      },
+      {
+        top: '80%',
+        src: '/icon-no-bg.png',
+        speedX: 4200,
+        speedRotation: 1100,
+      },
+      {
+        top: '85%',
+        src: '/icon-no-bg.png',
+        speedX: 1800,
+        speedRotation: 1300,
+      },
+      {
         bottom: '5%',
-        src: 'https://raw.githubusercontent.com/RicardoYare/imagenes/9ef29f5bbe075b1d1230a996d87bca313b9b6a63/sticks/stick3.svg',
+        // src: 'https://raw.githubusercontent.com/RicardoYare/imagenes/9ef29f5bbe075b1d1230a996d87bca313b9b6a63/sticks/stick3.svg',
+        src: '/icon-no-bg.png',
         speedX: 0, // No horizontal movement
       },
     ];
@@ -154,8 +259,9 @@ function CharactersAnimation() {
       const stick = document.createElement('img');
       stick.classList.add('characters');
       stick.style.position = 'absolute';
-      stick.style.width = '18%';
-      stick.style.height = '18%';
+      stick.style.width = '60px';
+      stick.style.height = '60px';
+      stick.style.objectFit = 'contain';
 
       // Set position
       if (figure.top) stick.style.top = figure.top;
@@ -170,8 +276,8 @@ function CharactersAnimation() {
       // Append to the container
       charactersRef.current?.appendChild(stick);
 
-      // Skip animation for the last figure (index 5)
-      if (index === 5) return;
+      // Skip animation for the last figure (static one at bottom)
+      if (index === stickFigures.length - 1) return;
 
       // Horizontal movement animation
       stick.animate(
@@ -271,8 +377,8 @@ function CircleAnimation() {
     const distanceX = canvas.width / 80;
     const growthRate = canvas.width / 1000;
     
-    // Change to match your theme - using primary color with opacity
-    context.fillStyle = 'rgba(179, 30, 75, 0.3)'; // Primary color with transparency
+    // Using a darker, more sophisticated color that matches your theme
+    context.fillStyle = 'rgba(120, 20, 50, 0.25)'; // Darker maroon/burgundy with transparency
     context.clearRect(0, 0, canvas.width, canvas.height);
     
     circulosRef.current.forEach((circulo) => {
