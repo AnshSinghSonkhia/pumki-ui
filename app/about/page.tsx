@@ -440,7 +440,7 @@ export default function About() {
 
               {/* Position */}
               <p className="mb-4 text-sm font-medium text-blue-500">
-                Founder & Creator, PumpkiUI
+                Founder & Creator, PumkiUI
               </p>
 
               {/* About */}
@@ -464,7 +464,7 @@ export default function About() {
               
               {/* Avatar */}
               <a
-                href="https://www.linkedin.com/company/pumpkiui"
+                href="https://www.linkedin.com/company/pumkiui"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block"
@@ -510,7 +510,7 @@ export default function About() {
               
               {/* Avatar */}
               {/* <a
-                href="https://www.linkedin.com/company/pumpkiui"
+                href="https://www.linkedin.com/company/pumkiui"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block"

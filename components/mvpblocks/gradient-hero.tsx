@@ -56,7 +56,7 @@ export default function GradientHero() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="from-primary/10 via-foreground/85 to-foreground/50 bg-gradient-to-tl bg-clip-text text-center text-4xl tracking-tighter text-balance text-transparent sm:text-5xl md:text-6xl lg:text-7xl"
           >
-            Build beautiful interfaces with speed and precision
+            Ship stunning UIs from one library, not ten.
           </motion.h1>
 
           {/* Description */}
@@ -66,9 +66,11 @@ export default function GradientHero() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-muted-foreground mx-auto mt-6 max-w-2xl text-center text-lg"
           >
-            A modern UI component library designed to help developers create
+            {/* A modern UI component library designed to help developers create
             stunning web applications with minimal effort. Fully customizable,
-            responsive, and accessible.
+            responsive, and accessible. */}
+
+            PumkiUI is a modern UI library that blends the best components and animations from top libraries — with fresh originals — so you build stunning, consistent apps in minutes, not days.
           </motion.p>
 
           {/* CTA Buttons */}
