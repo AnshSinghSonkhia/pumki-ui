@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useRef, useLayoutEffect } from "react"
 import Link from "next/link"
 import Logo from "@/components/logo"
 import { Button } from "@/components/ui/button"
@@ -33,6 +33,16 @@ const navigationLinks = [
 
 export default function Navbar() {
   const [open, setOpen] = useState(false)
+  const [isLimelightReady, setIsLimelightReady] = useState(false)
+  const textRef = useRef<HTMLSpanElement | null>(null)
+  const limelightRef = useRef<HTMLDivElement | null>(null)
+
+  useLayoutEffect(() => {
+    // Just trigger the ready state, no positioning needed
+    if (!isLimelightReady) {
+      setTimeout(() => setIsLimelightReady(true), 100)
+    }
+  }, [isLimelightReady])
 
   return (
     <header className="relative z-50 border-b px-4 md:px-6">
@@ -44,7 +54,7 @@ export default function Navbar() {
             <Popover open={open} onOpenChange={setOpen}>
               <PopoverTrigger asChild>
                 <Button 
-                  className="group size-8" 
+                  className="relative z-30 group size-8" 
                   variant="ghost" 
                   size="icon"
                   onClick={() => console.log('Hamburger clicked', !open)}
@@ -94,10 +104,32 @@ export default function Navbar() {
           </div>
           {/* Main nav */}
           <div className="flex items-center gap-6">
-            <Link href="/" className="flex items-center gap-2 text-primary hover:text-primary/90 cursor-pointer">
-              <img src="/icon-no-bg.png" alt="Pumki UI Logo" className="h-8 w-8 cursor-pointer" />
+            <Link href="/" className="relative flex items-center gap-2 text-primary hover:text-primary/90 cursor-pointer">
+              <img src="/icon-no-bg.png" alt="Pumki UI Logo" className="relative z-20 h-8 w-8 cursor-pointer" />
               {/* <span className="font-bold text-xl tracking-tight text-white cursor-pointer">Pumki UI</span> */}
-              <span className="from-primary/10 via-foreground/85 to-foreground/50 bg-gradient-to-tl bg-clip-text text-2xl tracking-tight font-bold text-balance text-transparent cursor-pointer pt-1">Pumki UI</span>
+              <span 
+                ref={textRef}
+                className="relative z-20 from-primary/10 via-foreground/85 to-foreground/50 bg-gradient-to-tl bg-clip-text text-2xl tracking-tight font-bold text-balance text-transparent cursor-pointer pt-1"
+              >
+                Pumki UI
+              </span>
+              
+              {/* Limelight effect covering both logo and text */}
+              <div 
+                ref={limelightRef}
+                className={`absolute -top-6 -left-10 z-10 w-56 h-20 ${
+                  isLimelightReady ? 'transition-all duration-700 ease-in-out opacity-100' : 'opacity-0'
+                }`}
+              >
+                {/* Main spotlight beam */}
+                <div className="absolute left-[8%] top-0 w-[84%] h-full [clip-path:polygon(25%_0%,75%_0%,92%_100%,8%_100%)] bg-gradient-to-b from-primary/40 via-primary/15 to-transparent pointer-events-none" />
+                
+                {/* Outer glow */}
+                <div className="absolute left-[3%] top-0 w-[94%] h-full [clip-path:polygon(30%_0%,70%_0%,97%_100%,3%_100%)] bg-gradient-to-b from-primary/20 via-primary/5 to-transparent pointer-events-none" />
+                
+                {/* Top light source */}
+                <div className="absolute left-[20%] -top-1 w-[60%] h-2 bg-gradient-to-r from-transparent via-primary/60 to-transparent rounded-full blur-sm" />
+              </div>
             </Link>
             {/* Navigation menu */}
             <NavigationMenu className="h-full *:h-full max-md:hidden">
