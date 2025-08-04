@@ -37,16 +37,16 @@ export default function GradientHero() {
             className="mx-auto mb-6 flex justify-center"
           >
             <div 
-              className="border-border bg-background/80 inline-flex items-center rounded-full border px-3 py-1 text-sm backdrop-blur-sm cursor-pointer hover:bg-background/90 transition-colors duration-200"
+              className="border-border bg-background/80 inline-flex items-center rounded-full border px-3 py-1 text-sm backdrop-blur-sm cursor-pointer hover:bg-background/90 transition-colors duration-200 relative overflow-hidden before:absolute before:w-[0.4rem] before:h-[20rem] before:top-0 before:translate-x-[-20rem] hover:before:translate-x-[20rem] before:duration-[0.8s] before:-skew-x-[10deg] before:transition-all before:bg-white before:blur-[8px] hover:brightness-100 brightness-90"
               onClick={() => window.location.href = '/docs'}
             >
-              <span className="bg-primary mr-2 rounded-full px-2 py-0.5 text-xs font-semibold text-white">
+              <span className="bg-primary mr-2 rounded-full px-2 py-0.5 text-xs font-semibold text-white relative z-10">
                 New
               </span>
-              <span className="text-muted-foreground">
+              <span className="text-muted-foreground relative z-10">
                 Introducing our latest component library
               </span>
-              <ChevronRight className="text-muted-foreground ml-1 h-4 w-4" />
+              <ChevronRight className="text-muted-foreground ml-1 h-4 w-4 relative z-10" />
             </div>
           </motion.div>
 
@@ -89,6 +89,7 @@ export default function GradientHero() {
             className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row"
           >
             <Button
+              variant="shine"
               size="lg"
               className="group bg-primary text-primary-foreground hover:shadow-primary/30 relative overflow-hidden rounded-full px-6 shadow-lg transition-all duration-300 cursor-pointer"
               onClick={() => window.location.href = '/docs'}
@@ -102,7 +103,7 @@ export default function GradientHero() {
             </Button>
 
             <Button
-              variant="outline"
+              variant="shine-outline"
               size="lg"
               className="border-border bg-background/50 flex items-center gap-2 rounded-full backdrop-blur-sm cursor-pointer"
               onClick={() => window.location.href = '/docs'}

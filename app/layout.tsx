@@ -2,7 +2,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { ViewTransitions } from "next-view-transitions";
-import LenisProvider from "../components/LenisProvider";
 
 export const metadata: Metadata = {
   title: "Pumki UI - Ship stunning UIs from one library, not ten.",
@@ -18,9 +17,7 @@ export default function RootLayout({
     <ViewTransitions>
       <html lang="en" className="dark">
         <body className="antialiased">
-          <LenisProvider>
-            {children}
-          </LenisProvider>
+          {children}
         </body>
       </html>
     </ViewTransitions>
