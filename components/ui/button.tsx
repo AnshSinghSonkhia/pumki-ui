@@ -16,7 +16,7 @@ const buttonVariants = cva(
         outline:
           'border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50',
         'shine-outline':
-          'relative border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 overflow-hidden before:absolute before:w-[0.4rem] before:h-[20rem] before:top-0 before:translate-x-[-8rem] hover:before:translate-x-[7rem] before:duration-[0.8s] before:-skew-x-[10deg] before:transition-all before:bg-white before:blur-[8px] hover:brightness-100 brightness-90',
+          'relative border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 overflow-hidden before:absolute before:w-[0.4rem] before:h-[20rem] before:top-0 before:translate-x-[-9rem] hover:before:translate-x-[8rem] before:duration-[0.8s] before:-skew-x-[10deg] before:transition-all before:bg-white before:blur-[8px] hover:brightness-100 brightness-90',
         secondary:
           'bg-secondary text-secondary-foreground shadow-xs hover:bg-secondary/80',
         ghost:
