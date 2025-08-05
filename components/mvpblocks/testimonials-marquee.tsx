@@ -6,6 +6,7 @@ import { motion } from 'framer-motion';
 // import { Star } from 'lucide-react';
 import { Marquee } from '@/components/ui/marquee';
 import { Lightning } from '@/components/landing/lightning';
+import { useState, useEffect } from 'react';
 
 export function Highlight({
   children,
@@ -219,7 +220,7 @@ const testimonials = [
     {
         name: 'Berny Angelo',
         role: 'EdTech Product Manager at LearnSphere',
-        img: 'https://randomuser.me/api/portraits/women/30.jpg',
+        img: 'https://randomuser.me/api/portraits/women/31.jpg',
         description: (
             <p>
                 Our educational platform needed to work for students of all ages and
@@ -263,7 +264,80 @@ const testimonials = [
     },
 ];
 
+// Utility function to get the number of columns based on screen width
+function getColumnCount(windowWidth: number): number {
+  if (windowWidth >= 1536) return 4; // 2xl
+  if (windowWidth >= 1280) return 3; // xl
+  if (windowWidth >= 768) return 2;  // md
+  return 1; // default (mobile)
+}
+
+// Utility function to distribute testimonials evenly across columns
+function distributeTestimonials<T>(items: T[], columnCount: number): T[][] {
+  const baseItemsPerColumn = Math.floor(items.length / columnCount);
+  const remainder = items.length % columnCount;
+  
+  const columns: T[][] = [];
+  let currentIndex = 0;
+  
+  for (let i = 0; i < columnCount; i++) {
+    // First 'remainder' columns get one extra item
+    const itemsInThisColumn = baseItemsPerColumn + (i < remainder ? 1 : 0);
+    columns.push(items.slice(currentIndex, currentIndex + itemsInThisColumn));
+    currentIndex += itemsInThisColumn;
+  }
+  
+  return columns;
+}
+
+// Utility function to calculate appropriate animation duration based on column content and screen size
+function calculateMarqueeDuration(
+  columnIndex: number, 
+  itemsInColumn: number, 
+  totalColumns: number
+): string {
+  // Base duration factors - made more reasonable
+  const baseDurationPerItem = 3; // 3 seconds per testimonial
+  const minDuration = 12; // Minimum 12 seconds
+  const maxDuration = 40; // Maximum 40 seconds
+  
+  // Calculate base duration based on number of items in this column
+  let duration = Math.max(minDuration, itemsInColumn * baseDurationPerItem);
+  
+  // Add significant variation between columns to create staggered effect
+  const variations = [0, 4, -2, 3]; // More noticeable differences
+  const variation = variations[columnIndex % variations.length] || 0;
+  duration += variation;
+  
+  // Ensure duration stays within reasonable bounds
+  duration = Math.min(maxDuration, Math.max(minDuration, duration));
+  
+  return `${duration}s`;
+}
+
 export default function Testimonials() {
+  const [windowWidth, setWindowWidth] = useState(0);
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+    
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    // Set initial width
+    handleResize();
+    
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  // Get current column count based on window width
+  const columnCount = isClient ? getColumnCount(windowWidth) : 1;
+  
+  // Distribute testimonials across columns
+  const distributedTestimonials = distributeTestimonials(testimonials, columnCount);
   return (
     <section className="relative w-full py-10 overflow-hidden">
       {/* Lightning Background */}
@@ -315,21 +389,17 @@ export default function Testimonials() {
 
         <div className="relative mt-6 max-h-screen overflow-hidden mx-auto max-w-7xl">
           <div className="gap-4 md:columns-2 xl:columns-3 2xl:columns-4 mx-auto">
-          {Array(Math.ceil(testimonials.length / 3))    // means max 3 testimonials per marquee instance (column)
-            .fill(0)
-            .map((_, i) => (
+          {distributedTestimonials.map((columnTestimonials, i) => {
+            const duration = calculateMarqueeDuration(i, columnTestimonials.length, columnCount);
+            return (
               <Marquee
                 vertical
                 key={i}
-                className={cn({
-                  '[--duration:8s]': i === 1,
-                  '[--duration:5s]': i === 2,
-                  '[--duration:10s]': i === 3,
-                }, '[--duration:6s]')}
+                style={{ '--duration': duration } as React.CSSProperties}
               >
-                {testimonials.slice(i * 3, (i + 1) * 3).map((card, idx) => (
+                {columnTestimonials.map((card, idx) => (
                   <motion.div
-                    key={idx}
+                    key={`${i}-${idx}`}
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     viewport={{ once: true }}
@@ -342,7 +412,8 @@ export default function Testimonials() {
                   </motion.div>
                 ))}
               </Marquee>
-            ))}
+            );
+          })}
         </div>
         <div className="from-background pointer-events-none absolute inset-x-0 bottom-0 h-1/4 w-full bg-gradient-to-t from-20%"></div>
         <div className="from-background pointer-events-none absolute inset-x-0 top-0 h-1/4 w-full bg-gradient-to-b from-20%"></div>
