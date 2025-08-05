@@ -287,3 +287,66 @@ html {
     @apply bg-background text-foreground;
   }
 }
+
+/* Custom Scrollbar Styles */
+@layer base {
+  /* Webkit browsers (Chrome, Safari, Edge) */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: oklch(0.08 0.05 318.5);
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: oklch(0.25 0.08 318.5 / 0.6);
+    border-radius: 3px;
+    transition: all 0.2s ease;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: oklch(0.45 0.18 340.5 / 0.8);
+  }
+
+  ::-webkit-scrollbar-thumb:active {
+    background: oklch(0.55 0.24 340.5 / 0.9);
+  }
+
+  ::-webkit-scrollbar-corner {
+    background: oklch(0.08 0.05 318.5);
+  }
+
+  /* Firefox */
+  html {
+    scrollbar-width: thin;
+    scrollbar-color: oklch(0.25 0.08 318.5 / 0.6) oklch(0.08 0.05 318.5);
+  }
+
+  /* For light mode */
+  :root:not(.dark) ::-webkit-scrollbar-track {
+    background: oklch(0.94 0.002 286.375);
+  }
+
+  :root:not(.dark) ::-webkit-scrollbar-thumb {
+    background: oklch(0.75 0.004 286.32 / 0.4);
+  }
+
+  :root:not(.dark) ::-webkit-scrollbar-thumb:hover {
+    background: oklch(0.35 0.12 340.5 / 0.6);
+  }
+
+  :root:not(.dark) ::-webkit-scrollbar-thumb:active {
+    background: oklch(0.45 0.18 340.5 / 0.8);
+  }
+
+  :root:not(.dark) ::-webkit-scrollbar-corner {
+    background: oklch(0.94 0.002 286.375);
+  }
+
+  :root:not(.dark) html {
+    scrollbar-color: oklch(0.75 0.004 286.32 / 0.4) oklch(0.94 0.002 286.375);
+  }
+}
