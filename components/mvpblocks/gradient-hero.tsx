@@ -4,6 +4,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, ChevronRight, ExternalLink, Github } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Stars } from "@react-three/drei";
+import { Canvas } from "@react-three/fiber";
 
 import { Ripple } from "@/components/magicui/ripple";
 import { StickyArrow } from "@/components/landing/sticky-arrow";
@@ -19,6 +21,13 @@ export default function GradientHero() {
         <div className="bg-primary/5 absolute top-0 left-1/2 -z-10 h-[1000px] w-[1000px] -translate-x-1/2 rounded-full blur-3xl" />
       </div>
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#8882_1px,transparent_1px),linear-gradient(to_bottom,#8882_1px,transparent_1px)] bg-[size:16px_16px] opacity-15" />
+
+      {/* Stars background effect */}
+      <div className="absolute inset-0 z-[1]">
+        <Canvas>
+          <Stars radius={100} count={3000} factor={4} fade speed={2} />
+        </Canvas>
+      </div>
 
       {/* Ripple effect overlay */}
       <div className="pointer-events-none absolute left-0 top-60 z-10 h-[800px] w-full overflow-hidden">

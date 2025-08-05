@@ -5,6 +5,8 @@ import React, { CSSProperties, useEffect, useState } from 'react';
 import useMeasure from 'react-use-measure';
 import { type ClassValue, clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
+import { Stars } from "@react-three/drei";
+import { Canvas } from "@react-three/fiber";
 
 function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
@@ -142,8 +144,15 @@ const LOGOS = [
 
 export default function LogoCloud() {
     return (
-        <section className="bg-background overflow-hidden py-16 w-full">
-            <div className="m-auto max-w-7xl px-6">
+        <section className="bg-background overflow-hidden py-16 w-full relative">
+            {/* Stars background effect */}
+            <div className="absolute inset-0 z-[1]">
+                <Canvas>
+                    <Stars radius={300} count={6000} factor={4} fade speed={2} />
+                </Canvas>
+            </div>
+            
+            <div className="m-auto max-w-7xl px-6 relative z-10">
                 <div className="flex flex-col items-center md:flex-row">
                     <div className="flex-shrink-0 text-center md:text-right md:max-w-44 md:border-r md:border-gray-200 dark:md:border-gray-800 md:pr-6">
                         <p className="text-sm text-gray-600 dark:text-gray-400">

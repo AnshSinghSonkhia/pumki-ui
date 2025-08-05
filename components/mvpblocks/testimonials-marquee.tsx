@@ -86,153 +86,181 @@ export function TestimonialCard({
   );
 }
 const testimonials = [
-  {
-    name: 'Jordan Hayes',
-    role: 'CTO at Quantum Innovations',
-    img: 'https://randomuser.me/api/portraits/men/22.jpg',
-    description: (
-      <p>
-        PumkiUI has completely transformed our development workflow.
-        <Highlight>
-          The component system saved us weeks of custom coding and design work.
-        </Highlight>{' '}
-        Our team can now focus on business logic instead of UI details.
-      </p>
-    ),
-  },
-  {
-    name: 'Maya Rodriguez',
-    role: 'Lead Developer at Skyline Digital',
-    img: 'https://randomuser.me/api/portraits/women/33.jpg',
-    description: (
-      <p>
-        I was skeptical at first, but PumkiUI proved me wrong.
-        <Highlight>
-          The accessibility features and responsive design are top-notch.
-        </Highlight>{' '}
-        It&apos;s rare to find a framework that prioritizes both aesthetics and
-        functionality.
-      </p>
-    ),
-  },
-  {
-    name: 'Ethan Park',
-    role: 'Startup Founder at Elevate Labs',
-    img: 'https://randomuser.me/api/portraits/men/32.jpg',
-    description: (
-      <p>
-        As a non-technical founder, PumkiUI has been a game-changer for our MVP.
-        <Highlight>We launched three months ahead of schedule.</Highlight> The
-        modular components allowed us to iterate quickly based on user feedback.
-      </p>
-    ),
-  },
-  {
-    name: 'Zoe Bennett',
-    role: 'UX Architect at Fusion Systems',
-    img: 'https://randomuser.me/api/portraits/women/44.jpg',
-    description: (
-      <p>
-        PumkiUI&apos;s attention to detail is impressive.
-        <Highlight>
-          The micro-interactions and animations create a polished experience.
-        </Highlight>{' '}
-        It&apos;s become our go-to solution for client projects with tight
-        deadlines.
-      </p>
-    ),
-  },
-  {
-    name: 'Victor Nguyen',
-    role: 'Product Lead at FinEdge',
-    img: 'https://randomuser.me/api/portraits/men/55.jpg',
-    description: (
-      <p>
-        Our financial dashboard needed a complete overhaul, and PumkiUI
-        delivered.
-        <Highlight>
-          The data visualization components are both beautiful and functional.
-        </Highlight>{' '}
-        User engagement has increased by 47% since the redesign.
-      </p>
-    ),
-  },
-  {
-    name: 'Amara Johnson',
-    role: 'Frontend Specialist at Nimbus Tech',
-    img: 'https://randomuser.me/api/portraits/women/67.jpg',
-    description: (
-      <p>
-        The documentation for PumkiUI is exceptional.
-        <Highlight>
-          I was able to implement complex UI patterns in just a few hours.
-        </Highlight>{' '}
-        The TypeScript support is also a major productivity booster.
-      </p>
-    ),
-  },
-  {
-    name: 'Leo Tanaka',
-    role: 'Creative Technologist at Prism Agency',
-    img: 'https://randomuser.me/api/portraits/men/78.jpg',
-    description: (
-      <p>
-        PumkiUI has the perfect balance of flexibility and structure.
-        <Highlight>
-          We can maintain brand consistency while still creating unique
-          experiences.
-        </Highlight>{' '}
-        Our clients are consistently impressed with the results.
-      </p>
-    ),
-  },
-  {
-    name: 'Sophia Martinez',
-    role: 'E-commerce Director at StyleHub',
-    img: 'https://randomuser.me/api/portraits/women/89.jpg',
-    description: (
-      <p>
-        Our conversion rates have increased by 28% since implementing PumkiUI.
-        <Highlight>
-          The checkout flow components are optimized for both desktop and
-          mobile.
-        </Highlight>{' '}
-        The dark mode support was also a huge hit with our customers.
-      </p>
-    ),
-  },
-  {
-    name: 'Aiden Wilson',
-    role: 'Healthcare Solutions Architect',
-    img: 'https://randomuser.me/api/portraits/men/92.jpg',
-    description: (
-      <p>
-        PumkiUI&apos;s accessibility features were crucial for our healthcare
-        platform.
-        <Highlight>
-          We passed compliance requirements with minimal additional work.
-        </Highlight>{' '}
-        The form components are especially well-designed for complex data entry.
-      </p>
-    ),
-  },
-  {
-    name: 'Olivia Chen',
-    role: 'EdTech Product Manager at LearnSphere',
-    img: 'https://randomuser.me/api/portraits/women/29.jpg',
-    description: (
-      <p>
-        Our educational platform needed to work for students of all ages and
-        abilities.
-        <Highlight>
-          PumkiUI&apos;s inclusive design principles made this possible without
-          compromise.
-        </Highlight>{' '}
-        The interactive components have significantly improved student
-        engagement.
-      </p>
-    ),
-  },
+    {
+        name: 'Jordan Bayes',
+        role: 'CTO at Quantum Innovations',
+        img: 'https://randomuser.me/api/portraits/men/23.jpg',
+        description: (
+            <p>
+                PumkiUI has completely transformed our development workflow.
+                <Highlight>
+                    The component system saved us weeks of custom coding and design work.
+                </Highlight>{' '}
+                Our team can now focus on business logic instead of UI details.
+            </p>
+        ),
+    },
+    {
+        name: 'Chaya Rodriguez',
+        role: 'Lead Developer at Skyline Digital',
+        img: 'https://randomuser.me/api/portraits/women/34.jpg',
+        description: (
+            <p>
+                I was skeptical at first, but PumkiUI proved me wrong.
+                <Highlight>
+                    The accessibility features and responsive design are top-notch.
+                </Highlight>{' '}
+                It&apos;s rare to find a framework that prioritizes both aesthetics and
+                functionality.
+            </p>
+        ),
+    },
+    {
+        name: 'Ethan Parker',
+        role: 'Startup Founder at Elevate Labs',
+        img: 'https://randomuser.me/api/portraits/men/33.jpg',
+        description: (
+            <p>
+                As a non-technical founder, PumkiUI has been a game-changer for our MVP.
+                <Highlight>We launched three months ahead of schedule.</Highlight> The
+                modular components allowed us to iterate quickly based on user feedback.
+            </p>
+        ),
+    },
+    {
+        name: 'Lui Bennett',
+        role: 'UX Architect at Fusion Systems',
+        img: 'https://randomuser.me/api/portraits/women/45.jpg',
+        description: (
+            <p>
+                PumkiUI&apos;s attention to detail is impressive.
+                <Highlight>
+                    The micro-interactions and animations create a polished experience.
+                </Highlight>{' '}
+                It&apos;s become our go-to solution for client projects with tight
+                deadlines.
+            </p>
+        ),
+    },
+    {
+        name: 'Vikram Saxena',
+        role: 'Product Lead at FinEdge',
+        img: 'https://randomuser.me/api/portraits/men/56.jpg',
+        description: (
+            <p>
+                Our financial dashboard needed a complete overhaul, and PumkiUI
+                delivered.
+                <Highlight>
+                    The data visualization components are both beautiful and functional.
+                </Highlight>{' '}
+                User engagement has increased by 47% since the redesign.
+            </p>
+        ),
+    },
+    {
+        name: 'Maria A. Johnson',
+        role: 'Frontend Specialist at Nimbus Tech',
+        img: 'https://randomuser.me/api/portraits/women/68.jpg',
+        description: (
+            <p>
+                The documentation for PumkiUI is exceptional.
+                <Highlight>
+                    I was able to implement complex UI patterns in just a few hours.
+                </Highlight>{' '}
+                The TypeScript support is also a major productivity booster.
+            </p>
+        ),
+    },
+    {
+        name: 'Teo Tanaka',
+        role: 'Creative Technologist at Prism Agency',
+        img: 'https://randomuser.me/api/portraits/men/79.jpg',
+        description: (
+            <p>
+                PumkiUI has the perfect balance of flexibility and structure.
+                <Highlight>
+                    We can maintain brand consistency while still creating unique
+                    experiences.
+                </Highlight>{' '}
+                Our clients are consistently impressed with the results.
+            </p>
+        ),
+    },
+    {
+        name: 'Sogia Markinez',
+        role: 'E-commerce Director at StyleHub',
+        img: 'https://randomuser.me/api/portraits/women/90.jpg',
+        description: (
+            <p>
+                Our conversion rates have increased by 28% since implementing PumkiUI.
+                <Highlight>
+                    The checkout flow components are optimized for both desktop and
+                    mobile.
+                </Highlight>{' '}
+                The dark mode support was also a huge hit with our customers.
+            </p>
+        ),
+    },
+    {
+        name: 'Airen Carse',
+        role: 'Healthcare Solutions Architect',
+        img: 'https://randomuser.me/api/portraits/men/93.jpg',
+        description: (
+            <p>
+                PumkiUI&apos;s accessibility features were crucial for our healthcare
+                platform.
+                <Highlight>
+                    We passed compliance requirements with minimal additional work.
+                </Highlight>{' '}
+                The form components are especially well-designed for complex data entry.
+            </p>
+        ),
+    },
+    {
+        name: 'Berny Angelo',
+        role: 'EdTech Product Manager at LearnSphere',
+        img: 'https://randomuser.me/api/portraits/women/30.jpg',
+        description: (
+            <p>
+                Our educational platform needed to work for students of all ages and
+                abilities.
+                <Highlight>
+                    PumkiUI&apos;s inclusive design principles made this possible without
+                    compromise.
+                </Highlight>{' '}
+                The interactive components have significantly improved student
+                engagement.
+            </p>
+        ),
+    },
+    {
+        name: 'Mohit Chawla',
+        role: 'Mobile App Developer at AppVantage',
+        img: 'https://randomuser.me/api/portraits/men/46.jpg',
+        description: (
+            <p>
+                Integrating PumkiUI into our mobile projects was seamless.
+                <Highlight>
+                    The cross-platform consistency is unmatched.
+                </Highlight>{' '}
+                Our apps look and feel professional with minimal effort.
+            </p>
+        ),
+    },
+    {
+        name: 'Emily Fischer',
+        role: 'Design Lead at PixelForge',
+        img: 'https://randomuser.me/api/portraits/women/60.jpg',
+        description: (
+            <p>
+                PumkiUI empowers our designers and developers to collaborate efficiently.
+                <Highlight>
+                    The design tokens and theming options are incredibly flexible.
+                </Highlight>{' '}
+                We can quickly prototype and deliver polished interfaces every time.
+            </p>
+        ),
+    },
 ];
 
 export default function Testimonials() {
@@ -287,7 +315,7 @@ export default function Testimonials() {
 
         <div className="relative mt-6 max-h-screen overflow-hidden mx-auto max-w-7xl">
           <div className="gap-4 md:columns-2 xl:columns-3 2xl:columns-4 mx-auto">
-          {Array(Math.ceil(testimonials.length / 3))
+          {Array(Math.ceil(testimonials.length / 3))    // means max 3 testimonials per marquee instance (column)
             .fill(0)
             .map((_, i) => (
               <Marquee
@@ -297,7 +325,7 @@ export default function Testimonials() {
                   '[--duration:8s]': i === 1,
                   '[--duration:5s]': i === 2,
                   '[--duration:10s]': i === 3,
-                }, '[--duration:12s]')}
+                }, '[--duration:6s]')}
               >
                 {testimonials.slice(i * 3, (i + 1) * 3).map((card, idx) => (
                   <motion.div
