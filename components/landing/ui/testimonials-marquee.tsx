@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 // Removed Star import as it's no longer used
 // import { Star } from 'lucide-react';
 import { Marquee } from '@/components/ui/marquee';
-import { Lightning } from '@/components/landing/lightning';
+import { Lightning } from '@/components/landing/ui-animations/lightning';
 import { useState, useEffect } from 'react';
 
 export function Highlight({

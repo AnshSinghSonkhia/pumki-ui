@@ -5,8 +5,8 @@ import { useEffect, useRef, useState } from "react";
 import { Button } from '@/components/ui/button';
 import { ArrowLeft, Home } from 'lucide-react';
 import { useRouter } from 'next/navigation';
-import { Component as Hyperspeed } from '@/components/landing/hyperspeed';
-import { Lightning } from '@/components/landing/lightning';
+import { Component as Hyperspeed } from '@/components/landing/ui-animations/hyperspeed';
+import { Lightning } from '@/components/landing/ui-animations/lightning';
 
 // Combined component for 404 page
 export default function NotFoundPage() {

@@ -2,15 +2,15 @@
 
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { NumberTicker } from '@/components/mvpblocks/counter';
-import { Spotlight } from '@/components/mvpblocks/spotlight';
+import { NumberTicker } from '@/components/landing/ui/counter';
+import { Spotlight } from '@/components/landing/ui-animations/spotlight';
 import { useTheme } from 'next-themes';
 import { cn } from '@/lib/utils';
 import { Badge } from '@/components/ui/badge';
-import Navbar from "@/components/landing/aboutNavbar";
-import { Lightning } from "@/components/landing/lightning";
+import Navbar from "@/components/landing/ui/aboutNavbar";
+import { Lightning } from "@/components/landing/ui-animations/lightning";
 import { ChevronRight } from 'lucide-react';
-import { GradientBars } from '@/components/ui/gradient-bars';
+import { GradientBars } from '@/components/landing/ui-animations/gradient-bars';
 import { TextReveal } from '@/components/ui/text-reveal';
 
 import {
@@ -25,7 +25,7 @@ import {
   Clock,
   Zap,
 } from 'lucide-react';
-import { Ripple } from '@/components/magicui/ripple';
+import { Ripple } from '@/components/landing/ui-animations/ripple';
 
 interface StatItemProps {
   value: number;

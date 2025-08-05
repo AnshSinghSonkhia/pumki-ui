@@ -7,10 +7,10 @@ import { Button } from '@/components/ui/button';
 import { Stars } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 
-import { Ripple } from "@/components/magicui/ripple";
-import { StickyArrow } from "@/components/landing/sticky-arrow";
+import { Ripple } from "@/components/landing/ui-animations/ripple";
+import { StickyArrow } from "@/components/landing/ui-animations/sticky-arrow";
 import { cn } from '@/lib/utils';
-import Navbar from "@/components/landing/Navbar";
+import Navbar from "@/components/landing/ui/Navbar";
 
 export default function GradientHero() {
   return (

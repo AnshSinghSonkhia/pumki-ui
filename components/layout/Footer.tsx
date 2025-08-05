@@ -1,6 +1,6 @@
 "use client"
 import React, { useEffect, useRef, useState } from "react";
-import { StickyArrow } from "@/components/landing/sticky-arrow";
+import { StickyArrow } from "@/components/landing/ui-animations/sticky-arrow";
 
 const Footer = () => {
   const waveRefs = useRef<(HTMLDivElement | null)[]>([]);
