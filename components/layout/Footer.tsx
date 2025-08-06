@@ -67,7 +67,7 @@ const Footer = () => {
             <svg className="size-3" viewBox="0 0 80 80">
               <path fill="currentColor" d="M67.4307 11.5693C52.005...Z" />
             </svg>
-                @ 2025 PumkiUI
+                2025 © PumkiUI
           </p>
         </div>
         <div className="space-y-4">
@@ -124,7 +124,7 @@ const Footer = () => {
             {/* <svg className="size-3" viewBox="0 0 80 80">
               <path fill="currentColor" d="M67.4307 11.5693C52.005...Z" />
             </svg> */}
-            @ 2025 PumkiUI
+            2025 © PumkiUI
           </p>
           
           {/* Row 4: A project by... */}

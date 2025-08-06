@@ -1,0 +1,109 @@
+/* FreeSet Font Faces */
+@font-face {
+  font-family: 'FreeSet';
+  src: url('/fonts/FreeSetLightC.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'FreeSet';
+  src: url('/fonts/FreeSetLightC-Italic.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'FreeSet';
+  src: url('/fonts/FreeSetC.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'FreeSet';
+  src: url('/fonts/FreeSetC-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'FreeSet';
+  src: url('/fonts/FreeSetDemiC.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'FreeSet';
+  src: url('/fonts/FreeSetDemiC-Italic.ttf') format('truetype');
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Apply FreeSet fonts to documentation */
+:root {
+  --font-freeset: 'FreeSet', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* Global font application */
+body {
+  font-family: var(--font-freeset);
+}
+
+/* Nextra content styling */
+.nextra-content {
+  font-family: var(--font-freeset);
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6,
+.nextra-content h1,
+.nextra-content h2,
+.nextra-content h3,
+.nextra-content h4,
+.nextra-content h5,
+.nextra-content h6 {
+  font-family: var(--font-freeset) !important;
+  font-weight: 600;
+}
+
+/* Navigation */
+.nextra-nav-container {
+  font-family: var(--font-freeset);
+}
+
+/* Sidebar */
+.nextra-sidebar {
+  font-family: var(--font-freeset);
+}
+
+/* Custom utility classes */
+.font-freeset-light {
+  font-family: var(--font-freeset);
+  font-weight: 300;
+}
+
+.font-freeset {
+  font-family: var(--font-freeset);
+  font-weight: 400;
+}
+
+.font-freeset-demi {
+  font-family: var(--font-freeset);
+  font-weight: 600;
+}
+
+/* Sidebar separators styling */
+.nextra-sidebar .cursor-default {
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.75rem;
+}
