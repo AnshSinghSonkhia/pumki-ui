@@ -1,6 +1,6 @@
 # PumkiUI
 
-<!-- TimeStamp: 02:36:08 -->
+<!-- TimeStamp: 02:50:08 -->
 
 <!--
     STEPS of Making a component
@@ -12,14 +12,8 @@
 -->
 
 <!--
-    STEPS for FumaDocs
-
-
--->
-
-<!--
     [ToDo]
 
-    - https://fumadocs.dev/docs/ui/components/banner  Use it's banner for showing the latest component on landing page.
+    - Add banner component for showing the latest component on landing page.
 
 -->
