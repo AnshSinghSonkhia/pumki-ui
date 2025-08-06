@@ -54,7 +54,8 @@ const Footer = () => {
       className="bg-black text-white relative flex flex-col w-full h-full justify-between lg:h-screen select-none"
       data-sticky-arrow-container-footer
     >
-      <div className="w-full max-w-7xl mx-auto px-4">
+        {/* Not for Mobile & Small screens */}
+      <div className="hidden md:block w-full max-w-7xl mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between w-full gap-4 pb-24 pt-8">
         <div className="space-y-2">
           <ul className="flex flex-wrap gap-4">
@@ -92,7 +93,59 @@ const Footer = () => {
         </div>
       </div>
       </div>
+
+        {/* for Mobile & Small screens */}
+      <div className="block md:hidden w-full max-w-7xl mx-auto px-4">
+        <div className="flex flex-col items-center justify-center text-center space-y-4 pb-24 pt-8">
+          {/* Row 1: Showcase Sponsors */}
+          <div className="flex gap-6">
+            <a href="/showcase" className="text-sm hover:text-pink-400">Showcase</a>
+            <a href="/sponsors" className="text-sm hover:text-pink-400">Sponsors</a>
+          </div>
+          
+          {/* Row 2: Careers About Help Center */}
+          <div className="flex gap-6">
+            <a href="/careers" className="text-sm hover:text-pink-400">Careers</a>
+            <a href="/about" className="text-sm hover:text-pink-400">About</a>
+            <a href="/help" className="text-sm hover:text-pink-400">Help Center</a>
+          </div>
+          
+          {/* Funny divider */}
+          <div className="flex items-center gap-2 text-gray-600">
+            <span className="text-xs">🎃</span>
+            <span className="text-xs">·</span>
+            <span className="text-xs">💻</span>
+            <span className="text-xs">·</span>
+            <span className="text-xs">✨</span>
+          </div>
+          
+          {/* Row 3: @ 2025 PumkiUI */}
+          <p className="text-sm text-gray-600 dark:text-gray-400 flex items-center justify-center gap-x-1">
+            {/* <svg className="size-3" viewBox="0 0 80 80">
+              <path fill="currentColor" d="M67.4307 11.5693C52.005...Z" />
+            </svg> */}
+            @ 2025 PumkiUI
+          </p>
+          
+          {/* Row 4: A project by... */}
+          <p className="text-sm text-gray-600 dark:text-gray-400">
+            A project by
+            <a
+              href="https://www.linkedin.com/in/anshsinghsonkhia"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold hover:text-pink-400 transition-colors"
+              data-sticky-arrow-target-footer
+            >
+              <span> </span> <span className="underline">Ansh Singh Sonkhia</span>
+            </a>
+          </p>
+      </div>
+      </div>
       
+
+
+
       <div className="w-full flex mt-4 items-center justify-center px-4">
         <h1 className="text-center text-3xl md:text-5xl lg:text-[8rem] xl:text-[10rem] font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-700 to-neutral-900 select-none max-w-7xl">
           Pumki UI
