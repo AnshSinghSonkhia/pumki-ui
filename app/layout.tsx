@@ -16,6 +16,9 @@ export default function RootLayout({
   return (
     <ViewTransitions>
       <html lang="en" className="dark" suppressHydrationWarning>
+        {/* <head>
+          <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+        </head> */}
         <body className="antialiased">
           {children}
         </body>

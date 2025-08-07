@@ -144,45 +144,53 @@ export default function About() {
 
   return (
     <>
-        <Navbar />
+      <Navbar />
 
-    <section className="relative w-full overflow-hidden py-16 md:py-24">
-      {/* Lightning Background */}
-      <div className="absolute inset-0 opacity-30 pointer-events-none">
-        <Lightning
-          hue={270}
-          xOffset={0}
-          speed={0.5}
-          intensity={0.8}
-          size={1.5}
-          className="absolute inset-0"
-        />
-      </div>
+      {/* Orchid Depths */}
+      <div
+        className="fixed inset-0 z-[-1]"
+        style={{
+          background: "radial-gradient(125% 125% at 50% 10%, #000000 40%, #350136 100%)",
+        }}
+      />
 
-       {/* Background gradient */}
-      <div className="absolute inset-0 z-0">
-        <div className="from-primary/10 via-background/90 to-background/80 absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))]" />
-        <div className="bg-primary/10 absolute top-0 left-1/2 -z-10 h-[1000px] w-[1000px] -translate-x-1/2 rounded-full blur-3xl" />
-      </div>
+      <section className="relative w-full overflow-hidden py-16 md:py-24">
+        {/* Lightning Background */}
+        <div className="absolute inset-0 opacity-30 pointer-events-none">
+          <Lightning
+            hue={270}
+            xOffset={0}
+            speed={0.5}
+            intensity={0.8}
+            size={1.5}
+            className="absolute inset-0"
+          />
+        </div>
 
-      <div className="flex h-full w-full flex-col items-center justify-center">
-                <GradientBars />
-            </div>
+        {/* Background gradient (commented out as per user request) */}
+        {/**
+        <div className="absolute inset-0 z-0">
+          <div className="from-primary/10 via-background/90 to-background/80 absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))]" />
+          <div className="bg-primary/10 absolute top-0 left-1/2 -z-10 h-[1000px] w-[1000px] -translate-x-1/2 rounded-full blur-3xl" />
+        </div>
+        */}
 
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#8882_1px,transparent_1px),linear-gradient(to_bottom,#8882_1px,transparent_1px)] bg-[size:16px_16px] opacity-10" />
+        <div className="flex h-full w-full flex-col items-center justify-center">
+          <GradientBars />
+        </div>
 
+        {/* Grid pattern */}
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#8882_1px,transparent_1px),linear-gradient(to_bottom,#8882_1px,transparent_1px)] bg-[size:16px_16px] opacity-10" />
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#8882_1px,transparent_1px),linear-gradient(to_bottom,#8882_1px,transparent_1px)] bg-[size:16px_16px] opacity-15" />
 
-      {/* Grid pattern */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#8882_1px,transparent_1px),linear-gradient(to_bottom,#8882_1px,transparent_1px)] bg-[size:16px_16px] opacity-15" />
+        {/* Ripple effect overlay (commented out as per user request) */}
+        {/**
+        <div className="pointer-events-none absolute left-0 top-40 z-10 h-[800px] w-full overflow-hidden">
+          <Ripple />
+        </div>
+        */}
 
-      {/* Ripple effect overlay */}
-      {/**
-      <div className="pointer-events-none absolute left-0 top-40 z-10 h-[800px] w-full overflow-hidden">
-        <Ripple />
-      </div>
-      */}
-
-      <div className="relative z-10 container mx-auto max-w-6xl px-4 md:px-6">
+        <div className="relative z-10 container mx-auto max-w-6xl px-4 md:px-6">
         {/* Header Section with Badge */}
         <div className="mx-auto mb-8 max-w-3xl text-center">
           {/* <motion.div
@@ -422,7 +430,12 @@ export default function About() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.4, ease: 'easeOut' }}
-              className="group relative overflow-hidden rounded-2xl border border-border/30 bg-card p-8 text-center shadow-lg shadow-black/[0.03] transition-all duration-300 hover:shadow-xl hover:shadow-black/[0.08]"
+              className="group relative overflow-hidden rounded-2xl p-8 text-center transition-all duration-300"
+              style={{
+                background: 'rgba(24, 16, 48, 0.85)',
+                boxShadow: '0 4px 32px 0 rgba(120, 75, 160, 0.25), 0 1.5px 8px 0 rgba(0, 207, 255, 0.10)',
+                borderRadius: '24px'
+              }}
             >
               <Spotlight
                 gradientFirst="radial-gradient(68.54% 68.72% at 55.02% 31.46%, hsla(216, 100%, 50%, 0.08) 0, hsla(221, 100%, 55%, 0.04) 50%, hsla(216, 100%, 45%, 0) 80%)"
@@ -468,7 +481,12 @@ export default function About() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.4, ease: 'easeOut' }}
-              className="group relative overflow-hidden rounded-2xl border border-border/30 bg-card p-8 text-center shadow-lg shadow-black/[0.03] transition-all duration-300 hover:shadow-xl hover:shadow-black/[0.08]"
+              className="group relative overflow-hidden rounded-2xl p-8 text-center transition-all duration-300"
+              style={{
+                background: 'rgba(24, 16, 48, 0.85)',
+                boxShadow: '0 4px 32px 0 rgba(120, 75, 160, 0.25), 0 1.5px 8px 0 rgba(0, 207, 255, 0.10)',
+                borderRadius: '24px'
+              }}
             >
               <Spotlight
                 gradientFirst="radial-gradient(68.54% 68.72% at 55.02% 31.46%, hsla(216, 100%, 50%, 0.08) 0, hsla(221, 100%, 55%, 0.04) 50%, hsla(216, 100%, 45%, 0) 80%)"

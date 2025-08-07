@@ -89,14 +89,24 @@ const footer = <Footer />
 
 export default async function DocsLayout({ children }: { children: React.ReactNode }) {
   return (
-    <Layout
-      banner={banner}
-      navbar={navbar}
-      pageMap={await getPageMap('/docs')} // Specify the content directory path
-      docsRepositoryBase="https://github.com/AnshSinghSonkhia/pumki-ui/tree/main/content"
-      footer={footer}
-    >
-      {children}
-    </Layout>
+    <div className="min-h-screen w-full relative">
+      {/* Orchid Depths */}
+      <div
+        className="fixed inset-0 z-[-1]"
+        style={{
+          background: "radial-gradient(125% 125% at 50% 10%, #000000 40%, #350136 100%)",
+        }}
+      />
+      {/* Your Content/Components */}
+      <Layout
+        banner={banner}
+        navbar={navbar}
+        pageMap={await getPageMap('/docs')} // Specify the content directory path
+        docsRepositoryBase="https://github.com/AnshSinghSonkhia/pumki-ui/tree/main/content"
+        footer={footer}
+      >
+        {children}
+      </Layout>
+    </div>
   )
 }
