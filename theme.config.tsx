@@ -1,3 +1,7 @@
+import Image from "next/image";
+import Link from "next/link";
+import { DocsContributors } from "./components/DocsContributors";
+
 export default {
   logo: <span style={{ fontFamily: 'FreeSet', fontWeight: 700 }}>Pumki UI</span>,
   head: (
@@ -82,6 +86,7 @@ export default {
     }
   },
   toc: {
-    backToTop: true
+    backToTop: true,
+    extraContent: <DocsContributors />,
   }
 }
