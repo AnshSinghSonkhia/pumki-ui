@@ -27,7 +27,7 @@ import { Github } from "lucide-react"
 
 const navigationLinks = [
   { href: "/docs", label: "Docs" },
-  { href: "/docs", label: "Components" },
+  { href: "/docs/components", label: "Components" },
   { href: "/about", label: "About" },
 ]
 

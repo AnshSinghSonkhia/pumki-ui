@@ -1,9 +1,16 @@
 export default {
-  index: 'Overview',
-  intro: 'Introduction',
-  about: {
-    title: 'About',
-    type: 'page',
-    href: '/about',
-  }
+    "#": {
+        type: 'separator',
+        title: "Getting Started",
+    },
+    intro: 'Introduction',
+    installation: 'Installation',
+    "###": {
+        type: 'separator',
+    },
+    about: {
+        title: 'About',
+        type: 'page',
+        href: '/about',
+    }
 }

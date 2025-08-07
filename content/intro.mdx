@@ -1,66 +1,109 @@
-# Introduction to Pumki UI
+import { Callout } from 'nextra/components'
+import { Cards } from 'nextra/components'
+import { Github } from 'lucide-react'
+import { DiscordIcon } from '../components/icons/DiscordIcon'
+import { LinkedInIcon } from '../components/icons/LinkedInIcon'
+import { Steps, Step } from '../components/ui/steps'
+ 
 
-Welcome to Pumki UI! This introduction will help you get started with our comprehensive React component library.
+# Welcome to Pumki UI 🥳
 
-## What is Pumki UI?
+**Pumki UI** is a modern, production-ready UI library built to streamline frontend development. It consolidates components, animations, design tokens, and templates into a single, consistent system—so you can focus on building, not configuring.
 
-Pumki UI is a modern React component library designed to help developers ship stunning UIs quickly and efficiently. Instead of managing multiple libraries, Pumki UI provides everything you need in one cohesive package.
+Whether you're building internal dashboards, SaaS products, landing pages, or tools, Pumki UI gives you a solid foundation to move faster with fewer dependencies.
 
-## Key Features
+<Callout>Ship interfaces with one library, not ten.</Callout>
 
-### 🎨 Beautiful Design
-- Modern, clean aesthetics
-- Consistent design language
-- Professional-grade components
+## Why Pumki UI
 
-### 🌓 Theme Support
-- Built-in dark and light modes
-- Customizable theme system
-- CSS variables for easy theming
+- **All-in-one architecture**  
+  UI components, layouts, animations, and design tokens included out of the box.
 
-### 📱 Responsive First
-- Mobile-first approach
-- Flexible grid system
-- Adaptive components
+- **Minimal setup, maximum output**  
+  Pre-configured defaults mean less boilerplate and more building.
 
-### ⚡ Performance Optimized
-- Built with React 19
-- Next.js 15 compatibility
-- Tree-shaking support
-- Minimal bundle size
+- **Type-safe and predictable**  
+  Built with TypeScript for strong developer confidence and better DX.
 
-### 🔧 Developer Experience
-- Full TypeScript support
-- Comprehensive documentation
-- Easy customization
-- Accessibility built-in
+- **Modern aesthetics by default**  
+  Consistent, elegant components designed for real-world use.
 
-## Getting Started
+- **Optional Tailwind support**  
+  Use our built-in tokens, or integrate seamlessly with your existing Tailwind setup.
 
-Ready to start building? Let's get Pumki UI set up in your project.
 
-### Installation
+## Frequently Asked Questions
 
-```bash copy
-npm install pumki-ui
-```
+<br />
 
-### Basic Usage
+<Steps>
+  <Step title="Is Pumki UI ready for production use?">
+    Yes. While still evolving, Pumki UI is actively maintained and used in real-world applications.
+  </Step>
+  
+  <Step title="Is it FREE? 🥳🥳🥳">
+    YES. Pumki UI is open-source and free for both commercial and personal use under the MIT license.
+  </Step>
+  
+  <Step title="Can I use Tailwind CSS with Pumki UI?">
+    Yes. Pumki UI is compatible with Tailwind CSS, but also works well on its own using built-in styling primitives.
+  </Step>
+  
+  <Step title="What frameworks does it support?">
+    Pumki UI is designed for React, and works best with frameworks like Next.js and Vite.
+  </Step>
+  
+  <Step title="Is dark mode supported?">
+    Yes. Dark mode support is built-in and can be customized easily.
+  </Step>
+</Steps>
 
-```tsx
-import { Button } from 'pumki-ui'
+## Community
 
-export default function App() {
-  return (
-    <Button variant="primary">
-      Hello, Pumki UI!
-    </Button>
-  )
-}
-```
+We welcome developers to explore, adopt, and contribute to **Pumki UI**. If you encounter issues, have feature requests, or want to share what you’ve built, we encourage participation through the following channels:
+
+- **Discord** – Ask questions, report bugs, and engage with the community.  
+- **GitHub** – Open issues, submit pull requests, or star the repo to support the project.
+- **LinkedIn** – Stay up to date with the latest releases and announcements.
+
+<Cards>
+  <Cards.Card
+    icon={<Github />}
+    title="GitHub"
+    href="https://github.com/AnshSinghSonkhia/pumki-ui"
+  />
+  <Cards.Card
+    icon={<DiscordIcon />}
+    title="Discord"
+    href="https://discord.gg/your-discord-server"
+  />
+  <Cards.Card
+    icon={<LinkedInIcon />}
+    title="LinkedIn"
+    href="https://www.linkedin.com/company/pumkiui"
+  />
+</Cards>
+
+
+## Contributing
+
+Contributions to **Pumki UI** are welcome. Please review our [contribution guidelines](/docs/contributing) to understand how to get involved.
+
+If you want to fix bugs, improve components, enhance documentation, or propose features, we’re happy to collaborate.
 
 ## Next Steps
 
-- Explore our [component library](/docs/components)
-- Check out [examples](/docs/examples)
-- Read our [customization guide](/docs/customization)
+<Cards>
+  <Cards.Card
+    title="Showcase"
+    href="/showcase"
+  />
+  <Cards.Card
+    title="Installation"
+    href="/docs/installation"
+  />
+  <Cards.Card
+    title="Components"
+    href="/docs/components"
+  />
+</Cards>
