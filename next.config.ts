@@ -9,6 +9,20 @@ const withNextra = nextra({
 
 const nextConfig: NextConfig = {
   /* config options here */
+  async redirects() {
+    return [
+      {
+        source: '/docs',
+        destination: '/docs/getting-started',
+        permanent: true,
+      },
+      {
+        source: '/docs/components',
+        destination: '/docs/components/buttons',
+        permanent: true,
+      },
+    ];
+  },
 };
 
 // Export the final Next.js config with Nextra included
