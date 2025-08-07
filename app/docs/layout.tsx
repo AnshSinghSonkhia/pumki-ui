@@ -104,6 +104,7 @@ export default async function DocsLayout({ children }: { children: React.ReactNo
         pageMap={await getPageMap('/docs')} // Specify the content directory path
         docsRepositoryBase="https://github.com/AnshSinghSonkhia/pumki-ui/tree/main/content"
         footer={footer}
+        darkMode={false}
       >
         {children}
       </Layout>
