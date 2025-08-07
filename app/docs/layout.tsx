@@ -2,6 +2,7 @@ import { Layout, Navbar } from 'nextra-theme-docs'
 import { Banner, Head } from 'nextra/components'
 import { getPageMap } from 'nextra/page-map'
 import Footer from '@/components/layout/Footer'
+import { DocsContributors } from '@/components/DocsContributors'
 import 'nextra-theme-docs/style.css'
 import '../globals.css'
 
@@ -112,6 +113,9 @@ export default async function DocsLayout({ children }: { children: React.ReactNo
         docsRepositoryBase="https://github.com/AnshSinghSonkhia/pumki-ui/tree/main/content"
         footer={footer}
         darkMode={false}
+        toc={{
+          extraContent: <DocsContributors />
+        }}
       >
         {children}
       </Layout>

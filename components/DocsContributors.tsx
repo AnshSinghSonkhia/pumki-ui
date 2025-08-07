@@ -1,10 +1,8 @@
-import Image from "next/image";
-
 // Single contributor data
 const contributor = {
   name: "Ansh Singh Sonkhia",
   title: "Founder, Pumki UI",
-  image: "/ansh-avatar.png", // Using the existing avatar image from public folder
+  image: "/ansh.png", // Try using the other avatar image
   profileUrl: "https://www.linkedin.com/in/anshsinghsonkhia",
 };
 
@@ -12,16 +10,16 @@ export const DocsContributors = () => {
   return (
     <div className="mt-1 pt-4 border-t border-border w-full">
       <div className="text-sm font-medium text-gray-500 dark:text-gray-400 mb-2">
-        Contributors
+        Created by
       </div>
       <div>
         <a
           href={contributor.profileUrl}
-          className="group flex items-center gap-2.5 p-1 rounded-md hover:bg-accent transition-colors mb-1"
+          className="group flex items-center gap-2.5 p-1 rounded-md mb-1"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Image
+          <img
             src={contributor.image}
             width={32}
             height={32}
