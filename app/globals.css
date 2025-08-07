@@ -368,18 +368,16 @@ html {
 /* Force Dark Theme - Override any light theme detection */
 html, html[data-theme="light"], html[class*="light"] {
   color-scheme: dark !important;
-  background: #000 !important;
 }
 
-/* Ensure Nextra components stay in dark theme */
+/* Ensure Nextra components stay in dark theme but preserve backgrounds */
 .nextra-nav-container,
 .nextra-sidebar,
-.nextra-content,
-body {
+.nextra-content {
   color-scheme: dark !important;
 }
 
-/* Override any light theme colors */
+/* Override any light theme colors but don't touch backgrounds */
 :root {
   color-scheme: dark !important;
 }
@@ -390,4 +388,15 @@ button[title*="theme" i],
 .theme-toggle,
 .nextra-theme-toggle {
   display: none !important;
+}
+
+/* Custom text selection color - Yellow */
+::selection {
+  background-color: #ffd700; /* Gold/Yellow */
+  color: #000000; /* Black text for contrast */
+}
+
+::-moz-selection {
+  background-color: #ffd700; /* Gold/Yellow */
+  color: #000000; /* Black text for contrast */
 }

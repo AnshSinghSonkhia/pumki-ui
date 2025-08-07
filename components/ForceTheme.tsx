@@ -16,9 +16,6 @@ export function ForceTheme() {
       html.setAttribute('data-theme', 'dark')
       html.setAttribute('data-color-mode', 'dark')
       
-      // Set style
-      html.style.colorScheme = 'dark'
-      
       // Update localStorage
       try {
         localStorage.setItem('theme', 'dark')

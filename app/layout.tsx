@@ -26,7 +26,6 @@ export default function RootLayout({
                   const html = document.documentElement;
                   html.classList.add('dark');
                   html.setAttribute('data-theme', 'dark');
-                  html.style.colorScheme = 'dark';
                   
                   // Override localStorage theme settings
                   try {
