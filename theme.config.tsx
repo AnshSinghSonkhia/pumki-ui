@@ -4,12 +4,31 @@ import { DocsContributors } from "./components/DocsContributors";
 
 export default {
   logo: <span style={{ fontFamily: 'FreeSet', fontWeight: 700 }}>Pumki UI</span>,
+  // Force dark theme - disable theme switching
+  darkMode: false,
+  nextThemes: {
+    defaultTheme: 'dark',
+    forcedTheme: 'dark'
+  },
   head: (
     <>
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta property="og:title" content="Pumki UI" />
       <meta property="og:description" content="Beautiful React component library with FreeSet typography" />
       <link rel="icon" href="/icon-no-bg.png" />
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `
+            // Force dark theme immediately
+            (function() {
+              document.documentElement.classList.add('dark');
+              document.documentElement.setAttribute('data-theme', 'dark');
+              localStorage.setItem('theme', 'dark');
+              localStorage.setItem('nextra-theme', 'dark');
+            })();
+          `
+        }}
+      />
       <style jsx global>{`
         /* Override Nextra's default typography to use FreeSet */
         .nextra-content {

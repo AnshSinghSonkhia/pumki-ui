@@ -364,3 +364,30 @@ html {
 .animate-shimmer {
   animation: shimmer 3s ease-in-out infinite;
 }
+
+/* Force Dark Theme - Override any light theme detection */
+html, html[data-theme="light"], html[class*="light"] {
+  color-scheme: dark !important;
+  background: #000 !important;
+}
+
+/* Ensure Nextra components stay in dark theme */
+.nextra-nav-container,
+.nextra-sidebar,
+.nextra-content,
+body {
+  color-scheme: dark !important;
+}
+
+/* Override any light theme colors */
+:root {
+  color-scheme: dark !important;
+}
+
+/* Hide theme toggle button if it exists */
+button[aria-label*="theme" i],
+button[title*="theme" i],
+.theme-toggle,
+.nextra-theme-toggle {
+  display: none !important;
+}

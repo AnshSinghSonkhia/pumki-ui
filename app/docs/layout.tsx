@@ -3,6 +3,7 @@ import { Banner, Head } from 'nextra/components'
 import { getPageMap } from 'nextra/page-map'
 import Footer from '@/components/layout/Footer'
 import { DocsContributors } from '@/components/DocsContributors'
+import { ForceTheme } from '@/components/ForceTheme'
 import 'nextra-theme-docs/style.css'
 import '../globals.css'
 
@@ -91,6 +92,7 @@ const footer = <Footer />
 export default async function DocsLayout({ children }: { children: React.ReactNode }) {
   return (
     <div className="min-h-screen w-full relative">
+      <ForceTheme />
       {/* Orchid Depths */}
       <div
         className="fixed inset-0 z-[-1]"
