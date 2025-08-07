@@ -97,6 +97,13 @@ export default async function DocsLayout({ children }: { children: React.ReactNo
           background: "radial-gradient(125% 125% at 50% 10%, #000000 40%, #350136 100%)",
         }}
       />
+      {/* Diagonal Stripes Background */}
+      <div
+        className="fixed inset-0 z-[-1]"
+        style={{
+          backgroundImage: "repeating-linear-gradient(45deg, transparent, transparent 2px, rgba(243, 244, 246, 0.02) 2px, rgba(243, 244, 246, 0.02) 4px)",
+        }}
+      />
       {/* Your Content/Components */}
       <Layout
         banner={banner}
