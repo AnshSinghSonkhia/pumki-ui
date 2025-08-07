@@ -3,8 +3,8 @@ import nextra from "nextra";
 
 // Set up Nextra with its configuration
 const withNextra = nextra({
-  // Configuration options for Nextra
-  // Theme is handled by the layout components
+    contentDirBasePath: '/docs', // Serve content from /docs path
+    defaultShowCopyCode: true,
 });
 
 const nextConfig: NextConfig = {

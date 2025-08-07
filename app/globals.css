@@ -350,3 +350,17 @@ html {
     scrollbar-color: oklch(0.75 0.004 286.32 / 0.4) oklch(0.94 0.002 286.375);
   }
 }
+
+/* Custom Banner Animations */
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%) skewX(-12deg);
+  }
+  100% {
+    transform: translateX(400%) skewX(-12deg);
+  }
+}
+
+.animate-shimmer {
+  animation: shimmer 3s ease-in-out infinite;
+}
