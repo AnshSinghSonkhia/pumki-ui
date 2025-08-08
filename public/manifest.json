@@ -1,0 +1,27 @@
+{
+  "name": "Pumki UI - React Component Library",
+  "short_name": "Pumki UI",
+  "description": "A beautiful React component library with FreeSet typography. Build modern web applications with our comprehensive collection of customizable UI components.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#350136",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icon-no-bg.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/logo-pumkiui.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["developer", "productivity", "utilities"],
+  "lang": "en",
+  "dir": "ltr"
+}
