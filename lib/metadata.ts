@@ -13,7 +13,7 @@ export function generatePageMetadata({
   description = 'A beautiful React component library with FreeSet typography. Build modern web applications with our comprehensive collection of customizable UI components.',
   path = '',
   keywords = [],
-  image = '/logo-pumkiui.png'
+  image = '/og_root.png'
 }: PageMetadataProps = {}): Metadata {
   const fullTitle = title === 'Pumki UI' 
     ? 'Pumki UI - Ship stunning UIs from one library, not ten.'
@@ -87,42 +87,76 @@ export function generatePageMetadata({
   }
 }
 
+// Helper function specifically for docs pages
+export function generateDocsMetadata({
+  title,
+  description,
+  path,
+  keywords = []
+}: Omit<PageMetadataProps, 'image'> & { title: string; path: string }): Metadata {
+  return generatePageMetadata({
+    title,
+    description,
+    path,
+    keywords,
+    image: '/og_docs.png'
+  })
+}
+
+// Helper function for 404 and error pages
+export function generate404Metadata(): Metadata {
+  return generatePageMetadata({
+    title: '404 - Page Not Found',
+    description: 'The page you are looking for could not be found. Return to Pumki UI to explore our beautiful React components.',
+    path: '/404',
+    keywords: ['404', 'not found', 'error'],
+    image: '/og_root.png'
+  })
+}
+
 // Predefined metadata for common pages
 export const pageMetadata = {
-  home: generatePageMetadata(),
+  home: generatePageMetadata({
+    image: '/og_root.png'
+  }),
   
   gettingStarted: generatePageMetadata({
     title: 'Getting Started',
     description: 'Learn how to get started with Pumki UI component library. Quick setup guide and basic usage examples.',
     path: '/docs/getting-started',
-    keywords: ['getting started', 'setup', 'installation', 'quick start']
+    keywords: ['getting started', 'setup', 'installation', 'quick start'],
+    image: '/og_docs.png'
   }),
   
   installation: generatePageMetadata({
     title: 'Installation',
     description: 'Install Pumki UI in your React project. NPM, Yarn, and CDN installation methods.',
     path: '/docs/installation',
-    keywords: ['installation', 'npm', 'yarn', 'setup', 'package manager']
+    keywords: ['installation', 'npm', 'yarn', 'setup', 'package manager'],
+    image: '/og_docs.png'
   }),
   
   cli: generatePageMetadata({
     title: 'CLI Tools',
     description: 'Use Pumki UI CLI tools to add components to your project quickly and efficiently.',
     path: '/docs/cli',
-    keywords: ['CLI', 'command line', 'tools', 'add components']
+    keywords: ['CLI', 'command line', 'tools', 'add components'],
+    image: '/og_docs.png'
   }),
   
   components: generatePageMetadata({
     title: 'Components',
     description: 'Explore all available Pumki UI components. Buttons, inputs, modals, and more.',
     path: '/docs/components',
-    keywords: ['components', 'UI elements', 'buttons', 'inputs', 'modals']
+    keywords: ['components', 'UI elements', 'buttons', 'inputs', 'modals'],
+    image: '/og_docs.png'
   }),
   
   about: generatePageMetadata({
     title: 'About',
     description: 'Learn more about Pumki UI, our mission, and the team behind this beautiful component library.',
     path: '/about',
-    keywords: ['about', 'team', 'mission', 'story']
+    keywords: ['about', 'team', 'mission', 'story'],
+    image: '/og_about.png'
   })
 }

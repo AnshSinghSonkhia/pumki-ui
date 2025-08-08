@@ -1,11 +1,13 @@
 import Footer from "@/components/layout/Footer";
-
+import { generatePageMetadata } from "@/lib/metadata";
 import { Metadata } from "next";
 
-export const metadata:Metadata = {
-    title: "About - Pumki UI",
+export const metadata: Metadata = generatePageMetadata({
+    title: "About",
     description: "Learn more about Pumki UI and its features.",
-}
+    path: "/about",
+    image: "/og_about.png"
+});
 
 export default function AboutLayout({
     children,

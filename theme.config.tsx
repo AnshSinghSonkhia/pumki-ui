@@ -22,7 +22,7 @@ export default {
       <meta property="og:url" content="https://pumki-ui.vercel.app/" />
       <meta property="og:title" content="Pumki UI - Ship stunning UIs from one library, not ten." />
       <meta property="og:description" content="A beautiful React component library with FreeSet typography. Build modern web applications with our comprehensive collection of customizable UI components." />
-      <meta property="og:image" content="https://pumki-ui.vercel.app/logo-pumkiui.png" />
+      <meta property="og:image" content="https://pumki-ui.vercel.app/og_docs.png" />
       <meta property="og:site_name" content="Pumki UI" />
       <meta property="og:locale" content="en_US" />
       
@@ -31,7 +31,7 @@ export default {
       <meta name="twitter:url" content="https://pumki-ui.vercel.app/" />
       <meta name="twitter:title" content="Pumki UI - Ship stunning UIs from one library, not ten." />
       <meta name="twitter:description" content="A beautiful React component library with FreeSet typography. Build modern web applications with our comprehensive collection of customizable UI components." />
-      <meta name="twitter:image" content="https://pumki-ui.vercel.app/logo-pumkiui.png" />
+      <meta name="twitter:image" content="https://pumki-ui.vercel.app/og_docs.png" />
       <meta name="twitter:creator" content="@AnshSinghSonkhia" />
       <meta name="twitter:site" content="@PumkiUI" />
       

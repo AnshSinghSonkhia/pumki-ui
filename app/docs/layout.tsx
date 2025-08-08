@@ -4,8 +4,15 @@ import { getPageMap } from 'nextra/page-map'
 import Footer from '@/components/layout/Footer'
 import { DocsContributors } from '@/components/DocsContributors'
 import { ForceTheme } from '@/components/ForceTheme'
+import { generateDocsMetadata } from '@/lib/metadata'
 import 'nextra-theme-docs/style.css'
 import '../globals.css'
+
+export const metadata = generateDocsMetadata({
+  title: 'Documentation',
+  description: 'Comprehensive documentation for Pumki UI components. Learn how to build stunning UIs with our React component library.',
+  path: '/docs'
+})
 
 const banner = (
   <div className="relative overflow-hidden border-0">

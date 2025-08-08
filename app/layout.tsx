@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     description: 'A beautiful React component library with FreeSet typography. Build modern web applications with our comprehensive collection of customizable UI components.',
     images: [
       {
-        url: '/logo-pumkiui.png',
+        url: '/og_root.png',
         width: 1200,
         height: 630,
         alt: 'Pumki UI - React Component Library',
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     creator: '@AnshSinghSonkhia',
     title: 'Pumki UI - Ship stunning UIs from one library, not ten.',
     description: 'A beautiful React component library with FreeSet typography. Build modern web applications with our comprehensive collection of customizable UI components.',
-    images: ['/logo-pumkiui.png'],
+    images: ['/og_root.png'],
   },
   alternates: {
     canonical: 'https://pumki-ui.vercel.app',
