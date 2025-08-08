@@ -107,3 +107,20 @@ h1, h2, h3, h4, h5, h6,
   letter-spacing: 0.1em;
   font-size: 0.75rem;
 }
+
+/* Folder/Directory items styling - make them bold and bigger */
+/* Broad targeting for all sidebar buttons/clickable items */
+.nextra-sidebar button,
+.nextra-sidebar .cursor-pointer,
+nav button,
+aside button {
+  font-weight: 700 !important;
+  font-size: 1.1rem !important;
+}
+
+/* Override for regular page links to keep them normal */
+.nextra-sidebar a:not(button),
+.nextra-sidebar .nx-link {
+  font-weight: 400 !important;
+  font-size: 0.875rem !important;
+}

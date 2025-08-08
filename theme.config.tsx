@@ -26,6 +26,41 @@ export default {
               localStorage.setItem('theme', 'dark');
               localStorage.setItem('nextra-theme', 'dark');
             })();
+            
+            // Add badges to navigation items
+            function addNavigationBadges() {
+              const sidebarLinks = document.querySelectorAll('.nextra-sidebar a, .nextra-sidebar span');
+              sidebarLinks.forEach(link => {
+                const text = link.textContent;
+                if (text && text.includes('[') && text.includes(']')) {
+                  const match = text.match(/^(.+?)\\s*\\[(\\d+)\\]$/);
+                  if (match) {
+                    const [, title, number] = match;
+                    link.innerHTML = \`
+                      <span style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+                        <span>\${title}</span>
+                        <span style="
+                          background-color: #3b82f6; 
+                          color: white; 
+                          font-size: 0.75rem; 
+                          font-weight: 600;
+                          padding: 2px 6px; 
+                          border-radius: 9999px;
+                          margin-left: 8px;
+                          min-width: 20px;
+                          text-align: center;
+                        ">\${number}</span>
+                      </span>
+                    \`;
+                  }
+                }
+              });
+            }
+            
+            // Run after DOM is loaded
+            document.addEventListener('DOMContentLoaded', addNavigationBadges);
+            // Also run after navigation changes
+            setTimeout(addNavigationBadges, 1000);
           `
         }}
       />

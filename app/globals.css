@@ -377,6 +377,63 @@ html, html[data-theme="light"], html[class*="light"] {
   color-scheme: dark !important;
 }
 
+/* Nextra Sidebar Folder Styling - Make folder names bold, bigger, and white */
+.nextra-sidebar li:has(> div > button) > div > button,
+.nextra-sidebar li:has(> button[aria-expanded]) > button,
+.nextra-sidebar li > div > button[aria-expanded],
+.nextra-sidebar button[aria-expanded="true"],
+.nextra-sidebar button[aria-expanded="false"] {
+  font-weight: 700 !important;
+  font-size: 1.1rem !important;
+  letter-spacing: 0.02em !important;
+  color: #ffffff !important;
+}
+
+/* Alternative approach - target all buttons in sidebar that have children */
+.nextra-sidebar button:has(+ *),
+.nextra-sidebar .cursor-pointer:has(svg) {
+  font-weight: 700 !important;
+  font-size: 1.1rem !important;
+  color: #ffffff !important;
+}
+
+/* Selected/Active navigation items - Electric Blue background */
+.nextra-sidebar [data-active="true"],
+.nextra-sidebar .nx-active,
+.nextra-sidebar [aria-current="page"],
+.nextra-sidebar .active,
+.nextra-sidebar a[data-active],
+.nextra-sidebar li[data-active="true"] a,
+.nextra-sidebar .cursor-pointer[data-active="true"],
+.nextra-sidebar button[data-active="true"] {
+  background-color: #230122 !important;
+  /* background: radial-gradient(125% 125% at 50% 10%, #000000 40%, #350136 100%) !important; */
+  color: #ffffff !important;
+  border-radius: 6px !important;
+  padding: 8px 12px !important;
+  margin: 2px 0 !important;
+}
+
+/* Target by text content - specific to "Components" */
+/* .nextra-sidebar button:contains("Components"),
+.nextra-sidebar *:contains("Components") {
+  font-weight: 700 !important;
+  font-size: 1.1rem !important;
+} */
+
+/* Force all sidebar navigation items to be styled */
+.nextra-sidebar nav * {
+  font-weight: 700 !important;
+  font-size: 1.1rem !important;
+}
+
+.nextra-sidebar button:contains("Getting Started"),
+.nextra-sidebar *:contains("Getting Started") {
+  font-weight: 700 !important;
+  font-size: 1.1rem !important;
+  color: #ffffff !important;
+}
+
 /* Override any light theme colors but don't touch backgrounds */
 :root {
   color-scheme: dark !important;
@@ -400,3 +457,108 @@ button[title*="theme" i],
   background-color: #ffd700; /* Gold/Yellow */
   color: #000000; /* Black text for contrast */
 }
+
+/* Badge styling for navigation items with [number] format */
+.nextra-sidebar a,
+.nextra-sidebar span {
+  position: relative;
+}
+
+/* Style text that contains [number] pattern as badges */
+.nextra-sidebar a:has-text(/\[\d+\]/),
+.nextra-sidebar span:has-text(/\[\d+\]/) {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  width: 100% !important;
+}
+
+/* ===== BADGE SYSTEM FOR NEXTRA SIDEBAR ===== */
+/* This system allows easy addition of number badges and "new" badges to navigation items
+   To add badges to any navigation item, just add it to the appropriate section below */
+
+/* 1. BASE FLEX LAYOUT - Apply to all navigation items that need badges */
+.nextra-sidebar a[href*="buttons"], 
+.nextra-sidebar a[href*="tooltip"], 
+.nextra-sidebar a[href*="ai"] {
+  position: relative;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+}
+
+/* 2. NUMBER BADGE STYLES - Shared styles for all number badges */
+/* These appear at the far right: "Buttons NEW 56" */
+.nextra-sidebar a[href*="buttons"]:after,
+.nextra-sidebar a[href*="tooltip"]:after,
+.nextra-sidebar a[href*="ai"]:after {
+  background-color: #14041c;
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 2px 6px;
+  border-radius: 9999px;
+  margin-left: 4px;
+  min-width: 20px;
+  text-align: center;
+  display: inline-block;
+  order: 2;
+}
+
+/* 3. NUMBER BADGE CONTENT - Add/edit individual badge numbers here */
+.nextra-sidebar a[href*="buttons"]:after {
+  content: "56";
+}
+.nextra-sidebar a[href*="ai"]:after {
+  content: "30";
+}
+.nextra-sidebar a[href*="tooltip"]:after {
+  content: "6";
+}
+
+/* 4. "NEW" BADGE STYLES - Shared styles for all "new" badges */
+/* These appear between the text and the number badge: "Buttons NEW 56" */
+.nextra-sidebar a[href*="tooltip"]:before,
+.nextra-sidebar a[href*="ai"]:before {
+  content: "new";
+  background-color: #640D5F;
+  color: white;
+  font-size: 0.65rem;
+  font-weight: 600;
+  padding: 1px 4px;
+  border-radius: 4px;
+  margin-left: auto;
+  margin-right: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  display: inline-block;
+  order: 1;
+}
+
+/* ===== HOW TO ADD NEW BADGES ===== */
+/* 
+   TO ADD A NUMBER BADGE:
+   1. Add the href selector to section 1 (BASE FLEX LAYOUT)
+   2. Add the href selector to section 2 (NUMBER BADGE STYLES) 
+   3. Add individual content rule in section 3 (NUMBER BADGE CONTENT)
+   
+   TO ADD A "NEW" BADGE:
+   1. Make sure the item already has number badge setup above
+   2. Add the href selector to section 4 ("NEW" BADGE STYLES)
+   
+   EXAMPLE: To add badges to "installation":
+   
+   1. Add to BASE FLEX LAYOUT:
+   .nextra-sidebar a[href*="installation"] {
+   
+   2. Add to NUMBER BADGE STYLES:
+   .nextra-sidebar a[href*="installation"]:after {
+   
+   3. Add NUMBER BADGE CONTENT:
+   .nextra-sidebar a[href*="installation"]:after {
+     content: "5";
+   }
+   
+   4. OPTIONAL - Add to "NEW" BADGE STYLES:
+   .nextra-sidebar a[href*="installation"]:before {
+*/

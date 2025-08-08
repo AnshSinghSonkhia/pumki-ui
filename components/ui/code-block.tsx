@@ -89,11 +89,17 @@ export const CodeBlock: React.FC<CodeBlockProps> = ({
       {/* Header - only show if filename exists */}
       {filename && (
         <div className="flex items-center justify-between px-4 py-2 bg-muted/80 border-b border-border">
-          <div className="flex items-center gap-2">
-            <div className="w-3 h-3 rounded-full bg-red-500"></div>
+          <div className="flex items-center gap-0.5">
+            
+            {/* <div className="w-3 h-3 rounded-full bg-red-500"></div>
             <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
-            <div className="w-3 h-3 rounded-full bg-green-500"></div>
-            <span className="ml-2 text-sm font-medium text-muted-foreground">{filename}</span>
+            <div className="w-3 h-3 rounded-full bg-green-500"></div> */}
+            <span className="ml-1 text-sm font-medium text-muted-foreground">{filename}</span>
+            <img 
+              src="/icon-no-bg.png" 
+              alt="Pumki UI" 
+              className="ml-2 w-6 h-6"
+            />
           </div>
           {copy && (
             <button

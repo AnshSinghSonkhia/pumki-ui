@@ -1,4 +1,5 @@
 export default {
+    ai: 'AI Chats',
     buttons: 'Buttons',
-    ai: 'ArtiIN',
+    tooltip: 'Tooltips',
 }
