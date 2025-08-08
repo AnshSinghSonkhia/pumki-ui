@@ -6,9 +6,7 @@ import Footer from '@/components/layout/Footer';
 const NotFound = () => {
   return (
     <>
-        {/* <div className="flex w-full h-screen justify-center items-center">
-        </div> */}
-            <NotFoundPage />
+        <NotFoundPage />
         <Footer />
     </>
   )
