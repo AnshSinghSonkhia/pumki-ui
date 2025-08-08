@@ -584,3 +584,102 @@ button[title*="theme" i],
    4. OPTIONAL - Add to "NEW" BADGE STYLES:
    .nextra-sidebar a[href*="installation"]:before {
 */
+
+/* Mobile Navigation Z-Index Fix */
+@media (max-width: 768px) {
+  /* Hide mobile navigation by default */
+  .nextra-mobile-nav {
+    display: none !important; /* Hidden by default */
+    z-index: 9998 !important; /* Lower than hamburger button */
+    background-color: #000000 !important; /* Black background to see position */
+    top: var(--nextra-navbar-height, 64px) !important; /* Start below navbar */
+    height: calc(100vh - var(--nextra-navbar-height, 64px)) !important; /* Don't cover navbar */
+  }
+  
+  /* Show mobile navigation only when hamburger is open (when html has overflow hidden class) */
+  html.x\:max-md\:overflow-hidden .nextra-mobile-nav {
+    display: flex !important; /* Show when menu is open */
+  }
+  
+  /* Ensure mobile nav container and its children have proper z-index */
+  .nextra-mobile-nav,
+  .nextra-mobile-nav * {
+    z-index: 9998 !important; /* Lower than hamburger */
+  }
+  
+  /* Override the x:z-20 class with themed styling */
+  aside.nextra-mobile-nav {
+    z-index: 9998 !important; /* Lower than hamburger */
+    position: fixed !important;
+    background: linear-gradient(135deg, oklch(0.087 0.072 318.5) 0%, oklch(0.12 0.075 318.5) 100%) !important;
+    backdrop-filter: blur(20px) !important;
+    border: 1px solid oklch(0.3 0.05 318.5 / 30%) !important;
+    border-radius: 0 0 16px 16px !important;
+    box-shadow: 0 10px 40px oklch(0.087 0.072 318.5 / 60%) !important;
+    top: var(--nextra-navbar-height, 64px) !important; /* Start below navbar */
+    margin-top: 40px !important; /* Reduced from 20px to 8px */
+    height: calc(100vh - var(--nextra-navbar-height, 64px) - 8px) !important; /* Adjust height for smaller margin */
+    padding-top: 8px !important; /* Reduce internal top padding */
+  }
+  
+  /* Ensure hamburger button stays on top */
+  .nextra-nav-container,
+  .nextra-nav-container *,
+  .nextra-hamburger,
+  .nextra-nav-container .nextra-hamburger,
+  .nextra-nav-container .nextra-hamburger button,
+  button[aria-label="Open menu"],
+  button[aria-label="Close menu"] {
+    z-index: 9999 !important; /* Higher than mobile nav */
+    position: relative !important;
+  }
+  
+  /* Mobile navigation content styling */
+  .nextra-mobile-nav .nextra-search,
+  .nextra-mobile-nav ul,
+  .nextra-mobile-nav li,
+  .nextra-mobile-nav a,
+  .nextra-mobile-nav button {
+    z-index: 9998 !important;
+    position: relative !important;
+  }
+  
+  /* Style mobile navigation text and elements */
+  .nextra-mobile-nav,
+  .nextra-mobile-nav * {
+    color: oklch(0.985 0 0) !important; /* White text */
+  }
+  
+  /* Mobile navigation links hover effects */
+  .nextra-mobile-nav a:hover,
+  .nextra-mobile-nav button:hover {
+    background-color: oklch(0.25 0.08 318.5 / 40%) !important;
+    border-radius: 8px !important;
+    transition: all 0.2s ease !important;
+  }
+  
+  /* Mobile navigation active/selected items */
+  .nextra-mobile-nav [data-active="true"],
+  .nextra-mobile-nav .nx-active,
+  .nextra-mobile-nav [aria-current="page"] {
+    background: linear-gradient(135deg, oklch(0.55 0.24 340.5 / 20%) 0%, oklch(0.45 0.20 340.5 / 30%) 100%) !important;
+    border: 1px solid oklch(0.55 0.24 340.5 / 40%) !important;
+    border-radius: 8px !important;
+    color: oklch(0.985 0 0) !important;
+  }
+  
+  /* Mobile search input styling */
+  .nextra-mobile-nav input[type="search"],
+  .nextra-mobile-nav .nextra-search input {
+    background-color: oklch(0.15 0.08 318.5 / 80%) !important;
+    border: 1px solid oklch(0.3 0.05 318.5 / 40%) !important;
+    border-radius: 12px !important;
+    color: oklch(0.985 0 0) !important;
+    padding: 12px 16px !important;
+  }
+  
+  .nextra-mobile-nav input[type="search"]::placeholder,
+  .nextra-mobile-nav .nextra-search input::placeholder {
+    color: oklch(0.705 0.015 318.5) !important;
+  }
+}
