@@ -6,5 +6,9 @@ export default {
   about: {
     title: 'About',
     type: 'page'
+  },
+  careers: {
+    title: 'Careers',
+    type: 'page'
   }
 }

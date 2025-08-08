@@ -8,6 +8,10 @@ interface PageMetadataProps {
   image?: string
 }
 
+const baseUrl = process.env.NODE_ENV === 'production' 
+  ? 'https://pumki-ui.vercel.app'
+  : 'http://localhost:3000'
+
 export function generatePageMetadata({
   title = 'Pumki UI',
   description = 'A beautiful React component library with FreeSet typography. Build modern web applications with our comprehensive collection of customizable UI components.',
@@ -19,8 +23,8 @@ export function generatePageMetadata({
     ? 'Pumki UI - Ship stunning UIs from one library, not ten.'
     : `${title} - Pumki UI`
   
-  const url = `https://pumki-ui.vercel.app${path}`
-  const imageUrl = `https://pumki-ui.vercel.app${image}`
+  const url = `${baseUrl}${path}`
+  const imageUrl = `${baseUrl}${image}`
   
   const defaultKeywords = [
     'React',

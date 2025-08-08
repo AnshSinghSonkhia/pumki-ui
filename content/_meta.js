@@ -18,5 +18,10 @@ export default {
         title: 'About',
         type: 'page',
         href: '/about',
+    },
+    careers: {
+        title: 'Careers',
+        type: 'page',
+        href: '/careers',
     }
 }

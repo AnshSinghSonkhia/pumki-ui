@@ -7,7 +7,8 @@ import { Spotlight } from '@/components/landing/ui-animations/spotlight';
 import { useTheme } from 'next-themes';
 import { cn } from '@/lib/utils';
 // import { Badge } from '@/components/ui/badge';
-import Navbar from "@/components/landing/ui/aboutNavbar";
+import DynamicNavbar from '@/components/landing/ui/DynamicNavbar';
+import { getNavigationConfig } from '@/lib/navigation';
 import { Lightning } from "@/components/landing/ui-animations/lightning";
 // import { ChevronRight } from 'lucide-react';
 import { GradientBars } from '@/components/landing/ui-animations/gradient-bars';
@@ -107,7 +108,10 @@ export default function About() {
 
   return (
     <>
-      <Navbar />
+      <DynamicNavbar 
+        navigationLinks={getNavigationConfig('about')}
+        variant="gradient"
+      />
 
       {/* Orchid Depths */}
       <div

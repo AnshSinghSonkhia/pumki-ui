@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useRef, useLayoutEffect } from "react"
-import Logo from "@/components/logo"
+import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import {
   NavigationMenu,
@@ -16,20 +16,24 @@ import {
 } from "@/components/ui/popover"
 import { Github } from "lucide-react"
 
-// Navigation links array to be used in both desktop and mobile menus
-// const navigationLinks = [
-//   { href: "#", label: "Home", active: true },
-//   { href: "#", label: "Features" },
-//   { href: "#", label: "Pricing" },
-//   { href: "#", label: "About" },
-// ]
+export interface NavLink {
+  href: string
+  label: string
+  active?: boolean
+}
 
-const navigationLinks = [
-  { href: "/docs", label: "Docs" },
-  { href: "/docs/components", label: "Components" },
-]
+interface DynamicNavbarProps {
+  navigationLinks: NavLink[]
+  variant?: 'default' | 'gradient' // For different styling variants
+  className?: string
+}
 
-export default function Navbar() {
+export default function DynamicNavbar({ 
+  navigationLinks, 
+  variant = 'default',
+  className = '' 
+}: DynamicNavbarProps) {
+  const [open, setOpen] = useState(false)
   const [isLimelightReady, setIsLimelightReady] = useState(false)
   const textRef = useRef<HTMLSpanElement | null>(null)
   const limelightRef = useRef<HTMLDivElement | null>(null)
@@ -41,16 +45,25 @@ export default function Navbar() {
     }
   }, [isLimelightReady])
 
+  const headerClasses = variant === 'gradient' 
+    ? "relative z-50 border-b px-4 md:px-6 bg-gradient-to-r from-pink-500/10 via-background/80 to-pink-400/10 backdrop-blur-sm"
+    : "relative z-50 border-b px-4 md:px-6"
+
   return (
-    <header className="relative z-50 border-b px-4 md:px-6 bg-gradient-to-r from-pink-500/10 via-background/80 to-pink-400/10 backdrop-blur-sm">
+    <header className={`${headerClasses} ${className}`}>
       <div className="flex h-16 justify-between gap-4">
         {/* Left side */}
         <div className="flex gap-2">
           <div className="flex items-center md:hidden">
             {/* Mobile menu trigger */}
-            <Popover>
+            <Popover open={open} onOpenChange={setOpen}>
               <PopoverTrigger asChild>
-                <Button className="relative z-30 group size-8" variant="ghost" size="icon" aria-label="Toggle menu">
+                <Button 
+                  className="relative z-30 group size-8" 
+                  variant="ghost" 
+                  size="icon"
+                  aria-label="Toggle menu"
+                >
                   <svg
                     className="pointer-events-none"
                     width={16}
@@ -78,29 +91,28 @@ export default function Navbar() {
                   </svg>
                 </Button>
               </PopoverTrigger>
-              <PopoverContent align="start" className="w-64 p-4 md:hidden">
-                <NavigationMenu className="max-w-none *:w-full">
-                  <NavigationMenuList className="flex-col items-start gap-2">
-                    {navigationLinks.map((link, index) => (
-                      <NavigationMenuItem key={index} className="w-full">
-                        <NavigationMenuLink
-                          href={link.href}
-                          className="w-full rounded-md py-2 px-4 hover:bg-accent hover:text-accent-foreground transition-colors"
-                        >
-                          {link.label}
-                        </NavigationMenuLink>
-                      </NavigationMenuItem>
-                    ))}
-                  </NavigationMenuList>
-                </NavigationMenu>
+              <PopoverContent align="start" className="z-50 w-64 p-4 md:hidden">
+                <nav className="space-y-2">
+                  {navigationLinks.map((link, index) => (
+                    <Link
+                      key={index}
+                      href={link.href}
+                      onClick={() => setOpen(false)}
+                      className={`block w-full rounded-md py-2 px-4 hover:bg-accent hover:text-accent-foreground transition-colors ${
+                        link.active ? 'bg-accent text-accent-foreground' : ''
+                      }`}
+                    >
+                      {link.label}
+                    </Link>
+                  ))}
+                </nav>
               </PopoverContent>
             </Popover>
           </div>
           {/* Main nav */}
           <div className="flex items-center gap-6">
-            <a href="/" className="relative flex items-center gap-2 text-primary hover:text-primary/90 cursor-pointer">
-              <img src="/icon-no-bg.png" alt="Pumki UI Logo" className="relative z-20 h-8 w-8" />
-              {/* <span className="font-bold text-xl tracking-tight text-white cursor-pointer">Pumki UI</span> */}
+            <Link href="/" className="relative flex items-center gap-2 text-primary hover:text-primary/90 cursor-pointer">
+              <img src="/icon-no-bg.png" alt="Pumki UI Logo" className="relative z-20 h-8 w-8 cursor-pointer" />
               <span 
                 ref={textRef}
                 className="relative z-20 from-primary/10 via-foreground/85 to-foreground/50 bg-gradient-to-tl bg-clip-text text-2xl tracking-tight font-bold text-balance text-transparent cursor-pointer pt-1"
@@ -124,17 +136,21 @@ export default function Navbar() {
                 {/* Top light source */}
                 <div className="absolute left-[20%] -top-1 w-[60%] h-2 bg-gradient-to-r from-transparent via-primary/60 to-transparent rounded-full blur-sm" />
               </div>
-            </a>
+            </Link>
             {/* Navigation menu */}
             <NavigationMenu className="h-full *:h-full max-md:hidden">
               <NavigationMenuList className="h-full gap-2">
                 {navigationLinks.map((link, index) => (
                   <NavigationMenuItem key={index} className="h-full">
                     <NavigationMenuLink
-                      href={link.href}
-                      className="text-muted-foreground hover:text-primary border-b-primary hover:border-b-primary data-[active]:border-b-primary h-full justify-center rounded-none border-y-2 border-transparent py-1.5 font-medium hover:bg-transparent data-[active]:bg-transparent!"
+                      asChild
+                      className={`text-muted-foreground hover:text-primary border-b-primary hover:border-b-primary h-full justify-center rounded-none border-y-2 border-transparent py-1.5 font-medium hover:bg-transparent transition-colors ${
+                        link.active ? 'border-b-primary text-primary bg-transparent!' : 'data-[active]:border-b-primary data-[active]:bg-transparent!'
+                      }`}
                     >
-                      {link.label}
+                      <Link href={link.href}>
+                        {link.label}
+                      </Link>
                     </NavigationMenuLink>
                   </NavigationMenuItem>
                 ))}
@@ -142,21 +158,8 @@ export default function Navbar() {
             </NavigationMenu>
           </div>
         </div>
-        {/* Right side */}
+        {/* Right side - GitHub button (permanent) */}
         <div className="flex items-center gap-2">
-          {/* <Button asChild variant="ghost" size="sm" className="text-sm">
-            <a href="#">Sign In</a>
-          </Button> */}
-          {/* <Button
-            variant="rainbow"
-            size="sm"
-            className="group hover:shadow-primary/30 relative overflow-hidden rounded-full px-6 shadow-lg transition-all duration-300 cursor-pointer"
-          >
-            <span className="relative z-10 flex items-center gap-2">
-              <Github className="h-4 w-4" />
-              GitHub
-            </span>
-          </Button> */}
           <Button
             asChild
             variant="shine-outline"
@@ -172,9 +175,6 @@ export default function Navbar() {
               Star on GitHub
             </a>
           </Button>
-          {/* <Button asChild size="sm" className="text-sm">
-            <a href="#">GitHub</a>
-          </Button> */}
         </div>
       </div>
     </header>

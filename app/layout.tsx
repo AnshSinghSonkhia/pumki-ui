@@ -5,6 +5,7 @@ import { ViewTransitions } from "next-view-transitions";
 import { ForceTheme } from "@/components/ForceTheme";
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://pumki-ui.vercel.app'),
   title: "Pumki UI - Ship stunning UIs from one library, not ten.",
   description: "A beautiful React component library with FreeSet typography. Build modern web applications with our comprehensive collection of customizable UI components.",
   keywords: [

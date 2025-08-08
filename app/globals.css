@@ -349,6 +349,28 @@ html {
   :root:not(.dark) html {
     scrollbar-color: oklch(0.75 0.004 286.32 / 0.4) oklch(0.94 0.002 286.375);
   }
+
+/* Utility to hide scrollbars */
+.careerscrollbar-hide {
+  /* Hide scrollbar for IE, Edge and Firefox */
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.careerscrollbar-hide::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for Chrome, Safari and Opera */
+  width: 0;
+  height: 0;
+}
+
+/* Additional fallback for mobile webkit browsers */
+.careerscrollbar-hide::-webkit-scrollbar-track {
+  display: none;
+}
+
+.careerscrollbar-hide::-webkit-scrollbar-thumb {
+  display: none;
+}
 }
 
 /* Custom Banner Animations */

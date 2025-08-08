@@ -10,7 +10,8 @@ import { Canvas } from "@react-three/fiber";
 import { Ripple } from "@/components/landing/ui-animations/ripple";
 import { StickyArrow } from "@/components/landing/ui-animations/sticky-arrow";
 import { cn } from '@/lib/utils';
-import Navbar from "@/components/landing/ui/Navbar";
+import DynamicNavbar from '@/components/landing/ui/DynamicNavbar';
+import { getNavigationConfig } from '@/lib/navigation';
 
 export default function GradientHero() {
   return (
@@ -34,7 +35,9 @@ export default function GradientHero() {
         <Ripple />
       </div>
 
-      <Navbar />
+      <DynamicNavbar 
+        navigationLinks={getNavigationConfig('home')}
+      />
 
       <div className="relative z-10 container mx-auto px-4 py-12 sm:px-6 lg:px-8 lg:py-20">
         <div className="mx-auto max-w-5xl">
