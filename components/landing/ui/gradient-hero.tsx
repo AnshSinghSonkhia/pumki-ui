@@ -115,7 +115,7 @@ export default function GradientHero() {
               variant="shine-outline"
               size="lg"
               className="border-border bg-background/50 flex items-center gap-2 rounded-full backdrop-blur-sm cursor-pointer"
-              onClick={() => window.location.href = '/docs'}
+              onClick={() => window.location.href = '/docs/components'}
               data-sticky-arrow-target
             >
               {/* <Github className="h-4 w-4" /> */}
