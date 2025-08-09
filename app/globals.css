@@ -480,111 +480,6 @@ button[title*="theme" i],
   color: #000000; /* Black text for contrast */
 }
 
-/* Badge styling for navigation items with [number] format */
-.nextra-sidebar a,
-.nextra-sidebar span {
-  position: relative;
-}
-
-/* Style text that contains [number] pattern as badges */
-.nextra-sidebar a:has-text(/\[\d+\]/),
-.nextra-sidebar span:has-text(/\[\d+\]/) {
-  display: flex !important;
-  justify-content: space-between !important;
-  align-items: center !important;
-  width: 100% !important;
-}
-
-/* ===== BADGE SYSTEM FOR NEXTRA SIDEBAR ===== */
-/* This system allows easy addition of number badges and "new" badges to navigation items
-   To add badges to any navigation item, just add it to the appropriate section below */
-
-/* 1. BASE FLEX LAYOUT - Apply to all navigation items that need badges */
-.nextra-sidebar a[href*="buttons"], 
-.nextra-sidebar a[href*="tooltip"], 
-.nextra-sidebar a[href*="ai"] {
-  position: relative;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: space-between !important;
-}
-
-/* 2. NUMBER BADGE STYLES - Shared styles for all number badges */
-/* These appear at the far right: "Buttons NEW 56" */
-.nextra-sidebar a[href*="buttons"]:after,
-.nextra-sidebar a[href*="tooltip"]:after,
-.nextra-sidebar a[href*="ai"]:after {
-  background-color: #14041c;
-  color: white;
-  font-size: 0.75rem;
-  font-weight: 600;
-  padding: 2px 6px;
-  border-radius: 9999px;
-  margin-left: 4px;
-  min-width: 20px;
-  text-align: center;
-  display: inline-block;
-  order: 2;
-}
-
-/* 3. NUMBER BADGE CONTENT - Add/edit individual badge numbers here */
-.nextra-sidebar a[href*="buttons"]:after {
-  content: "56";
-}
-.nextra-sidebar a[href*="ai"]:after {
-  content: "30";
-}
-.nextra-sidebar a[href*="tooltip"]:after {
-  content: "6";
-}
-
-/* 4. "NEW" BADGE STYLES - Shared styles for all "new" badges */
-/* These appear between the text and the number badge: "Buttons NEW 56" */
-.nextra-sidebar a[href*="tooltip"]:before,
-.nextra-sidebar a[href*="ai"]:before {
-  content: "new";
-  background-color: #640D5F;
-  color: white;
-  font-size: 0.65rem;
-  font-weight: 600;
-  padding: 1px 4px;
-  border-radius: 4px;
-  margin-left: auto;
-  margin-right: 6px;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  display: inline-block;
-  order: 1;
-}
-
-/* ===== HOW TO ADD NEW BADGES ===== */
-/* 
-   TO ADD A NUMBER BADGE:
-   1. Add the href selector to section 1 (BASE FLEX LAYOUT)
-   2. Add the href selector to section 2 (NUMBER BADGE STYLES) 
-   3. Add individual content rule in section 3 (NUMBER BADGE CONTENT)
-   
-   TO ADD A "NEW" BADGE:
-   1. Make sure the item already has number badge setup above
-   2. Add the href selector to section 4 ("NEW" BADGE STYLES)
-   
-   EXAMPLE: To add badges to "installation":
-   
-   1. Add to BASE FLEX LAYOUT:
-   .nextra-sidebar a[href*="installation"] {
-   
-   2. Add to NUMBER BADGE STYLES:
-   .nextra-sidebar a[href*="installation"]:after {
-   
-   3. Add NUMBER BADGE CONTENT:
-   .nextra-sidebar a[href*="installation"]:after {
-     content: "5";
-   }
-   
-   4. OPTIONAL - Add to "NEW" BADGE STYLES:
-   .nextra-sidebar a[href*="installation"]:before {
-*/
-
 /* Mobile Navigation Z-Index Fix */
 @media (max-width: 768px) {
   /* Hide mobile navigation by default */
@@ -683,3 +578,179 @@ button[title*="theme" i],
     color: oklch(0.705 0.015 318.5) !important;
   }
 }
+
+/* Badge styling for navigation items with [number] format */
+.nextra-sidebar a,
+.nextra-sidebar span {
+  position: relative;
+}
+
+/* Style text that contains [number] pattern as badges */
+.nextra-sidebar a:has-text(/\[\d+\]/),
+.nextra-sidebar span:has-text(/\[\d+\]/) {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  width: 100% !important;
+}
+
+/* ===== BADGE SYSTEM FOR NEXTRA SIDEBAR ===== */
+/* This system allows easy addition of number badges and "new" badges to navigation items
+   To add badges to any navigation item, just add it to the appropriate section below */
+
+   /* 1. BASE FLEX LAYOUT - Apply to all navigation items that need badges */
+.nextra-sidebar a[href*="silver"], 
+.nextra-sidebar a[href*="yellow"], 
+.nextra-sidebar a[href*="white"], 
+.nextra-sidebar a[href*="teal"], 
+.nextra-sidebar a[href*="red"], 
+.nextra-sidebar a[href*="purple"], 
+.nextra-sidebar a[href*="pink"], 
+.nextra-sidebar a[href*="orange"], 
+.nextra-sidebar a[href*="green"], 
+.nextra-sidebar a[href*="gray"], 
+.nextra-sidebar a[href*="cyan"], 
+.nextra-sidebar a[href*="brown"], 
+.nextra-sidebar a[href*="blue"], 
+.nextra-sidebar a[href*="black"], 
+.nextra-sidebar a[href*="buttons"], 
+.nextra-sidebar a[href*="tooltip"], 
+.nextra-sidebar a[href*="ai"] {
+  position: relative;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+}
+
+/* 2. NUMBER BADGE STYLES - Shared styles for all number badges */
+/* These appear at the far right: "Buttons NEW 56" */
+.nextra-sidebar a[href*="silver"]:after, 
+.nextra-sidebar a[href*="yellow"]:after, 
+.nextra-sidebar a[href*="white"]:after, 
+.nextra-sidebar a[href*="teal"]:after, 
+.nextra-sidebar a[href*="red"]:after, 
+.nextra-sidebar a[href*="purple"]:after, 
+.nextra-sidebar a[href*="pink"]:after, 
+.nextra-sidebar a[href*="orange"]:after, 
+.nextra-sidebar a[href*="green"]:after, 
+.nextra-sidebar a[href*="gray"]:after, 
+.nextra-sidebar a[href*="cyan"]:after, 
+.nextra-sidebar a[href*="brown"]:after, 
+.nextra-sidebar a[href*="blue"]:after, 
+.nextra-sidebar a[href*="black"]:after,
+.nextra-sidebar a[href*="buttons"]:after,
+.nextra-sidebar a[href*="tooltip"]:after,
+.nextra-sidebar a[href*="ai"]:after {
+  background-color: #14041c;
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 2px 6px;
+  border-radius: 9999px;
+  margin-left: 4px;
+  min-width: 20px;
+  text-align: center;
+  display: inline-block;
+  order: 2;
+}
+
+/* 3. NUMBER BADGE CONTENT - Add/edit individual badge numbers here */
+.nextra-sidebar a[href*="buttons"]:after {
+  content: "56";
+}
+.nextra-sidebar a[href*="ai"]:after {
+  content: "30";
+}
+.nextra-sidebar a[href*="tooltip"]:after {
+  content: "6";
+}
+.nextra-sidebar a[href*="black"]:after {
+  content: "132";
+}
+.nextra-sidebar a[href*="blue"]:after {
+  content: "73";
+}
+.nextra-sidebar a[href*="brown"]:after {
+  content: "13";
+}
+.nextra-sidebar a[href*="cyan"]:after {
+  content: "50";
+}
+.nextra-sidebar a[href*="gray"]:after {
+  content: "42";
+}
+.nextra-sidebar a[href*="green"]:after {
+  content: "42";
+}
+.nextra-sidebar a[href*="orange"]:after {
+  content: "32";
+}
+.nextra-sidebar a[href*="pink"]:after {
+  content: "45";
+}
+.nextra-sidebar a[href*="purple"]:after {
+  content: "36";
+}
+.nextra-sidebar a[href*="red"]:after {
+  content: "40";
+}
+.nextra-sidebar a[href*="teal"]:after {
+  content: "50";
+}
+.nextra-sidebar a[href*="white"]:after {
+  content: "11";
+}
+.nextra-sidebar a[href*="yellow"]:after {
+  content: "46";
+}
+.nextra-sidebar a[href*="silver"]:after {
+  content: "9";
+}
+
+/* 4. "NEW" BADGE STYLES - Shared styles for all "new" badges */
+/* These appear between the text and the number badge: "Buttons NEW 56" */
+.nextra-sidebar a[href*="silver"]:before,
+.nextra-sidebar a[href*="tooltip"]:before,
+.nextra-sidebar a[href*="ai"]:before {
+  content: "new";
+  background-color: #640D5F;
+  color: white;
+  font-size: 0.65rem;
+  font-weight: 600;
+  padding: 1px 4px;
+  border-radius: 4px;
+  margin-left: auto;
+  margin-right: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  display: inline-block;
+  order: 1;
+}
+
+/* ===== HOW TO ADD NEW BADGES ===== */
+/* 
+   TO ADD A NUMBER BADGE:
+   1. Add the href selector to section 1 (BASE FLEX LAYOUT)
+   2. Add the href selector to section 2 (NUMBER BADGE STYLES) 
+   3. Add individual content rule in section 3 (NUMBER BADGE CONTENT)
+   
+   TO ADD A "NEW" BADGE:
+   1. Make sure the item already has number badge setup above
+   2. Add the href selector to section 4 ("NEW" BADGE STYLES)
+   
+   EXAMPLE: To add badges to "installation":
+   
+   1. Add to BASE FLEX LAYOUT:
+   .nextra-sidebar a[href*="installation"] {
+   
+   2. Add to NUMBER BADGE STYLES:
+   .nextra-sidebar a[href*="installation"]:after {
+   
+   3. Add NUMBER BADGE CONTENT:
+   .nextra-sidebar a[href*="installation"]:after {
+     content: "5";
+   }
+   
+   4. OPTIONAL - Add to "NEW" BADGE STYLES:
+   .nextra-sidebar a[href*="installation"]:before {
+*/

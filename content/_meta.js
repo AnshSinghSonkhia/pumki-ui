@@ -14,6 +14,7 @@ export default {
     //     title: "Components",
     // },
     components: 'Components',
+    gradients: 'Gradients',
     about: {
         title: 'About',
         type: 'page',

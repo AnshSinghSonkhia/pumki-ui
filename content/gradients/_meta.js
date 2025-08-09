@@ -1,0 +1,16 @@
+export default {
+    blue: 'Blue Grads',
+    brown: 'Brown Grads',
+    cyan: 'Cyan Grads',
+    gray: 'Gray Grads',
+    green: 'Green Grads',
+    orange: 'Orange Grads',
+    pink: 'Pink Grads',
+    purple: 'Purple Grads',
+    red: 'Red Grads',
+    silver: 'Silver Grads',
+    teal: 'Teal Grads',
+    yellow: 'Yellow Grads',
+    black: 'Black Grads',
+    white: 'White Grads',
+}
