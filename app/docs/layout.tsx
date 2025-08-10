@@ -1,3 +1,4 @@
+import React from 'react'
 import { Layout, Navbar } from 'nextra-theme-docs'
 import { Banner, Head } from 'nextra/components'
 import { getPageMap } from 'nextra/page-map'
@@ -94,7 +95,7 @@ const navbar = (
   </Navbar>
 )
 
-const footer = <Footer />
+const footer = <React.Fragment key="footer"><Footer /></React.Fragment>
 
 export default async function DocsLayout({ children }: { children: React.ReactNode }) {
   return (

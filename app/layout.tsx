@@ -1,7 +1,6 @@
 
 import type { Metadata } from "next";
 import "./globals.css";
-import { ViewTransitions } from "next-view-transitions";
 import { ForceTheme } from "@/components/ForceTheme";
 
 export const metadata: Metadata = {
@@ -71,7 +70,6 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ViewTransitions>
       <html lang="en" className="dark" data-theme="dark" suppressHydrationWarning>
         <head>
           <meta charSet="utf-8" />
@@ -108,6 +106,5 @@ export default function RootLayout({
           {children}
         </body>
       </html>
-    </ViewTransitions>
   );
 }

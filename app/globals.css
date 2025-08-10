@@ -665,7 +665,7 @@ button[title*="theme" i],
   content: "6";
 }
 .nextra-sidebar a[href*="black"]:after {
-  content: "132";
+  content: "133";
 }
 .nextra-sidebar a[href*="blue"]:after {
   content: "73";
@@ -677,7 +677,7 @@ button[title*="theme" i],
   content: "50";
 }
 .nextra-sidebar a[href*="gray"]:after {
-  content: "42";
+  content: "50";
 }
 .nextra-sidebar a[href*="green"]:after {
   content: "42";
@@ -698,7 +698,7 @@ button[title*="theme" i],
   content: "50";
 }
 .nextra-sidebar a[href*="white"]:after {
-  content: "11";
+  content: "17";
 }
 .nextra-sidebar a[href*="yellow"]:after {
   content: "46";

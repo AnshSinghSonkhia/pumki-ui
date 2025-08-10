@@ -19,7 +19,7 @@
     ]
     },
     {
-    "name": "Man of Steel",
+    "name": "Brahmos",
     "colors": ["#780206", "#061161"],
     "colorsname": ["dark red", "dark blue"],
     "keywords": [
@@ -74,7 +74,7 @@
     ]
     },
     {
-    "name": "Blooker20",
+    "name": "Tejas",
     "colors": ["#e65c00", "#F9D423"],
     "colorsname": ["bright orange", "light yellow"],
     "keywords": [
@@ -261,7 +261,7 @@
     ]
   },
   {
-    "name": "Farhan",
+    "name": "Bhopal",
     "colors": ["#9400D3", "#4B0082"],
     "colorsname": ["dark violet", "indigo"],
     "keywords": [
@@ -279,7 +279,7 @@
     ]
   },
   {
-    "name": "Ibtesam",
+    "name": "Khushi",
     "colors": ["#00F5A0", "#00D9F5"],
     "colorsname": ["light green", "light cyan"],
     "keywords": [
@@ -352,7 +352,7 @@
     ]
   },
   {
-    "name": "Ver",
+    "name": "Veer",
     "colors": ["#FFE000", "#799F0C"],
     "colorsname": ["bright yellow", "green"],
     "keywords": [
@@ -361,7 +361,7 @@
     ]
   },
   {
-    "name": "Ver Black",
+    "name": "Veer Black",
     "colors": ["#F7F8F8", "#ACBB78"],
     "colorsname": ["light gray", "olive"],
     "keywords": [
@@ -370,7 +370,7 @@
     ]
   },
   {
-    "name": "Anwar",
+    "name": "Ujjwal",
     "colors": ["#334d50", "#cbcaa5"],
     "colorsname": ["dark grayish teal", "light beige"],
     "keywords": [
@@ -680,7 +680,7 @@
     ]
   },
   {
-    "name": "Bloody Mary",
+    "name": "Monjulika",
     "colors": ["#FF512F", "#DD2476"],
     "colorsname": ["bright red", "bright pink"],
     "keywords": [
@@ -789,7 +789,7 @@
     ]
   },
   {
-    "name": "Kashmir",
+    "name": "Pune",
     "colors": ["#614385", "#516395"],
     "colorsname": ["dark purple", "dark blue"],
     "keywords": [
@@ -933,7 +933,7 @@
     ]
   },
   {
-    "name": "Stellar",
+    "name": "Interstellar",
     "colors": ["#7474BF", "#348AC7"],
     "colorsname": ["dark blue", "bright blue"],
     "keywords": [
@@ -1493,7 +1493,7 @@
     ]
   },
   {
-    "name": "Virgin America",
+    "name": "Virgin Bihar",
     "colors": ["#7b4397", "#dc2430"],
     "colorsname": ["dark purple", "bright red"],
     "keywords": [
@@ -1736,7 +1736,7 @@
     ]
   },
   {
-    "name": "Haikus",
+    "name": "Kavita",
     "colors": ["#fd746c", "#ff9068"],
     "colorsname": ["light pink", "light orange"],
     "keywords": [
@@ -1772,7 +1772,7 @@
     ]
   },
   {
-    "name": "Minnesota Vikings",
+    "name": "Rajput Vikings",
     "colors": ["#5614B0", "#DBD65C"],
     "colorsname": ["dark purple", "light yellow"],
     "keywords": [
@@ -1781,7 +1781,7 @@
     ]
   },
   {
-    "name": "Miami Dolphins",
+    "name": "Ganga Dolphins",
     "colors": ["#4DA0B0", "#D39D38"],
     "colorsname": ["dark teal", "light orange"],
     "keywords": [
@@ -1862,7 +1862,7 @@
     ]
   },
   {
-    "name": "Ali",
+    "name": "Kanha",
     "colors": ["#ff4b1f", "#1fddff"],
     "colorsname": ["bright red", "bright cyan"],
     "keywords": [
@@ -1871,7 +1871,7 @@
     ]
   },
   {
-    "name": "Alihossein",
+    "name": "Kanha Bright",
     "colors": ["#f7ff00", "#db36a4"],
     "colorsname": ["bright yellow", "bright pink"],
     "keywords": [
@@ -1880,7 +1880,7 @@
     ]
   },
   {
-    "name": "Shahabi",
+    "name": "Gwalior",
     "colors": ["#a80077", "#66ff00"],
     "colorsname": ["dark pink", "bright green"],
     "keywords": [
@@ -2106,7 +2106,7 @@
       ]
     },
     {
-      "name": "Ali",
+      "name": "Kanha",
       "colors": ["#ff4b1f", "#1fddff"],
       "colorsname": ["bright red", "bright cyan"],
       "keywords": [
@@ -2115,7 +2115,7 @@
       ]
     },
     {
-      "name": "Alihossein",
+      "name": "Kanha Bright",
       "colors": ["#f7ff00", "#db36a4"],
       "colorsname": ["bright yellow", "bright pink"],
       "keywords": [
@@ -2124,7 +2124,7 @@
       ]
     },
     {
-      "name": "Shahabi",
+      "name": "Gwalior",
       "colors": ["#a80077", "#66ff00"],
       "colorsname": ["dark pink", "bright green"],
       "keywords": [
