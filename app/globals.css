@@ -1,76 +1,76 @@
 @font-face {
   font-family: "FreeSet";
-  src: url("fonts/FreeSetLightC.ttf") format("truetype");
+  src: url("/fonts/FreeSetLightC.ttf") format("truetype");
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
   font-family: "FreeSet";
-  src: url("fonts/FreeSetLightC-Italic.ttf") format("truetype");
+  src: url("/fonts/FreeSetLightC-Italic.ttf") format("truetype");
   font-weight: 300;
   font-style: italic;
 }
 
 @font-face {
   font-family: "FreeSet";
-  src: url("fonts/FreeSetC.ttf") format("truetype");
+  src: url("/fonts/FreeSetC.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: "FreeSet";
-  src: url("fonts/FreeSetC-Italic.ttf") format("truetype");
+  src: url("/fonts/FreeSetC-Italic.ttf") format("truetype");
   font-weight: 400;
   font-style: italic;
 }
 
 @font-face {
   font-family: "FreeSet";
-  src: url("fonts/FreeSetDemiC.ttf") format("truetype");
+  src: url("/fonts/FreeSetDemiC.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: "FreeSet";
-  src: url("fonts/FreeSetDemiC-Italic.ttf") format("truetype");
+  src: url("/fonts/FreeSetDemiC-Italic.ttf") format("truetype");
   font-weight: 700;
   font-style: italic;
 }
 
 @font-face {
   font-family: "Gilroy";
-  src: url("fonts/Gilroy-Light.ttf") format("truetype");
+  src: url("/fonts/Gilroy-Light.ttf") format("truetype");
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Gilroy";
-  src: url("fonts/Gilroy-Regular.ttf") format("truetype");
+  src: url("/fonts/Gilroy-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Gilroy";
-  src: url("fonts/Gilroy-Medium.ttf") format("truetype");
+  src: url("/fonts/Gilroy-Medium.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Gilroy";
-  src: url("fonts/Gilroy-Bold.ttf") format("truetype");
+  src: url("/fonts/Gilroy-Bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Gilroy";
-  src: url("fonts/Gilroy-Heavy.ttf") format("truetype");
+  src: url("/fonts/Gilroy-Heavy.ttf") format("truetype");
   font-weight: 800;
   font-style: normal;
 }
@@ -87,7 +87,7 @@ html {
 @import "tailwindcss";
 @import "tw-animate-css";
 
-@custom-variant dark (&:is(.dark *));
+/* @custom-variant dark (&:is(.dark *)); */
 
 @theme inline {
   --color-background: var(--background);
