@@ -8,7 +8,9 @@ const withNextra = nextra({
 });
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  /* Disable CSS optimization (cssnano) to avoid parse errors from :has(), oklch() etc. */
+  optimizeCss: false,
+  
   async redirects() {
     return [
       {
