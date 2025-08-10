@@ -7,7 +7,7 @@ import { DocsContributors } from '@/components/DocsContributors'
 import { ForceTheme } from '@/components/ForceTheme'
 import { generateDocsMetadata } from '@/lib/metadata'
 import 'nextra-theme-docs/style.css'
-import '../globals.css'
+// import '../globals.css'
 
 export const metadata = generateDocsMetadata({
   title: 'Documentation',
