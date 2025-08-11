@@ -42,12 +42,22 @@ const nextConfig: NextConfig = {
     eslint: {
         ignoreDuringBuilds: true,
     },
-    webpack: (config) => {
-        config.plugins = config.plugins.filter(
-            (plugin: any) => plugin.constructor.name !== 'CssMinimizerPlugin'
-        );
-        return config;
-    },
+    webpack: (config: Configuration) => {
+    if (!config.plugins) {
+      config.plugins = [];
+    }
+    console.log('Webpack plugins before filtering:', config.plugins.map(p => p && p.constructor ? p.constructor.name : typeof p));
+    config.plugins = config.plugins.filter(
+      (plugin: any) => plugin.constructor.name !== 'CssMinimizerPlugin'
+    );
+    console.log('Webpack plugins after filtering:', config.plugins.map(p => p && p.constructor ? p.constructor.name : typeof p));
+    // Optionally disable all optimizations that might trigger CSS minification
+    if (config.optimization) {
+      config.optimization.minimize = false;
+      config.optimization.minimizer = [];
+    }
+    return config;
+  },
 };
 
 // Export the final Next.js config with Nextra included
