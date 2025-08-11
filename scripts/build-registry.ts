@@ -41,13 +41,11 @@ const getComponentFiles = async (files: File[], registryType: string) => {
             const normalizedPath = file.startsWith("/") ? file : `/${file}`;
             const filePath = path.join(REGISTRY_BASE_PATH, normalizedPath);
             const fileContent = await fs.readFile(filePath, "utf-8");
-            
             const fileName = normalizedPath.split('/').pop() || '';
-            
             return {
                 type: registryType,
                 content: fileContent,
-                path: normalizedPath,
+                path: file, // Use the original string, do not prepend slash
                 target: `/components/pumki-ui/${fileName}`,
             };
         }
@@ -56,9 +54,7 @@ const getComponentFiles = async (files: File[], registryType: string) => {
             : `/${file.path}`;
         const filePath = path.join(REGISTRY_BASE_PATH, normalizedPath);
         const fileContent = await fs.readFile(filePath, "utf-8");
-        
         const fileName = normalizedPath.split('/').pop() || '';
-        
         const getTargetPath = (type: string) => {
             switch (type) {
                 case "registry:hook":
@@ -71,13 +67,11 @@ const getComponentFiles = async (files: File[], registryType: string) => {
                     return `/components/pumki-ui/${fileName}`;
             }
         };
-        
         const fileType = typeof file === 'string' ? registryType : (file.type || registryType);
-        
         return {
             type: fileType,
             content: fileContent,
-            path: normalizedPath,
+            path: file.path, // Use the original file.path, do not prepend slash
             target: typeof file === 'string' ? getTargetPath(registryType) : (file.target || getTargetPath(fileType)),
         };
     });
@@ -96,6 +90,7 @@ const main = async () => {
 
         const json = JSON.stringify(
             {
+                "$schema": "https://ui.shadcn.com/schema/registry-item.json",
                 ...component,
                 files: filesArray,
             },
