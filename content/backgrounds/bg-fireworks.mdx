@@ -14,26 +14,25 @@ import { FireworksBackground } from '@/components/pumki-ui/backgrounds/bg-firewo
 A vibrant fireworks animation background component for celebrations and special occasions, with colorful bursts and effects.
 
 <Preview 
-  title="Basic Preview"
-  description="The simplest fireworks background with default styling."
+  title="Massive Fireworks"
+  description="Get your background heavily populated with fireworks."
   code={`'use client';
  
 import { FireworksBackground } from '@/components/pumki-ui/backgrounds/bg-fireworks';
-import { useTheme } from 'next-themes';
-export default function FireworksBackgroundDemo() {
-    const { resolvedTheme: theme } = useTheme();
-    
+
+export default function FireworksBackgroundPopulationDemo() {
     return (
         <FireworksBackground
         className="absolute inset-0 flex items-center justify-center rounded-xl"
-        color={theme === 'dark' ? 'white' : 'black'}
+        population={16}
         />
     );
 }`}
 >
 
     <FireworksBackground
-    className="absolute inset-0 flex items-center justify-center rounded-xl"
+        className="absolute inset-0 flex items-center justify-center rounded-xl"
+        population={16}
     />
 
 </Preview>
@@ -65,4 +64,178 @@ export default function FireworksBackgroundDemo() {
   </Tabs.Tab>
 </Tabs>
 
+
+## Usage
+
+<br/>
+
+<CodeBlock language="typescript">
+    {`import { FireworksBackground } from '@/components/pumki-ui/backgrounds/bg-fireworks';`}
+</CodeBlock>
+
+<br/>
+
+<CodeBlock language="typescript">
+    {`<FireworksBackground />`}
+</CodeBlock>
+
+## Example
+
+<Preview 
+  title="Basic Fireworks"
+  description="The simplest fireworks background with default styling."
+  code={`'use client';
+ 
+import { FireworksBackground } from '@/components/pumki-ui/backgrounds/bg-fireworks';
+import { useTheme } from 'next-themes';
+export default function FireworksBackgroundDemo() {
+    const { resolvedTheme: theme } = useTheme();
+    
+    return (
+        <FireworksBackground
+        className="absolute inset-0 flex items-center justify-center rounded-xl"
+        color={theme === 'dark' ? 'white' : 'black'}
+        />
+    );
+}`}
+>
+
+    <FireworksBackground
+    className="absolute inset-0 flex items-center justify-center rounded-xl"
+    />
+
+</Preview>
+
+<Preview 
+  title="Faster and larger Fireworks"
+  code={`'use client';
+ 
+import { FireworksBackground } from '@/components/pumki-ui/backgrounds/bg-fireworks';
+ 
+export default function FireworksBackgroundSizeSpeedDemo() {
+    return (
+        <FireworksBackground
+        className="absolute inset-0 flex items-center justify-center rounded-xl"
+        fireworkSpeed={{ min: 8, max: 16 }}
+        fireworkSize={{ min: 4, max: 10 }}
+        particleSpeed={{ min: 4, max: 14 }}
+        particleSize={{ min: 2, max: 10 }}
+        />
+    );
+}`}
+>
+
+    <FireworksBackground
+      className="absolute inset-0 flex items-center justify-center rounded-xl"
+      fireworkSpeed={{ min: 8, max: 16 }}
+      fireworkSize={{ min: 4, max: 10 }}
+      particleSpeed={{ min: 4, max: 14 }}
+      particleSize={{ min: 2, max: 10 }}
+    />
+
+</Preview>
+
+<Preview 
+  title="Circular effect with uniform dimensions and velocity."
+  code={`'use client';
+ 
+import { FireworksBackground } from '@/components/pumki-ui/backgrounds/bg-fireworks';
+ 
+export default function FireworksBackgroundSizeSpeedDemo() {
+    return (
+        <FireworksBackground
+            className="absolute inset-0 flex items-center justify-center rounded-xl"
+            fireworkSize={7}
+            fireworkSpeed={7}
+            particleSize={7}
+            particleSpeed={7}
+        />
+    );
+}`}
+>
+
+    <FireworksBackground
+      className="absolute inset-0 flex items-center justify-center rounded-xl"
+      fireworkSize={7}
+      fireworkSpeed={7}
+      particleSize={7}
+      particleSpeed={7}
+    />
+
+</Preview>
+
+## Props
+
+import { PumkiTable, PumkiTableStyles } from '../../components/docs/PumkiTable'
+
+<PumkiTableStyles />
+
+<PumkiTable>
+  <table className="pumki-table">
+    <thead>
+      <tr>
+        <th>Prop</th>
+        <th>Type</th>
+        <th>Default</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>particleSize?</code></td>
+        <td><code>{`{ min: number; max: number } | number`}</code></td>
+        <td><code>{`{ min: 1, max: 5 }`}</code></td>
+        <td>Size of each particle (range or fixed).</td>
+      </tr>
+      <tr>
+        <td><code>particleSpeed?</code></td>
+        <td><code>{`{ min: number; max: number } | number`}</code></td>
+        <td><code>{`{ min: 2, max: 7 }`}</code></td>
+        <td>Speed of each particle (range or fixed).</td>
+      </tr>
+      <tr>
+        <td><code>fireworkSize?</code></td>
+        <td><code>{`{ min: number; max: number } | number`}</code></td>
+        <td><code>{`{ min: 2, max: 5 }`}</code></td>
+        <td>Size of the firework burst (range or fixed).</td>
+      </tr>
+      <tr>
+        <td><code>fireworkSpeed?</code></td>
+        <td><code>{`{ min: number; max: number } | number`}</code></td>
+        <td><code>{`{ min: 4, max: 8 }`}</code></td>
+        <td>Speed of the firework burst (range or fixed).</td>
+      </tr>
+      <tr>
+        <td><code>population?</code></td>
+        <td><code>number</code></td>
+        <td><code>1</code></td>
+        <td>Number of fireworks on screen.</td>
+      </tr>
+      <tr>
+        <td><code>color?</code></td>
+        <td><code>string | string[]</code></td>
+        <td><code>randColor()</code></td>
+        <td>Color(s) of the fireworks.</td>
+      </tr>
+      <tr>
+        <td><code>canvasProps?</code></td>
+        <td><code>React.HTMLAttributes&lt;HTMLCanvasElement&gt;</code></td>
+        <td>-</td>
+        <td>Props passed to the canvas element.</td>
+      </tr>
+      <tr>
+        <td><code>className?</code></td>
+        <td><code>string</code></td>
+        <td>-</td>
+        <td>Custom class names for the container.</td>
+      </tr>
+      <tr>
+        <td><code>children?</code></td>
+        <td><code>React.ReactNode</code></td>
+        <td>-</td>
+        <td>Custom children to render inside.</td>
+      </tr>
+    </tbody>
+  </table>
+</PumkiTable>
 

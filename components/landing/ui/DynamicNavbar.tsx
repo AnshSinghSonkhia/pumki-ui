@@ -112,7 +112,13 @@ export default function DynamicNavbar({
           {/* Main nav */}
           <div className="flex items-center gap-6">
             <Link href="/" className="relative flex items-center gap-2 text-primary hover:text-primary/90 cursor-pointer">
-              <img src="/icon-no-bg.png" alt="Pumki UI Logo" className="relative z-20 h-8 w-8 cursor-pointer" />
+              <img src="/big-circle-pumki.png" alt="Pumki UI Logo" className="relative z-20 h-8 w-8 cursor-pointer" />
+              {/* <img 
+                    src="/logo-pumkiui.png" 
+                    alt="Pumki UI Logo" 
+                    className="relative z-20 h-8 w-8 cursor-pointer rounded-lg shadow-sm"
+                /> */}
+              {/* <img src="/shadow-pumki.png" alt="Pumki UI Logo" className="relative z-20 h-8 w-8 cursor-pointer" /> */}
               <span 
                 ref={textRef}
                 className="relative z-20 from-primary/10 via-foreground/85 to-foreground/50 bg-gradient-to-tl bg-clip-text text-2xl tracking-tight font-bold text-balance text-transparent cursor-pointer pt-1"
