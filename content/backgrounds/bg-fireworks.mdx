@@ -3,10 +3,66 @@ title: "Fireworks Background - Pumki UI"
 ---
 
 import { Callout } from 'nextra/components'
+import { Tabs } from 'nextra/components'
+import { CodeBlock } from '../../components/docs/code-block'
+import { Preview, ResponsivePreview } from '../../components/docs/preview'
+import { Button } from '../../components/ui/button'
+import { FireworksBackground } from '@/components/pumki-ui/backgrounds/bg-fireworks';
 
 # Fireworks Background 🎆
 
 A vibrant fireworks animation background component for celebrations and special occasions, with colorful bursts and effects.
 
+<Preview 
+  title="Basic Preview"
+  description="The simplest fireworks background with default styling."
+  code={`'use client';
+ 
+import { FireworksBackground } from '@/components/pumki-ui/backgrounds/bg-fireworks';
+import { useTheme } from 'next-themes';
+export default function FireworksBackgroundDemo() {
+    const { resolvedTheme: theme } = useTheme();
+    
+    return (
+        <FireworksBackground
+        className="absolute inset-0 flex items-center justify-center rounded-xl"
+        color={theme === 'dark' ? 'white' : 'black'}
+        />
+    );
+}`}
+>
+
+    <FireworksBackground
+    className="absolute inset-0 flex items-center justify-center rounded-xl"
+    />
+
+</Preview>
+
 <Callout>Click the background to trigger a spectacular fireworks display.</Callout>
+
+## Installation
+
+<Tabs items={['pnpm', 'npm', 'yarn', 'bun']} defaultIndex="1">
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`pnpm dlx shadcn@latest add "https://pumki-ui.vercel.app/r/bg-fireworks.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`npx shadcn@latest add "https://pumki-ui.vercel.app/r/bg-fireworks.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`yarn dlx shadcn@latest add "https://pumki-ui.vercel.app/r/bg-fireworks.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`bunx shadcn@latest add "https://pumki-ui.vercel.app/r/bg-fireworks.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+</Tabs>
+
 

@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { CodeBlock } from '../components/ui/code-block';
+import { CodeBlock } from './docs/code-block';
 
 function getTailwindCode(colors: string[]): string {
   if (colors.length === 3) {

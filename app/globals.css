@@ -520,6 +520,7 @@ button[title*="theme" i],
    To add badges to any navigation item, just add it to the appropriate section below */
 
    /* 1. BASE FLEX LAYOUT - Apply to all navigation items that need badges */
+.nextra-sidebar a[href*="bg-fireworks"], 
 .nextra-sidebar a[href*="silver"], 
 .nextra-sidebar a[href*="yellow"], 
 .nextra-sidebar a[href*="white"], 
@@ -545,6 +546,7 @@ button[title*="theme" i],
 
 /* 2. NUMBER BADGE STYLES - Shared styles for all number badges */
 /* These appear at the far right: "Buttons NEW 56" */
+.nextra-sidebar a[href*="bg-fireworks"]:after, 
 .nextra-sidebar a[href*="silver"]:after, 
 .nextra-sidebar a[href*="yellow"]:after, 
 .nextra-sidebar a[href*="white"]:after, 
@@ -630,6 +632,7 @@ button[title*="theme" i],
 
 /* 4. "NEW" BADGE STYLES - Shared styles for all "new" badges */
 /* These appear between the text and the number badge: "Buttons NEW 56" */
+.nextra-sidebar a[href*="bg-fireworks"]:before,
 .nextra-sidebar a[href*="silver"]:before,
 .nextra-sidebar a[href*="tooltip"]:before,
 .nextra-sidebar a[href*="ai"]:before {
