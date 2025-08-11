@@ -46,8 +46,8 @@ export default function DynamicNavbar({
   }, [isLimelightReady])
 
   const headerClasses = variant === 'gradient' 
-    ? "relative z-50 border-b px-4 md:px-6 bg-gradient-to-r from-pink-500/10 via-background/80 to-pink-400/10 backdrop-blur-sm"
-    : "relative z-50 border-b px-4 md:px-6"
+    ? "relative z-50 px-4 md:px-6 bg-gradient-to-r from-pink-500/10 via-background/80 to-pink-400/10 backdrop-blur-sm"
+    : "relative z-50 px-4 md:px-6"
 
   return (
     <header className={`${headerClasses} ${className}`}>
