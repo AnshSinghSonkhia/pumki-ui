@@ -141,17 +141,20 @@ export default function GradientHero() {
             <div className="border-border/40 bg-background/50 overflow-hidden rounded-xl border shadow-xl backdrop-blur-sm">
               <div className="border-border/40 bg-muted/50 flex h-10 items-center border-b px-4">
                 <div className="flex space-x-2">
-                  <div className="h-3 w-3 rounded-full bg-red-500"></div>
+                  {/* <div className="h-3 w-3 rounded-full bg-red-500"></div>
                   <div className="h-3 w-3 rounded-full bg-yellow-500"></div>
-                  <div className="h-3 w-3 rounded-full bg-green-500"></div>
+                  <div className="h-3 w-3 rounded-full bg-green-500"></div> */}
+                  <div className="h-3 w-3 rounded-full bg-pink-200"></div>
+                  <div className="h-3 w-3 rounded-full bg-pink-400"></div>
+                  <div className="h-3 w-3 rounded-full bg-pink-600"></div>
                 </div>
                 <div className="bg-background/50 text-muted-foreground mx-auto flex items-center rounded-md px-3 py-1 text-xs">
-                  https://pumki-ui.in/docs
+                  https://pumki-ui.vercel.app/docs
                 </div>
               </div>
               <div className="relative">
                 <img
-                  src="https://i.postimg.cc/0yk8Vz7t/dashboard.webp"
+                  src="/screenshot.png"
                   alt="Dashboard Preview"
                   className="w-full"
                 />
@@ -161,11 +164,11 @@ export default function GradientHero() {
 
             {/* Floating elements for visual interest */}
             <div className="border-border/40 bg-background/80 absolute -top-6 -right-6 h-12 w-12 rounded-lg border p-3 shadow-lg backdrop-blur-md">
-              <div className="bg-white/20 h-full w-full rounded-md"></div>
+              <div className="bg-[#370031] h-full w-full rounded-md"></div>
             </div>
             <div className="border-border/40 bg-background/80 absolute -bottom-4 -left-4 h-8 w-8 rounded-full border shadow-lg backdrop-blur-md"></div>
             <div className="border-border/40 bg-background/80 absolute right-12 -bottom-6 h-10 w-10 rounded-lg border p-2 shadow-lg backdrop-blur-md">
-              <div className="h-full w-full rounded-md bg-white/20"></div>
+              <div className="h-full w-full rounded-md bg-[#370031]"></div>
             </div>
           </motion.div>
         </div>
