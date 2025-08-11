@@ -1,5 +1,7 @@
 import type { NextConfig } from "next";
 import nextra from "nextra";
+import type { Configuration } from 'webpack';
+
 
 // Set up Nextra with its configuration
 const withNextra = nextra({
@@ -39,7 +41,13 @@ const nextConfig: NextConfig = {
     },
     eslint: {
         ignoreDuringBuilds: true,
-    }
+    },
+    webpack: (config) => {
+        config.plugins = config.plugins.filter(
+            (plugin: any) => plugin.constructor.name !== 'CssMinimizerPlugin'
+        );
+        return config;
+    },
 };
 
 // Export the final Next.js config with Nextra included

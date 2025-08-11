@@ -1,3 +1,6 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
 /* @font-face {
   font-family: "FreeSet";
   src: url("\/fonts\/FreeSetLightC.ttf") format("truetype");
