@@ -14,6 +14,7 @@ export default {
     //     title: "Components",
     // },
     components: 'Components',
+    backgrounds: 'Backgrounds',
     gradients: 'Gradients',
     about: {
         title: 'About',

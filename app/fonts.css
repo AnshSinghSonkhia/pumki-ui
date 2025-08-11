@@ -1,5 +1,5 @@
 /* FreeSet Font Faces */
-@font-face {
+/* @font-face {
   font-family: 'FreeSet';
   src: url('/fonts/FreeSetLightC.ttf') format('truetype');
   font-weight: 300;
@@ -37,33 +37,33 @@
   font-weight: 600;
   font-style: normal;
   font-display: swap;
-}
+} */
 
-@font-face {
+/* @font-face {
   font-family: 'FreeSet';
   src: url('/fonts/FreeSetDemiC-Italic.ttf') format('truetype');
   font-weight: 600;
   font-style: italic;
   font-display: swap;
-}
+} */
 
 /* Apply FreeSet fonts to documentation */
-:root {
+/* :root {
   --font-freeset: 'FreeSet', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-}
+} */
 
 /* Global font application */
-body {
+/* body {
   font-family: var(--font-freeset);
-}
+} */
 
 /* Nextra content styling */
-.nextra-content {
+/* .nextra-content {
   font-family: var(--font-freeset);
-}
+} */
 
 /* Headings */
-h1, h2, h3, h4, h5, h6,
+/* h1, h2, h3, h4, h5, h6,
 .nextra-content h1,
 .nextra-content h2,
 .nextra-content h3,
@@ -72,20 +72,20 @@ h1, h2, h3, h4, h5, h6,
 .nextra-content h6 {
   font-family: var(--font-freeset) !important;
   font-weight: 600;
-}
+} */
 
 /* Navigation */
-.nextra-nav-container {
+/* .nextra-nav-container {
   font-family: var(--font-freeset);
-}
+} */
 
 /* Sidebar */
-.nextra-sidebar {
+/* .nextra-sidebar {
   font-family: var(--font-freeset);
-}
+} */
 
 /* Custom utility classes */
-.font-freeset-light {
+/* .font-freeset-light {
   font-family: var(--font-freeset);
   font-weight: 300;
 }
@@ -93,34 +93,34 @@ h1, h2, h3, h4, h5, h6,
 .font-freeset {
   font-family: var(--font-freeset);
   font-weight: 400;
-}
+} */
 
-.font-freeset-demi {
+/* .font-freeset-demi {
   font-family: var(--font-freeset);
   font-weight: 600;
-}
+} */
 
 /* Sidebar separators styling */
-.nextra-sidebar .cursor-default {
+/* .nextra-sidebar .cursor-default {
   font-weight: 300;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   font-size: 0.75rem;
-}
+} */
 
 /* Folder/Directory items styling - make them bold and bigger */
 /* Broad targeting for all sidebar buttons/clickable items */
-.nextra-sidebar button,
+/* .nextra-sidebar button,
 .nextra-sidebar .cursor-pointer,
 nav button,
 aside button {
   font-weight: 700 !important;
   font-size: 1.1rem !important;
-}
+} */
 
 /* Override for regular page links to keep them normal */
-.nextra-sidebar a:not(button),
+/* .nextra-sidebar a:not(button),
 .nextra-sidebar .nx-link {
   font-weight: 400 !important;
   font-size: 0.875rem !important;
-}
+} */
