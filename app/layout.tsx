@@ -3,6 +3,34 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { ForceTheme } from "@/components/ForceTheme";
 
+import localFont from 'next/font/local'
+
+const freeSet = localFont({
+  src: [
+    { path: '../public/fonts/FreeSetLightC.ttf', weight: '300', style: 'normal' },
+    { path: '../public/fonts/FreeSetLightC-Italic.ttf', weight: '300', style: 'italic' },
+    { path: '../public/fonts/FreeSetC.ttf', weight: '400', style: 'normal' },
+    { path: '../public/fonts/FreeSetC-Italic.ttf', weight: '400', style: 'italic' },
+    { path: '../public/fonts/FreeSetDemiC.ttf', weight: '700', style: 'normal' },
+    { path: '../public/fonts/FreeSetDemiC-Italic.ttf', weight: '700', style: 'italic' },
+  ],
+  variable: '--font-freeset',
+  display: 'swap',
+})
+
+// Gilroy font with all weights
+const gilroy = localFont({
+  src: [
+    { path: '../public/fonts/Gilroy-Light.ttf', weight: '300', style: 'normal' },
+    { path: '../public/fonts/Gilroy-Regular.ttf', weight: '400', style: 'normal' },
+    { path: '../public/fonts/Gilroy-Medium.ttf', weight: '500', style: 'normal' },
+    { path: '../public/fonts/Gilroy-Bold.ttf', weight: '700', style: 'normal' },
+    { path: '../public/fonts/Gilroy-Heavy.ttf', weight: '800', style: 'normal' },
+  ],
+  variable: '--font-gilroy',
+  display: 'swap',
+})
+
 export const metadata: Metadata = {
   metadataBase: new URL('https://pumki-ui.vercel.app'),
   title: "Pumki UI - Ship stunning UIs from one library, not ten.",
@@ -70,7 +98,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-      <html lang="en" className="dark" data-theme="dark" suppressHydrationWarning>
+      <html lang="en" className={`dark ${freeSet.variable} ${gilroy.variable}`} data-theme="dark" suppressHydrationWarning>
         <head>
           <meta charSet="utf-8" />
           <meta name="theme-color" content="#350136" />
@@ -101,7 +129,12 @@ export default function RootLayout({
             }}
           />
         </head>
-        <body className="antialiased dark">
+        <body
+            className="antialiased dark"
+            style={{
+                fontFamily: 'var(--font-freeset), var(--font-gilroy), sans-serif',
+            }}
+        >
           <ForceTheme />
           {children}
         </body>
