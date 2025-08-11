@@ -2,19 +2,19 @@ import type { Registry } from "./schema";
 
 export const component: Registry = [
     {
-        name: "bg-bubble",
+        name: "bg-ambient-aurora",
         type: "registry:ui",
-        title: "Bubble Background",
+        title: "Ambient Aurora Background",
         description:
-            "Animated gradient bubbles create a playful, dynamic visual display that captivates viewers with lively motion.",
+            "A serene and captivating background featuring slow-moving, ethereal gradients.",
         author: "Ansh Singh Sonkhia",
         dependencies: ["motion", "react"],
         registryDependencies: [],
         files: [
             {
-                path: "components/pumki-ui/backgrounds/bg-bubble.tsx",
+                path: "components/pumki-ui/backgrounds/bg-ambient-aurora.tsx",
                 type: "registry:ui",
-                target: "components/pumki-ui/backgrounds/bg-bubble.tsx",
+                target: "components/pumki-ui/backgrounds/bg-ambient-aurora.tsx",
             },
         ],
     },
@@ -32,6 +32,23 @@ export const component: Registry = [
                 path: "components/pumki-ui/backgrounds/bg-fireworks.tsx",
                 type: "registry:ui",
                 target: "components/pumki-ui/backgrounds/bg-fireworks.tsx",
+            },
+        ],
+    },
+    {
+        name: "bg-hexagon",
+        type: "registry:ui",
+        title: "Hexagon Background",
+        description:
+            "An unique interactive hexagon grid background component for modern applications, with customizable colors and patterns.",
+        author: "Ansh Singh Sonkhia",
+        dependencies: ["react"],
+        registryDependencies: [],
+        files: [
+            {
+                path: "components/pumki-ui/backgrounds/bg-hexagon.tsx",
+                type: "registry:ui",
+                target: "components/pumki-ui/backgrounds/bg-hexagon.tsx",
             },
         ],
     },

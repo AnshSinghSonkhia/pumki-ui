@@ -1,0 +1,264 @@
+---
+title: "Hexagon Background - Pumki UI"
+description: An unique interactive hexagon grid background component for modern applications, with customizable colors and patterns.
+---
+
+import { Callout } from 'nextra/components'
+import { Tabs } from 'nextra/components'
+import { CodeBlock } from '../../components/docs/code-block'
+import { Preview, ResponsivePreview } from '../../components/docs/preview'
+import { Button } from '../../components/ui/button'
+import { HexagonBackground } from '@/components/pumki-ui/backgrounds/bg-hexagon'
+
+# Hexagon Background 
+
+An unique interactive hexagon grid background component for modern applications, with customizable colors and patterns.
+
+<Preview 
+  title="Tiny Honeycomb"
+  description="Dense pattern with small hexagons creating a subtle texture like honeycomb."
+  code={`'use client';
+ 
+import { HexagonBackground } from '@/components/pumki-ui/backgrounds/bg-hexagon';
+
+export const TinyHoneycombDemo = () => {
+    return (
+        <HexagonBackground
+            hexagonSize={25}
+            hexagonMargin={1}
+            className="absolute inset-0 flex items-center justify-center rounded-xl bg-gradient-to-br from-amber-300 via-yellow-400 to-amber-500"
+        />
+    );
+};`}
+>
+    <HexagonBackground
+        hexagonSize={25}
+        hexagonMargin={1}
+        className="absolute inset-0 flex items-center justify-center rounded-xl bg-gradient-to-br from-amber-300 via-yellow-400 to-amber-500"
+    />
+</Preview>
+
+<Callout>The background is interactive, allowing users to engage with the visual elements.</Callout>
+
+## Installation
+
+<Tabs items={['pnpm', 'npm', 'yarn', 'bun']} defaultIndex="1">
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`pnpm dlx shadcn@latest add "https://pumki-ui.vercel.app/r/bg-hexagon.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`npx shadcn@latest add "https://pumki-ui.vercel.app/r/bg-hexagon.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`yarn dlx shadcn@latest add "https://pumki-ui.vercel.app/r/bg-hexagon.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`bunx shadcn@latest add "https://pumki-ui.vercel.app/r/bg-hexagon.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+</Tabs>
+
+## Usage
+
+<br/>
+
+<CodeBlock language="typescript">
+    {`import { HexagonBackground } from '@/components/pumki-ui/backgrounds/bg-hexagon';`}
+</CodeBlock>
+
+<br/>
+
+<CodeBlock language="typescript">
+    {`<HexagonBackground />`}
+</CodeBlock>
+
+## Example
+
+<Preview 
+  title="Starter Hexagons Template"
+  code={`'use client';
+
+import { HexagonBackground } from '@/components/pumki-ui/backgrounds/bg-hexagon';
+
+export const HexagonBackgroundDemo = () => {
+    return (
+        <HexagonBackground className="absolute inset-0 flex items-center justify-center rounded-xl" />
+    );
+};`}
+>
+
+    <HexagonBackground className="absolute inset-0 flex items-center justify-center rounded-xl" />
+
+</Preview>
+
+<Preview 
+  title="Glowing Hexagons"
+  description="Hexagons with a subtle glow effect for a futuristic feel."
+  code={`'use client';
+ 
+import { HexagonBackground } from '@/components/pumki-ui/backgrounds/bg-hexagon';
+
+export const GlowingHexagonsDemo = () => {
+    return (
+        <HexagonBackground
+            hexagonSize={80}
+            hexagonMargin={8}
+            hexagonProps={{
+                className: "shadow-lg shadow-blue-500/20 bg-blue-50/10 border border-blue-200/30"
+            }}
+            className="absolute inset-0 flex items-center justify-center rounded-xl bg-slate-900"
+        />
+    );
+};`}
+>
+    <HexagonBackground
+        hexagonSize={80}
+        hexagonMargin={8}
+        hexagonProps={{
+            className: "shadow-lg shadow-blue-500/20 bg-blue-50/10 border border-blue-200/30"
+        }}
+        className="absolute inset-0 flex items-center justify-center rounded-xl bg-slate-900"
+    />
+</Preview>
+
+<Preview 
+  title="Colorful Mosaic"
+  description="Vibrant hexagons with gradient backgrounds creating an artistic mosaic."
+  code={`'use client';
+ 
+import { HexagonBackground } from '@/components/pumki-ui/backgrounds/bg-hexagon';
+
+export const ColorfulMosaicDemo = () => {
+    return (
+        <HexagonBackground
+            hexagonSize={65}
+            hexagonMargin={4}
+            hexagonProps={{
+                className: "bg-gradient-to-br from-purple-400 via-pink-500 to-red-500 opacity-80"
+            }}
+            className="absolute inset-0 flex items-center justify-center rounded-xl bg-gradient-to-br from-indigo-900 to-purple-900"
+        />
+    );
+};`}
+>
+    <HexagonBackground
+        hexagonSize={65}
+        hexagonMargin={4}
+        hexagonProps={{
+            className: "bg-gradient-to-br from-purple-400 via-pink-500 to-red-500 opacity-80"
+        }}
+        className="absolute inset-0 flex items-center justify-center rounded-xl bg-gradient-to-br from-indigo-900 to-purple-900"
+    />
+</Preview>
+
+<Preview 
+  title="Subtle Elegance"
+  description="Refined hexagons with soft shadows for a sophisticated appearance."
+  code={`'use client';
+ 
+import { HexagonBackground } from '@/components/pumki-ui/backgrounds/bg-hexagon';
+
+export const SubtleEleganceDemo = () => {
+    return (
+        <HexagonBackground
+            hexagonSize={90}
+            hexagonMargin={12}
+            hexagonProps={{
+                className: "bg-white/5 backdrop-blur-sm border border-gray-200/10 shadow-md"
+            }}
+            className="absolute inset-0 flex items-center justify-center rounded-xl bg-gradient-to-br from-gray-800 to-gray-900"
+        />
+    );
+};`}
+>
+    <HexagonBackground
+        hexagonSize={90}
+        hexagonMargin={12}
+        hexagonProps={{
+            className: "bg-white/5 backdrop-blur-sm border border-gray-200/10 shadow-md"
+        }}
+        className="absolute inset-0 flex items-center justify-center rounded-xl bg-gradient-to-br from-gray-800 to-gray-900"
+    />
+</Preview>
+
+<Preview 
+  title="Neon Grid"
+  description="Electric hexagons with neon borders for a cyberpunk aesthetic."
+  code={`'use client';
+ 
+import { HexagonBackground } from '@/components/pumki-ui/backgrounds/bg-hexagon';
+
+export const NeonGridDemo = () => {
+    return (
+        <HexagonBackground
+            hexagonSize={70}
+            hexagonMargin={6}
+            hexagonProps={{
+                className: "border-2 border-cyan-400 bg-cyan-400/10 shadow-lg shadow-cyan-400/50"
+            }}
+            className="absolute inset-0 flex items-center justify-center rounded-xl bg-black"
+        />
+    );
+};`}
+>
+    <HexagonBackground
+        hexagonSize={70}
+        hexagonMargin={6}
+        hexagonProps={{
+            className: "border-2 border-cyan-400 bg-cyan-400/10 shadow-lg shadow-cyan-400/50"
+        }}
+        className="absolute inset-0 flex items-center justify-center rounded-xl bg-black"
+    />
+</Preview>
+
+## Props
+
+import { PumkiTable, PumkiTableStyles } from '../../components/docs/PumkiTable'
+
+<PumkiTableStyles />
+
+<PumkiTable>
+  <table className="pumki-table">
+    <thead>
+      <tr>
+        <th>Prop</th>
+        <th>Type</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>hexagonMargin?</code></td>
+        <td><code>number</code></td>
+        <td><code>{`3`}</code></td>
+      </tr>
+      <tr>
+        <td><code>hexagonSize?</code></td>
+        <td><code>number</code></td>
+        <td><code>{`75`}</code></td>
+      </tr>
+      <tr>
+        <td><code>hexagonProps?</code></td>
+        <td><code>{`React.HTMLAttributes<HTMLDivElement>`}</code></td>
+        <td><code>-</code></td>
+      </tr>
+      <tr>
+        <td><code>className?</code></td>
+        <td><code>string</code></td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td><code>children?</code></td>
+        <td><code>React.ReactNode</code></td>
+        <td>-</td>
+      </tr>
+    </tbody>
+  </table>
+</PumkiTable>

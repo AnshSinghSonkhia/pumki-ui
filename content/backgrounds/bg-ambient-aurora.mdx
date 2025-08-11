@@ -1,0 +1,185 @@
+---
+title: "Ambient Aurora Background - Pumki UI"
+description: A serene and captivating background featuring slow-moving, ethereal gradients.
+---
+
+import { Callout } from 'nextra/components'
+import { Tabs } from 'nextra/components'
+import { CodeBlock } from '../../components/docs/code-block'
+import { Preview, ResponsivePreview } from '../../components/docs/preview'
+import { Button } from '../../components/ui/button'
+import { BubbleBackground } from '@/components/pumki-ui/backgrounds/bg-ambient-aurora'
+
+# Ambient Aurora Background 🌌
+
+A serene and captivating background featuring slow-moving, ethereal gradients. Each bubble or orb gently shifts its color palette, blending seamlessly with its neighbors to create a calming, aurora-like effect. The animation is designed to be subtle and non-distracting, providing a tranquil and visually rich backdrop that enhances, rather than competes with, foreground content.
+
+<Preview 
+  title="Basic Bubbles"
+  code={`'use client';
+ 
+import { BubbleBackground } from '@/components/pumki-ui/backgrounds/bg-ambient-aurora';
+
+export const BubbleBackgroundDemo = () => {
+    return (
+        <BubbleBackground
+            interactive
+            className="absolute inset-0 flex items-center justify-center rounded-xl"
+        />
+    );
+};`}
+>
+
+    <BubbleBackground
+        interactive
+        className="absolute inset-0 flex items-center justify-center rounded-xl"
+    />
+
+</Preview>
+
+<Callout>The background is interactive, allowing users to engage with the visual elements.
+Use `interactive` prop to enable this feature.</Callout>
+
+## Installation
+
+<Tabs items={['pnpm', 'npm', 'yarn', 'bun']} defaultIndex="1">
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`pnpm dlx shadcn@latest add "https://pumki-ui.vercel.app/r/bg-ambient-aurora.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`npx shadcn@latest add "https://pumki-ui.vercel.app/r/bg-ambient-aurora.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`yarn dlx shadcn@latest add "https://pumki-ui.vercel.app/r/bg-ambient-aurora.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`bunx shadcn@latest add "https://pumki-ui.vercel.app/r/bg-ambient-aurora.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+</Tabs>
+
+## Usage
+
+<br/>
+
+<CodeBlock language="typescript">
+    {`import { BubbleBackground } from '@/components/pumki-ui/backgrounds/bg-ambient-aurora';`}
+</CodeBlock>
+
+<br/>
+
+<CodeBlock language="typescript">
+    {`<BubbleBackground />`}
+</CodeBlock>
+
+## Example
+
+<Preview 
+  title="With Content Overlay"
+  description="Background with centered content to show practical usage."
+  code={`'use client';
+ 
+import { BubbleBackground } from '@/components/pumki-ui/backgrounds/bg-ambient-aurora';
+import { Button } from '@/components/ui/button';
+
+export const ContentOverlayDemo = () => {
+    return (
+        <BubbleBackground
+            interactive
+            colors={{
+                first: '99,102,241',
+                second: '139,92,246',
+                third: '168,85,247',
+                fourth: '217,70,239',
+                fifth: '244,114,182',
+                sixth: '251,146,60'
+            }}
+            className="absolute inset-0 flex items-center justify-center rounded-xl"
+        >
+            <div className="text-center z-10">
+                <h2 className="text-4xl font-bold text-white mb-4 drop-shadow-lg">
+                    Welcome to Pumki UI
+                </h2>
+                <div className="text-lg text-white/90 mb-6 drop-shadow">
+                    Beautiful backgrounds for modern applications
+                </div>
+                <Button variant="secondary" className="backdrop-blur-sm">
+                    Get Started
+                </Button>
+            </div>
+        </BubbleBackground>
+    );
+};`}
+>
+    <BubbleBackground
+        interactive
+        colors={{
+            first: '99,102,241',
+            second: '139,92,246',
+            third: '168,85,247',
+            fourth: '217,70,239',
+            fifth: '244,114,182',
+            sixth: '251,146,60'
+        }}
+        className="absolute inset-0 flex items-center justify-center rounded-xl"
+    >
+        <div className="text-center z-10">
+            <h2 className="text-4xl font-bold text-white mb-4 drop-shadow-lg">
+                {"Welcome to Pumki UI"}
+            </h2>
+            <div className="text-lg text-white/90 mb-6 drop-shadow">
+                {"Beautiful backgrounds for modern applications"}
+            </div>
+            <Button variant="secondary" className="backdrop-blur-sm">
+                {"Get Started"}
+            </Button>
+        </div>
+    </BubbleBackground>
+</Preview>
+
+## Props
+
+import { PumkiTable, PumkiTableStyles } from '../../components/docs/PumkiTable'
+
+<PumkiTableStyles />
+
+<PumkiTable>
+  <table className="pumki-table">
+    <thead>
+      <tr>
+        <th>Prop</th>
+        <th>Type</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>colors?</code></td>
+        <td><code>object</code></td>
+        <td><code>{`{ first: '18,113,255', second: '221,74,255', third: '0,220,255', fourth: '200,50,50', fifth: '180,180,50', sixth: '140,100,255', }`}</code></td>
+      </tr>
+      <tr>
+        <td><code>transition?</code></td>
+        <td><code>SpringOptions</code></td>
+        <td><code>{`{ stiffness: 100, damping: 20 }`}</code></td>
+      </tr>
+      <tr>
+        <td><code>interactive?</code></td>
+        <td><code>boolean</code></td>
+        <td><code>false</code></td>
+      </tr>
+      <tr>
+        <td><code>children?</code></td>
+        <td><code>React.ReactNode</code></td>
+        <td>-</td>
+      </tr>
+    </tbody>
+  </table>
+</PumkiTable>
