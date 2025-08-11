@@ -1,0 +1,28 @@
+---
+title: "Copy Button - Pumki UI"
+description: A button that copies text to the clipboard with an accompanying animation.
+---
+
+import { Tabs } from 'nextra/components'
+import { CodeBlock } from '@/components/docs/code-block'
+import { Preview, ResponsivePreview } from '@/components/docs/preview'
+import { Button } from '@/components/ui/button'
+import { CopyButton } from '@/components/pumki-ui/buttons/copy'
+
+# Copy Button 
+
+A button that copies text to the clipboard with an accompanying animation.
+
+<Preview 
+  code={`import { CopyButton } from '@/components/animate-ui/buttons/copy';
+
+export const CopyButtonDemo = () => {
+    return <CopyButton content="Content to copy" size="md" />;
+};`}
+>
+    
+    <CopyButton content="Content to copy" size="md" />
+    
+</Preview>
+
+## Installation

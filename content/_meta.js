@@ -1,3 +1,5 @@
+import { Collapse } from "nextra/components";
+
 export default {
     "#": {
         type: 'separator',
@@ -14,8 +16,18 @@ export default {
     //     title: "Components",
     // },
     components: 'Components',
-    backgrounds: 'Backgrounds',
-    gradients: 'Gradients',
+   backgrounds: {
+        title: "Backgrounds",
+        theme: {
+            collapsed: true
+        }
+    },
+    gradients: {
+        title: "Gradients",
+        theme: {
+            collapsed: true
+        }
+    },
     about: {
         title: 'About',
         type: 'page',

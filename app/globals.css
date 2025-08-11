@@ -321,7 +321,7 @@ html, html[data-theme="light"], html[class*="light"] {
 }
 
 /* Nextra Sidebar Folder Styling - Make folder names bold, bigger, and white */
-.nextra-sidebar li:has(> div > button) > div > button,
+/* .nextra-sidebar li:has(> div > button) > div > button,
 .nextra-sidebar li:has(> button[aria-expanded]) > button,
 .nextra-sidebar li > div > button[aria-expanded],
 .nextra-sidebar button[aria-expanded="true"],
@@ -330,11 +330,19 @@ html, html[data-theme="light"], html[class*="light"] {
   font-size: 1.1rem !important;
   letter-spacing: 0.02em !important;
   color: #ffffff !important;
-}
+} */
 
 /* Alternative approach - target all buttons in sidebar that have children */
-.nextra-sidebar button:has(+ *),
+/* .nextra-sidebar button:has(+ *),
 .nextra-sidebar .cursor-pointer:has(svg) {
+  font-weight: 700 !important;
+  font-size: 1.1rem !important;
+  color: #ffffff !important;
+} */
+
+/* Alternative: Target folders that are not nested inside other folders */
+.nextra-sidebar li:not(li li) > button:has(svg),
+.nextra-sidebar li:not(li li) > .cursor-pointer:has(svg) {
   font-weight: 700 !important;
   font-size: 1.1rem !important;
   color: #ffffff !important;
@@ -536,7 +544,6 @@ button[title*="theme" i],
 .nextra-sidebar a[href*="brown"], 
 .nextra-sidebar a[href*="blue"], 
 .nextra-sidebar a[href*="black"], 
-.nextra-sidebar a[href*="buttons"], 
 .nextra-sidebar a[href*="tooltip"], 
 .nextra-sidebar a[href*="ai"] {
   position: relative;
@@ -563,7 +570,6 @@ button[title*="theme" i],
 .nextra-sidebar a[href*="brown"]:after, 
 .nextra-sidebar a[href*="blue"]:after, 
 .nextra-sidebar a[href*="black"]:after,
-.nextra-sidebar a[href*="buttons"]:after,
 .nextra-sidebar a[href*="tooltip"]:after,
 .nextra-sidebar a[href*="ai"]:after {
   background-color: #14041c;
@@ -580,9 +586,6 @@ button[title*="theme" i],
 }
 
 /* 3. NUMBER BADGE CONTENT - Add/edit individual badge numbers here */
-.nextra-sidebar a[href*="buttons"]:after {
-  content: "56";
-}
 .nextra-sidebar a[href*="ai"]:after {
   content: "30";
 }

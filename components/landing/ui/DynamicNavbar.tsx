@@ -14,7 +14,8 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover"
-import { Github } from "lucide-react"
+// import { Github } from "lucide-react"
+import { FaGithub } from 'react-icons/fa'
 
 export interface NavLink {
   href: string
@@ -177,7 +178,7 @@ export default function DynamicNavbar({
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Github className="h-4 w-4" />
+              <FaGithub className="h-4 w-4" />
               Star on GitHub
             </a>
           </Button>
