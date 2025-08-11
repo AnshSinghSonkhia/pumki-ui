@@ -52,4 +52,38 @@ export const component: Registry = [
             },
         ],
     },
+    {
+        name: "bg-potion",
+        type: "registry:ui",
+        title: "Magical Potion Background",
+        description:
+            "Immersive liquid potion background effect perfect for fantasy games, magical applications, or any project that needs an enchanting animated background.",
+        author: "Ansh Singh Sonkhia",
+        dependencies: ["react"],
+        registryDependencies: [],
+        files: [
+            {
+                path: "components/pumki-ui/backgrounds/bg-potion.tsx",
+                type: "registry:ui",
+                target: "components/pumki-ui/backgrounds/bg-potion.tsx",
+            },
+        ],
+    },
+    {
+        name: "bg-wormhole",
+        type: "registry:ui",
+        title: "Wormhole Background",
+        description:
+            "An immersive futuristic gateway with animated grid perspective and glowing portal core.",
+        author: "Ansh Singh Sonkhia",
+        dependencies: ["react", "motion"],
+        registryDependencies: [],
+        files: [
+            {
+                path: "components/pumki-ui/backgrounds/bg-wormhole.tsx",
+                type: "registry:ui",
+                target: "components/pumki-ui/backgrounds/bg-wormhole.tsx",
+            },
+        ],
+    },
 ];

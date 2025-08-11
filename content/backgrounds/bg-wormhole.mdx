@@ -1,0 +1,119 @@
+---
+title: "Wormhole Background - Pumki UI"
+description: An immersive futuristic gateway with animated grid perspective and glowing portal core.
+---
+
+import { Tabs } from 'nextra/components'
+import { CodeBlock } from '../../components/docs/code-block'
+import { Preview, ResponsivePreview } from '../../components/docs/preview'
+import { Button } from '../../components/ui/button'
+import { WormholeBackground } from '@/components/pumki-ui/backgrounds/bg-wormhole'
+
+# Wormhole Background 🌀
+
+An immersive futuristic gateway with animated grid perspective and glowing portal core.
+
+<Preview 
+  code={`'use client';
+ 
+import { WormholeBackground } from '@/components/pumki-ui/backgrounds/bg-wormhole'
+
+export const WormholeBackgroundDemo = () => {
+    return (
+        <WormholeBackground className="absolute inset-0 flex items-center justify-center rounded-xl" />
+    );
+};`}
+>
+    
+    <WormholeBackground className="absolute inset-0 flex items-center justify-center rounded-xl" />
+    
+</Preview>
+
+## Installation
+
+<Tabs items={['pnpm', 'npm', 'yarn', 'bun']} defaultIndex="1">
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`pnpm dlx shadcn@latest add "https://pumki-ui.vercel.app/r/bg-wormhole.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`npx shadcn@latest add "https://pumki-ui.vercel.app/r/bg-wormhole.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`yarn dlx shadcn@latest add "https://pumki-ui.vercel.app/r/bg-wormhole.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`bunx shadcn@latest add "https://pumki-ui.vercel.app/r/bg-wormhole.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+</Tabs>
+
+## Usage
+
+<br/>
+
+<CodeBlock language="typescript">
+    {`import { WormholeBackground } from '@/components/pumki-ui/backgrounds/bg-wormhole';`}
+</CodeBlock>
+
+<br/>
+
+<CodeBlock language="typescript">
+    {`<WormholeBackground />`}
+</CodeBlock>
+
+## Props
+
+import { PumkiTable, PumkiTableStyles } from '../../components/docs/PumkiTable'
+
+<PumkiTableStyles />
+
+<PumkiTable>
+  <table className="pumki-table">
+    <thead>
+      <tr>
+        <th>Prop</th>
+        <th>Type</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>particleRGBColor?</code></td>
+        <td><code>number[]</code></td>
+        <td><code>{`[255, 255, 255]`}</code></td>
+      </tr>
+      <tr>
+        <td><code>numberOfDiscs?</code></td>
+        <td><code>number</code></td>
+        <td><code>{`50`}</code></td>
+      </tr>
+      <tr>
+        <td><code>numberOfLines?</code></td>
+        <td><code>number</code></td>
+        <td><code>{`50`}</code></td>
+      </tr>
+      <tr>
+        <td><code>strokeColor?</code></td>
+        <td><code>string</code></td>
+        <td><code>{`#737373`}</code></td>
+      </tr>
+      <tr>
+        <td><code>className?</code></td>
+        <td><code>string</code></td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td><code>children?</code></td>
+        <td><code>React.ReactNode</code></td>
+        <td>-</td>
+      </tr>
+    </tbody>
+  </table>
+</PumkiTable>

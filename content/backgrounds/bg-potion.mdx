@@ -1,0 +1,485 @@
+---
+title: "Magical Potion Background - Pumki UI"
+description: Immersive liquid potion background effect perfect for fantasy games, magical applications, or any project that needs an enchanting animated background.
+---
+
+import { Callout } from 'nextra/components'
+import { Tabs } from 'nextra/components'
+import { CodeBlock } from '../../components/docs/code-block'
+import { Preview, ResponsivePreview } from '../../components/docs/preview'
+import { Button } from '../../components/ui/button'
+import { PotionBackground } from '@/components/pumki-ui/backgrounds/bg-potion'
+
+# Magical Potion Background 🧙🏻‍♀️
+
+A mesmerizing, fully customizable React background component that creates an immersive liquid potion effect.
+
+<Callout>Perfect for fantasy games, magical applications, or any project that needs an enchanting animated background.</Callout>
+
+
+<Preview 
+  title="Blue Magical Potion"
+  description="A mesmerizing blue potion background with a magical liquid effect."
+  code={`'use client';
+ 
+import { PotionBackground } from '@/components/pumki-ui/backgrounds/bg-potion';
+
+export const PotionBackgroundDemo = () => {
+    return (
+        <PotionBackground
+            colors={{
+                gradient: ['#87CEEB', '#4169E1', '#191970', '#000080', '#00008B'],
+                glitterParticle: {
+                inner: '#ffffff',
+                middle: '#87CEEB',
+                outer: '#4169E1',
+                },
+                sparkParticle: {
+                inner: '#fff',
+                middle: 'rgba(255, 255, 255, 0.9)',
+                outer: 'rgba(65, 105, 225, 0.9)',
+                },
+            }}
+        />
+    );
+};`}
+>
+    
+    <PotionBackground
+        colors={{
+            gradient: ['#87CEEB', '#4169E1', '#191970', '#000080', '#00008B'],
+            glitterParticle: {
+            inner: '#ffffff',
+            middle: '#87CEEB',
+            outer: '#4169E1',
+            },
+            sparkParticle: {
+            inner: '#fff',
+            middle: 'rgba(255, 255, 255, 0.9)',
+            outer: 'rgba(65, 105, 225, 0.9)',
+            },
+        }}
+    />
+    
+</Preview>
+
+## Installation
+
+<Tabs items={['pnpm', 'npm', 'yarn', 'bun']} defaultIndex="1">
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`pnpm dlx shadcn@latest add "https://pumki-ui.vercel.app/r/bg-potion.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`npx shadcn@latest add "https://pumki-ui.vercel.app/r/bg-potion.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`yarn dlx shadcn@latest add "https://pumki-ui.vercel.app/r/bg-potion.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`bunx shadcn@latest add "https://pumki-ui.vercel.app/r/bg-potion.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+</Tabs>
+
+## Usage
+
+<br/>
+
+<CodeBlock language="typescript">
+    {`import { PotionBackground } from '@/components/pumki-ui/backgrounds/bg-potion';`}
+</CodeBlock>
+
+<br/>
+
+<CodeBlock language="typescript">
+    {`<PotionBackground />`}
+</CodeBlock>
+
+## Example
+
+<Preview 
+  title="Basic (Golden Potion)"
+  description="A simple golden potion background with a shimmering liquid effect."
+  code={`'use client';
+ 
+import { PotionBackground } from '@/components/pumki-ui/backgrounds/bg-potion';
+
+export const PotionBackgroundDemo = () => {
+    return (
+        <PotionBackground />
+    );
+};`}
+>
+    
+    <PotionBackground />
+    
+</Preview>
+
+<Preview 
+  title="Full customization"
+  code={`'use client';
+ 
+import { PotionBackground } from '@/components/pumki-ui/backgrounds/bg-potion';
+
+export const PotionBackgroundDemo = () => {
+    return (
+        <PotionBackground
+            className="custom-background"
+            glitterCount={{ mobile: 150, desktop: 300 }}
+            sparkCount={{ mobile: 100, desktop: 200 }}
+            colors={{
+                gradient: ['#ff6b6b', '#ffa726', '#ffcc02', '#ff8f00', '#e65100'],
+                glitterParticle: {
+                inner: '#ffffff',
+                middle: '#ff6b6b',
+                outer: '#e65100',
+                },
+            }}
+            animations={{
+                liquidShiftDuration: 12,
+                surfaceRippleDuration: 8,
+                shimmerSweepDuration: 15,
+                particleFloatDuration: { min: 4, max: 8 },
+            }}
+            particleConfig={{
+                glitterSize: 5,
+                sparkSize: 2.5,
+                opacity: { min: 0.4, max: 0.9 },
+            }}
+            features={{
+                showGlitter: true,
+                showSparks: true,
+                showSurfaceHighlights: true,
+                showShimmer: false,
+            }}
+        />
+    );
+};`}
+>
+    
+    <PotionBackground
+        className="custom-background"
+        glitterCount={{ mobile: 150, desktop: 300 }}
+        sparkCount={{ mobile: 100, desktop: 200 }}
+        colors={{
+            gradient: ['#ff6b6b', '#ffa726', '#ffcc02', '#ff8f00', '#e65100'],
+            glitterParticle: {
+            inner: '#ffffff',
+            middle: '#ff6b6b',
+            outer: '#e65100',
+            },
+        }}
+        animations={{
+            liquidShiftDuration: 12,
+            surfaceRippleDuration: 8,
+            shimmerSweepDuration: 15,
+            particleFloatDuration: { min: 4, max: 8 },
+        }}
+        particleConfig={{
+            glitterSize: 5,
+            sparkSize: 2.5,
+            opacity: { min: 0.4, max: 0.9 },
+        }}
+        features={{
+            showGlitter: true,
+            showSparks: true,
+            showSurfaceHighlights: true,
+            showShimmer: false,
+        }}
+    />
+    
+</Preview>
+
+<Preview 
+  title="Custom particle counts"
+  code={`'use client';
+ 
+import { PotionBackground } from '@/components/pumki-ui/backgrounds/bg-potion';
+
+export const PotionBackgroundDemo = () => {
+    return (
+        <PotionBackground
+            glitterCount={{ mobile: 100, desktop: 200 }}
+            sparkCount={{ mobile: 80, desktop: 150 }}
+        />
+    );
+};`}
+>
+    
+    <PotionBackground
+        glitterCount={{ mobile: 100, desktop: 200 }}
+        sparkCount={{ mobile: 80, desktop: 150 }}
+    />
+    
+</Preview>
+
+<Preview 
+  title="Performance optimized"
+  description="fewer particles, faster animation"
+  code={`'use client';
+ 
+import { PotionBackground } from '@/components/pumki-ui/backgrounds/bg-potion';
+
+export const PotionBackgroundDemo = () => {
+    return (
+        <PotionBackground
+            glitterCount={{ mobile: 50, desktop: 100 }}
+            sparkCount={{ mobile: 30, desktop: 60 }}
+            animations={{
+                liquidShiftDuration: 4,
+                surfaceRippleDuration: 3,
+                particleFloatDuration: { min: 2, max: 4 },
+            }}
+        />
+    );
+};`}
+>
+    
+    <PotionBackground
+        glitterCount={{ mobile: 50, desktop: 100 }}
+        sparkCount={{ mobile: 30, desktop: 60 }}
+        animations={{
+            liquidShiftDuration: 4,
+            surfaceRippleDuration: 3,
+            particleFloatDuration: { min: 2, max: 4 },
+        }}
+    />
+    
+</Preview>
+
+<Preview 
+  title="Minimal version"
+  description="no particles"
+  code={`'use client';
+ 
+import { PotionBackground } from '@/components/pumki-ui/backgrounds/bg-potion';
+
+export const PotionBackgroundDemo = () => {
+    return (
+        <PotionBackground
+            features={{
+                showGlitter: false,
+                showSparks: false,
+                showSurfaceHighlights: true,
+                showShimmer: true,
+            }}
+        />
+    );
+};`}
+>
+    
+    <PotionBackground
+        features={{
+            showGlitter: false,
+            showSparks: false,
+            showSurfaceHighlights: true,
+            showShimmer: true,
+        }}
+    />
+    
+</Preview>
+
+
+## Props
+
+import { PumkiTable, PumkiTableStyles } from '../../components/docs/PumkiTable'
+
+<PumkiTableStyles />
+
+
+### PotionBackground Props
+
+<PumkiTable>
+  <table className="pumki-table">
+    <thead>
+      <tr>
+        <th>Prop</th>
+        <th>Type</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>glitterCount?</code></td>
+        <td><code>{`{ mobile?: number; desktop?: number }`}</code></td>
+        <td><code>{`{ mobile: 250, desktop: 500 }`}</code></td>
+      </tr>
+      <tr>
+        <td><code>sparkCount?</code></td>
+        <td><code>{`{ mobile?: number; desktop?: number }`}</code></td>
+        <td><code>{`{ mobile: 200, desktop: 350 }`}</code></td>
+      </tr>
+      <tr>
+        <td><code>colors?</code></td>
+        <td><code>ColorConfig</code></td>
+        <td>See ColorConfig defaults</td>
+      </tr>
+      <tr>
+        <td><code>animations?</code></td>
+        <td><code>AnimationConfig</code></td>
+        <td>See AnimationConfig defaults</td>
+      </tr>
+      <tr>
+        <td><code>particleConfig?</code></td>
+        <td><code>ParticleConfig</code></td>
+        <td>See ParticleConfig defaults</td>
+      </tr>
+      <tr>
+        <td><code>features?</code></td>
+        <td><code>FeatureConfig</code></td>
+        <td>See FeatureConfig defaults</td>
+      </tr>
+      <tr>
+        <td><code>className?</code></td>
+        <td><code>string</code></td>
+        <td><code>""</code></td>
+      </tr>
+    </tbody>
+  </table>
+</PumkiTable>
+ 
+### ColorConfig Props
+
+<PumkiTable>
+  <table className="pumki-table">
+    <thead>
+      <tr>
+        <th>Prop</th>
+        <th>Type</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>gradient?</code></td>
+        <td><code>string[]</code></td>
+        <td><code>{`['#faf398', '#f9f295', '#e0aa3e', '#b88a44', '#8b6f47']`}</code></td>
+      </tr>
+      <tr>
+        <td><code>glitterParticle?</code></td>
+        <td><code>{`{ inner?: string; middle?: string; outer?: string }`}</code></td>
+        <td><code>{`{ inner: '#ffffff', middle: '#faf398', outer: '#e0aa3e' }`}</code></td>
+      </tr>
+      <tr>
+        <td><code>sparkParticle?</code></td>
+        <td><code>{`{ inner?: string; middle?: string; outer?: string }`}</code></td>
+        <td><code>{`{ inner: '#fff', middle: 'rgba(255, 255, 255, 0.9)', outer: 'rgba(224, 170, 62, 0.9)' }`}</code></td>
+      </tr>
+      <tr>
+        <td><code>highlights?</code></td>
+        <td><code>{`{ primary?: string; secondary?: string; accent?: string }`}</code></td>
+        <td><code>{`{ primary: 'rgba(255, 255, 255, 0.1)', secondary: 'rgba(255, 255, 255, 0.15)', accent: 'rgba(212, 175, 55, 0.1)' }`}</code></td>
+      </tr>
+    </tbody>
+  </table>
+</PumkiTable>
+
+### AnimationConfig Props
+
+<PumkiTable>
+  <table className="pumki-table">
+    <thead>
+      <tr>
+        <th>Prop</th>
+        <th>Type</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>liquidShiftDuration?</code></td>
+        <td><code>number</code></td>
+        <td><code>8</code></td>
+      </tr>
+      <tr>
+        <td><code>surfaceRippleDuration?</code></td>
+        <td><code>number</code></td>
+        <td><code>6</code></td>
+      </tr>
+      <tr>
+        <td><code>shimmerSweepDuration?</code></td>
+        <td><code>number</code></td>
+        <td><code>10</code></td>
+      </tr>
+      <tr>
+        <td><code>particleFloatDuration?</code></td>
+        <td><code>{`{ min?: number; max?: number }`}</code></td>
+        <td><code>{`{ min: 3, max: 7 }`}</code></td>
+      </tr>
+    </tbody>
+  </table>
+</PumkiTable>
+
+### ParticleConfig Props
+
+<PumkiTable>
+  <table className="pumki-table">
+    <thead>
+      <tr>
+        <th>Prop</th>
+        <th>Type</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>glitterSize?</code></td>
+        <td><code>number</code></td>
+        <td><code>4</code></td>
+      </tr>
+      <tr>
+        <td><code>sparkSize?</code></td>
+        <td><code>number</code></td>
+        <td><code>2</code></td>
+      </tr>
+      <tr>
+        <td><code>opacity?</code></td>
+        <td><code>{`{ min?: number; max?: number }`}</code></td>
+        <td><code>{`{ min: 0.5, max: 1.0 }`}</code></td>
+      </tr>
+    </tbody>
+  </table>
+</PumkiTable>
+
+### FeatureConfig Props
+
+<PumkiTable>
+  <table className="pumki-table">
+    <thead>
+      <tr>
+        <th>Prop</th>
+        <th>Type</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>showGlitter?</code></td>
+        <td><code>boolean</code></td>
+        <td><code>true</code></td>
+      </tr>
+      <tr>
+        <td><code>showSparks?</code></td>
+        <td><code>boolean</code></td>
+        <td><code>true</code></td>
+      </tr>
+      <tr>
+        <td><code>showSurfaceHighlights?</code></td>
+        <td><code>boolean</code></td>
+        <td><code>true</code></td>
+      </tr>
+      <tr>
+        <td><code>showShimmer?</code></td>
+        <td><code>boolean</code></td>
+        <td><code>true</code></td>
+      </tr>
+    </tbody>
+  </table>
+</PumkiTable>
