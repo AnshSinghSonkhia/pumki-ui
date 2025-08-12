@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "counting-number",
+  "type": "registry:ui",
+  "title": "Counting Number",
+  "description": "A component that animates the counting effect on numbers.",
+  "author": "Ansh Singh Sonkhia",
+  "dependencies": [
+    "react",
+    "motion"
+  ],
+  "registryDependencies": [],
+  "files": [
+    {
+      "type": "registry:ui",
+      "content": "'use client';\r\n \r\nimport * as React from 'react';\r\nimport {\r\n  type SpringOptions,\r\n  type UseInViewOptions,\r\n  useInView,\r\n  useMotionValue,\r\n  useSpring,\r\n} from 'motion/react';\r\n \r\ntype CountingNumberProps = React.ComponentProps<'span'> & {\r\n  number: number;\r\n  fromNumber?: number;\r\n  padStart?: boolean;\r\n  inView?: boolean;\r\n  inViewMargin?: UseInViewOptions['margin'];\r\n  inViewOnce?: boolean;\r\n  decimalSeparator?: string;\r\n  transition?: SpringOptions;\r\n  decimalPlaces?: number;\r\n};\r\n \r\nfunction CountingNumber({\r\n  ref,\r\n  number,\r\n  fromNumber = 0,\r\n  padStart = false,\r\n  inView = false,\r\n  inViewMargin = '0px',\r\n  inViewOnce = true,\r\n  decimalSeparator = '.',\r\n  transition = { stiffness: 90, damping: 50 },\r\n  decimalPlaces = 0,\r\n  className,\r\n  ...props\r\n}: CountingNumberProps) {\r\n  const localRef = React.useRef<HTMLSpanElement>(null);\r\n  React.useImperativeHandle(ref, () => localRef.current as HTMLSpanElement);\r\n \r\n  const numberStr = number.toString();\r\n  const decimals =\r\n    typeof decimalPlaces === 'number'\r\n      ? decimalPlaces\r\n      : numberStr.includes('.')\r\n        ? (numberStr.split('.')[1]?.length ?? 0)\r\n        : 0;\r\n \r\n  const motionVal = useMotionValue(fromNumber);\r\n  const springVal = useSpring(motionVal, transition);\r\n  const inViewResult = useInView(localRef, {\r\n    once: inViewOnce,\r\n    margin: inViewMargin,\r\n  });\r\n  const isInView = !inView || inViewResult;\r\n \r\n  React.useEffect(() => {\r\n    if (isInView) motionVal.set(number);\r\n  }, [isInView, number, motionVal]);\r\n \r\n  React.useEffect(() => {\r\n    const unsubscribe = springVal.on('change', (latest) => {\r\n      if (localRef.current) {\r\n        let formatted =\r\n          decimals > 0\r\n            ? latest.toFixed(decimals)\r\n            : Math.round(latest).toString();\r\n \r\n        if (decimals > 0) {\r\n          formatted = formatted.replace('.', decimalSeparator);\r\n        }\r\n \r\n        if (padStart) {\r\n          const finalIntLength = Math.floor(Math.abs(number)).toString().length;\r\n          const [intPart, fracPart] = formatted.split(decimalSeparator);\r\n          const paddedInt = intPart?.padStart(finalIntLength, '0') ?? '';\r\n          formatted = fracPart\r\n            ? `${paddedInt}${decimalSeparator}${fracPart}`\r\n            : paddedInt;\r\n        }\r\n \r\n        localRef.current.textContent = formatted;\r\n      }\r\n    });\r\n    return () => unsubscribe();\r\n  }, [springVal, decimals, padStart, number, decimalSeparator]);\r\n \r\n  const finalIntLength = Math.floor(Math.abs(number)).toString().length;\r\n  const initialText = padStart\r\n    ? '0'.padStart(finalIntLength, '0') +\r\n      (decimals > 0 ? decimalSeparator + '0'.repeat(decimals) : '')\r\n    : '0' + (decimals > 0 ? decimalSeparator + '0'.repeat(decimals) : '');\r\n \r\n  return (\r\n    <span\r\n      ref={localRef}\r\n      data-slot=\"counting-number\"\r\n      className={className}\r\n      {...props}\r\n    >\r\n      {initialText}\r\n    </span>\r\n  );\r\n}\r\n \r\nexport { CountingNumber, type CountingNumberProps };",
+      "path": "components/pumki-ui/text/counting-number.tsx",
+      "target": "components/pumki-ui/text/counting-number.tsx"
+    }
+  ]
+}

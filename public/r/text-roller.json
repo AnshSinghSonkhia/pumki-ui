@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "text-roller",
+  "type": "registry:ui",
+  "title": "Text Roller",
+  "description": "A component that applies a rolling effect to text with a smooth animation.",
+  "author": "Ansh Singh Sonkhia",
+  "dependencies": [
+    "react",
+    "motion"
+  ],
+  "registryDependencies": [],
+  "files": [
+    {
+      "type": "registry:ui",
+      "content": "'use client';\r\n \r\nimport * as React from 'react';\r\nimport {\r\n  motion,\r\n  useInView,\r\n  type UseInViewOptions,\r\n  type Transition,\r\n} from 'motion/react';\r\n \r\nconst ENTRY_ANIMATION = {\r\n  initial: { rotateX: 0 },\r\n  animate: { rotateX: 90 },\r\n};\r\n \r\nconst EXIT_ANIMATION = {\r\n  initial: { rotateX: 90 },\r\n  animate: { rotateX: 0 },\r\n};\r\n \r\nconst formatCharacter = (char: string) => (char === ' ' ? '\\u00A0' : char);\r\n \r\ntype RollingTextProps = Omit<React.ComponentProps<'span'>, 'children'> & {\r\n  transition?: Transition;\r\n  inView?: boolean;\r\n  inViewMargin?: UseInViewOptions['margin'];\r\n  inViewOnce?: boolean;\r\n  text: string;\r\n};\r\n \r\nfunction RollingText({\r\n  ref,\r\n  transition = { duration: 0.5, delay: 0.1, ease: 'easeOut' },\r\n  inView = false,\r\n  inViewMargin = '0px',\r\n  inViewOnce = true,\r\n  text,\r\n  ...props\r\n}: RollingTextProps) {\r\n  const localRef = React.useRef<HTMLSpanElement>(null);\r\n  React.useImperativeHandle(ref, () => localRef.current!);\r\n \r\n  const inViewResult = useInView(localRef, {\r\n    once: inViewOnce,\r\n    margin: inViewMargin,\r\n  });\r\n  const isInView = !inView || inViewResult;\r\n \r\n  const characters = React.useMemo(() => text.split(''), [text]);\r\n \r\n  return (\r\n    <span data-slot=\"rolling-text\" {...props} ref={ref}>\r\n      {characters.map((char, idx) => (\r\n        <span\r\n          key={idx}\r\n          className=\"relative inline-block perspective-[9999999px] transform-3d w-auto\"\r\n          aria-hidden=\"true\"\r\n        >\r\n          <motion.span\r\n            className=\"absolute inline-block backface-hidden origin-[50%_25%]\"\r\n            initial={ENTRY_ANIMATION.initial}\r\n            animate={isInView ? ENTRY_ANIMATION.animate : undefined}\r\n            transition={{\r\n              ...transition,\r\n              delay: idx * (transition?.delay ?? 0),\r\n            }}\r\n          >\r\n            {formatCharacter(char)}\r\n          </motion.span>\r\n          <motion.span\r\n            className=\"absolute inline-block backface-hidden origin-[50%_100%]\"\r\n            initial={EXIT_ANIMATION.initial}\r\n            animate={isInView ? EXIT_ANIMATION.animate : undefined}\r\n            transition={{\r\n              ...transition,\r\n              delay: idx * (transition?.delay ?? 0) + 0.3,\r\n            }}\r\n          >\r\n            {formatCharacter(char)}\r\n          </motion.span>\r\n          <span className=\"invisible\">{formatCharacter(char)}</span>\r\n        </span>\r\n      ))}\r\n \r\n      <span className=\"sr-only\">{text}</span>\r\n    </span>\r\n  );\r\n}\r\n \r\nexport { RollingText, type RollingTextProps };",
+      "path": "components/pumki-ui/text/text-roller.tsx",
+      "target": "components/pumki-ui/text/text-roller.tsx"
+    }
+  ]
+}

@@ -1,0 +1,119 @@
+---
+title: "Gradient Text - Pumki UI"
+description: A component that applies a gradient effect to text with a smooth animation, perfect for emphasizing important information.
+---
+
+import { Tabs } from 'nextra/components'
+import { CodeBlock } from '@/components/docs/code-block'
+import { Preview, ResponsivePreview } from '@/components/docs/preview'
+import { Button } from '@/components/ui/button'
+import { GradientText } from '@/components/pumki-ui/text/text-gradient'
+
+# Gradient Text Animation
+
+A component that applies a gradient effect to text with a smooth animation, perfect for emphasizing important information.
+
+<Preview
+  code={`import { GradientText } from '@/components/pumki-ui/text/text-gradient';
+
+  export const GradientTextDemo = () => {
+    return (
+        <div className="flex flex-col items-center gap-6">
+            <GradientText className="text-4xl font-semibold" text="Pumki UI" />
+            
+            <GradientText className="text-4xl font-semibold" text="Pumki UI" neon />
+        </div>
+    );
+};`}
+>
+        <div className="flex flex-col items-center gap-6">
+            <GradientText className="text-4xl font-semibold" text="Pumki UI" />
+            
+            <GradientText className="text-4xl font-semibold" text="Pumki UI" neon />
+        </div>
+
+</Preview>
+
+## Installation
+
+<Tabs items={['pnpm', 'npm', 'yarn', 'bun']} defaultIndex="1">
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`pnpm dlx shadcn@latest add "https://pumki-ui.vercel.app/r/text-gradient.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`npx shadcn@latest add "https://pumki-ui.vercel.app/r/text-gradient.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`yarn dlx shadcn@latest add "https://pumki-ui.vercel.app/r/text-gradient.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`bunx shadcn@latest add "https://pumki-ui.vercel.app/r/text-gradient.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+</Tabs>
+
+## Usage
+
+<br/>
+
+<CodeBlock language="typescript">
+    {`import { GradientText } from '@/components/pumki-ui/text/text-gradient';`}
+</CodeBlock>
+
+<br/>
+
+<CodeBlock language="typescript">
+    {`<GradientText text="Pumki UI" />`}
+</CodeBlock>
+
+## Props
+
+import { PumkiTable, PumkiTableStyles } from '@/components/docs/PumkiTable'
+
+<PumkiTableStyles />
+
+<PumkiTable>
+  <table className="pumki-table">
+    <thead>
+      <tr>
+        <th>Prop</th>
+        <th>Type</th>
+        <th>Default</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>neon?</code></td>
+        <td><code>boolean</code></td>
+        <td><code>false</code></td>
+        <td>Enable neon glow effect</td>
+      </tr>
+      <tr>
+        <td><code>gradient?</code></td>
+        <td><code>string</code></td>
+        <td><code>linear-gradient(90deg, #3b82f6 0%, #a855f7 20%, #ec4899 50%, #a855f7 80%, #3b82f6 100%)</code></td>
+        <td>CSS gradient for text</td>
+      </tr>
+      <tr>
+        <td><code>transition?</code></td>
+        <td><code>Transition</code></td>
+        <td><code>{`{ duration: 50, repeat: Infinity, ease: 'linear' }`}</code></td>
+        <td>Animation transition config</td>
+      </tr>
+      <tr>
+        <td><code>text</code></td>
+        <td><code>string</code></td>
+        <td><code>-</code></td>
+        <td>Text to display with gradient</td>
+      </tr>
+    </tbody>
+  </table>
+</PumkiTable>

@@ -1,0 +1,123 @@
+---
+title: "Highlight Text - Pumki UI"
+description: A component that highlights text with a smooth animation effect, perfect for emphasizing important information.
+---
+
+import { Tabs } from 'nextra/components'
+import { CodeBlock } from '@/components/docs/code-block'
+import { Preview, ResponsivePreview } from '@/components/docs/preview'
+import { Button } from '@/components/ui/button'
+import { HighlightText } from '@/components/pumki-ui/text/text-highlight'
+
+# Highlight Text Animation
+
+A component that highlights text with a smooth animation effect, perfect for emphasizing important information.
+
+<Preview
+  code={`import { HighlightText } from '@/components/pumki-ui/text/text-highlight';
+
+  export const HighlightTextDemo = () => {
+    return (
+        <HighlightText className="text-4xl font-semibold" text="Pumki UI" />
+    );
+};`}
+>
+        <HighlightText className="text-4xl font-semibold" text="Pumki UI" />
+
+</Preview>
+
+## Installation
+
+<Tabs items={['pnpm', 'npm', 'yarn', 'bun']} defaultIndex="1">
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`pnpm dlx shadcn@latest add "https://pumki-ui.vercel.app/r/text-highlight.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`npx shadcn@latest add "https://pumki-ui.vercel.app/r/text-highlight.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`yarn dlx shadcn@latest add "https://pumki-ui.vercel.app/r/text-highlight.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`bunx shadcn@latest add "https://pumki-ui.vercel.app/r/text-highlight.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+</Tabs>
+
+## Usage
+
+<br/>
+
+<CodeBlock language="typescript">
+    {`import { HighlightText } from '@/components/pumki-ui/text/text-highlight';`}
+</CodeBlock>
+
+<br/>
+
+<CodeBlock language="typescript">
+    {`<HighlightText text="Pumki UI" />`}
+</CodeBlock>
+
+## Props
+
+import { PumkiTable, PumkiTableStyles } from '@/components/docs/PumkiTable'
+
+<PumkiTableStyles />
+
+<PumkiTable>
+  <table className="pumki-table">
+    <thead>
+      <tr>
+        <th>Prop</th>
+        <th>Type</th>
+        <th>Default</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>transition?</code></td>
+        <td><code>Transition</code></td>
+        <td><code>{`{ duration: 2, ease: 'easeInOut' }`}</code></td>
+        <td>Animation transition config</td>
+      </tr>
+      <tr>
+        <td><code>inViewOnce?</code></td>
+        <td><code>boolean</code></td>
+        <td><code>true</code></td>
+        <td>Animate only once when in view</td>
+      </tr>
+      <tr>
+        <td><code>inViewMargin?</code></td>
+        <td><code>string</code></td>
+        <td><code>0px</code></td>
+        <td>Margin for in-view detection</td>
+      </tr>
+      <tr>
+        <td><code>inView?</code></td>
+        <td><code>boolean</code></td>
+        <td><code>false</code></td>
+        <td>Force animation in view</td>
+      </tr>
+      <tr>
+        <td><code>className?</code></td>
+        <td><code>string</code></td>
+        <td><code>-</code></td>
+        <td>Custom class name</td>
+      </tr>
+      <tr>
+        <td><code>text</code></td>
+        <td><code>string</code></td>
+        <td><code>-</code></td>
+        <td>Text to highlight</td>
+      </tr>
+    </tbody>
+  </table>
+</PumkiTable>

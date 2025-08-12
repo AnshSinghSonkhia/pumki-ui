@@ -256,4 +256,89 @@ export const component: Registry = [
             },
         ],
     },
+    {
+        name: "counting-number",
+        type: "registry:ui",
+        title: "Counting Number",
+        description:
+            "A component that animates the counting effect on numbers.",
+        author: "Ansh Singh Sonkhia",
+        dependencies: ["react", "motion"],
+        registryDependencies: [],
+        files: [
+            {
+                path: "components/pumki-ui/text/counting-number.tsx",
+                type: "registry:ui",
+                target: "components/pumki-ui/text/counting-number.tsx",
+            },
+        ],
+    },
+    {
+        name: "text-highlight",
+        type: "registry:ui",
+        title: "Text Highlight",
+        description:
+            "A component that highlights text with a smooth animation effect.",
+        author: "Ansh Singh Sonkhia",
+        dependencies: ["react", "motion"],
+        registryDependencies: [],
+        files: [
+            {
+                path: "components/pumki-ui/text/text-highlight.tsx",
+                type: "registry:ui",
+                target: "components/pumki-ui/text/text-highlight.tsx",
+            },
+        ],
+    },
+    {
+        name: "text-gradient",
+        type: "registry:ui",
+        title: "Text Gradient",
+        description:
+            "A component that applies a gradient effect to text with a smooth animation.",
+        author: "Ansh Singh Sonkhia",
+        dependencies: ["react", "motion"],
+        registryDependencies: [],
+        files: [
+            {
+                path: "components/pumki-ui/text/text-gradient.tsx",
+                type: "registry:ui",
+                target: "components/pumki-ui/text/text-gradient.tsx",
+            },
+        ],
+    },
+    {
+        name: "text-roller",
+        type: "registry:ui",
+        title: "Text Roller",
+        description:
+            "A component that applies a rolling effect to text with a smooth animation.",
+        author: "Ansh Singh Sonkhia",
+        dependencies: ["react", "motion"],
+        registryDependencies: [],
+        files: [
+            {
+                path: "components/pumki-ui/text/text-roller.tsx",
+                type: "registry:ui",
+                target: "components/pumki-ui/text/text-roller.tsx",
+            },
+        ],
+    },
+    {
+        name: "text-splitting",
+        type: "registry:ui",
+        title: "Text Splitting",
+        description:
+            "A component that applies a splitting effect to text with a smooth animation.",
+        author: "Ansh Singh Sonkhia",
+        dependencies: ["react", "motion"],
+        registryDependencies: [],
+        files: [
+            {
+                path: "components/pumki-ui/text/text-splitting.tsx",
+                type: "registry:ui",
+                target: "components/pumki-ui/text/text-splitting.tsx",
+            },
+        ],
+    },
 ];

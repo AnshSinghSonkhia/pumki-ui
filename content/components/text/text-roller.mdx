@@ -1,0 +1,129 @@
+---
+title: "Text Roller - Pumki UI"
+description: A component that applies a rolling animation to text, perfect for emphasizing important information.
+---
+
+import { Tabs } from 'nextra/components'
+import { CodeBlock } from '@/components/docs/code-block'
+import { Preview, ResponsivePreview } from '@/components/docs/preview'
+import { Button } from '@/components/ui/button'
+import { RollingText } from '@/components/pumki-ui/text/text-roller'
+
+# Rolling Text Animation
+
+A component that applies a rolling animation to text, perfect for emphasizing important information.
+
+<Preview
+  code={`import { RollingText } from '@/components/pumki-ui/text/text-roller';
+
+  export const RollingTextDemo = () => {
+    return (
+        <RollingText className="text-4xl" text="Ansh Singh Sonkhia" />;
+    );
+};`}
+>
+        <RollingText className="text-4xl" text="Ansh Singh Sonkhia" />
+
+</Preview>
+
+## Installation
+
+<Tabs items={['pnpm', 'npm', 'yarn', 'bun']} defaultIndex="1">
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`pnpm dlx shadcn@latest add "https://pumki-ui.vercel.app/r/text-roller.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`npx shadcn@latest add "https://pumki-ui.vercel.app/r/text-roller.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`yarn dlx shadcn@latest add "https://pumki-ui.vercel.app/r/text-roller.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`bunx shadcn@latest add "https://pumki-ui.vercel.app/r/text-roller.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+</Tabs>
+
+## Usage
+
+<br/>
+
+<CodeBlock language="typescript">
+    {`import { RollingText } from '@/components/pumki-ui/text/text-roller';`}
+</CodeBlock>
+
+<br/>
+
+<CodeBlock language="typescript">
+    {`<RollingText text="Pumki UI" />`}
+</CodeBlock>
+
+## Props
+
+import { PumkiTable, PumkiTableStyles } from '@/components/docs/PumkiTable'
+
+<PumkiTableStyles />
+
+<PumkiTable>
+  <table className="pumki-table">
+    <thead>
+      <tr>
+        <th>Prop</th>
+        <th>Type</th>
+        <th>Default</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>text</code></td>
+        <td><code>string</code></td>
+        <td><code>-</code></td>
+        <td>Text to animate</td>
+      </tr>
+      <tr>
+        <td><code>inViewOnce?</code></td>
+        <td><code>boolean</code></td>
+        <td><code>true</code></td>
+        <td>Animate only once when in view</td>
+      </tr>
+      <tr>
+        <td><code>inViewMargin?</code></td>
+        <td><code>string</code></td>
+        <td><code>0px</code></td>
+        <td>Margin for in-view detection</td>
+      </tr>
+      <tr>
+        <td><code>inView?</code></td>
+        <td><code>boolean</code></td>
+        <td><code>false</code></td>
+        <td>Force animation in view</td>
+      </tr>
+      <tr>
+        <td><code>transition?</code></td>
+        <td><code>Transition</code></td>
+        <td><code>{`{ duration: 0.5, delay: 0.1, ease: 'easeOut' }`}</code></td>
+        <td>Animation transition config</td>
+      </tr>
+      <tr>
+        <td><code>className?</code></td>
+        <td><code>string</code></td>
+        <td><code>-</code></td>
+        <td>Custom class name</td>
+      </tr>
+      <tr>
+        <td><code>children</code></td>
+        <td><code>React.ReactNode</code></td>
+        <td><code>-</code></td>
+        <td>Custom content to roll</td>
+      </tr>
+    </tbody>
+  </table>
+</PumkiTable>

@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "text-gradient",
+  "type": "registry:ui",
+  "title": "Text Gradient",
+  "description": "A component that applies a gradient effect to text with a smooth animation.",
+  "author": "Ansh Singh Sonkhia",
+  "dependencies": [
+    "react",
+    "motion"
+  ],
+  "registryDependencies": [],
+  "files": [
+    {
+      "type": "registry:ui",
+      "content": "'use client';\r\n \r\nimport * as React from 'react';\r\nimport { motion, type Transition } from 'motion/react';\r\n \r\nimport { cn } from '@/lib/utils';\r\n \r\ntype GradientTextProps = React.ComponentProps<'span'> & {\r\n  text: string;\r\n  gradient?: string;\r\n  neon?: boolean;\r\n  transition?: Transition;\r\n};\r\n \r\nfunction GradientText({\r\n  text,\r\n  className,\r\n  gradient = 'linear-gradient(90deg, #3b82f6 0%, #a855f7 20%, #ec4899 50%, #a855f7 80%, #3b82f6 100%)',\r\n  neon = false,\r\n  transition = { duration: 50, repeat: Infinity, ease: 'linear' },\r\n  ...props\r\n}: GradientTextProps) {\r\n  const baseStyle: React.CSSProperties = {\r\n    backgroundImage: gradient,\r\n  };\r\n \r\n  return (\r\n    <span\r\n      data-slot=\"gradient-text\"\r\n      className={cn('relative inline-block', className)}\r\n      {...props}\r\n    >\r\n      <motion.span\r\n        className=\"m-0 text-transparent bg-clip-text bg-[length:700%_100%] bg-[position:0%_0%]\"\r\n        style={baseStyle}\r\n        initial={{ backgroundPosition: '0% 0%' }}\r\n        animate={{ backgroundPosition: '500% 100%' }}\r\n        transition={transition}\r\n      >\r\n        {text}\r\n      </motion.span>\r\n \r\n      {neon && (\r\n        <motion.span\r\n          className=\"m-0 absolute top-0 left-0 text-transparent bg-clip-text blur-[8px] mix-blend-plus-lighter bg-[length:700%_100%] bg-[position:0%_0%]\"\r\n          style={baseStyle}\r\n          initial={{ backgroundPosition: '0% 0%' }}\r\n          animate={{ backgroundPosition: '500% 100%' }}\r\n          transition={transition}\r\n        >\r\n          {text}\r\n        </motion.span>\r\n      )}\r\n    </span>\r\n  );\r\n}\r\n \r\nexport { GradientText, type GradientTextProps };",
+      "path": "components/pumki-ui/text/text-gradient.tsx",
+      "target": "components/pumki-ui/text/text-gradient.tsx"
+    }
+  ]
+}

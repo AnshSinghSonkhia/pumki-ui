@@ -1,0 +1,194 @@
+---
+title: "Counting Number Text - Pumki UI"
+description: A number display component that animates values with a smooth counting effect, perfect for stats, metrics, and dashboards.
+---
+
+import { Tabs } from 'nextra/components'
+import { CodeBlock } from '@/components/docs/code-block'
+import { Preview, ResponsivePreview } from '@/components/docs/preview'
+import { Button } from '@/components/ui/button'
+import { CountingNumber } from '@/components/pumki-ui/text/counting-number'
+
+# Counting Number Animation
+
+A number display component that animates values with a smooth counting effect, perfect for stats, metrics, and dashboards.
+
+<Preview
+  code={`import { CountingNumber } from '@/components/pumki-ui/text/counting-number';
+
+  export const CountingNumberDemo = () => {
+    return (
+        <CountingNumber number={new Date().getFullYear()} className="text-4xl" />
+    );
+};`}
+>
+        <CountingNumber number={new Date().getFullYear()} className="text-4xl" />
+
+</Preview>
+
+## Installation
+
+<Tabs items={['pnpm', 'npm', 'yarn', 'bun']} defaultIndex="1">
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`pnpm dlx shadcn@latest add "https://pumki-ui.vercel.app/r/counting-number.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`npx shadcn@latest add "https://pumki-ui.vercel.app/r/counting-number.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`yarn dlx shadcn@latest add "https://pumki-ui.vercel.app/r/counting-number.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`bunx shadcn@latest add "https://pumki-ui.vercel.app/r/counting-number.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+</Tabs>
+
+## Usage
+
+<br/>
+
+<CodeBlock language="typescript">
+    {`import { CountingNumber } from '@/components/pumki-ui/text/counting-number';`}
+</CodeBlock>
+
+<br/>
+
+<CodeBlock language="typescript">
+    {`<CountingNumber number={5555} />`}
+</CodeBlock>
+
+## Example
+
+<Preview
+  title="Using Decimals"
+  code={`import { CountingNumber } from '@/components/pumki-ui/text/counting-number';
+
+  export const CountingNumberDemo = () => {
+    return (
+        <CountingNumber
+            number={12345.67}
+            decimalPlaces={2}
+            decimalSeparator=","
+            className="text-4xl"
+            inView
+        />
+    );
+};`}
+>
+        <CountingNumber
+            number={12345.67}
+            decimalPlaces={2}
+            decimalSeparator=","
+            className="text-4xl"
+            inView
+        />
+
+</Preview>
+
+<Preview
+  title="Starting from a specific number"
+  description="You can start counting from a specific number by using the `fromNumber` prop."
+  code={`import { CountingNumber } from '@/components/pumki-ui/text/counting-number';
+
+  export const CountingNumberDemo = () => {
+    return (
+        <CountingNumber
+            number={new Date().getFullYear()}
+            fromNumber={0}
+            className="text-4xl"
+            inView
+        />
+    );
+};`}
+>
+        <CountingNumber
+            number={new Date().getFullYear()}
+            fromNumber={0}
+            className="text-4xl"
+            inView
+        />
+
+</Preview>
+
+## Props
+
+import { PumkiTable, PumkiTableStyles } from '@/components/docs/PumkiTable'
+
+<PumkiTableStyles />
+
+<PumkiTable>
+  <table className="pumki-table">
+    <thead>
+      <tr>
+        <th>Prop</th>
+        <th>Type</th>
+        <th>Default</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>decimalPlaces?</code></td>
+        <td><code>number</code></td>
+        <td><code>0</code></td>
+        <td>Number of decimal places</td>
+      </tr>
+      <tr>
+        <td><code>transition?</code></td>
+        <td><code>object</code></td>
+        <td><code>{`{ stiffness: 90, damping: 50 }`}</code></td>
+        <td>Animation transition config</td>
+      </tr>
+      <tr>
+        <td><code>decimalSeparator?</code></td>
+        <td><code>string</code></td>
+        <td><code>.</code></td>
+        <td>Decimal separator character</td>
+      </tr>
+      <tr>
+        <td><code>inViewOnce?</code></td>
+        <td><code>boolean</code></td>
+        <td><code>true</code></td>
+        <td>Animate only once when in view</td>
+      </tr>
+      <tr>
+        <td><code>inViewMargin?</code></td>
+        <td><code>string</code></td>
+        <td><code>0px</code></td>
+        <td>Margin for in-view detection</td>
+      </tr>
+      <tr>
+        <td><code>inView?</code></td>
+        <td><code>boolean</code></td>
+        <td><code>false</code></td>
+        <td>Force animation in view</td>
+      </tr>
+      <tr>
+        <td><code>padStart?</code></td>
+        <td><code>boolean</code></td>
+        <td><code>false</code></td>
+        <td>Pad with zeros at start</td>
+      </tr>
+      <tr>
+        <td><code>fromNumber?</code></td>
+        <td><code>number</code></td>
+        <td><code>0</code></td>
+        <td>Start counting from this number</td>
+      </tr>
+      <tr>
+        <td><code>number</code></td>
+        <td><code>number</code></td>
+        <td><code>-</code></td>
+        <td>Target number to animate</td>
+      </tr>
+    </tbody>
+  </table>
+</PumkiTable>

@@ -1,0 +1,255 @@
+---
+title: "Text Splitting - Pumki UI"
+description: A component that applies a splitting animation to text, perfect for emphasizing important information.
+---
+
+import { Tabs } from 'nextra/components'
+import { CodeBlock } from '@/components/docs/code-block'
+import { Preview, ResponsivePreview } from '@/components/docs/preview'
+import { Button } from '@/components/ui/button'
+import { SplittingText } from '@/components/pumki-ui/text/text-splitting'
+
+# Splitting Text Animation
+
+A component that applies a splitting animation to text, perfect for emphasizing important information.
+
+<Preview
+  code={`import { SplittingText } from '@/components/pumki-ui/text/text-splitting';
+
+  export const SplittingTextDemo = () => {
+    return (
+        <div className="flex flex-col gap-2 justify-center text-center">
+            <SplittingText
+                className="text-2xl"
+                text="Introducing Pumki UI Splitter"
+            />
+            <SplittingText
+                className="text-base text-muted-foreground"
+                text="Made with Motion. Highly customizable and easy to use."
+                delay={2200}
+                type="words"
+            />
+        </div>
+    );
+};`}
+>
+        <div className="flex flex-col gap-2 justify-center text-center">
+            <SplittingText
+                className="text-2xl"
+                text="Introducing Pumki UI Splitter"
+            />
+            <SplittingText
+                className="text-base text-muted-foreground"
+                text="Made with Motion. Highly customizable and easy to use."
+                delay={2200}
+                type="words"
+            />
+        </div>
+
+</Preview>
+
+## Installation
+
+<Tabs items={['pnpm', 'npm', 'yarn', 'bun']} defaultIndex="1">
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`pnpm dlx shadcn@latest add "https://pumki-ui.vercel.app/r/text-splitting.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`npx shadcn@latest add "https://pumki-ui.vercel.app/r/text-splitting.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`yarn dlx shadcn@latest add "https://pumki-ui.vercel.app/r/text-splitting.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`bunx shadcn@latest add "https://pumki-ui.vercel.app/r/text-splitting.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+</Tabs>
+
+## Usage
+
+<br/>
+
+<CodeBlock language="typescript">
+    {`import { SplittingText } from '@/components/pumki-ui/text/text-splitting';`}
+</CodeBlock>
+
+<br/>
+
+<CodeBlock language="typescript">
+    {`<SplittingText type="chars" text="Splitting Text" />`}
+</CodeBlock>
+
+
+## Example
+
+
+<Preview
+  title="Splitting words"
+  code={`import { SplittingText } from '@/components/pumki-ui/text/text-splitting';
+
+  export const SplittingTextDemo = () => {
+    return (
+        <SplittingText
+            className="text-lg"
+            type="words"
+            inView
+            text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos."
+        />
+    );
+};`}
+>
+        <SplittingText
+      className="text-lg"
+      type="words"
+      inView
+      text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos."
+    />
+
+</Preview>
+
+<Preview
+  title="Splitting lines"
+  code={`import { SplittingText } from '@/components/pumki-ui/text/text-splitting';
+
+  export const SplittingTextDemo = () => {
+    return (
+        <SplittingText
+            className="text-lg"
+            type="lines"
+            inView
+            motionVariants={{
+                initial: { y: 50, opacity: 0, x: 0 },
+                animate: { y: 0, opacity: 1, x: 0 },
+            }}
+            text={[
+                'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.',
+                'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.',
+                'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.',
+            ]}
+        />
+    );
+};`}
+>
+        <SplittingText
+      className="text-lg"
+      type="lines"
+      inView
+      motionVariants={{
+        initial: { y: 50, opacity: 0, x: 0 },
+        animate: { y: 0, opacity: 1, x: 0 },
+      }}
+      text={[
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.',
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.',
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.',
+      ]}
+    />
+
+</Preview>
+
+<Preview
+  title="Splitting with custom variants"
+  code={`import { SplittingText } from '@/components/pumki-ui/text/text-splitting';
+
+  export const SplittingTextDemo = () => {
+    return (
+        <SplittingText
+            className="text-lg"
+            type="chars"
+            inView
+            text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos."
+            motionVariants={{
+                initial: { y: 50, scale: 0.5, opacity: 0, x: 50, rotate: 90 },
+                animate: { y: 0, scale: 1, opacity: 1, x: 0, rotate: 0 },
+                transition: { duration: 0.5, ease: 'easeOut' },
+            }}
+        />
+    );
+};`}
+>
+        <SplittingText
+      className="text-lg"
+      type="chars"
+      inView
+      text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos."
+      motionVariants={{
+        initial: { y: 50, scale: 0.5, opacity: 0, x: 50, rotate: 90 },
+        animate: { y: 0, scale: 1, opacity: 1, x: 0, rotate: 0 },
+        transition: { duration: 0.5, ease: 'easeOut' },
+      }}
+    />
+
+</Preview>
+
+
+
+## Props
+
+import { PumkiTable, PumkiTableStyles } from '@/components/docs/PumkiTable'
+
+<PumkiTableStyles />
+
+<PumkiTable>
+  <table className="pumki-table">
+    <thead>
+      <tr>
+        <th>Prop</th>
+        <th>Type</th>
+        <th>Default</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>inViewOnce?</code></td>
+        <td><code>boolean</code></td>
+        <td><code>true</code></td>
+        <td>Animate only once when in view</td>
+      </tr>
+      <tr>
+        <td><code>inViewMargin?</code></td>
+        <td><code>string</code></td>
+        <td><code>0px</code></td>
+        <td>Margin for in-view detection</td>
+      </tr>
+      <tr>
+        <td><code>inView?</code></td>
+        <td><code>boolean</code></td>
+        <td><code>false</code></td>
+        <td>Force animation in view</td>
+      </tr>
+      <tr>
+        <td><code>motionVariants?</code></td>
+        <td><code>Variants</code></td>
+        <td><code>-</code></td>
+        <td>Custom Framer Motion variants</td>
+      </tr>
+      <tr>
+        <td><code>type?</code></td>
+        <td><code>'chars' | 'words' | 'lines'</code></td>
+        <td><code>chars</code></td>
+        <td>How to split the text</td>
+      </tr>
+      <tr>
+        <td><code>text</code></td>
+        <td><code>string | string[]</code></td>
+        <td><code>-</code></td>
+        <td>Text to animate or array of strings</td>
+      </tr>
+      <tr>
+        <td><code>className?</code></td>
+        <td><code>string</code></td>
+        <td><code>-</code></td>
+        <td>Custom class name</td>
+      </tr>
+    </tbody>
+  </table>
+</PumkiTable>
