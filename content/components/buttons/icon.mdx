@@ -1,0 +1,128 @@
+---
+title: "Icon Button - Pumki UI"
+description: A button that displays an icon with an accompanying animation.
+---
+
+import * as React from 'react'
+import { Tabs } from 'nextra/components'
+import { CodeBlock } from '@/components/docs/code-block'
+import { Preview, ResponsivePreview } from '@/components/docs/preview'
+import { Button } from '@/components/ui/button'
+import { IconButton } from '@/components/pumki-ui/buttons/icon'
+import { Heart } from 'lucide-react'
+import { IconButtonDemo } from '@/components/demos/button-icon-demo'
+
+# Icon Button 
+
+A button that displays an icon with an accompanying animation.
+
+<Preview
+  code={`'use client';
+import * as React from 'react';
+import { IconButton } from '@/components/pumki-ui/buttons/icon';
+import { Heart } from 'lucide-react';
+
+export const IconButtonDemo = () => {
+    const [active, setActive] = React.useState(false);
+    
+    return (
+        <IconButton
+            icon={Heart}
+            active={active}
+            onClick={() => setActive(!active)}
+            color={[239, 68, 68]}
+        />
+    );
+};`}
+>
+  <IconButtonDemo />
+</Preview>
+
+## Installation
+
+<Tabs items={['pnpm', 'npm', 'yarn', 'bun']} defaultIndex="1">
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`pnpm dlx shadcn@latest add "https://pumki-ui.vercel.app/r/button-copy.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`npx shadcn@latest add "https://pumki-ui.vercel.app/r/button-copy.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`yarn dlx shadcn@latest add "https://pumki-ui.vercel.app/r/button-copy.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`bunx shadcn@latest add "https://pumki-ui.vercel.app/r/button-copy.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+</Tabs>
+
+## Usage
+
+<br/>
+
+<CodeBlock language="typescript">
+    {`import { IconButton } from '@/components/pumki-ui/buttons/icon';`}
+</CodeBlock>
+
+<br/>
+
+<CodeBlock language="typescript">
+    {`<IconButton icon={Heart} />`}
+</CodeBlock>
+
+## Props
+
+import { PumkiTable, PumkiTableStyles } from '@/components/docs/PumkiTable'
+
+<PumkiTableStyles />
+
+<PumkiTable>
+  <table className="pumki-table">
+    <thead>
+      <tr>
+        <th>Prop</th>
+        <th>Type</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>transition?</code></td>
+        <td><code>Transition</code></td>
+        <td><code>spring</code></td>
+      </tr>
+      <tr>
+        <td><code>color?</code></td>
+        <td><code>[number, number, number]</code></td>
+        <td><code>[59, 130, 246]</code></td>
+      </tr>
+      <tr>
+        <td><code>size?</code></td>
+        <td><code>'default' | 'sm' | 'md' | 'lg'</code></td>
+        <td><code>default</code></td>
+      </tr>
+      <tr>
+        <td><code>animate?</code></td>
+        <td><code>boolean</code></td>
+        <td><code>true</code></td>
+      </tr>
+      <tr>
+        <td><code>active?</code></td>
+        <td><code>boolean</code></td>
+        <td><code>false</code></td>
+      </tr>
+      <tr>
+        <td><code>icon</code></td>
+        <td><code>React.ElementType</code></td>
+        <td>-</td>
+      </tr>
+    </tbody>
+  </table>
+</PumkiTable>

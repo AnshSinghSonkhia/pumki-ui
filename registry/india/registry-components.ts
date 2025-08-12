@@ -86,4 +86,72 @@ export const component: Registry = [
             },
         ],
     },
+    {
+        name: "button-copy",
+        type: "registry:ui",
+        title: "Copy Button",
+        description:
+            "A button that copies text to the clipboard with an accompanying animation.",
+        author: "Ansh Singh Sonkhia",
+        dependencies: ["react", "motion", "lucide-react", "class-variance-authority"],
+        registryDependencies: [],
+        files: [
+            {
+                path: "components/pumki-ui/buttons/copy.tsx",
+                type: "registry:ui",
+                target: "components/pumki-ui/buttons/copy.tsx",
+            },
+        ],
+    },
+    {
+        name: "button-flip",
+        type: "registry:ui",
+        title: "Flip Button",
+        description:
+            "A button that flips between two states with an accompanying animation.",
+        author: "Ansh Singh Sonkhia",
+        dependencies: ["react", "motion"],
+        registryDependencies: [],
+        files: [
+            {
+                path: "components/pumki-ui/buttons/flip.tsx",
+                type: "registry:ui",
+                target: "components/pumki-ui/buttons/flip.tsx",
+            },
+        ],
+    },
+    {
+        name: "button-icon",
+        type: "registry:ui",
+        title: "Icon Button",
+        description:
+            "A button that displays an icon with an accompanying animation.",
+        author: "Ansh Singh Sonkhia",
+        dependencies: ["react", "motion"],
+        registryDependencies: [],
+        files: [
+            {
+                path: "components/pumki-ui/buttons/icon.tsx",
+                type: "registry:ui",
+                target: "components/pumki-ui/buttons/icon.tsx",
+            },
+        ],
+    },
+    {
+        name: "button-input",
+        type: "registry:ui",
+        title: "Input Button",
+        description:
+            "An input field that displays an icon with an accompanying animation.",
+        author: "Ansh Singh Sonkhia",
+        dependencies: ["react", "motion", "lucide-react"],
+        registryDependencies: [],
+        files: [
+            {
+                path: "components/pumki-ui/buttons/input.tsx",
+                type: "registry:ui",
+                target: "components/pumki-ui/buttons/input.tsx",
+            },
+        ],
+    },
 ];

@@ -14,15 +14,110 @@ import { CopyButton } from '@/components/pumki-ui/buttons/copy'
 A button that copies text to the clipboard with an accompanying animation.
 
 <Preview 
-  code={`import { CopyButton } from '@/components/animate-ui/buttons/copy';
+  code={`import { CopyButton } from '@/components/pumki-ui/buttons/copy';
 
 export const CopyButtonDemo = () => {
-    return <CopyButton content="Content to copy" size="md" />;
+    return (
+        <div className='flex gap-6'>
+            <CopyButton content="Hello Pumki!" size="md" />
+            <CopyButton content="Hello Pumki!" size="md" variant="secondary" />
+            <CopyButton content="Hello Pumki!" size="md" variant="muted" />
+            <CopyButton content="Hello Pumki!" size="md" variant="outline" />
+            <CopyButton content="Hello Pumki!" size="md" variant="ghost" />
+        </div>
+    );
 };`}
 >
-    
-    <CopyButton content="Content to copy" size="md" />
+    <div className='flex gap-6'>
+        <CopyButton content="Hello Pumki!" size="md" />
+        <CopyButton content="Hello Pumki!" size="md" variant="secondary" />
+        <CopyButton content="Hello Pumki!" size="md" variant="muted" />
+        <CopyButton content="Hello Pumki!" size="md" variant="outline" />
+        <CopyButton content="Hello Pumki!" size="md" variant="ghost" />
+    </div>
     
 </Preview>
 
 ## Installation
+
+<Tabs items={['pnpm', 'npm', 'yarn', 'bun']} defaultIndex="1">
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`pnpm dlx shadcn@latest add "https://pumki-ui.vercel.app/r/button-copy.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`npx shadcn@latest add "https://pumki-ui.vercel.app/r/button-copy.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`yarn dlx shadcn@latest add "https://pumki-ui.vercel.app/r/button-copy.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`bunx shadcn@latest add "https://pumki-ui.vercel.app/r/button-copy.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+</Tabs>
+
+## Usage
+
+<br/>
+
+<CodeBlock language="typescript">
+    {`import { CopyButton } from '@/components/pumki-ui/buttons/copy';`}
+</CodeBlock>
+
+<br/>
+
+<CodeBlock language="typescript">
+    {`<CopyButton content="Hello Pumki!" />`}
+</CodeBlock>
+
+## Props
+
+import { PumkiTable, PumkiTableStyles } from '@/components/docs/PumkiTable'
+
+<PumkiTableStyles />
+
+<PumkiTable>
+  <table className="pumki-table">
+    <thead>
+      <tr>
+        <th>Prop</th>
+        <th>Type</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>onCopy?</code></td>
+        <td><code>{`(content: string) => void`}</code></td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td><code>variant?</code></td>
+        <td><code>{`'default' | 'muted' | 'outline' | 'secondary' | 'ghost'`}</code></td>
+        <td><code>{`default`}</code></td>
+      </tr>
+      <tr>
+        <td><code>size?</code></td>
+        <td><code>{`'default' | 'sm' | 'md' | 'lg'`}</code></td>
+        <td><code>{`default`}</code></td>
+      </tr>
+      <tr>
+        <td><code>delay?</code></td>
+        <td><code>number</code></td>
+        <td><code>3000</code></td>
+      </tr>
+      <tr>
+        <td><code>content?</code></td>
+        <td><code>string</code></td>
+        <td>-</td>
+      </tr>
+    </tbody>
+  </table>
+</PumkiTable>

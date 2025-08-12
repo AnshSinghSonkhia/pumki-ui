@@ -19,7 +19,7 @@ const nextConfig: NextConfig = {
       },
       {
         source: '/docs/components',
-        destination: '/docs/components/buttons',
+        destination: '/docs/components/buttons/copy',
         permanent: true,
       },
     ];

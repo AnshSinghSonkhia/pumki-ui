@@ -16,7 +16,7 @@ export default {
     //     title: "Components",
     // },
     components: 'Components',
-   backgrounds: {
+    backgrounds: {
         title: "Backgrounds",
         theme: {
             collapsed: true

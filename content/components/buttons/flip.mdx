@@ -1,0 +1,146 @@
+---
+title: "Flip Button - Pumki UI"
+description: A button that flips between two states with an accompanying animation.
+---
+
+import { Tabs } from 'nextra/components'
+import { CodeBlock } from '@/components/docs/code-block'
+import { Preview, ResponsivePreview } from '@/components/docs/preview'
+import { Button } from '@/components/ui/button'
+import { FlipButton } from '@/components/pumki-ui/buttons/flip'
+
+# Flip Button
+
+A button that flips between two states with an accompanying animation.
+
+<Preview 
+  code={`import { FlipButton } from '@/components/pumki-ui/buttons/flip';
+
+export const FlipButtonDemo = () => {
+    return (
+        <div className='flex gap-6'>
+            <FlipButton frontText="Hello Pumki!" backText="Love you Pumki!" />
+        </div>
+    );
+};`}
+>
+    <div className='flex gap-6'>
+        <FlipButton frontText="Hello Pumki!" backText="Love you Pumki!" />
+    </div>
+    
+</Preview>
+
+## Installation
+
+<Tabs items={['pnpm', 'npm', 'yarn', 'bun']} defaultIndex="1">
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`pnpm dlx shadcn@latest add "https://pumki-ui.vercel.app/r/button-flip.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`npx shadcn@latest add "https://pumki-ui.vercel.app/r/button-flip.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`yarn dlx shadcn@latest add "https://pumki-ui.vercel.app/r/button-flip.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`bunx shadcn@latest add "https://pumki-ui.vercel.app/r/button-flip.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+</Tabs>
+
+## Usage
+
+<br/>
+
+<CodeBlock language="typescript">
+    {`import { FlipButton } from '@/components/pumki-ui/buttons/flip';`}
+</CodeBlock>
+
+<br/>
+
+<CodeBlock language="typescript">
+    {`<FlipButton frontText="Hello Pumki!" backText="Love you Pumki" />`}
+</CodeBlock>
+
+## Example
+
+<Preview 
+  title="Flip Button from Right"
+  description="Use the `from` prop to specify the direction of the flip animation."
+  code={`import { FlipButton } from '@/components/pumki-ui/buttons/flip';
+
+export const FlipButtonFromRightDemo = () => {
+    return (
+        <div className='flex gap-6'>
+            <FlipButton frontText="Hello Pumki!" backText="Love you Pumki!" from="right" />
+        </div>
+    );
+};`}
+>
+    <div className='flex gap-6'>
+        <FlipButton frontText="Hello Pumki!" backText="Love you Pumki!" from="right" />
+    </div>
+    
+</Preview>
+
+## Props
+
+import { PumkiTable, PumkiTableStyles } from '@/components/docs/PumkiTable'
+
+<PumkiTableStyles />
+
+<PumkiTable>
+  <table className="pumki-table">
+    <thead>
+      <tr>
+        <th>Prop</th>
+        <th>Type</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>from?</code></td>
+        <td><code>string</code></td>
+        <td><code>top</code></td>
+      </tr>
+      <tr>
+        <td><code>backClassName?</code></td>
+        <td><code>string</code></td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td><code>frontClassName?</code></td>
+        <td><code>string</code></td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td><code>className?</code></td>
+        <td><code>string</code></td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td><code>transition?</code></td>
+        <td><code>Transition</code></td>
+        <td><code>{`{ type: "spring", stiffness: 280, damping: 20 }`}</code></td>
+      </tr>
+      <tr>
+        <td><code>backText</code></td>
+        <td><code>string</code></td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td><code>frontText</code></td>
+        <td><code>string</code></td>
+        <td>-</td>
+      </tr>
+    </tbody>
+  </table>
+</PumkiTable>

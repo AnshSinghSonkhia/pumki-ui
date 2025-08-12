@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button-flip",
+  "type": "registry:ui",
+  "title": "Flip Button",
+  "description": "A button that flips between two states with an accompanying animation.",
+  "author": "Ansh Singh Sonkhia",
+  "dependencies": [
+    "react",
+    "motion"
+  ],
+  "registryDependencies": [],
+  "files": [
+    {
+      "type": "registry:ui",
+      "content": "'use client';\r\n \r\nimport * as React from 'react';\r\nimport {\r\n  type HTMLMotionProps,\r\n  type Transition,\r\n  type Variant,\r\n  motion,\r\n} from 'motion/react';\r\n \r\nimport { cn } from '@/lib/utils';\r\n \r\ntype FlipDirection = 'top' | 'bottom' | 'left' | 'right';\r\n \r\ntype FlipButtonProps = HTMLMotionProps<'button'> & {\r\n  frontText: string;\r\n  backText: string;\r\n  transition?: Transition;\r\n  frontClassName?: string;\r\n  backClassName?: string;\r\n  from?: FlipDirection;\r\n};\r\n \r\nconst DEFAULT_SPAN_CLASS_NAME =\r\n  'absolute inset-0 flex items-center justify-center rounded-lg';\r\n \r\nfunction FlipButton({\r\n  frontText,\r\n  backText,\r\n  transition = { type: 'spring', stiffness: 280, damping: 20 },\r\n  className,\r\n  frontClassName,\r\n  backClassName,\r\n  from = 'top',\r\n  ...props\r\n}: FlipButtonProps) {\r\n  const isVertical = from === 'top' || from === 'bottom';\r\n  const rotateAxis = isVertical ? 'rotateX' : 'rotateY';\r\n \r\n  const frontOffset = from === 'top' || from === 'left' ? '50%' : '-50%';\r\n  const backOffset = from === 'top' || from === 'left' ? '-50%' : '50%';\r\n \r\n  const buildVariant = (\r\n    opacity: number,\r\n    rotation: number,\r\n    offset: string | null = null,\r\n  ): Variant => ({\r\n    opacity,\r\n    [rotateAxis]: rotation,\r\n    ...(isVertical && offset !== null ? { y: offset } : {}),\r\n    ...(!isVertical && offset !== null ? { x: offset } : {}),\r\n  });\r\n \r\n  const frontVariants = {\r\n    initial: buildVariant(1, 0, '0%'),\r\n    hover: buildVariant(0, 90, frontOffset),\r\n  };\r\n \r\n  const backVariants = {\r\n    initial: buildVariant(0, 90, backOffset),\r\n    hover: buildVariant(1, 0, '0%'),\r\n  };\r\n \r\n  return (\r\n    <motion.button\r\n      data-slot=\"flip-button\"\r\n      initial=\"initial\"\r\n      whileHover=\"hover\"\r\n      whileTap={{ scale: 0.95 }}\r\n      className={cn(\r\n        'relative inline-block h-10 px-4 py-2 text-sm font-medium cursor-pointer perspective-[1000px] focus:outline-none',\r\n        className,\r\n      )}\r\n      {...props}\r\n    >\r\n      <motion.span\r\n        data-slot=\"flip-button-front\"\r\n        variants={frontVariants}\r\n        transition={transition}\r\n        className={cn(\r\n          DEFAULT_SPAN_CLASS_NAME,\r\n          'bg-muted text-black dark:text-white',\r\n          frontClassName,\r\n        )}\r\n      >\r\n        {frontText}\r\n      </motion.span>\r\n      <motion.span\r\n        data-slot=\"flip-button-back\"\r\n        variants={backVariants}\r\n        transition={transition}\r\n        className={cn(\r\n          DEFAULT_SPAN_CLASS_NAME,\r\n          'bg-primary text-primary-foreground',\r\n          backClassName,\r\n        )}\r\n      >\r\n        {backText}\r\n      </motion.span>\r\n      <span className=\"invisible\">{frontText}</span>\r\n    </motion.button>\r\n  );\r\n}\r\n \r\nexport { FlipButton, type FlipButtonProps, type FlipDirection };",
+      "path": "components/pumki-ui/buttons/flip.tsx",
+      "target": "components/pumki-ui/buttons/flip.tsx"
+    }
+  ]
+}
