@@ -1,0 +1,106 @@
+---
+title: "Scramble Text - Pumki UI"
+description: A component that applies a scrambling animation to text, perfect for emphasizing important information.
+---
+
+import { Tabs } from 'nextra/components'
+import { CodeBlock } from '@/components/docs/code-block'
+import { Preview, ResponsivePreview } from '@/components/docs/preview'
+import { Button } from '@/components/ui/button'
+import { ScrambleText } from '@/components/pumki-ui/text/scramble-text'
+
+# Scramble Text Animation
+
+A component that applies a scrambling animation to text, perfect for emphasizing important information.
+
+<Preview
+  code={`import { ScrambleText } from '@/components/pumki-ui/text/scramble-text';
+
+  export const ScrambleTextDemo = () => {
+    return (
+        <ScrambleText text="Scramble Text - Pumki UI" className="font-mono text-lg font-medium sm:text-xl xl:text-3xl" />
+    );
+};`}
+>
+        <ScrambleText text="Scramble Text - Pumki UI" className="font-mono text-lg font-medium sm:text-xl xl:text-3xl" />
+
+</Preview>
+
+## Installation
+
+<Tabs items={['pnpm', 'npm', 'yarn', 'bun']} defaultIndex="1">
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`pnpm dlx shadcn@latest add "https://pumki-ui.vercel.app/r/scramble-text.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`npx shadcn@latest add "https://pumki-ui.vercel.app/r/scramble-text.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`yarn dlx shadcn@latest add "https://pumki-ui.vercel.app/r/scramble-text.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`bunx shadcn@latest add "https://pumki-ui.vercel.app/r/scramble-text.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+</Tabs>
+
+## Usage
+
+<br/>
+
+<CodeBlock language="typescript">
+    {`import { ScrambleText } from '@/components/pumki-ui/text/scramble-text';`}
+</CodeBlock>
+
+<br/>
+
+<CodeBlock language="typescript">
+    {`<ScrambleText text="Scramble Text" />`}
+</CodeBlock>
+
+
+## Props
+
+import { PumkiTable, PumkiTableStyles } from '@/components/docs/PumkiTable'
+
+<PumkiTableStyles />
+
+<PumkiTable>
+  <table className="pumki-table">
+    <thead>
+      <tr>
+        <th>Prop</th>
+        <th>Type</th>
+        <th>Default</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>random?</code></td>
+        <td><code>boolean</code></td>
+        <td><code>true</code></td>
+        <td>Use a random set of characters for the scramble animation.</td>
+      </tr>
+      <tr>
+        <td><code>scrambleOnLoad?</code></td>
+        <td><code>boolean</code></td>
+        <td><code>true</code></td>
+        <td>Whether to trigger the scramble animation on initial load.</td>
+      </tr>
+      <tr>
+        <td><code>text</code></td>
+        <td><code>string</code></td>
+        <td><code>-</code></td>
+        <td>The text to display and animate with the scramble effect.</td>
+      </tr>
+    </tbody>
+  </table>
+</PumkiTable>

@@ -1,0 +1,112 @@
+---
+title: "Distort Text - Pumki UI"
+description: A responsive text effect that scrambles nearby characters as the cursor moves across a paragraph.
+---
+
+import { Tabs } from 'nextra/components'
+import { CodeBlock } from '@/components/docs/code-block'
+import { Preview, ResponsivePreview } from '@/components/docs/preview'
+import { Button } from '@/components/ui/button'
+import { DistortText } from '@/components/pumki-ui/text/distort-text'
+
+# Distort Text Animation
+
+A component that applies a scrambling animation to text, perfect for emphasizing important information.
+
+<Preview
+  code={`import { DistortText } from '@/components/pumki-ui/text/distort-text';
+
+  export const DistortTextDemo = () => {
+    return (
+        <DistortText className="font-mono text-xl text-left">
+            A collection of projects showcasing RAG, agents, workflows, and other AI use cases
+        </DistortText>
+    );
+};`}
+>
+        <DistortText className="font-mono text-xl text-left">
+           A collection of projects showcasing RAG, agents, workflows, and other AI use casesA collection of projects showcasing RAG, agents, workflows, and other AI use casesA collection of projects showcasing RAG, agents, workflows, and other AI use casesA collection of projects showcasing RAG, agents, workflows, and other AI use casesA collection of projects showcasing RAG, agents, workflows, and other AI use casesA collection of projects showcasing RAG, agents, workflows, and other AI use casesA collection of projects showcasing RAG, agents, workflows, and other AI use casesA collection of projects showcasing RAG, agents, workflows, and other AI use casesA collection of projects showcasing RAG, agents, workflows, and other AI use casesA collection of projects showcasing RAG, agents, workflows, and other AI use casesA collection of projects showcasing RAG, agents, workflows, and other AI use casesA collection of projects showcasing RAG, agents, workflows, and other AI use casesA collection of projects showcasing RAG, agents, workflows, and other AI use cases
+        </DistortText>
+
+</Preview>
+
+## Installation
+
+<Tabs items={['pnpm', 'npm', 'yarn', 'bun']} defaultIndex="1">
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`pnpm dlx shadcn@latest add "https://pumki-ui.vercel.app/r/distort-text.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`npx shadcn@latest add "https://pumki-ui.vercel.app/r/distort-text.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`yarn dlx shadcn@latest add "https://pumki-ui.vercel.app/r/distort-text.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`bunx shadcn@latest add "https://pumki-ui.vercel.app/r/distort-text.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+</Tabs>
+
+## Usage
+
+<br/>
+
+<CodeBlock language="typescript">
+    {`import { DistortText } from '@/components/pumki-ui/text/distort-text';`}
+</CodeBlock>
+
+<br/>
+
+## Example
+
+<Preview
+  code={`import { DistortText } from '@/components/pumki-ui/text/distort-text';
+
+  export const DistortTextDemo = () => {
+    return (
+        <DistortText distortChar="❤️" className="font-mono text-xl text-left">
+            A collection of projects showcasing RAG, agents, workflows, and other AI use cases
+        </DistortText>
+    );
+};`}
+>
+        <DistortText distortChar="❤️" className="font-mono text-xl text-left">
+            A collection of projects showcasing RAG, agents, workflows, and other AI use casesA collection of projects showcasing RAG, agents, workflows, and other AI use casesA collection of projects showcasing RAG, agents, workflows, and other AI use casesA collection of projects showcasing RAG, agents, workflows, and other AI use casesA collection of projects showcasing RAG, agents, workflows, and other AI use casesA collection of projects showcasing RAG, agents, workflows, and other AI use casesA collection of projects showcasing RAG, agents, workflows, and other AI use casesA collection of projects showcasing RAG, agents, workflows, and other AI use cases
+        </DistortText>
+
+</Preview>
+
+## Props
+
+import { PumkiTable, PumkiTableStyles } from '@/components/docs/PumkiTable'
+
+<PumkiTableStyles />
+
+<PumkiTable>
+  <table className="pumki-table">
+    <thead>
+      <tr>
+        <th>Prop</th>
+        <th>Type</th>
+        <th>Default</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>distortChar?</code></td>
+        <td><code>string</code></td>
+        <td><code>.:</code></td>
+        <td>Characters used to distort the text during the animation.</td>
+      </tr>
+    </tbody>
+  </table>
+</PumkiTable>

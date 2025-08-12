@@ -1,0 +1,22 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "distort-text",
+  "type": "registry:ui",
+  "title": "Distort Text",
+  "description": "A component that applies a distortion effect to text with a smooth animation.",
+  "author": "Ansh Singh Sonkhia",
+  "dependencies": [
+    "react",
+    "gsap",
+    "@gsap/react"
+  ],
+  "registryDependencies": [],
+  "files": [
+    {
+      "type": "registry:ui",
+      "content": "\"use client\";\r\n\r\nimport { ComponentProps, useRef } from \"react\";\r\n\r\nimport { useGSAP } from \"@gsap/react\";\r\nimport gsap from \"gsap\";\r\nimport { ScrambleTextPlugin } from \"gsap/ScrambleTextPlugin\";\r\nimport { SplitText } from \"gsap/SplitText\";\r\n\r\ngsap.registerPlugin(ScrambleTextPlugin);\r\n\r\ntype DistortTextProps = {\r\n    distortChar?: string;\r\n} & ComponentProps<\"div\">;\r\n\r\nexport const DistortText = ({ distortChar = \".:\", ...props }: DistortTextProps) => {\r\n    const wrapperRef = useRef<HTMLDivElement | null>(null);\r\n\r\n    useGSAP(\r\n        () => {\r\n            const element = wrapperRef.current;\r\n            if (!element) return;\r\n\r\n            const splitText = SplitText.create(element, { type: \"chars\", charsClass: \"char\" });\r\n\r\n            splitText.chars.forEach((char) => {\r\n                gsap.set(char, { attr: { \"data-content\": char.innerHTML } });\r\n            });\r\n\r\n            element.onpointermove = (e) => {\r\n                splitText.chars.forEach((char) => {\r\n                    const rect = char.getBoundingClientRect();\r\n                    const cx = rect.left + rect.width / 2;\r\n                    const cy = rect.top + rect.height / 2;\r\n                    const dx = e.clientX - cx;\r\n                    const dy = e.clientY - cy;\r\n                    const dist = Math.sqrt(dx * dx + dy * dy);\r\n                    if (dist < 100) {\r\n                        gsap.to(char, {\r\n                            overwrite: true,\r\n                            duration: 2 - dist / 100,\r\n                            scrambleText: {\r\n                                // @ts-ignore\r\n                                text: char.dataset.content,\r\n                                chars: distortChar,\r\n                                speed: 0.5,\r\n                            },\r\n                            ease: \"bounce\",\r\n                        });\r\n                    }\r\n                });\r\n            };\r\n        },\r\n        { scope: wrapperRef },\r\n    );\r\n\r\n    return <div {...props} ref={wrapperRef} />;\r\n};\r\n",
+      "path": "components/pumki-ui/text/distort-text.tsx",
+      "target": "components/pumki-ui/text/distort-text.tsx"
+    }
+  ]
+}

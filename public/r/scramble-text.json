@@ -1,0 +1,22 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "scramble-text",
+  "type": "registry:ui",
+  "title": "Scramble Text",
+  "description": "A component that applies a scrambling effect to text with a smooth animation.",
+  "author": "Ansh Singh Sonkhia",
+  "dependencies": [
+    "react",
+    "gsap",
+    "@gsap/react"
+  ],
+  "registryDependencies": [],
+  "files": [
+    {
+      "type": "registry:ui",
+      "content": "\"use client\";\r\n\r\nimport { ComponentProps, useEffect, useRef } from \"react\";\r\n\r\nimport { useGSAP } from \"@gsap/react\";\r\nimport gsap from \"gsap\";\r\nimport { ScrambleTextPlugin } from \"gsap/ScrambleTextPlugin\";\r\n\r\ngsap.registerPlugin(ScrambleTextPlugin);\r\n\r\ntype ScrambleTextProps = {\r\n    random?: boolean;\r\n    scrambleOnLoad?: boolean;\r\n    text?: string;\r\n} & ComponentProps<\"div\">;\r\n\r\nconst defaultChars = \"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789\";\r\n\r\nexport const ScrambleText = ({ scrambleOnLoad = true, random = true, text, children, ...props }: ScrambleTextProps) => {\r\n    const wrapperRef = useRef<HTMLDivElement | null>(null);\r\n\r\n    const { contextSafe } = useGSAP();\r\n\r\n    const scramble = contextSafe(() => {\r\n        const target = wrapperRef.current;\r\n        if (gsap.isTweening(target) || !target) return;\r\n        const scrambleTextValue = text ?? target.innerText;\r\n        gsap.to(target, {\r\n            duration: 1,\r\n            ease: \"sine.in\",\r\n            scrambleText: {\r\n                text: scrambleTextValue,\r\n                speed: 2,\r\n                chars: random ? defaultChars : scrambleTextValue.replace(/\\s/g, \"\"),\r\n            },\r\n        });\r\n    });\r\n\r\n    useEffect(() => {\r\n        if (scrambleOnLoad) scramble();\r\n        const target = wrapperRef.current;\r\n        target?.addEventListener(\"pointerenter\", scramble);\r\n        return () => target?.removeEventListener(\"pointerenter\", scramble);\r\n    }, [wrapperRef, scramble, scrambleOnLoad]);\r\n\r\n    return (\r\n        <div {...props} ref={wrapperRef}>\r\n            {text ?? children}\r\n        </div>\r\n    );\r\n};\r\n",
+      "path": "components/pumki-ui/text/scramble-text.tsx",
+      "target": "components/pumki-ui/text/scramble-text.tsx"
+    }
+  ]
+}

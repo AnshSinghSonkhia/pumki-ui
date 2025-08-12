@@ -341,4 +341,38 @@ export const component: Registry = [
             },
         ],
     },
+    {
+        name: "scramble-text",
+        type: "registry:ui",
+        title: "Scramble Text",
+        description:
+            "A component that applies a scrambling effect to text with a smooth animation.",
+        author: "Ansh Singh Sonkhia",
+        dependencies: ["react", "gsap", "@gsap/react"],
+        registryDependencies: [],
+        files: [
+            {
+                path: "components/pumki-ui/text/scramble-text.tsx",
+                type: "registry:ui",
+                target: "components/pumki-ui/text/scramble-text.tsx",
+            },
+        ],
+    },
+    {
+        name: "distort-text",
+        type: "registry:ui",
+        title: "Distort Text",
+        description:
+            "A component that applies a distortion effect to text with a smooth animation.",
+        author: "Ansh Singh Sonkhia",
+        dependencies: ["react", "gsap", "@gsap/react"],
+        registryDependencies: [],
+        files: [
+            {
+                path: "components/pumki-ui/text/distort-text.tsx",
+                type: "registry:ui",
+                target: "components/pumki-ui/text/distort-text.tsx",
+            },
+        ],
+    },
 ];
