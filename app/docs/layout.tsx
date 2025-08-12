@@ -9,6 +9,9 @@ import { generateDocsMetadata } from '@/lib/metadata'
 import 'nextra-theme-docs/style.css'
 // import '../globals.css'
 
+// ✅ Apply ISR to all docs pages
+export const revalidate = 3600; // 1 hour
+
 export const metadata = generateDocsMetadata({
   title: 'Documentation',
   description: 'Comprehensive documentation for Pumki UI components. Learn how to build stunning UIs with our React component library.',
