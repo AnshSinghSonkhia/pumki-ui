@@ -46,15 +46,20 @@ export const InputButtonDemo = () => {
       className="w-full flex items-center justify-center"
     >
       <InputButtonProvider showInput={showInput} setShowInput={setShowInput}>
-        <InputButton>
-          <InputButtonAction onClick={() => {}}>
+        <InputButton className="">
+          <InputButtonAction 
+            onClick={() => {}}
+            className="!text-gray-800 !bg-white hover:!bg-gray-50"
+          >
             Join the newsletter
           </InputButtonAction>
           <InputButtonSubmit
             onClick={() => {}}
             type="submit"
             disabled={pending}
-            className={pending || success ? 'aspect-square px-0' : ''}
+            className={`bg-muted !text-white hover:!bg-black ${
+              pending || success ? 'aspect-square px-0' : ''
+            }`}
           >
             {success ? (
               <motion.span
@@ -86,6 +91,7 @@ export const InputButtonDemo = () => {
           onChange={(e) => setValue(e.target.value)}
           disabled={pending}
           autoFocus
+          className="!bg-white !text-gray-900 !border-gray-200 placeholder:!text-gray-500"
         />
       </InputButtonProvider>
     </form>

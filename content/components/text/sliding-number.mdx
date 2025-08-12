@@ -1,0 +1,174 @@
+---
+title: "Sliding Number Animation - Pumki UI"
+description: A component that animates the transition between numbers.
+---
+
+import { Tabs } from 'nextra/components'
+import { CodeBlock } from '@/components/docs/code-block'
+import { Callout } from 'nextra/components'
+import { Preview, ResponsivePreview } from '@/components/docs/preview'
+import { Button } from '@/components/ui/button'
+import { SlidingNumber } from '@/components/pumki-ui/text/sliding-number'
+
+# Sliding Number Animation
+
+A component that animates the transition between numbers.
+
+<Callout>Also used as Counter</Callout>
+
+<Preview
+  code={`import { SlidingNumber } from '@/components/pumki-ui/text/sliding-number'
+
+  export const SlidingNumberDemo = () => {
+    return (
+        <SlidingNumber
+            number={12345.67}
+            decimalSeparator="."
+            decimalPlaces={2}
+            padStart
+            className="text-4xl"
+            inView
+        />
+    );
+};`}
+>
+    <SlidingNumber
+      number={12345.67}
+      decimalSeparator="."
+      decimalPlaces={2}
+      padStart
+      className="text-4xl"
+      inView
+    />
+
+</Preview>
+
+## Installation
+
+<Tabs items={['pnpm', 'npm', 'yarn', 'bun']} defaultIndex="1">
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`pnpm dlx shadcn@latest add "https://pumki-ui.vercel.app/r/sliding-number.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`npx shadcn@latest add "https://pumki-ui.vercel.app/r/sliding-number.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`yarn dlx shadcn@latest add "https://pumki-ui.vercel.app/r/sliding-number.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`bunx shadcn@latest add "https://pumki-ui.vercel.app/r/sliding-number.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+</Tabs>
+
+## Usage
+
+<br/>
+
+<CodeBlock language="typescript">
+    {`import { SlidingNumber } from '@/components/pumki-ui/text/sliding-number';`}
+</CodeBlock>
+
+<br/>
+
+<CodeBlock language="typescript">
+    {`<SlidingNumber number={55555} />`}
+</CodeBlock>
+
+
+## Example
+
+<Preview
+  title="Date and year"
+  description="Using SlidingNumber component to display the current year with a sliding animation."
+  code={`import { SlidingNumber } from '@/components/pumki-ui/text/sliding-number'
+
+  export const SlidingNumberDemo = () => {
+    return (
+        <SlidingNumber
+            number={new Date().getFullYear()}
+            padStart
+            className="text-4xl"
+        />
+    );
+};`}
+>
+    <SlidingNumber
+      number={new Date().getFullYear()}
+      padStart
+      className="text-4xl"
+    />
+
+</Preview>
+
+## Props
+
+import { PumkiTable, PumkiTableStyles } from '@/components/docs/PumkiTable'
+
+<PumkiTableStyles />
+
+<PumkiTable>
+  <table className="pumki-table">
+    <thead>
+      <tr>
+        <th>Prop</th>
+        <th>Type</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>transition?</code></td>
+        <td><code>SpringOptions</code></td>
+        <td><code>{`{ stiffness: 200, damping: 20, mass: 0.4 }`}</code></td>
+      </tr>
+      <tr>
+        <td><code>decimalPlaces?</code></td>
+        <td><code>number</code></td>
+        <td><code>0</code></td>
+      </tr>
+      <tr>
+        <td><code>decimalSeparator?</code></td>
+        <td><code>string</code></td>
+        <td><code>.</code></td>
+      </tr>
+      <tr>
+        <td><code>padStart?</code></td>
+        <td><code>boolean</code></td>
+        <td><code>false</code></td>
+      </tr>
+      <tr>
+        <td><code>inViewOnce?</code></td>
+        <td><code>boolean</code></td>
+        <td><code>true</code></td>
+      </tr>
+      <tr>
+        <td><code>inViewMargin?</code></td>
+        <td><code>string</code></td>
+        <td><code>0px</code></td>
+      </tr>
+      <tr>
+        <td><code>inView?</code></td>
+        <td><code>boolean</code></td>
+        <td><code>false</code></td>
+      </tr>
+      <tr>
+        <td><code>number</code></td>
+        <td><code>number | string</code></td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td><code>className?</code></td>
+        <td><code>string</code></td>
+        <td>-</td>
+      </tr>
+    </tbody>
+  </table>
+</PumkiTable>

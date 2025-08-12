@@ -1,0 +1,137 @@
+---
+title: "GitHub Star Button - Pumki UI"
+description: A button component that displays the number of stars a GitHub repository has, with a dynamic animation effect.
+---
+
+import { Tabs } from 'nextra/components'
+import { CodeBlock } from '@/components/docs/code-block'
+import { Preview, ResponsivePreview } from '@/components/docs/preview'
+import { Button } from '@/components/ui/button'
+import { GitHubStarsButton } from '@/components/pumki-ui/buttons/github-star';
+
+# GitHub Star Button
+
+A button component that displays the number of stars a GitHub repository has, with a dynamic animation effect.
+
+<Preview
+  code={`import { GitHubStarsButton } from '@/components/pumki-ui/buttons/github-star'
+
+  export const GitHubStarsButtonDemo = () => {
+    return (
+        <GitHubStarsButton username="facebook" repo="react" />
+    );
+};`}
+>
+    <div className='flex items-center gap-4 flex-col'>
+        <GitHubStarsButton username="facebook" repo="react" className="text-black bg-white" />
+    </div>
+
+</Preview>
+
+## Installation
+
+<Tabs items={['pnpm', 'npm', 'yarn', 'bun']} defaultIndex="1">
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`pnpm dlx shadcn@latest add "https://pumki-ui.vercel.app/r/github-star.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`npx shadcn@latest add "https://pumki-ui.vercel.app/r/github-star.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`yarn dlx shadcn@latest add "https://pumki-ui.vercel.app/r/github-star.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`bunx shadcn@latest add "https://pumki-ui.vercel.app/r/github-star.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+</Tabs>
+
+## Usage
+
+<br/>
+
+<CodeBlock language="typescript">
+    {`import { GitHubStarsButton } from '@/components/pumki-ui/buttons/github-star';`}
+</CodeBlock>
+
+<br/>
+
+<CodeBlock language="typescript">
+    {`<GitHubStarsButton username="AnshSinghSonkhia" repo="pumki-ui" />`}
+</CodeBlock>
+
+## Props
+
+import { PumkiTable, PumkiTableStyles } from '@/components/docs/PumkiTable'
+
+<PumkiTableStyles />
+
+<PumkiTable>
+  <table className="pumki-table">
+  <thead>
+    <tr>
+      <th>Prop</th>
+      <th>Type</th>
+      <th>Default</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>inViewOnce?</code></td>
+      <td><code>boolean</code></td>
+      <td><code>true</code></td>
+      <td>Animate only the first time the button enters the viewport</td>
+    </tr>
+    <tr>
+      <td><code>inViewMargin?</code></td>
+      <td><code>string</code></td>
+      <td><code>0px</code></td>
+      <td>Margin for viewport detection</td>
+    </tr>
+    <tr>
+      <td><code>inView?</code></td>
+      <td><code>boolean</code></td>
+      <td><code>false</code></td>
+      <td>Enable viewport-based animation</td>
+    </tr>
+    <tr>
+      <td><code>formatted?</code></td>
+      <td><code>boolean</code></td>
+      <td><code>false</code></td>
+      <td>Show compact number format (e.g. 1.2k)</td>
+    </tr>
+    <tr>
+      <td><code>transition?</code></td>
+      <td><code>object</code></td>
+      <td><code>{`{ stiffness: 90, damping: 50 }`}</code></td>
+      <td>Spring animation config</td>
+    </tr>
+    <tr>
+      <td><code>repo</code></td>
+      <td><code>string</code></td>
+      <td>-</td>
+      <td>GitHub repository name</td>
+    </tr>
+    <tr>
+      <td><code>username</code></td>
+      <td><code>string</code></td>
+      <td>-</td>
+      <td>GitHub username or organization</td>
+    </tr>
+    <tr>
+      <td><code>tooltip</code></td>
+      <td><code>boolean</code></td>
+      <td><code>false</code></td>
+      <td>Show repo URL tooltip on hover</td>
+    </tr>
+  </tbody>
+</table>
+</PumkiTable>

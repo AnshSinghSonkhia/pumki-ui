@@ -154,4 +154,72 @@ export const component: Registry = [
             },
         ],
     },
+    {
+        name: "button-ripple",
+        type: "registry:ui",
+        title: "Ripple Button",
+        description:
+            "A button that shows a ripple effect on click.",
+        author: "Ansh Singh Sonkhia",
+        dependencies: ["react", "motion", "class-variance-authority"],
+        registryDependencies: [],
+        files: [
+            {
+                path: "components/pumki-ui/buttons/ripple.tsx",
+                type: "registry:ui",
+                target: "components/pumki-ui/buttons/ripple.tsx",
+            },
+        ],
+    },
+    {
+        name: "github-star",
+        type: "registry:ui",
+        title: "GitHub Star Button",
+        description:
+            "An animated button that shows the number of stars a GitHub repository has.",
+        author: "Ansh Singh Sonkhia",
+        dependencies: ["react", "motion", "lucide-react"],
+        registryDependencies: ["https://pumki-ui.vercel.app/r/sliding-number.json"],
+        files: [
+            {
+                path: "components/pumki-ui/buttons/github-star.tsx",
+                type: "registry:ui",
+                target: "components/pumki-ui/buttons/github-star.tsx",
+            },
+        ],
+    },
+    {
+        name: "sliding-number",
+        type: "registry:ui",
+        title: "Sliding Number",
+        description:
+            "A component that animates the transition between numbers.",
+        author: "Ansh Singh Sonkhia",
+        dependencies: ["react", "motion", "react-use-measure"],
+        registryDependencies: [],
+        files: [
+            {
+                path: "components/pumki-ui/text/sliding-number.tsx",
+                type: "registry:ui",
+                target: "components/pumki-ui/text/sliding-number.tsx",
+            },
+        ],
+    },
+    {
+        name: "text-rotator",
+        type: "registry:ui",
+        title: "Text Rotator",
+        description:
+            "A component that smoothly rotates through text.",
+        author: "Ansh Singh Sonkhia",
+        dependencies: ["react", "motion"],
+        registryDependencies: [],
+        files: [
+            {
+                path: "components/pumki-ui/text/text-rotator.tsx",
+                type: "registry:ui",
+                target: "components/pumki-ui/text/text-rotator.tsx",
+            },
+        ],
+    },
 ];

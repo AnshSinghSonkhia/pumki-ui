@@ -1,0 +1,117 @@
+---
+title: "Ripple Button - Pumki UI"
+description: A button that shows a ripple effect on click.
+---
+
+import { Tabs } from 'nextra/components'
+import { CodeBlock } from '@/components/docs/code-block'
+import { Preview, ResponsivePreview } from '@/components/docs/preview'
+import { Button } from '@/components/ui/button'
+import { RippleButton } from '@/components/pumki-ui/buttons/ripple'
+
+# Ripple Button
+
+A button that shows a ripple effect on click.
+
+<Preview
+  code={`import { RippleButton } from '@/components/pumki-ui/buttons/ripple'
+   
+  export const RippleButtonDemo = () => {
+    return (
+        <div className='flex gap-4'>
+            <RippleButton>Ripple Button</RippleButton>
+            <RippleButton className="bg-white text-black font-bold hover:bg-gray-100">Ripple Button</RippleButton>
+        </div>
+    );
+};`}
+>
+    <div className='flex gap-4'>
+        <RippleButton>Ripple Button</RippleButton>
+        <RippleButton className="bg-white text-black font-bold hover:bg-gray-100">Ripple Button</RippleButton>
+    </div>
+
+</Preview>
+
+## Installation
+
+<Tabs items={['pnpm', 'npm', 'yarn', 'bun']} defaultIndex="1">
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`pnpm dlx shadcn@latest add "https://pumki-ui.vercel.app/r/button-ripple.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`npx shadcn@latest add "https://pumki-ui.vercel.app/r/button-ripple.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`yarn dlx shadcn@latest add "https://pumki-ui.vercel.app/r/button-ripple.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`bunx shadcn@latest add "https://pumki-ui.vercel.app/r/button-ripple.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+</Tabs>
+
+## Usage
+
+<br/>
+
+<CodeBlock language="typescript">
+    {`import { RippleButton } from '@/components/pumki-ui/buttons/ripple';`}
+</CodeBlock>
+
+<br/>
+
+<CodeBlock language="typescript">
+    {`<RippleButton>Button</RippleButton>`}
+</CodeBlock>
+
+## Props
+
+import { PumkiTable, PumkiTableStyles } from '@/components/docs/PumkiTable'
+
+<PumkiTableStyles />
+
+<PumkiTable>
+  <table className="pumki-table">
+    <thead>
+      <tr>
+        <th>Prop</th>
+        <th>Type</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>scale?</code></td>
+        <td><code>number</code></td>
+        <td><code>10</code></td>
+      </tr>
+      <tr>
+        <td><code>transition?</code></td>
+        <td><code>{`Transition`}</code></td>
+        <td>{`{ duration: 0.6, ease: "easeOut" }`}</td>
+      </tr>
+      <tr>
+        <td><code>rippleClassName?</code></td>
+        <td><code>string</code></td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td><code>className?</code></td>
+        <td><code>className</code></td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td><code>children</code></td>
+        <td><code>{`React.ReactNode`}</code></td>
+        <td>-</td>
+      </tr>
+    </tbody>
+  </table>
+</PumkiTable>

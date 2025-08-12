@@ -1,0 +1,117 @@
+---
+title: "Text Rotator - Pumki UI"
+description: A dynamic text animation that smoothly rotates through words or phrases, adding energy and motion to your headlines, hero sections, and banners.
+---
+
+import { Tabs } from 'nextra/components'
+import { CodeBlock } from '@/components/docs/code-block'
+import { Preview, ResponsivePreview } from '@/components/docs/preview'
+import { Button } from '@/components/ui/button'
+import { RotatingText } from '@/components/pumki-ui/text/text-rotator'
+
+# Text Rotator Animation
+
+A dynamic text animation that smoothly rotates through words or phrases, adding energy and motion to your headlines, hero sections, and banners.
+
+<Preview
+  code={`import { RotatingText } from '@/components/pumki-ui/text/text-rotator'
+
+  export const RotatingTextDemo = () => {
+    return (
+        <RotatingText
+            className="text-4xl font-semibold"
+            text={['Ansh', 'Singh', 'Sonkhia', 'India']}
+        />
+    );
+};`}
+>
+    <RotatingText
+      className="text-4xl font-semibold"
+      text={['Ansh', 'Singh', 'Sonkhia', 'India']}
+    />
+
+</Preview>
+
+## Installation
+
+<Tabs items={['pnpm', 'npm', 'yarn', 'bun']} defaultIndex="1">
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`pnpm dlx shadcn@latest add "https://pumki-ui.vercel.app/r/text-rotator.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`npx shadcn@latest add "https://pumki-ui.vercel.app/r/text-rotator.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`yarn dlx shadcn@latest add "https://pumki-ui.vercel.app/r/text-rotator.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`bunx shadcn@latest add "https://pumki-ui.vercel.app/r/text-rotator.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+</Tabs>
+
+## Usage
+
+<br/>
+
+<CodeBlock language="typescript">
+    {`import { RotatingText } from '@/components/pumki-ui/text/text-rotator';`}
+</CodeBlock>
+
+<br/>
+
+<CodeBlock language="typescript">
+    {`<RotatingText text={['Ansh', 'Singh', 'Sonkhia']} />`}
+</CodeBlock>
+
+## Props
+
+import { PumkiTable, PumkiTableStyles } from '@/components/docs/PumkiTable'
+
+<PumkiTableStyles />
+
+<PumkiTable>
+  <table className="pumki-table">
+    <thead>
+      <tr>
+        <th>Prop</th>
+        <th>Type</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>containerClassName?</code></td>
+        <td><code>string</code></td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td><code>y?</code></td>
+        <td><code>number</code></td>
+        <td><code>-50</code></td>
+      </tr>
+      <tr>
+        <td><code>transition?</code></td>
+        <td><code>Transition</code></td>
+        <td><code>{`duration: 0.3, ease: "easeOut"`}</code></td>
+      </tr>
+      <tr>
+        <td><code>duration?</code></td>
+        <td><code>number</code></td>
+        <td><code>2000</code></td>
+      </tr>
+      <tr>
+        <td><code>text</code></td>
+        <td><code>string | string[]</code></td>
+        <td>-</td>
+      </tr>
+    </tbody>
+  </table>
+</PumkiTable>

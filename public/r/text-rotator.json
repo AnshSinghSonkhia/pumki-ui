@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "text-rotator",
+  "type": "registry:ui",
+  "title": "Text Rotator",
+  "description": "A component that smoothly rotates through text.",
+  "author": "Ansh Singh Sonkhia",
+  "dependencies": [
+    "react",
+    "motion"
+  ],
+  "registryDependencies": [],
+  "files": [
+    {
+      "type": "registry:ui",
+      "content": "'use client';\r\n \r\nimport * as React from 'react';\r\nimport {\r\n  AnimatePresence,\r\n  motion,\r\n  type HTMLMotionProps,\r\n  type Transition,\r\n} from 'motion/react';\r\n \r\nimport { cn } from '@/lib/utils';\r\n \r\ntype RotatingTextProps = {\r\n  text: string | string[];\r\n  duration?: number;\r\n  transition?: Transition;\r\n  y?: number;\r\n  containerClassName?: string;\r\n} & HTMLMotionProps<'div'>;\r\n \r\nfunction RotatingText({\r\n  text,\r\n  y = -50,\r\n  duration = 2000,\r\n  transition = { duration: 0.3, ease: 'easeOut' },\r\n  containerClassName,\r\n  ...props\r\n}: RotatingTextProps) {\r\n  const [index, setIndex] = React.useState(0);\r\n \r\n  React.useEffect(() => {\r\n    if (!Array.isArray(text)) return;\r\n    const interval = setInterval(() => {\r\n      setIndex((prevIndex) => (prevIndex + 1) % text.length);\r\n    }, duration);\r\n    return () => clearInterval(interval);\r\n  }, [text, duration]);\r\n \r\n  const currentText = Array.isArray(text) ? text[index] : text;\r\n \r\n  return (\r\n    <div className={cn('overflow-hidden py-1', containerClassName)}>\r\n      <AnimatePresence mode=\"wait\">\r\n        <motion.div\r\n          key={currentText}\r\n          transition={transition}\r\n          initial={{ opacity: 0, y: -y }}\r\n          animate={{ opacity: 1, y: 0 }}\r\n          exit={{ opacity: 0, y }}\r\n          {...props}\r\n        >\r\n          {currentText}\r\n        </motion.div>\r\n      </AnimatePresence>\r\n    </div>\r\n  );\r\n}\r\n \r\nexport { RotatingText, type RotatingTextProps };",
+      "path": "components/pumki-ui/text/text-rotator.tsx",
+      "target": "components/pumki-ui/text/text-rotator.tsx"
+    }
+  ]
+}
