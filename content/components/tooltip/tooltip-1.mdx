@@ -1,0 +1,138 @@
+---
+title: "Interactive Tooltip - Pumki UI"
+description: A lively tooltip component that follows the cursor with smooth spring-based motion, ideal for showcasing user profiles or team member details with interactive hover animations.
+---
+
+import { Tabs } from 'nextra/components'
+import { CodeBlock } from '@/components/docs/code-block'
+import { Preview, ResponsivePreview } from '@/components/docs/preview'
+import { Button } from '@/components/ui/button'
+import { InteractiveTooltip } from '@/components/pumki-ui/tooltip/tooltip-1'
+import { InteractiveTooltipDemo } from '@/components/demos/tooltip-1-demo'
+
+# Interactive Tooltip
+
+A lively tooltip component that follows the cursor with smooth spring-based motion, ideal for showcasing user profiles or team member details with interactive hover animations.
+
+<Preview
+  code={`import { InteractiveTooltip } from '@/components/pumki-ui/tooltip/tooltip-1';
+
+    const teamMembers = [
+        {
+            id: 1,
+            name: "Miguel Prewitt",
+            designation: "Dr. Fix",
+            image: "https://randomuser.me/api/portraits/men/21.jpg"
+        },
+        {
+            id: 2,
+            name: "Mark Frank",
+            designation: "Paranoid-in-Chief",
+            image: "https://randomuser.me/api/portraits/men/22.jpg"
+        },
+        {
+            id: 3,
+            name: "Fredrick Noyes",
+            designation: "Chief Geek",
+            image: "https://randomuser.me/api/portraits/men/24.jpg"
+        }
+    ];
+
+  export const InteractiveTooltipDemo = () => {
+    return (
+        <div className="flex items-center justify-center min-h-[200px] p-8">
+            <div className="flex items-center">
+                <InteractiveTooltip items={teamMembers} />
+            </div>
+        </div>
+    );
+};`}
+>
+        <InteractiveTooltipDemo />
+
+</Preview>
+
+## Installation
+
+<Tabs items={['pnpm', 'npm', 'yarn', 'bun']} defaultIndex="1">
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`pnpm dlx shadcn@latest add "https://pumki-ui.vercel.app/r/tooltip-1.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`npx shadcn@latest add "https://pumki-ui.vercel.app/r/tooltip-1.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`yarn dlx shadcn@latest add "https://pumki-ui.vercel.app/r/tooltip-1.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`bunx shadcn@latest add "https://pumki-ui.vercel.app/r/tooltip-1.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+</Tabs>
+
+## Usage
+
+<br/>
+
+<CodeBlock language="typescript">
+    {`import { InteractiveTooltip } from '@/components/pumki-ui/tooltip/tooltip-1';`}
+</CodeBlock>
+
+
+## Props
+
+import { PumkiTable, PumkiTableStyles } from '@/components/docs/PumkiTable'
+
+<PumkiTableStyles />
+
+<PumkiTable>
+  <table className="pumki-table">
+    <thead>
+      <tr>
+        <th>Prop</th>
+        <th>Type</th>
+        <th>Default</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>items?</code></td>
+        <td><code>{`{id: number, name: string, designation: string, image: string}`}</code></td>
+        <td><code>{`[]`}</code></td>
+        <td>Array of team member objects to display in the tooltip.</td>
+      </tr>
+      <tr>
+        <td><code>id?</code></td>
+        <td><code>number</code></td>
+        <td><code>-</code></td>
+        <td>Unique identifier for each team member.</td>
+      </tr>
+      <tr>
+        <td><code>name?</code></td>
+        <td><code>string</code></td>
+        <td><code>-</code></td>
+        <td>Name of the team member.</td>
+      </tr>
+      <tr>
+        <td><code>designation?</code></td>
+        <td><code>string</code></td>
+        <td><code>-</code></td>
+        <td>Designation of the team member.</td>
+      </tr>
+      <tr>
+        <td><code>image?</code></td>
+        <td><code>string</code></td>
+        <td><code>-</code></td>
+        <td>Image URL of the team member.</td>
+      </tr>
+    </tbody>
+  </table>
+</PumkiTable>

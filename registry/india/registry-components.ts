@@ -375,4 +375,21 @@ export const component: Registry = [
             },
         ],
     },
+    {
+        name: "tooltip-1",
+        type: "registry:ui",
+        title: "Tooltip 1",
+        description:
+            "A component that displays an interactive tooltip with a smooth animation.",
+        author: "Ansh Singh Sonkhia",
+        dependencies: ["react", "motion"],
+        registryDependencies: [],
+        files: [
+            {
+                path: "components/pumki-ui/tooltip/tooltip-1.tsx",
+                type: "registry:ui",
+                target: "components/pumki-ui/tooltip/tooltip-1.tsx",
+            },
+        ],
+    },
 ];
