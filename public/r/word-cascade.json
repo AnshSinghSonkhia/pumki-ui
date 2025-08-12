@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "word-cascade",
+  "type": "registry:ui",
+  "title": "Word Cascade",
+  "description": "A component that animates the cascade effect on words.",
+  "author": "Ansh Singh Sonkhia",
+  "dependencies": [
+    "react",
+    "motion"
+  ],
+  "registryDependencies": [],
+  "files": [
+    {
+      "type": "registry:ui",
+      "content": "'use client';\r\n \r\nimport * as React from 'react';\r\nimport {\r\n  motion,\r\n  useInView,\r\n  type Transition,\r\n  type UseInViewOptions,\r\n} from 'motion/react';\r\n \r\ntype WordCascadeTextProps = Omit<React.ComponentProps<'span'>, 'children'> & {\r\n  transition?: Transition;\r\n  inView?: boolean;\r\n  inViewMargin?: UseInViewOptions['margin'];\r\n  inViewOnce?: boolean;\r\n  spacing?: number | string;\r\n  text: string;\r\n};\r\n \r\nfunction WordCascadeText({\r\n  ref,\r\n  inView = false,\r\n  inViewMargin = '0px',\r\n  inViewOnce = true,\r\n  spacing = 5,\r\n  text,\r\n  transition = { type: 'spring', bounce: 0, duration: 2, delay: 0.5 },\r\n  ...props\r\n}: WordCascadeTextProps) {\r\n  const localRef = React.useRef<HTMLSpanElement>(null);\r\n  React.useImperativeHandle(ref, () => localRef.current as HTMLSpanElement);\r\n \r\n  const inViewResult = useInView(localRef, {\r\n    once: inViewOnce,\r\n    margin: inViewMargin,\r\n  });\r\n  const isInView = !inView || inViewResult;\r\n \r\n  const words = React.useMemo(() => text.split(' '), [text]);\r\n \r\n  return (\r\n    <span ref={localRef} data-slot=\"writing-text\" {...props}>\r\n      {words.map((word, index) => (\r\n        <motion.span\r\n          key={index}\r\n          className=\"inline-block will-change-transform will-change-opacity\"\r\n          style={{ marginRight: spacing }}\r\n          initial={{ opacity: 0, y: 10 }}\r\n          animate={isInView ? { opacity: 1, y: 0 } : undefined}\r\n          transition={{\r\n            ...transition,\r\n            delay: index * (transition?.delay ?? 0),\r\n          }}\r\n        >\r\n          {word}{' '}\r\n        </motion.span>\r\n      ))}\r\n    </span>\r\n  );\r\n}\r\n \r\nexport { WordCascadeText, type WordCascadeTextProps };",
+      "path": "components/pumki-ui/text/word-cascade.tsx",
+      "target": "components/pumki-ui/text/word-cascade.tsx"
+    }
+  ]
+}

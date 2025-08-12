@@ -1,0 +1,156 @@
+---
+title: "Lustrous Text - Pumki UI"
+description: A component that animates the lustrous effect on text.
+---
+
+import { Tabs } from 'nextra/components'
+import { CodeBlock } from '@/components/docs/code-block'
+import { Preview, ResponsivePreview } from '@/components/docs/preview'
+import { Button } from '@/components/ui/button'
+import { LustrousText } from '@/components/pumki-ui/text/lustrous-text'
+
+# Lustrous Text Animation
+
+A component that animates the lustrous effect on text.
+
+<Preview
+  code={`import { LustrousText } from '@/components/pumki-ui/text/lustrous-text';
+
+  export const LustrousTextDemo = () => {
+    return (
+        <LustrousText
+            className="text-4xl font-semibold"
+            text="Ansh Singh Sonkhia India"
+            wave
+        />
+    );
+};`}
+>
+        <LustrousText
+            className="text-4xl font-semibold"
+            text="Ansh Singh Sonkhia India"
+            wave
+        />
+
+</Preview>
+
+## Installation
+
+<Tabs items={['pnpm', 'npm', 'yarn', 'bun']} defaultIndex="1">
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`pnpm dlx shadcn@latest add "https://pumki-ui.vercel.app/r/lustrous-text.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`npx shadcn@latest add "https://pumki-ui.vercel.app/r/lustrous-text.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`yarn dlx shadcn@latest add "https://pumki-ui.vercel.app/r/lustrous-text.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`bunx shadcn@latest add "https://pumki-ui.vercel.app/r/lustrous-text.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+</Tabs>
+
+## Usage
+
+<br/>
+
+<CodeBlock language="typescript">
+    {`import { LustrousText } from '@/components/pumki-ui/text/lustrous-text';`}
+</CodeBlock>
+
+<br/>
+
+<CodeBlock language="typescript">
+    {`<LustrousText text="Ansh Singh Sonkhia" />`}
+</CodeBlock>
+
+## Example
+
+<Preview
+  title="Gold Customizations"
+  code={`import { LustrousText } from '@/components/pumki-ui/text/lustrous-text';
+
+  export const LustrousTextDemo = () => {
+    return (
+        <LustrousText
+            className="text-4xl font-semibold tracking-wide"
+            text="Ansh Singh Sonkhia India"
+            wave
+            lustrousColor="#FFD700"
+            color="#B8860B"
+            duration={1.5}
+        />
+    );
+};`}
+>
+    <LustrousText
+        className="text-4xl font-semibold tracking-wide"
+        text="Ansh Singh Sonkhia India"
+        wave
+        lustrousColor="#FFD700"
+        color="#B8860B"
+        duration={1.5}
+    />
+
+</Preview>
+
+
+## Props
+
+import { PumkiTable, PumkiTableStyles } from '@/components/docs/PumkiTable'
+
+<PumkiTableStyles />
+
+<PumkiTable>
+  <table className="pumki-table">
+    <thead>
+      <tr>
+        <th>Prop</th>
+        <th>Type</th>
+        <th>Default</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>lustrousColor?</code></td>
+        <td><code>string</code></td>
+        <td><code>{`var(--color-neutral-300)`}</code></td>
+        <td>The color of the lustrous effect</td>
+      </tr>
+      <tr>
+        <td><code>color?</code></td>
+        <td><code>string</code></td>
+        <td><code>{`var(--color-neutral-500)`}</code></td>
+        <td>The color of the text.</td>
+      </tr>
+      <tr>
+        <td><code>wave?</code></td>
+        <td><code>boolean</code></td>
+        <td><code>false</code></td>
+        <td>Enable wave animation</td>
+      </tr>
+      <tr>
+        <td><code>duration?</code></td>
+        <td><code>number</code></td>
+        <td><code>1</code></td>
+        <td>Animation duration in seconds</td>
+      </tr>
+      <tr>
+        <td><code>text</code></td>
+        <td><code>string</code></td>
+        <td><code>-</code></td>
+        <td>Text to animate</td>
+      </tr>
+    </tbody>
+  </table>
+</PumkiTable>

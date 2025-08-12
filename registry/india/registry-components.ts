@@ -222,4 +222,38 @@ export const component: Registry = [
             },
         ],
     },
+    {
+        name: "lustrous-text",
+        type: "registry:ui",
+        title: "Lustrous Text",
+        description:
+            "A component that animates the lustrous effect on text.",
+        author: "Ansh Singh Sonkhia",
+        dependencies: ["react", "motion"],
+        registryDependencies: [],
+        files: [
+            {
+                path: "components/pumki-ui/text/lustrous-text.tsx",
+                type: "registry:ui",
+                target: "components/pumki-ui/text/lustrous-text.tsx",
+            },
+        ],
+    },
+    {
+        name: "word-cascade",
+        type: "registry:ui",
+        title: "Word Cascade",
+        description:
+            "A component that animates the cascade effect on words.",
+        author: "Ansh Singh Sonkhia",
+        dependencies: ["react", "motion"],
+        registryDependencies: [],
+        files: [
+            {
+                path: "components/pumki-ui/text/word-cascade.tsx",
+                type: "registry:ui",
+                target: "components/pumki-ui/text/word-cascade.tsx",
+            },
+        ],
+    },
 ];

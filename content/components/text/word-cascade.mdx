@@ -1,0 +1,150 @@
+---
+title: "Word Cascade Text - Pumki UI"
+description: A text component that gracefully unveils each word in sequence, creating a flowing, cascading reading experience.
+---
+
+import { Tabs } from 'nextra/components'
+import { CodeBlock } from '@/components/docs/code-block'
+import { Preview, ResponsivePreview } from '@/components/docs/preview'
+import { Button } from '@/components/ui/button'
+import { WordCascadeText } from '@/components/pumki-ui/text/word-cascade'
+
+# Word Cascade Text Animation
+
+A text component that gracefully unveils each word in sequence, creating a flowing, cascading reading experience.
+
+<Preview
+  code={`import { WordCascadeText } from '@/components/pumki-ui/text/word-cascade';
+
+  export const WordCascadeTextDemo = () => {
+    return (
+        <WordCascadeText
+            className="text-4xl"
+            text="Pumki UI With Cascade Effect"
+            spacing={9}
+        />
+    );
+};`}
+>
+        <WordCascadeText
+            className="text-4xl"
+            text="Pumki UI With Cascade Effect"
+            spacing={9}
+        />
+
+</Preview>
+
+## Installation
+
+<Tabs items={['pnpm', 'npm', 'yarn', 'bun']} defaultIndex="1">
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`pnpm dlx shadcn@latest add "https://pumki-ui.vercel.app/r/word-cascade.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`npx shadcn@latest add "https://pumki-ui.vercel.app/r/word-cascade.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`yarn dlx shadcn@latest add "https://pumki-ui.vercel.app/r/word-cascade.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`bunx shadcn@latest add "https://pumki-ui.vercel.app/r/word-cascade.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+</Tabs>
+
+## Usage
+
+<br/>
+
+<CodeBlock language="typescript">
+    {`import { WordCascadeText } from '@/components/pumki-ui/text/word-cascade';`}
+</CodeBlock>
+
+<br/>
+
+<CodeBlock language="typescript">
+    {`<WordCascadeText text="Ansh Singh Sonkhia" />`}
+</CodeBlock>
+
+
+## Props
+
+import { PumkiTable, PumkiTableStyles } from '@/components/docs/PumkiTable'
+
+<PumkiTableStyles />
+
+<PumkiTable>
+  <table className="pumki-table">
+    <thead>
+      <tr>
+        <th>Prop</th>
+        <th>Type</th>
+        <th>Default</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>transition?</code></td>
+        <td><code>Transition</code></td>
+        <td><code>{`{ type: 'spring', bounce: 0, duration: 2, delay: 0.5 }`}</code></td>
+        <td>Framer Motion transition config</td>
+      </tr>
+      <tr>
+        <td><code>text</code></td>
+        <td><code>string</code></td>
+        <td><code>-</code></td>
+        <td>Text to animate</td>
+      </tr>
+      <tr>
+        <td><code>spacing?</code></td>
+        <td><code>number | string</code></td>
+        <td><code>5</code></td>
+        <td>Space between words</td>
+      </tr>
+      <tr>
+        <td><code>inViewOnce?</code></td>
+        <td><code>boolean</code></td>
+        <td><code>true</code></td>
+        <td>Animate only once when in view</td>
+      </tr>
+      <tr>
+        <td><code>inViewMargin?</code></td>
+        <td><code>string</code></td>
+        <td><code>0px</code></td>
+        <td>Margin for in-view detection</td>
+      </tr>
+      <tr>
+        <td><code>inView?</code></td>
+        <td><code>boolean</code></td>
+        <td><code>false</code></td>
+        <td>Force animation in view</td>
+      </tr>
+      <tr>
+        <td><code>delay?</code></td>
+        <td><code>number</code></td>
+        <td><code>0.5</code></td>
+        <td>Delay before animation (seconds)</td>
+      </tr>
+      <tr>
+        <td><code>duration?</code></td>
+        <td><code>number</code></td>
+        <td><code>2</code></td>
+        <td>Animation duration (seconds)</td>
+      </tr>
+      <tr>
+        <td><code>className?</code></td>
+        <td><code>string</code></td>
+        <td><code>-</code></td>
+        <td>Custom class name</td>
+      </tr>
+    </tbody>
+  </table>
+</PumkiTable>

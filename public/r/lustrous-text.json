@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "lustrous-text",
+  "type": "registry:ui",
+  "title": "Lustrous Text",
+  "description": "A component that animates the lustrous effect on text.",
+  "author": "Ansh Singh Sonkhia",
+  "dependencies": [
+    "react",
+    "motion"
+  ],
+  "registryDependencies": [],
+  "files": [
+    {
+      "type": "registry:ui",
+      "content": "'use client';\r\n \r\nimport * as React from 'react';\r\nimport { type HTMLMotionProps, motion, type Transition } from 'motion/react';\r\n \r\nimport { cn } from '@/lib/utils';\r\n \r\ntype LustrousTextProps = {\r\n  text: string;\r\n  duration?: number;\r\n  transition?: Transition;\r\n  wave?: boolean;\r\n  color?: string;\r\n  lustrousColor?: string;\r\n} & Omit<HTMLMotionProps<'span'>, 'children'>;\r\n \r\nfunction LustrousText({\r\n  text,\r\n  duration = 1,\r\n  transition,\r\n  wave = false,\r\n  className,\r\n  color = 'var(--color-neutral-500)',\r\n  lustrousColor = 'var(--color-neutral-300)',\r\n  ...props\r\n}: LustrousTextProps) {\r\n  return (\r\n    <motion.span\r\n      className={cn('relative inline-block [perspective:500px]', className)}\r\n      style={\r\n        {\r\n          '--lustrous-color': lustrousColor,\r\n          '--color': color,\r\n          color: 'var(--color)',\r\n        } as React.CSSProperties\r\n      }\r\n      {...props}\r\n    >\r\n      {text?.split('')?.map((char, i) => (\r\n        <motion.span\r\n          key={i}\r\n          className=\"inline-block whitespace-pre [transform-style:preserve-3d]\"\r\n          initial={{\r\n            ...(wave\r\n              ? {\r\n                  scale: 1,\r\n                  rotateY: 0,\r\n                }\r\n              : {}),\r\n            color: 'var(--color)',\r\n          }}\r\n          animate={{\r\n            ...(wave\r\n              ? {\r\n                  x: [0, 5, 0],\r\n                  y: [0, -5, 0],\r\n                  scale: [1, 1.1, 1],\r\n                  rotateY: [0, 15, 0],\r\n                }\r\n              : {}),\r\n            color: ['var(--color)', 'var(--lustrous-color)', 'var(--color)'],\r\n          }}\r\n          transition={{\r\n            duration,\r\n            repeat: Infinity,\r\n            repeatType: 'loop',\r\n            repeatDelay: text.length * 0.05,\r\n            delay: (i * duration) / text.length,\r\n            ease: 'easeInOut',\r\n            ...transition,\r\n          }}\r\n        >\r\n          {char}\r\n        </motion.span>\r\n      ))}\r\n    </motion.span>\r\n  );\r\n}\r\n \r\nexport { LustrousText, type LustrousTextProps };",
+      "path": "components/pumki-ui/text/lustrous-text.tsx",
+      "target": "components/pumki-ui/text/lustrous-text.tsx"
+    }
+  ]
+}
