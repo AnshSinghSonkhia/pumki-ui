@@ -523,11 +523,68 @@ button[title*="theme" i],
   width: 100% !important;
 }
 
+/* Test by looking for the parent of the purple items --- SUCCESS */
+/* .nextra-sidebar li:has(a[href*="buttons/copy"]) {
+  background-color: yellow !important;
+} */
+
+/* Test the actual button/folder element --- SUCCESS */
+/* .nextra-sidebar li > button,
+.nextra-sidebar li > [role="button"] {
+  background-color: red !important;
+} */
+
+/* ===== BADGE SYSTEM FOR NEXTRA SIDEBAR (for folders) ===== */
+
+/* Target the Buttons folder specifically */
+/* .nextra-sidebar li > button:has(svg) {
+  position: relative;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+} */
+
+/* Add badge to the Buttons folder - target by the li that contains buttons links */
+/* .nextra-sidebar li:has(a[href*="buttons/"]) > button:after {
+  content: "9";
+  background-color: #14041c;
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 2px 6px;
+  border-radius: 9999px;
+  margin-left: 4px;
+  min-width: 20px;
+  text-align: center;
+  display: inline-block;
+  order: 2;
+} */
+
+/* NEW badge for Buttons folder */
+/* .nextra-sidebar li:has(a[href*="buttons/"]) > button:before {
+  content: "new";
+  background-color: #640D5F;
+  color: white;
+  font-size: 0.65rem;
+  font-weight: 600;
+  padding: 1px 4px;
+  border-radius: 4px;
+  margin-left: auto;
+  margin-right: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  display: inline-block;
+  order: 1;
+} */
+
+
+
 /* ===== BADGE SYSTEM FOR NEXTRA SIDEBAR ===== */
 /* This system allows easy addition of number badges and "new" badges to navigation items
    To add badges to any navigation item, just add it to the appropriate section below */
 
    /* 1. BASE FLEX LAYOUT - Apply to all navigation items that need badges */
+.nextra-sidebar a[href*="buttons"][href*="copy"],
 .nextra-sidebar a[href*="bg-potion"], 
 .nextra-sidebar a[href*="bg-fireworks"], 
 .nextra-sidebar a[href*="silver"], 
@@ -554,6 +611,7 @@ button[title*="theme" i],
 
 /* 2. NUMBER BADGE STYLES - Shared styles for all number badges */
 /* These appear at the far right: "Buttons NEW 56" */
+.nextra-sidebar a[href*="buttons"][href*="copy"]:after, 
 .nextra-sidebar a[href*="bg-potion"]:after, 
 .nextra-sidebar a[href*="bg-fireworks"]:after, 
 .nextra-sidebar a[href*="silver"]:after, 
@@ -637,6 +695,7 @@ button[title*="theme" i],
 
 /* 4. "NEW" BADGE STYLES - Shared styles for all "new" badges */
 /* These appear between the text and the number badge: "Buttons NEW 56" */
+.nextra-sidebar a[href*="buttons"][href*="copy"]:before,
 .nextra-sidebar a[href*="bg-potion"]:before,
 .nextra-sidebar a[href*="bg-fireworks"]:before,
 .nextra-sidebar a[href*="silver"]:before,
