@@ -16,6 +16,12 @@ export default {
     //     title: "Components",
     // },
     components: 'Components',
+    sections: {
+        title: "Sections",
+        theme: {
+            collapsed: true
+        }
+    },
     backgrounds: {
         title: "Backgrounds",
         theme: {

@@ -392,4 +392,21 @@ export const component: Registry = [
             },
         ],
     },
+    {
+        name: "sparkles",
+        type: "registry:ui",
+        title: "Sparkles",
+        description:
+            "A component that displays a sparkling effect with a smooth animation.",
+        author: "Ansh Singh Sonkhia",
+        dependencies: ["react", "motion", "@tsparticles/react", "@tsparticles/engine", "@tsparticles/slim"],
+        registryDependencies: [],
+        files: [
+            {
+                path: "components/pumki-ui/ui/sparkles.tsx",
+                type: "registry:ui",
+                target: "components/pumki-ui/ui/sparkles.tsx",
+            },
+        ],
+    },
 ];
