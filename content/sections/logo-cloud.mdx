@@ -8,9 +8,8 @@ import { CodeBlock } from '@/components/docs/code-block'
 import { Callout } from 'nextra/components'
 import { Preview, ResponsivePreview } from '@/components/docs/preview'
 import { Button } from '@/components/ui/button'
-import { InteractiveTooltip } from '@/components/pumki-ui/tooltip/tooltip-1'
-import { InteractiveTooltipDemo } from '@/components/demos/tooltip-1-demo'
 import { Jugnu } from '@/components/pumki-ui/sections/logo-cloud/jugnu'
+import { Proof } from '@/components/pumki-ui/sections/logo-cloud/sp1'
 
 # Logo Cloud Sections
 
@@ -120,3 +119,124 @@ export function Jugnu() {
   </Tabs.Tab>
 </Tabs>
 
+## Social Proof Logo Cloud
+
+<Callout type="info">Inpiration from & Credits to Magic UI</Callout>
+
+<Preview
+  title="Basic Variant"
+  code={`
+  import { Proof } from '@/components/pumki-ui/sections/logo-cloud/sp1';
+
+export const CopyButtonDemo = () => {
+    return (
+        <Proof />
+    );
+};
+`}
+>
+          <Proof />
+</Preview>
+
+
+### Installation
+
+<Tabs items={['pnpm', 'npm', 'yarn', 'bun']} defaultIndex="1">
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`pnpm dlx shadcn@latest add "https://pumki-ui.vercel.app/r/logocloud-sp1.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`npx shadcn@latest add "https://pumki-ui.vercel.app/r/logocloud-sp1.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`yarn dlx shadcn@latest add "https://pumki-ui.vercel.app/r/logocloud-sp1.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`bunx shadcn@latest add "https://pumki-ui.vercel.app/r/logocloud-sp1.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+</Tabs>
+
+### Examples
+
+<Preview
+  title="Glass Variant"
+  code={`
+  import { Proof } from '@/components/pumki-ui/sections/logo-cloud/sp1';
+
+export const CopyButtonDemo = () => {
+    return (
+        <Proof variant="glass" />
+    );
+};
+`}
+>
+          <Proof variant="glass" />
+</Preview>
+
+<Preview
+  title="Classic Variant"
+  code={`
+  import { Proof } from '@/components/pumki-ui/sections/logo-cloud/sp1';
+
+export const CopyButtonDemo = () => {
+    return (
+        <Proof variant="classic" />
+    );
+};
+`}
+>
+          <Proof variant="classic" />
+</Preview>
+
+<Preview
+  title="Slider Variant"
+  code={`
+  import { Proof } from '@/components/pumki-ui/sections/logo-cloud/sp1';
+
+export const CopyButtonDemo = () => {
+    return (
+        <Proof variant="slider" />
+    );
+};
+`}
+>
+          <Proof variant="slider" />
+</Preview>
+
+<Preview
+  title="Centered Variant"
+  code={`
+  import { Proof } from '@/components/pumki-ui/sections/logo-cloud/sp1';
+
+export const CopyButtonDemo = () => {
+    return (
+        <Proof variant="centered" />
+    );
+};
+`}
+>
+          <Proof variant="centered" />
+</Preview>
+
+<Preview
+  title="Compact Variant"
+  code={`
+  import { Proof } from '@/components/pumki-ui/sections/logo-cloud/sp1';
+
+export const CopyButtonDemo = () => {
+    return (
+        <Proof variant="compact" />
+    );
+};
+`}
+>
+          <Proof variant="compact" />
+</Preview>
