@@ -1,0 +1,96 @@
+---
+title: "Squash Text - Pumki UI"
+description: Characters bounce and squash into place with playful, dynamic energy, perfect for drawing attention to your text.
+---
+
+import { Tabs } from 'nextra/components'
+import { CodeBlock } from '@/components/docs/code-block'
+import { Callout } from 'nextra/components'
+import { Preview, ResponsivePreview } from '@/components/docs/preview'
+import { Button } from '@/components/ui/button'
+import { SquashText } from '@/components/pumki-ui/text/text-squash'
+
+# Squash Text Animation
+
+Characters bounce and squash into place with playful, dynamic energy.
+
+<Callout>Perfect for drawing attention to your text.</Callout>
+
+<Preview
+  code={`import { SquashText } from '@/components/pumki-ui/text/text-squash';
+
+  export const SquashTextDemo = () => {
+    return (
+        <SquashText className="text-3xl font-semibold tracking-tight">Squash Text</SquashText>;
+    );
+};`}
+>
+        <SquashText className="text-3xl font-semibold tracking-tight">Squash Text</SquashText>;
+
+</Preview>
+
+## Installation
+
+<Tabs items={['pnpm', 'npm', 'yarn', 'bun']} defaultIndex="1">
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`pnpm dlx shadcn@latest add "https://pumki-ui.vercel.app/r/text-squash.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`npx shadcn@latest add "https://pumki-ui.vercel.app/r/text-squash.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`yarn dlx shadcn@latest add "https://pumki-ui.vercel.app/r/text-squash.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`bunx shadcn@latest add "https://pumki-ui.vercel.app/r/text-squash.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+</Tabs>
+
+## Usage
+
+<br/>
+
+<CodeBlock language="typescript">
+    {`import { SquashText } from '@/components/pumki-ui/text/text-squash';`}
+</CodeBlock>
+
+<br/>
+
+<CodeBlock language="typescript">
+    {`<SquashText>Squash Text</SquashText>;`}
+</CodeBlock>
+
+## Props
+
+import { PumkiTable, PumkiTableStyles } from '@/components/docs/PumkiTable'
+
+<PumkiTableStyles />
+
+<PumkiTable>
+  <table className="pumki-table">
+    <thead>
+      <tr>
+        <th>Prop</th>
+        <th>Type</th>
+        <th>Default</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>repeat?</code></td>
+        <td><code>{`boolean | number`}</code></td>
+        <td><code>{`true`}</code></td>
+        <td>Repeating the Squash animation</td>
+      </tr>
+    </tbody>
+  </table>
+</PumkiTable>

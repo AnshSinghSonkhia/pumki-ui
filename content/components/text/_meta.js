@@ -9,5 +9,6 @@ export default {
     'text-highlight': 'Text Highlight',
     'text-rotator': 'Text Rotator',
     'text-roller': 'Text Roller',
+    'text-squash': 'Text Squash',
     'word-cascade': 'Word Cascade',
 }

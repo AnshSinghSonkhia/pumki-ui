@@ -376,6 +376,23 @@ export const component: Registry = [
         ],
     },
     {
+        name: "text-squash",
+        type: "registry:ui",
+        title: "Squash Text",
+        description:
+            "Characters bounce and squash into place with playful, dynamic energy, perfect for drawing attention to your text.",
+        author: "Ansh Singh Sonkhia",
+        dependencies: ["react", "gsap", "@gsap/react"],
+        registryDependencies: [],
+        files: [
+            {
+                path: "components/pumki-ui/text/text-squash.tsx",
+                type: "registry:ui",
+                target: "components/pumki-ui/text/text-squash.tsx",
+            },
+        ],
+    },
+    {
         name: "tooltip-1",
         type: "registry:ui",
         title: "Tooltip 1",

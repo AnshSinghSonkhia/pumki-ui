@@ -1,0 +1,22 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "text-squash",
+  "type": "registry:ui",
+  "title": "Squash Text",
+  "description": "Characters bounce and squash into place with playful, dynamic energy, perfect for drawing attention to your text.",
+  "author": "Ansh Singh Sonkhia",
+  "dependencies": [
+    "react",
+    "gsap",
+    "@gsap/react"
+  ],
+  "registryDependencies": [],
+  "files": [
+    {
+      "type": "registry:ui",
+      "content": "\"use client\";\r\n\r\nimport { ComponentProps, useId, useRef } from \"react\";\r\n\r\nimport { useGSAP } from \"@gsap/react\";\r\nimport gsap from \"gsap\";\r\nimport { CustomBounce } from \"gsap/CustomBounce\";\r\nimport { CustomEase } from \"gsap/CustomEase\";\r\nimport { SplitText } from \"gsap/SplitText\";\r\n\r\ngsap.registerPlugin(CustomEase, CustomBounce, SplitText);\r\n\r\ntype SquashTextProps = {\r\n    repeat?: boolean | number;\r\n} & ComponentProps<\"div\">;\r\n\r\nexport const SquashText = ({ repeat = true, ...props }: SquashTextProps) => {\r\n    const wrapperRef = useRef<HTMLDivElement | null>(null);\r\n    const bounceId = useId();\r\n    const squashEase = `squash-${bounceId}`;\r\n    const bounceEase = `bounce-${bounceId}`;\r\n\r\n    useGSAP(\r\n        () => {\r\n            if (!wrapperRef.current) return;\r\n\r\n            CustomBounce.create(bounceEase, {\r\n                strength: 0.6,\r\n                squash: 1,\r\n                squashID: squashEase,\r\n            });\r\n\r\n            const splitText = new SplitText(wrapperRef.current).chars;\r\n\r\n            gsap.timeline({\r\n                defaults: { duration: 1.5, stagger: { amount: 0.1, ease: \"sine.in\" } },\r\n                repeat: repeat === true ? -1 : repeat === false ? 0 : repeat,\r\n            })\r\n                .from(\r\n                    splitText,\r\n                    {\r\n                        duration: 0.6,\r\n                        opacity: 0,\r\n                        ease: \"power1.inOut\",\r\n                    },\r\n                    0,\r\n                )\r\n                .from(\r\n                    splitText,\r\n                    {\r\n                        y: -100,\r\n                        ease: bounceEase,\r\n                    },\r\n                    0,\r\n                )\r\n                .to(\r\n                    splitText,\r\n                    {\r\n                        scaleX: 1.5,\r\n                        scaleY: 0.8,\r\n                        rotate: () => 15 - 30 * Math.random(),\r\n                        ease: squashEase,\r\n                        transformOrigin: \"50% 100%\",\r\n                    },\r\n                    0,\r\n                );\r\n        },\r\n        { scope: wrapperRef },\r\n    );\r\n\r\n    return <div {...props} ref={wrapperRef} />;\r\n};\r\n",
+      "path": "components/pumki-ui/text/text-squash.tsx",
+      "target": "components/pumki-ui/text/text-squash.tsx"
+    }
+  ]
+}
