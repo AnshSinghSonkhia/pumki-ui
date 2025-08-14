@@ -1,0 +1,148 @@
+---
+title: "Stats Carousel - Pumki UI"
+description: A smooth carousel effect for displaying statistics, perfect for dashboards and data visualization.
+---
+
+import { Tabs } from 'nextra/components'
+import { CodeBlock } from '@/components/docs/code-block'
+import { Callout } from 'nextra/components'
+import { Preview, ResponsivePreview } from '@/components/docs/preview'
+import { Button } from '@/components/ui/button'
+import StatsCarousel from '@/components/pumki-ui/carousels/stats-carousel'
+
+# Stats Carousel
+
+A smooth carousel effect for displaying statistics.
+<Callout>Perfect for dashboards and data visualization.</Callout>
+
+<Preview
+  code={`import StatsCarousel from '@/components/pumki-ui/carousels/stats-carousel';
+
+  export const StatsCarouselDemo = () => {
+    return (
+        <StatsCarousel
+            title="BUILD BEAUTIFUL UI. EFFORTLESSLY."
+            stats={[
+                { value: 50, suffix: "+", label: "Ready-to-use, customizable components" },
+                {
+                    value: 15,
+                    suffix: "K+",
+                    label: "Developers launching projects faster with Pumki",
+                },
+                { value: 99, suffix: "%", label: "Performance-optimized for a lightning-fast experience" },
+            ]}
+            className=""
+            cardClassName=""
+        />
+    );
+};`}
+>
+        <StatsCarousel
+            title="BUILD BEAUTIFUL UI. EFFORTLESSLY."
+            stats={[
+                { value: 50, suffix: "+", label: "Ready-to-use, customizable components" },
+                {
+                    value: 15,
+                    suffix: "K+",
+                    label: "Developers launching projects faster with Pumki",
+                },
+                { value: 99, suffix: "%", label: "Performance-optimized for a lightning-fast experience" },
+            ]}
+            className=""
+            cardClassName=""
+        />
+
+</Preview>
+
+## Installation
+
+<Tabs items={['pnpm', 'npm', 'yarn', 'bun']} defaultIndex="1">
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`pnpm dlx shadcn@latest add "https://pumki-ui.vercel.app/r/stats-carousel.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`npx shadcn@latest add "https://pumki-ui.vercel.app/r/stats-carousel.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`yarn dlx shadcn@latest add "https://pumki-ui.vercel.app/r/stats-carousel.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`bunx shadcn@latest add "https://pumki-ui.vercel.app/r/stats-carousel.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+</Tabs>
+
+## Usage
+
+<br/>
+
+<CodeBlock language="typescript">
+    {`import StatsCarousel from '@/components/pumki-ui/carousels/stats-carousel';`}
+</CodeBlock>
+
+<br/>
+
+<CodeBlock language="typescript">
+    {`<StatsCarousel
+            title="CREATE STUNNING INTERFACES WITH SCROLLX UI COMPONENTS"
+            stats={[
+                { value: 40, suffix: "+", label: "Handcrafted animated components" },
+                { value: 12, suffix: "K+", label: "Developers building with ScrollX UI" },
+                { value: 99, suffix: "%", label: "Performance optimized for web" },
+            ]}
+            className=""
+            cardClassName=""
+      />`}
+</CodeBlock>
+
+## Props
+
+import { PumkiTable, PumkiTableStyles } from '@/components/docs/PumkiTable'
+
+<PumkiTableStyles />
+
+<PumkiTable>
+  <table className="pumki-table">
+    <thead>
+      <tr>
+        <th>Prop</th>
+        <th>Type</th>
+        <th>Default</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>stats</code></td>
+        <td><code>{`{ value: number; suffix?: string; label: string; id?: number; }[]`}</code></td>
+        <td><code>optional</code></td>
+        <td>Array of stats with value, suffix, label, and optional id.</td>
+      </tr>
+      <tr>
+        <td><code>title</code></td>
+        <td><code>string</code></td>
+        <td><code>optional</code></td>
+        <td>Optional title above the carousel.</td>
+      </tr>
+      <tr>
+        <td><code>className</code></td>
+        <td><code>string</code></td>
+        <td><code>""</code></td>
+        <td>Extra classes for the wrapper.</td>
+      </tr>
+      <tr>
+        <td><code>cardClassName</code></td>
+        <td><code>string</code></td>
+        <td><code>""</code></td>
+        <td>Extra classes for stat cards.</td>
+      </tr>
+    </tbody>
+  </table>
+</PumkiTable>

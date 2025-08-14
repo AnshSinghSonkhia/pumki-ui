@@ -393,6 +393,23 @@ export const component: Registry = [
         ],
     },
     {
+        name: "draw-line-text",
+        type: "registry:ui",
+        title: "Draw Line Text",
+        description:
+            "A component that applies a drawing effect to text with a smooth animation.",
+        author: "Ansh Singh Sonkhia",
+        dependencies: ["react", "gsap", "@gsap/react"],
+        registryDependencies: [],
+        files: [
+            {
+                path: "components/pumki-ui/text/draw-line-text.tsx",
+                type: "registry:ui",
+                target: "components/pumki-ui/text/draw-line-text.tsx",
+            },
+        ],
+    },
+    {
         name: "tooltip-1",
         type: "registry:ui",
         title: "Tooltip 1",
@@ -423,6 +440,23 @@ export const component: Registry = [
                 path: "components/pumki-ui/ui/sparkles.tsx",
                 type: "registry:ui",
                 target: "components/pumki-ui/ui/sparkles.tsx",
+            },
+        ],
+    },
+    {
+        name: "stats-carousel",
+        type: "registry:ui",
+        title: "Stats Carousel",
+        description:
+            "A smooth carousel effect for displaying statistics, perfect for dashboards and data visualization.",
+        author: "Ansh Singh Sonkhia",
+        dependencies: ["react", "motion", "framer-motion"],
+        registryDependencies: [],
+        files: [
+            {
+                path: "components/pumki-ui/carousels/stats-carousel.tsx",
+                type: "registry:ui",
+                target: "components/pumki-ui/carousels/stats-carousel.tsx",
             },
         ],
     },

@@ -2,6 +2,7 @@ export default {
     'lustrous-text': 'Lustrous',
     'counting-number': 'Counting Number',
     'distort-text': 'Distort Text',
+    'draw-line-text': 'Draw Line Text',
     'scramble-text': 'Scramble Text',
     'sliding-number': 'Sliding Number',
     'text-splitting': 'Splitting Text',

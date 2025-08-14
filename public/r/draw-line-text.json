@@ -1,0 +1,22 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "draw-line-text",
+  "type": "registry:ui",
+  "title": "Draw Line Text",
+  "description": "A component that applies a drawing effect to text with a smooth animation.",
+  "author": "Ansh Singh Sonkhia",
+  "dependencies": [
+    "react",
+    "gsap",
+    "@gsap/react"
+  ],
+  "registryDependencies": [],
+  "files": [
+    {
+      "type": "registry:ui",
+      "content": "\"use client\";\r\n\r\nimport { ComponentProps, useRef, useState } from \"react\";\r\n\r\nimport { useGSAP } from \"@gsap/react\";\r\nimport gsap from \"gsap\";\r\n\r\ntype DrawTextProps = {\r\n    afterFill?: boolean;\r\n    color?: string;\r\n    fontSize?: number;\r\n    letterSpacing?: number;\r\n    oneByOne?: boolean;\r\n    strokeWidth?: number;\r\n    text: string;\r\n    wordSpacing?: number;\r\n} & ComponentProps<\"svg\">;\r\n\r\nexport const DrawLineText = ({\r\n    text,\r\n    oneByOne = true,\r\n    afterFill = true,\r\n    color = \"black\",\r\n    fontSize = 40,\r\n    wordSpacing = 10,\r\n    strokeWidth = 1,\r\n    letterSpacing = 0,\r\n    ...props\r\n}: DrawTextProps) => {\r\n    const wrapperRef = useRef<SVGSVGElement | null>(null);\r\n\r\n    const [textDimension, setTextDimension] = useState<{ height: number; width: number }>({ height: 0, width: 0 });\r\n\r\n    useGSAP(\r\n        () => {\r\n            const wrapperChildren = wrapperRef.current?.children;\r\n            if (!wrapperChildren) return;\r\n            const children = Array.from(wrapperChildren) as SVGTextElement[];\r\n            let totalWidth = 0;\r\n            let maxHeight = 0;\r\n            children.forEach((el, index) => {\r\n                el.setAttribute(\"x\", totalWidth + \"px\");\r\n                const elementWidth = el.getBoundingClientRect().width;\r\n                const elementHeight = el.getBoundingClientRect().height;\r\n                if (elementHeight > maxHeight) {\r\n                    maxHeight = elementHeight;\r\n                }\r\n                totalWidth +=\r\n                    +(elementWidth == 0 ? wordSpacing : elementWidth) +\r\n                    (children.length - 1 != index ? letterSpacing : 0);\r\n                const length = el.getComputedTextLength() * 8;\r\n                el.style.strokeDasharray = length + \"px\";\r\n                el.style.strokeDashoffset = length + \"px\";\r\n            });\r\n            setTextDimension({ width: totalWidth, height: maxHeight });\r\n\r\n            const textChildren = children.filter((el) => el.getBoundingClientRect().width != 0);\r\n\r\n            const tl = gsap.timeline();\r\n            tl.to(textChildren, {\r\n                strokeDashoffset: 0,\r\n                duration: 2.5,\r\n                ease: \"linear\",\r\n                stagger: oneByOne ? 0.8 : 0,\r\n            });\r\n            if (afterFill) {\r\n                tl.to(textChildren, {\r\n                    fillOpacity: 1,\r\n                    duration: 0.6,\r\n                    ease: \"power4.in\",\r\n                    stagger: {\r\n                        amount: 0.2,\r\n                        from: \"center\",\r\n                    },\r\n                });\r\n            }\r\n        },\r\n        { scope: wrapperRef, dependencies: [text] },\r\n    );\r\n\r\n    return (\r\n        <svg\r\n            {...props}\r\n            ref={wrapperRef}\r\n            style={{\r\n                userSelect: \"none\",\r\n                width: textDimension.width + \"px\",\r\n                height: textDimension.height * 1.03 + \"px\",\r\n            }}>\r\n            {text.split(\"\").map((char, i) => (\r\n                <text\r\n                    key={i}\r\n                    style={{\r\n                        stroke: color,\r\n                        fill: color,\r\n                        fillOpacity: 0,\r\n                        fontSize: fontSize,\r\n                        strokeWidth: `${strokeWidth}px`,\r\n                    }}\r\n                    y={fontSize}>\r\n                    {char}\r\n                </text>\r\n            ))}\r\n        </svg>\r\n    );\r\n};\r\n",
+      "path": "components/pumki-ui/text/draw-line-text.tsx",
+      "target": "components/pumki-ui/text/draw-line-text.tsx"
+    }
+  ]
+}

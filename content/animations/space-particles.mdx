@@ -1,0 +1,139 @@
+---
+title: "Space Particles Animation - Pumki UI"
+description: A component that renders a Dynamic 3D field of particles in space.
+---
+
+import { Tabs } from 'nextra/components'
+import { CodeBlock } from '@/components/docs/code-block'
+import { Preview, ResponsivePreview } from '@/components/docs/preview'
+import { Button } from '@/components/ui/button'
+import { Particles } from '@/components/pumki-ui/animations/space-particles'
+
+# Space Particles Animation
+
+A component that renders a Dynamic 3D field of particles in space.
+
+<Preview
+  code={`import { Particles } from '@/components/pumki-ui/animations/space-particles';
+
+  export const SpaceParticlesDemo = () => {
+    return (
+        <div className="relative w-full h-[800px]">
+            <Particles
+                color="#fffff"
+                particleCount={25000}
+                particleSize={5}
+                animate={false}
+                className="z-0 bg-black"
+            />
+        </div>
+    );
+};`}
+>
+        <div className="relative w-full h-[800px]">
+            <Particles
+                color="#fffff"
+                particleCount={25000}
+                particleSize={5}
+                animate={false}
+                className="z-0 bg-black"
+            />
+        </div>
+
+</Preview>
+
+## Installation
+
+<Tabs items={['pnpm', 'npm', 'yarn', 'bun']} defaultIndex="1">
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`pnpm dlx shadcn@latest add "https://pumki-ui.vercel.app/r/space-particles.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`npx shadcn@latest add "https://pumki-ui.vercel.app/r/space-particles.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`yarn dlx shadcn@latest add "https://pumki-ui.vercel.app/r/space-particles.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`bunx shadcn@latest add "https://pumki-ui.vercel.app/r/space-particles.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+</Tabs>
+
+## Usage
+
+<br/>
+
+<CodeBlock language="typescript">
+    {`import { Particles } from '@/components/pumki-ui/animations/space-particles';`}
+</CodeBlock>
+
+<br/>
+
+<CodeBlock language="typescript">
+    {`<Particles
+        color="#fffff"
+        particleCount={25000}
+        particleSize={5}
+        animate={false}
+        className="z-0"
+    />`}
+</CodeBlock>
+
+## Props
+
+import { PumkiTable, PumkiTableStyles } from '@/components/docs/PumkiTable'
+
+<PumkiTableStyles />
+
+<PumkiTable>
+  <table className="pumki-table">
+    <thead>
+      <tr>
+        <th>Prop</th>
+        <th>Type</th>
+        <th>Default</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>color</code></td>
+        <td><code>string</code></td>
+        <td><code>"#ff3366"</code></td>
+        <td>Base color of the particles (HEX).</td>
+      </tr>
+      <tr>
+        <td><code>particleCount</code></td>
+        <td><code>number</code></td>
+        <td><code>10000</code></td>
+        <td>Total number of particles rendered.</td>
+      </tr>
+      <tr>
+        <td><code>particleSize</code></td>
+        <td><code>number</code></td>
+        <td><code>35</code></td>
+        <td>Size of each individual particle.</td>
+      </tr>
+      <tr>
+        <td><code>animate</code></td>
+        <td><code>boolean</code></td>
+        <td><code>true</code></td>
+        <td>Whether particles animate color transitions.</td>
+      </tr>
+      <tr>
+        <td><code>className</code></td>
+        <td><code>string</code></td>
+        <td><code>""</code></td>
+        <td>Optional class for the outer container.</td>
+      </tr>
+    </tbody>
+  </table>
+</PumkiTable>

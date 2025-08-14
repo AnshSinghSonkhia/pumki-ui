@@ -22,6 +22,12 @@ export default {
             collapsed: true
         }
     },
+    animations: {
+        title: "Animations",
+        theme: {
+            collapsed: true
+        }
+    },
     backgrounds: {
         title: "Backgrounds",
         theme: {

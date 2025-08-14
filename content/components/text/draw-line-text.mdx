@@ -1,0 +1,187 @@
+---
+title: "Draw Line Text - Pumki UI"
+description: A smooth text effect that draws characters as strokes and fills them in, perfect for headers and highlights.
+---
+
+import { Tabs } from 'nextra/components'
+import { CodeBlock } from '@/components/docs/code-block'
+import { Callout } from 'nextra/components'
+import { Preview, ResponsivePreview } from '@/components/docs/preview'
+import { Button } from '@/components/ui/button'
+import { DrawLineText } from '@/components/pumki-ui/text/draw-line-text'
+
+# Draw Line Text Animation
+
+A smooth text effect that draws characters as strokes and fills them in, perfect for headers and highlights.
+
+<Callout>Perfect for headers and highlights.</Callout>
+
+<Preview
+  code={`import { DrawLineText } from '@/components/pumki-ui/text/draw-line-text';
+
+  export const DrawLineTextDemo = () => {
+    return (
+        <DrawLineText
+            className="font-medium"
+            fontSize={60}
+            strokeWidth={1.5}
+            text="Ansh Singh Sonkhia"
+            color="var(--color-foreground)"
+        />
+    );
+};`}
+>
+        <DrawLineText
+            className="font-medium"
+            fontSize={60}
+            strokeWidth={1.5}
+            text="Ansh Singh Snkhia"
+            color="var(--color-foreground)"
+        />
+
+</Preview>
+
+## Installation
+
+<Tabs items={['pnpm', 'npm', 'yarn', 'bun']} defaultIndex="1">
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`pnpm dlx shadcn@latest add "https://pumki-ui.vercel.app/r/draw-line-text.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`npx shadcn@latest add "https://pumki-ui.vercel.app/r/draw-line-text.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`yarn dlx shadcn@latest add "https://pumki-ui.vercel.app/r/draw-line-text.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`bunx shadcn@latest add "https://pumki-ui.vercel.app/r/draw-line-text.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+</Tabs>
+
+## Usage
+
+<br/>
+
+<CodeBlock language="typescript">
+    {`import { DrawLineText } from '@/components/pumki-ui/text/draw-line-text';`}
+</CodeBlock>
+
+<br/>
+
+<CodeBlock language="typescript">
+    {`<DrawLineText
+        className="font-medium"
+        fontSize={60}
+        strokeWidth={1.5}
+        text="Ansh Singh Snkhia"
+        color="var(--color-foreground)"
+    />`}
+</CodeBlock>
+
+## Examples
+
+<Preview
+  title="At once"
+  description="Set `oneByOne` to `false` to animate all characters together without any stagger."
+  code={`import { DrawLineText } from '@/components/pumki-ui/text/draw-line-text';
+
+  export const DrawLineTextDemo = () => {
+    return (
+        <DrawLineText
+            className="font-medium"
+            oneByOne={false}
+            fontSize={60}
+            strokeWidth={1.5}
+            text="Ansh Singh Sonkhia"
+            color="var(--color-foreground)"
+        />
+    );
+};`}
+>
+        <DrawLineText
+            className="font-medium"
+            oneByOne={false}
+            fontSize={60}
+            strokeWidth={1.5}
+            text="Ansh Singh Sonkhia"
+            color="var(--color-foreground)"
+        />
+
+</Preview>
+
+## Props
+
+import { PumkiTable, PumkiTableStyles } from '@/components/docs/PumkiTable'
+
+<PumkiTableStyles />
+
+<PumkiTable>
+  <table className="pumki-table">
+    <thead>
+      <tr>
+        <th>Prop</th>
+        <th>Type</th>
+        <th>Default</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>text</code></td>
+        <td><code>string</code></td>
+        <td><code>-</code></td>
+        <td>Text to display</td>
+      </tr>
+      <tr>
+        <td><code>afterFill</code></td>
+        <td><code>boolean</code></td>
+        <td><code>true</code></td>
+        <td>Show fill after stroke</td>
+      </tr>
+      <tr>
+        <td><code>oneByOne</code></td>
+        <td><code>boolean</code></td>
+        <td><code>true</code></td>
+        <td>Animate letters one by one</td>
+      </tr>
+      <tr>
+        <td><code>fontSize</code></td>
+        <td><code>number</code></td>
+        <td><code>40</code></td>
+        <td>Font size in px</td>
+      </tr>
+      <tr>
+        <td><code>wordSpacing</code></td>
+        <td><code>number</code></td>
+        <td><code>10</code></td>
+        <td>Space between words</td>
+      </tr>
+      <tr>
+        <td><code>strokeWidth</code></td>
+        <td><code>number</code></td>
+        <td><code>1</code></td>
+        <td>Stroke width in px</td>
+      </tr>
+      <tr>
+        <td><code>letterSpacing</code></td>
+        <td><code>number</code></td>
+        <td><code>0</code></td>
+        <td>Space between letters</td>
+      </tr>
+      <tr>
+        <td><code>color</code></td>
+        <td><code>string</code></td>
+        <td><code>-</code></td>
+        <td>Text color</td>
+      </tr>
+    </tbody>
+  </table>
+</PumkiTable>
