@@ -17,6 +17,8 @@ import {
 // import { Github } from "lucide-react"
 import { FaGithub } from 'react-icons/fa'
 
+import ClickSpark from './ClickSpark';
+
 export interface NavLink {
   href: string
   label: string
@@ -52,7 +54,14 @@ export default function DynamicNavbar({
 
   return (
     <header className={`${headerClasses} ${className}`}>
-      <div className="flex h-16 justify-between gap-4">
+        <ClickSpark
+            sparkColor='#fff'
+            sparkSize={10}
+            sparkRadius={15}
+            sparkCount={8}
+            duration={400}
+        >
+            <div className="flex h-16 justify-between gap-4">
         {/* Left side */}
         <div className="flex gap-2">
           <div className="flex items-center md:hidden">
@@ -183,7 +192,8 @@ export default function DynamicNavbar({
             </a>
           </Button>
         </div>
-      </div>
+            </div>
+        </ClickSpark>
     </header>
   )
 }

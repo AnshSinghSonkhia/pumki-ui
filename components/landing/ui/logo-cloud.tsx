@@ -7,6 +7,7 @@ import { type ClassValue, clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
 import { Stars } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
+import ClickSpark from './ClickSpark';
 
 function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
@@ -145,37 +146,45 @@ const LOGOS = [
 export default function LogoCloud() {
     return (
         <section className="bg-background overflow-hidden py-16 w-full relative">
-            {/* Stars background effect */}
-            <div className="absolute inset-0 z-[1]">
-                <Canvas>
-                    <Stars radius={300} count={6000} factor={4} fade speed={2} />
-                </Canvas>
-            </div>
-            
-            <div className="m-auto max-w-7xl px-6 relative z-10">
-                <div className="flex flex-col items-center md:flex-row">
-                    <div className="flex-shrink-0 text-center md:text-right md:max-w-44 md:border-r md:border-gray-200 dark:md:border-gray-800 md:pr-6">
-                        <p className="text-sm text-gray-600 dark:text-gray-400">
-                            Inspired by the best teams
-                        </p>
-                    </div>
-                    <div className="w-full py-6 md:w-auto md:flex-1">
-                        <BlurredInfiniteSlider speedOnHover={20} speed={40} gap={112} fadeWidth={80}>
-                            {LOGOS.map((logo) => (
-                                <div key={logo.src} className="flex">
-                                    <img
-                                        className="mx-auto w-fit dark:invert"
-                                        src={logo.src}
-                                        alt={logo.alt}
-                                        style={{ height: `${logo.height}px` }}
-                                        width="auto"
-                                    />
-                                </div>
-                            ))}
-                        </BlurredInfiniteSlider>
+            <ClickSpark
+            sparkColor="#fff"
+            sparkSize={10}
+            sparkRadius={15}
+            sparkCount={8}
+            duration={400}
+          >
+                {/* Stars background effect */}
+                <div className="absolute inset-0 z-[1]">
+                    <Canvas>
+                        <Stars radius={300} count={6000} factor={4} fade speed={2} />
+                    </Canvas>
+                </div>
+                
+                <div className="m-auto max-w-7xl px-6 relative z-10">
+                    <div className="flex flex-col items-center md:flex-row">
+                        <div className="flex-shrink-0 text-center md:text-right md:max-w-44 md:border-r md:border-gray-200 dark:md:border-gray-800 md:pr-6">
+                            <p className="text-sm text-gray-600 dark:text-gray-400">
+                                Inspired by the best teams
+                            </p>
+                        </div>
+                        <div className="w-full py-6 md:w-auto md:flex-1">
+                            <BlurredInfiniteSlider speedOnHover={20} speed={40} gap={112} fadeWidth={80}>
+                                {LOGOS.map((logo) => (
+                                    <div key={logo.src} className="flex">
+                                        <img
+                                            className="mx-auto w-fit dark:invert"
+                                            src={logo.src}
+                                            alt={logo.alt}
+                                            style={{ height: `${logo.height}px` }}
+                                            width="auto"
+                                        />
+                                    </div>
+                                ))}
+                            </BlurredInfiniteSlider>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </ClickSpark>
         </section>
     );
 }

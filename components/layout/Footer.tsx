@@ -1,6 +1,7 @@
 "use client"
 import React, { useEffect, useRef, useState } from "react";
 import { StickyArrow } from "@/components/landing/ui-animations/sticky-arrow";
+import ClickSpark from "../landing/ui/ClickSpark";
 
 const Footer = () => {
   const waveRefs = useRef<(HTMLDivElement | null)[]>([]);
@@ -145,13 +146,19 @@ const Footer = () => {
       
 
 
-
+    <ClickSpark
+            sparkColor="#fff"
+            sparkSize={10}
+            sparkRadius={15}
+            sparkCount={8}
+            duration={400}
+    >
       <div className="w-full flex mt-4 items-center justify-center px-4">
         <h1 className="text-center text-3xl md:text-5xl lg:text-[8rem] xl:text-[10rem] font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-700 to-neutral-900 select-none max-w-7xl">
           Pumki UI
         </h1>
       </div>
-
+</ClickSpark>
       <div id="waveContainer" aria-hidden="true" style={{ overflow: "hidden", height: 200 }}>
         <div>
           {Array.from({ length: 23 }).map((_, i) => (

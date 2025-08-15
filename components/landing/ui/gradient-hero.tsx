@@ -12,10 +12,18 @@ import { StickyArrow } from "@/components/landing/ui-animations/sticky-arrow";
 import { cn } from '@/lib/utils';
 import DynamicNavbar from '@/components/landing/ui/DynamicNavbar';
 import { getNavigationConfig } from '@/lib/navigation';
+import ClickSpark from './ClickSpark';
 
 export default function GradientHero() {
   return (
-    <div className="bg-background relative w-full overflow-hidden" data-sticky-arrow-container>
+      <div className="bg-background relative w-full overflow-hidden" data-sticky-arrow-container>
+          <ClickSpark
+            sparkColor="#fff"
+            sparkSize={10}
+            sparkRadius={15}
+            sparkCount={8}
+            duration={400}
+          >
       {/* Background gradient */}
       <div className="absolute inset-0 z-0">
         <div className="from-primary/20 via-background to-background absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))]" />
@@ -176,6 +184,7 @@ export default function GradientHero() {
 
       {/* Sticky Arrow Animation */}
       <StickyArrow />
-    </div>
-  );
-}
+      </ClickSpark>
+      </div>
+    );
+  }
