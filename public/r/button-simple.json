@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button-simple",
+  "type": "registry:ui",
+  "title": "Simple Buttons",
+  "description": "A collection of simple button components with various styles and sizes.",
+  "author": "Ansh Singh Sonkhia",
+  "dependencies": [
+    "react"
+  ],
+  "registryDependencies": [],
+  "files": [
+    {
+      "type": "registry:ui",
+      "content": "import * as React from \"react\";\r\n\r\n// Simple utility function to merge classes (replaces cn)\r\nconst mergeClasses = (...classes: (string | undefined | null | boolean)[]): string => {\r\n  return classes.filter(Boolean).join(\" \");\r\n};\r\n\r\n// SimpleButton variant styles\r\nconst buttonStyles = {\r\n  base: \"inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-blue-500 disabled:pointer-events-none disabled:opacity-50\",\r\n  \r\n  variants: {\r\n    default: \"bg-blue-600 text-white shadow hover:bg-blue-700\",\r\n    destructive: \"bg-red-600 text-white shadow-sm hover:bg-red-700\",\r\n    outline: \"border border-gray-300 bg-white shadow-sm hover:bg-gray-50 text-gray-700 hover:text-gray-900\",\r\n    secondary: \"bg-gray-100 text-gray-900 shadow-sm hover:bg-gray-200\",\r\n    ghost: \"hover:bg-gray-100 hover:text-gray-900\",\r\n    link: \"text-blue-600 underline-offset-4 hover:underline\",\r\n    success: \"bg-green-600 text-white hover:bg-green-700\",\r\n    warning: \"bg-yellow-500 text-black hover:bg-yellow-600\",\r\n    info: \"bg-blue-500 text-white hover:bg-blue-600\",\r\n    dark: \"bg-gray-800 text-white hover:bg-gray-700\",\r\n    light: \"bg-gray-100 text-gray-800 hover:bg-gray-200\",\r\n    gradient: \"bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white hover:opacity-90\",\r\n    glass: \"bg-white bg-opacity-10 backdrop-blur-md text-black border border-white border-opacity-20 hover:bg-opacity-20\",\r\n  },\r\n  \r\n  sizes: {\r\n    default: \"h-9 px-4 py-2\",\r\n    sm: \"h-8 rounded-md px-3 text-xs\",\r\n    lg: \"h-10 rounded-md px-8\",\r\n    icon: \"h-9 w-9\",\r\n  }\r\n};\r\n\r\nexport interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {\r\n  variant?: keyof typeof buttonStyles.variants;\r\n  size?: keyof typeof buttonStyles.sizes;\r\n  asChild?: boolean;\r\n  children?: React.ReactNode;\r\n}\r\n\r\nconst SimpleButton = React.forwardRef<HTMLButtonElement, ButtonProps>(\r\n  ({ \r\n    className, \r\n    variant = \"default\", \r\n    size = \"default\", \r\n    asChild = false, \r\n    children,\r\n    type = \"button\",\r\n    ...props \r\n  }, ref) => {\r\n    \r\n    const buttonClasses = mergeClasses(\r\n      buttonStyles.base,\r\n      buttonStyles.variants[variant],\r\n      buttonStyles.sizes[size],\r\n      className\r\n    );\r\n\r\n    // If asChild is true, we'll render the children directly with the classes\r\n    // This is a simplified version of what Radix Slot does\r\n    if (asChild && React.isValidElement(children)) {\r\n      const childElement = children as React.ReactElement<any>;\r\n      return React.cloneElement(childElement, {\r\n        ...(childElement.props as object),\r\n        ...(props as object),\r\n        className: mergeClasses(buttonClasses, childElement.props.className),\r\n        ref,\r\n      });\r\n    }\r\n\r\n    return (\r\n      <button\r\n        className={buttonClasses}\r\n        ref={ref}\r\n        type={type}\r\n        {...props}\r\n      >\r\n        {children}\r\n      </button>\r\n    );\r\n  }\r\n);\r\n\r\nSimpleButton.displayName = \"SimpleButton\";\r\n\r\nexport { SimpleButton };",
+      "path": "components/pumki-ui/buttons/simple.tsx",
+      "target": "components/pumki-ui/buttons/simple.tsx"
+    }
+  ]
+}

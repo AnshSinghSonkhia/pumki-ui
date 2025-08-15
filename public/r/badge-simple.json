@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "badge-simple",
+  "type": "registry:ui",
+  "title": "Simple Badges",
+  "description": "A collection of simple badge components with various styles and sizes.",
+  "author": "Ansh Singh Sonkhia",
+  "dependencies": [
+    "react"
+  ],
+  "registryDependencies": [],
+  "files": [
+    {
+      "type": "registry:ui",
+      "content": "import * as React from \"react\";\r\n\r\n// Simple utility function to merge classes\r\nconst mergeClasses = (...classes: (string | undefined | null | boolean)[]): string => {\r\n  return classes.filter(Boolean).join(\" \");\r\n};\r\n\r\n// SimpleBadge variant styles\r\nconst badgeStyles = {\r\n  base: \"inline-flex items-center justify-center rounded-md border px-2 py-1 text-xs font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2\",\r\n  \r\n  variants: {\r\n    default: \"border-transparent bg-blue-600 text-white hover:bg-blue-500\",\r\n    secondary: \"border-transparent bg-gray-50 text-gray-800 hover:bg-gray-100\",\r\n    destructive: \"border-transparent bg-red-600 text-white hover:bg-red-500\",\r\n    outline: \"text-white border-gray-300 bg-transparent hover:bg-gray-50\",\r\n  },\r\n  \r\n  shiny: \"relative overflow-hidden\"\r\n};\r\n\r\nexport interface BadgeProps extends React.HTMLAttributes<HTMLDivElement> {\r\n  variant?: keyof typeof badgeStyles.variants;\r\n  shiny?: boolean;\r\n  shinySpeed?: number;\r\n  children?: React.ReactNode;\r\n}\r\n\r\nfunction SimpleBadge({\r\n  className,\r\n  variant = \"default\",\r\n  shiny = false,\r\n  shinySpeed = 5,\r\n  children,\r\n  ...props\r\n}: BadgeProps) {\r\n  const badgeClasses = mergeClasses(\r\n    badgeStyles.base,\r\n    badgeStyles.variants[variant],\r\n    shiny ? badgeStyles.shiny : \"\",\r\n    className\r\n  );\r\n\r\n  const animationDuration = `${shinySpeed}s`;\r\n\r\n  // CSS keyframes for shine animation\r\n  const shineKeyframes = `\r\n    @keyframes shine {\r\n      0% { background-position: 100%; }\r\n      100% { background-position: -100%; }\r\n    }\r\n  `;\r\n\r\n  return (\r\n    <>\r\n      {/* Inject keyframes if shiny is enabled */}\r\n      {shiny && (\r\n        <style>\r\n          {shineKeyframes}\r\n        </style>\r\n      )}\r\n      \r\n      <div\r\n        className={badgeClasses}\r\n        {...props}\r\n      >\r\n        <span className={shiny ? \"relative z-10\" : \"\"}>\r\n          {children}\r\n        </span>\r\n\r\n        {/* Shine effect for light mode */}\r\n        {shiny && (\r\n          <span\r\n            className=\"absolute inset-0 pointer-events-none dark:hidden\"\r\n            style={{\r\n              background: \"linear-gradient(120deg, transparent 40%, rgba(255,255,255,0.6) 50%, transparent 60%)\",\r\n              backgroundSize: \"200% 100%\",\r\n              animation: `shine ${animationDuration} linear infinite`,\r\n              mixBlendMode: \"screen\",\r\n            }}\r\n          />\r\n        )}\r\n\r\n        {/* Shine effect for dark mode */}\r\n        {shiny && (\r\n          <span\r\n            className=\"absolute inset-0 pointer-events-none hidden dark:block\"\r\n            style={{\r\n              background: \"linear-gradient(120deg, transparent 40%, rgba(0,0,150,0.25) 50%, transparent 60%)\",\r\n              backgroundSize: \"200% 100%\",\r\n              animation: `shine ${animationDuration} linear infinite`,\r\n              mixBlendMode: \"multiply\",\r\n            }}\r\n          />\r\n        )}\r\n      </div>\r\n    </>\r\n  );\r\n}\r\n\r\nexport { SimpleBadge };",
+      "path": "components/pumki-ui/badges/simple.tsx",
+      "target": "components/pumki-ui/badges/simple.tsx"
+    }
+  ]
+}

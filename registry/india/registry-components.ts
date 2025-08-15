@@ -104,6 +104,23 @@ export const component: Registry = [
         ],
     },
     {
+        name: "button-simple",
+        type: "registry:ui",
+        title: "Simple Buttons",
+        description:
+            "A collection of simple button components with various styles and sizes.",
+        author: "Ansh Singh Sonkhia",
+        dependencies: ["react"],
+        registryDependencies: [],
+        files: [
+            {
+                path: "components/pumki-ui/buttons/simple.tsx",
+                type: "registry:ui",
+                target: "components/pumki-ui/buttons/simple.tsx",
+            },
+        ],
+    },
+    {
         name: "button-flip",
         type: "registry:ui",
         title: "Flip Button",
@@ -457,6 +474,40 @@ export const component: Registry = [
                 path: "components/pumki-ui/carousels/stats-carousel.tsx",
                 type: "registry:ui",
                 target: "components/pumki-ui/carousels/stats-carousel.tsx",
+            },
+        ],
+    },
+    {
+        name: "badge-simple",
+        type: "registry:ui",
+        title: "Simple Badges",
+        description:
+            "A collection of simple badge components with various styles and sizes.",
+        author: "Ansh Singh Sonkhia",
+        dependencies: ["react"],
+        registryDependencies: [],
+        files: [
+            {
+                path: "components/pumki-ui/badges/simple.tsx",
+                type: "registry:ui",
+                target: "components/pumki-ui/badges/simple.tsx",
+            },
+        ],
+    },
+    {
+        name: "dropdown-dd1",
+        type: "registry:ui",
+        title: "Dropdown 1",
+        description:
+            "A simple animated dropdown component.",
+        author: "Ansh Singh Sonkhia",
+        dependencies: ["react", "framer-motion", "motion", "@radix-ui/react-dropdown-menu", "lucide-react"],
+        registryDependencies: ["https://pumki-ui.vercel.app/r/button-simple.json"],
+        files: [
+            {
+                path: "components/pumki-ui/dropdown/dd1.tsx",
+                type: "registry:ui",
+                target: "components/pumki-ui/dropdown/dd1.tsx",
             },
         ],
     },

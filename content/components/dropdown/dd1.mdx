@@ -1,0 +1,185 @@
+---
+title: "Dropdown 1 - Pumki UI"
+description: An animated dropdown reveals a menu of options or actions when activated by a button.
+---
+
+import { Tabs } from 'nextra/components'
+import { CodeBlock } from '@/components/docs/code-block'
+import { Preview, ResponsivePreview } from '@/components/docs/preview'
+import { Dropdown1 } from '@/components/pumki-ui/dropdown/dd1'
+import DropdownUserDemo from '@/components/demos/dd1'
+
+# Dropdown 1
+
+An animated dropdown reveals a menu of options or actions when activated by a button.
+
+<Preview 
+  code={`"use client";
+
+import * as React from "react";
+import Dropdown1, { MenuItem } from "@/components/pumki-ui/dropdown/dd1";
+import { User, Settings, BarChart2, HelpCircle, LogOut } from "lucide-react";
+
+export default function DropdownUserDemo() {
+  const profileMenuItems: MenuItem[] = [
+    {
+      title: "Profile",
+      description: "View or edit your profile settings",
+      icon: <User className="w-5 h-5 text-blue-400" />,
+    },
+    {
+      title: "Settings",
+      description: "Configure application preferences",
+      icon: <Settings className="w-5 h-5 text-green-400" />,
+    },
+    {
+      title: "Analytics",
+      description: "View your usage statistics",
+      icon: <BarChart2 className="w-5 h-5 text-yellow-400" />,
+    },
+    {
+      title: "Help",
+      description: "Get support and documentation",
+      icon: <HelpCircle className="w-5 h-5 text-purple-400" />,
+    },
+    {
+      title: "Logout",
+      description: "Sign out of your account",
+      icon: <LogOut className="w-5 h-5 text-red-400" />,
+    },
+  ];
+
+  return (
+    <Dropdown1
+      menuItems={profileMenuItems}
+      triggerText="User Menu"
+      menuTitle="User Options"
+      buttonVariant="outline"
+      buttonSize="default"
+    />
+  );
+}`}
+>
+        <DropdownUserDemo />
+
+</Preview>
+
+## Installation
+
+<Tabs items={['pnpm', 'npm', 'yarn', 'bun']} defaultIndex="1">
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`pnpm dlx shadcn@latest add "https://pumki-ui.vercel.app/r/dropdown-dd1.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`npx shadcn@latest add "https://pumki-ui.vercel.app/r/dropdown-dd1.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`yarn dlx shadcn@latest add "https://pumki-ui.vercel.app/r/dropdown-dd1.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`bunx shadcn@latest add "https://pumki-ui.vercel.app/r/dropdown-dd1.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+</Tabs>
+
+## Usage
+
+<br/>
+
+<CodeBlock language="typescript">
+    {`import { Dropdown1 } from '@/components/pumki-ui/dropdown/dd1';`}
+</CodeBlock>
+
+<br/>
+
+<CodeBlock language="typescript">
+    {`<Dropdown1
+      menuItems={profileMenuItems}
+      triggerText="User Menu"
+      menuTitle="User Options"
+      buttonVariant="outline"
+      buttonSize="default"
+    />`}
+</CodeBlock>
+
+## Props
+
+import { PumkiTable, PumkiTableStyles } from '@/components/docs/PumkiTable'
+
+<PumkiTableStyles />
+
+<PumkiTable>
+  <table className="pumki-table">
+    <thead>
+      <tr>
+        <th>Prop</th>
+        <th>Type</th>
+        <th>Default</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>menuItems?</code></td>
+        <td><code>MenuItem[]</code></td>
+        <td><code>[]</code></td>
+        <td>Array of menu items to display in the dropdown.</td>
+      </tr>
+      <tr>
+        <td><code>triggerText?</code></td>
+        <td><code>string</code></td>
+        <td><code>"Menu"</code></td>
+        <td>Text for the dropdown trigger button.</td>
+      </tr>
+      <tr>
+        <td><code>menuTitle?</code></td>
+        <td><code>string</code></td>
+        <td><code>"Menu Options"</code></td>
+        <td>Title displayed at the top of the dropdown menu.</td>
+      </tr>
+      <tr>
+        <td><code>onSelect?</code></td>
+        <td><code>(title: string) =&gt; void</code></td>
+        <td>-</td>
+        <td>Callback when a menu item is selected.</td>
+      </tr>
+      <tr>
+        <td><code>maxHeight?</code></td>
+        <td><code>string | number</code></td>
+        <td><code>"16rem"</code></td>
+        <td>Maximum height of the dropdown menu.</td>
+      </tr>
+      <tr>
+        <td><code>buttonVariant?</code></td>
+        <td><code>"default" | "destructive" | "outline" | "secondary" | "ghost" | "link" | "success" | "warning" | "info" | "dark" | "light" | "gradient" | "glass"</code></td>
+        <td><code>"default"</code></td>
+        <td>Style variant for the trigger button.</td>
+      </tr>
+      <tr>
+        <td><code>buttonSize?</code></td>
+        <td><code>"default" | "sm" | "lg" | "icon"</code></td>
+        <td><code>"default"</code></td>
+        <td>Size of the trigger button.</td>
+      </tr>
+      <tr>
+        <td><code>className?</code></td>
+        <td><code>string</code></td>
+        <td>-</td>
+        <td>Additional CSS classes for the dropdown container.</td>
+      </tr>
+      <tr>
+        <td><code>...props</code></td>
+        <td><code>HTMLDivElement attributes</code></td>
+        <td>-</td>
+        <td>Any other props for the dropdown container.</td>
+      </tr>
+    </tbody>
+  </table>
+</PumkiTable>

@@ -1,6 +1,8 @@
 export default {
+    badges: 'Badges',
     buttons: 'Buttons',
-    carousels: 'Carousel',
+    carousels: 'Carousels',
+    dropdown: 'Dropdowns',
     text: 'Text',
-    tooltip: 'Tooltip',
+    tooltips: 'Tooltips',
 }

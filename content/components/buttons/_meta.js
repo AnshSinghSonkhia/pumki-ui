@@ -1,4 +1,5 @@
 export default {
+    simple: 'Simple',
     copy: 'Copy',
     flip: 'Flip',
     'github-star': 'GitHub Star',

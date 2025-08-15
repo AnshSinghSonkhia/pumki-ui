@@ -1,0 +1,215 @@
+---
+title: "Simple Buttons - Pumki UI"
+description: A button component with various styles and sizes.
+---
+
+import { Tabs } from 'nextra/components'
+import { CodeBlock } from '@/components/docs/code-block'
+import { Preview, ResponsivePreview } from '@/components/docs/preview'
+import { SimpleButton } from '@/components/pumki-ui/buttons/simple'
+
+# Simple Buttons 
+
+A few examples of simple buttons with different styles and sizes.
+
+<Preview 
+  code={`import { SimpleButton } from '@/components/pumki-ui/buttons/simple';
+
+export const ButtonDemo = () => {
+    return (
+        <div className="flex gap-4">
+            <div className="flex flex-col gap-2">
+                {/* Basic variants */}
+                <SimpleButton>Default SimpleButton</SimpleButton>
+                <SimpleButton variant="destructive">Delete</SimpleButton>
+                <SimpleButton variant="outline">Outline</SimpleButton>
+                <SimpleButton variant="secondary">Secondary</SimpleButton>
+                <SimpleButton variant="ghost">Ghost</SimpleButton>
+                <SimpleButton variant="link">Link SimpleButton</SimpleButton>
+                
+                {/* Custom variants */}
+                <SimpleButton variant="success">Success</SimpleButton>
+                <SimpleButton variant="warning">Warning</SimpleButton>
+                <SimpleButton variant="info">Info</SimpleButton>
+            </div>
+
+            <div className="flex flex-col gap-2">
+            
+                <SimpleButton variant="gradient">Gradient</SimpleButton>
+                <SimpleButton variant="glass">Glass</SimpleButton>
+
+                {/* Different sizes */}
+                <SimpleButton size="sm">Small</SimpleButton>
+                <SimpleButton size="default">Default</SimpleButton>
+                <SimpleButton size="lg">Large</SimpleButton>
+                <div className="flex gap-2">
+                    <SimpleButton size="icon">🚀</SimpleButton>
+                    <SimpleButton size="icon" className="bg-white">❤️</SimpleButton>
+                    <SimpleButton size="icon" className="bg-black">😍</SimpleButton>
+                </div>
+
+                {/* As child (renders children with button styles) */}
+                <SimpleButton asChild>
+                    <a href="/link">Link as SimpleButton</a>
+                </SimpleButton>
+                
+                {/* Disabled state */}
+                <SimpleButton disabled>Disabled</SimpleButton>
+                
+                {/* Custom className */}
+                <SimpleButton className="custom-class">Custom SimpleButton</SimpleButton>
+            </div>
+        </div>
+
+    );
+};`}
+>
+
+    <div className="flex gap-4">
+        <div className="flex flex-col gap-2">
+            {/* Basic variants */}
+            <SimpleButton>Default SimpleButton</SimpleButton>
+            <SimpleButton variant="destructive">Delete</SimpleButton>
+            <SimpleButton variant="outline">Outline</SimpleButton>
+            <SimpleButton variant="secondary">Secondary</SimpleButton>
+            <SimpleButton variant="ghost">Ghost</SimpleButton>
+            <SimpleButton variant="link">Link SimpleButton</SimpleButton>
+            
+            {/* Custom variants */}
+            <SimpleButton variant="success">Success</SimpleButton>
+            <SimpleButton variant="warning">Warning</SimpleButton>
+            <SimpleButton variant="info">Info</SimpleButton>
+        </div>
+
+        <div className="flex flex-col gap-2">
+        
+            <SimpleButton variant="gradient">Gradient</SimpleButton>
+            <SimpleButton variant="glass">Glass</SimpleButton>
+
+            {/* Different sizes */}
+            <SimpleButton size="sm">Small</SimpleButton>
+            <SimpleButton size="default">Default</SimpleButton>
+            <SimpleButton size="lg">Large</SimpleButton>
+            <div className="flex gap-2">
+                <SimpleButton size="icon">🚀</SimpleButton>
+                <SimpleButton size="icon" className="bg-white">❤️</SimpleButton>
+                <SimpleButton size="icon" className="bg-black">😍</SimpleButton>
+            </div>
+
+            {/* As child (renders children with button styles) */}
+            <SimpleButton asChild>
+                <a href="/link">Link as SimpleButton</a>
+            </SimpleButton>
+            
+            {/* Disabled state */}
+            <SimpleButton disabled>Disabled</SimpleButton>
+            
+            {/* Custom className */}
+            <SimpleButton className="custom-class">Custom SimpleButton</SimpleButton>
+        </div>
+    </div>
+
+    
+</Preview>
+
+## Installation
+
+<Tabs items={['pnpm', 'npm', 'yarn', 'bun']} defaultIndex="1">
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`pnpm dlx shadcn@latest add "https://pumki-ui.vercel.app/r/button-simple.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`npx shadcn@latest add "https://pumki-ui.vercel.app/r/button-simple.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`yarn dlx shadcn@latest add "https://pumki-ui.vercel.app/r/button-simple.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`bunx shadcn@latest add "https://pumki-ui.vercel.app/r/button-simple.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+</Tabs>
+
+## Usage
+
+<br/>
+
+<CodeBlock language="typescript">
+    {`import { SimpleButton } from '@/components/pumki-ui/buttons/simple';`}
+</CodeBlock>
+
+<br/>
+
+<CodeBlock language="typescript">
+    {`<SimpleButton>Default SimpleButton</SimpleButton>`}
+</CodeBlock>
+
+## Props
+
+import { PumkiTable, PumkiTableStyles } from '@/components/docs/PumkiTable'
+
+<PumkiTableStyles />
+
+<PumkiTable>
+  <table className="pumki-table">
+    <thead>
+      <tr>
+        <th>Prop</th>
+        <th>Type</th>
+        <th>Default</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>variant?</code></td>
+        <td><code>'default' | 'destructive' | 'outline' | 'secondary' | 'ghost' | 'link' | 'success' | 'warning' | 'info' | 'dark' | 'light' | 'gradient' | 'glass'</code></td>
+        <td><code>"default"</code></td>
+        <td>Style variant for the button.</td>
+      </tr>
+      <tr>
+        <td><code>size?</code></td>
+        <td><code>'default' | 'sm' | 'lg' | 'icon'</code></td>
+        <td><code>"default"</code></td>
+        <td>Size of the button.</td>
+      </tr>
+      <tr>
+        <td><code>asChild?</code></td>
+        <td><code>boolean</code></td>
+        <td><code>false</code></td>
+        <td>If true, renders children directly with button styles.</td>
+      </tr>
+      <tr>
+        <td><code>className?</code></td>
+        <td><code>string</code></td>
+        <td>-</td>
+        <td>Additional CSS classes for the button.</td>
+      </tr>
+      <tr>
+        <td><code>children?</code></td>
+        <td><code>React.ReactNode</code></td>
+        <td>-</td>
+        <td>Button content.</td>
+      </tr>
+      <tr>
+        <td><code>type?</code></td>
+        <td><code>'button' | 'submit' | 'reset'</code></td>
+        <td><code>"button"</code></td>
+        <td>Button type attribute.</td>
+      </tr>
+      <tr>
+        <td><code>...props</code></td>
+        <td><code>HTMLButtonElement attributes</code></td>
+        <td>-</td>
+        <td>Any other props for the button element.</td>
+      </tr>
+    </tbody>
+  </table>
+</PumkiTable>

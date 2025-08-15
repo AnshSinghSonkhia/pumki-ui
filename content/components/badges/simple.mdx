@@ -1,0 +1,160 @@
+---
+title: "Simple Badges - Pumki UI"
+description: A badge component with various styles and sizes.
+---
+
+import { Tabs } from 'nextra/components'
+import { CodeBlock } from '@/components/docs/code-block'
+import { Preview, ResponsivePreview } from '@/components/docs/preview'
+import { SimpleBadge } from '@/components/pumki-ui/badges/simple'
+
+# Simple Badges
+
+A few examples of simple badges with different styles and sizes.
+
+<Preview 
+  code={`import { SimpleBadge } from '@/components/pumki-ui/badges/simple';
+
+export const BadgeDemo = () => {
+    return (
+        <div className="flex flex-col gap-4">
+            {/* Basic variants */}
+            <SimpleBadge>Default</SimpleBadge>
+            <SimpleBadge variant="secondary">Secondary</SimpleBadge>
+            <SimpleBadge variant="destructive">Error</SimpleBadge>
+            <SimpleBadge variant="outline">Outline</SimpleBadge>
+            
+            {/* Shiny variants */}
+            <SimpleBadge shiny>Shiny Default</SimpleBadge>
+            <SimpleBadge variant="secondary" shiny>Shiny Secondary</SimpleBadge>
+            <SimpleBadge variant="destructive" shiny>Shiny Error</SimpleBadge>
+            <SimpleBadge variant="outline" shiny>Shiny Outline</SimpleBadge>
+            
+            {/* Custom shine speed */}
+            <SimpleBadge shiny shinySpeed={2}>Fast Shine</SimpleBadge>
+            <SimpleBadge shiny shinySpeed={8}>Slow Shine</SimpleBadge>
+            
+            {/* Custom className */}
+            <SimpleBadge className="text-lg px-4 py-1">Large SimpleBadge</SimpleBadge>
+        </div>
+    );
+};`}
+>
+        <div className="flex flex-col gap-4">
+            {/* Basic variants */}
+      <SimpleBadge>Default</SimpleBadge>
+      <SimpleBadge variant="secondary">Secondary</SimpleBadge>
+      <SimpleBadge variant="destructive">Error</SimpleBadge>
+      <SimpleBadge variant="outline">Outline</SimpleBadge>
+      
+      {/* Shiny variants */}
+      <SimpleBadge shiny>Shiny Default</SimpleBadge>
+      <SimpleBadge variant="secondary" shiny>Shiny Secondary</SimpleBadge>
+      <SimpleBadge variant="destructive" shiny>Shiny Error</SimpleBadge>
+      <SimpleBadge variant="outline" shiny>Shiny Outline</SimpleBadge>
+      
+      {/* Custom shine speed */}
+      <SimpleBadge shiny shinySpeed={2}>Fast Shine</SimpleBadge>
+      <SimpleBadge shiny shinySpeed={8}>Slow Shine</SimpleBadge>
+      
+      {/* Custom className */}
+      <SimpleBadge className="text-lg px-4 py-1">Large SimpleBadge</SimpleBadge>
+        </div>
+
+</Preview>
+
+## Installation
+
+<Tabs items={['pnpm', 'npm', 'yarn', 'bun']} defaultIndex="1">
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`pnpm dlx shadcn@latest add "https://pumki-ui.vercel.app/r/badge-simple.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`npx shadcn@latest add "https://pumki-ui.vercel.app/r/badge-simple.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`yarn dlx shadcn@latest add "https://pumki-ui.vercel.app/r/badge-simple.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`bunx shadcn@latest add "https://pumki-ui.vercel.app/r/badge-simple.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+</Tabs>
+
+## Usage
+
+<br/>
+
+<CodeBlock language="typescript">
+    {`import { SimpleBadge } from '@/components/pumki-ui/badges/simple';`}
+</CodeBlock>
+
+<br/>
+
+<CodeBlock language="typescript">
+    {`<SimpleBadge>Pumki UI</SimpleBadge>`}
+</CodeBlock>
+
+## Props
+
+import { PumkiTable, PumkiTableStyles } from '@/components/docs/PumkiTable'
+
+<PumkiTableStyles />
+
+<PumkiTable>
+  <table className="pumki-table">
+    <thead>
+      <tr>
+        <th>Prop</th>
+        <th>Type</th>
+        <th>Default</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>variant?</code></td>
+        <td><code>'default' | 'secondary' | 'destructive' | 'outline'</code></td>
+        <td><code>"default"</code></td>
+        <td>Style variant for the badge.</td>
+      </tr>
+      <tr>
+        <td><code>shiny?</code></td>
+        <td><code>boolean</code></td>
+        <td><code>false</code></td>
+        <td>If true, adds a shine animation to the badge.</td>
+      </tr>
+      <tr>
+        <td><code>shinySpeed?</code></td>
+        <td><code>number</code></td>
+        <td><code>5</code></td>
+        <td>Speed of the shine animation (in seconds).</td>
+      </tr>
+      <tr>
+        <td><code>className?</code></td>
+        <td><code>string</code></td>
+        <td>-</td>
+        <td>Additional CSS classes for the badge.</td>
+      </tr>
+      <tr>
+        <td><code>children?</code></td>
+        <td><code>React.ReactNode</code></td>
+        <td>-</td>
+        <td>Badge content.</td>
+      </tr>
+      <tr>
+        <td><code>...props</code></td>
+        <td><code>HTMLDivElement attributes</code></td>
+        <td>-</td>
+        <td>Any other props for the badge container.</td>
+      </tr>
+    </tbody>
+  </table>
+</PumkiTable>
