@@ -1,0 +1,194 @@
+---
+title: "Card Swap Animation - Pumki UI"
+description: A 3D card swap animation with stacking, depth, and smooth transitions.
+---
+
+import { Tabs } from 'nextra/components'
+import { CodeBlock } from '@/components/docs/code-block'
+import { Callout } from 'nextra/components'
+import { Preview } from '@/components/docs/preview'
+import CardSwap , { Card } from '@/components/pumki-ui/CardSwap'
+import { CardSwapDemo } from '@/components/demos/cardswap-demo'
+
+# Card Swap Animation
+
+A 3D animated card stack that cycles through multiple cards with configurable depth, skew, distance, and animation easing.
+
+<Preview
+  code={`import CardSwap , { Card } from '@/components/pumki-ui/CardSwap'
+
+export const CardSwapDemo = () => {
+  return (
+    <div className="relative w-full h-[500px] bg-gray-900 text-white flex items-center justify-center">
+      <CardSwap width={300} height={400} cardDistance={50} verticalDistance={60} delay={3000} skewAmount={6} easing="elastic">
+        <Card customClass="bg-pink-500 flex items-center justify-center text-xl">Card 1</Card>
+        <Card customClass="bg-blue-500 flex items-center justify-center text-xl">Card 2</Card>
+        <Card customClass="bg-green-500 flex items-center justify-center text-xl">Card 3</Card>
+      </CardSwap>
+    </div>
+  );
+};`}
+>
+  <CardSwapDemo />
+</Preview>
+
+## Installation
+
+<Tabs items={['pnpm', 'npm', 'yarn', 'bun']} defaultIndex="1">
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`pnpm dlx shadcn@latest add "https://raw.githubusercontent.com/AnshSinghSonkhia/pumki-ui/main/public/r/card-swap.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`npx shadcn@latest add "https://raw.githubusercontent.com/AnshSinghSonkhia/pumki-ui/main/public/r/card-swap.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`yarn dlx shadcn@latest add "https://raw.githubusercontent.com/AnshSinghSonkhia/pumki-ui/main/public/r/card-swap.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`bunx shadcn@latest add "https://raw.githubusercontent.com/AnshSinghSonkhia/pumki-ui/main/public/r/card-swap.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+</Tabs>
+
+## Usage
+
+<br/>
+<CodeBlock language="typescript">
+{`import CardSwap , { Card } from '@/components/pumki-ui/CardSwap';`}
+</CodeBlock>
+
+<br/>
+Wrap multiple `<Card>` elements inside `<CardSwap>` to create a rotating stack effect.
+
+<CodeBlock language="typescript">
+{`<CardSwap width={300} height={400} cardDistance={50} verticalDistance={60} delay={3000}>
+    <Card customClass="bg-red-500">Card 1</Card>
+    <Card customClass="bg-blue-500">Card 2</Card>
+    <Card customClass="bg-green-500">Card 3</Card>
+</CardSwap>`}
+</CodeBlock>
+
+## Props
+
+import { PumkiTable, PumkiTableStyles } from '@/components/docs/PumkiTable'
+
+<PumkiTableStyles />
+
+### CardSwap Props
+
+<PumkiTable>
+  <table className="pumki-table">
+    <thead>
+      <tr>
+        <th>Prop</th>
+        <th>Type</th>
+        <th>Default</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>width</code></td>
+        <td><code>number | string</code></td>
+        <td><code>500</code></td>
+        <td>Width of each card in pixels or CSS units.</td>
+      </tr>
+      <tr>
+        <td><code>height</code></td>
+        <td><code>number | string</code></td>
+        <td><code>400</code></td>
+        <td>Height of each card in pixels or CSS units.</td>
+      </tr>
+      <tr>
+        <td><code>cardDistance</code></td>
+        <td><code>number</code></td>
+        <td><code>60</code></td>
+        <td>Horizontal offset distance between cards in the stack.</td>
+      </tr>
+      <tr>
+        <td><code>verticalDistance</code></td>
+        <td><code>number</code></td>
+        <td><code>70</code></td>
+        <td>Vertical offset distance between cards in the stack.</td>
+      </tr>
+      <tr>
+        <td><code>delay</code></td>
+        <td><code>number</code></td>
+        <td><code>5000</code></td>
+        <td>Delay in milliseconds between card swaps.</td>
+      </tr>
+      <tr>
+        <td><code>pauseOnHover</code></td>
+        <td><code>boolean</code></td>
+        <td><code>false</code></td>
+        <td>Pauses the card swap animation when hovered.</td>
+      </tr>
+      <tr>
+        <td><code>onCardClick</code></td>
+        <td><code>(idx: number) =&gt; void</code></td>
+        <td><code>-</code></td>
+        <td>Callback triggered when a card is clicked, passing its index.</td>
+      </tr>
+      <tr>
+        <td><code>skewAmount</code></td>
+        <td><code>number</code></td>
+        <td><code>6</code></td>
+        <td>Skew value applied to cards for perspective effect.</td>
+      </tr>
+      <tr>
+        <td><code>easing</code></td>
+        <td><code>"linear" | "elastic"</code></td>
+        <td><code>"elastic"</code></td>
+        <td>Animation easing style for swaps.</td>
+      </tr>
+      <tr>
+        <td><code>children</code></td>
+        <td><code>ReactNode</code></td>
+        <td><code>-</code></td>
+        <td>List of <code>&lt;Card&gt;</code> elements to display in the swap animation.</td>
+      </tr>
+    </tbody>
+  </table>
+</PumkiTable>
+
+### Card Props
+
+<PumkiTable>
+  <table className="pumki-table">
+    <thead>
+      <tr>
+        <th>Prop</th>
+        <th>Type</th>
+        <th>Default</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>customClass</code></td>
+        <td><code>string</code></td>
+        <td><code>-</code></td>
+        <td>Additional custom class names for the card element.</td>
+      </tr>
+      <tr>
+        <td><code>className</code></td>
+        <td><code>string</code></td>
+        <td><code>-</code></td>
+        <td>Optional extra class names passed directly to the card element.</td>
+      </tr>
+      <tr>
+        <td><code>...rest</code></td>
+        <td><code>HTMLDivElement props</code></td>
+        <td><code>-</code></td>
+        <td>Any other standard <code>div</code> attributes.</td>
+      </tr>
+    </tbody>
+  </table>
+</PumkiTable>

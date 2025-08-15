@@ -1,4 +1,5 @@
 export default {
+    CardSwap: 'Card Swap',
     codeblock: 'CodeBlock',
     preview: 'Preview Block',
     badges: 'Badges',

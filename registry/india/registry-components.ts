@@ -545,4 +545,21 @@ export const component: Registry = [
             },
         ],
     },
+    {
+        name: "card-swap",
+        type: "registry:ui",
+        title: "Card Swap",
+        description:
+            "A 3D animated card stack that cycles through multiple cards with configurable depth, skew, distance, and animation easing.",
+        author: "Ansh Singh Sonkhia",
+        dependencies: ["react", "gsap"],
+        registryDependencies: [],
+        files: [
+            {
+                path: "components/pumki-ui/CardSwap.tsx",
+                type: "registry:ui",
+                target: "components/pumki-ui/CardSwap.tsx",
+            },
+        ],
+    },
 ];

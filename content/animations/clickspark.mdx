@@ -1,0 +1,147 @@
+---
+title: "Click Spark Animation - Pumki UI"
+description: A component that renders dynamic spark bursts on click interactions.
+---
+
+import { Tabs } from 'nextra/components'
+import { CodeBlock } from '@/components/docs/code-block'
+import { Callout } from 'nextra/components'
+import { Preview } from '@/components/docs/preview'
+import ClickSpark from '@/components/landing/ui/ClickSpark'
+import { ClickSparkDemo } from '@/components/demos/click-spark-demo'
+
+# Click Spark Animation
+
+A component that renders animated spark bursts when the user clicks anywhere inside its container.
+
+<Preview
+  code={`import ClickSpark from '@/components/pumki-ui/animations/click-spark';
+
+export const ClickSparkDemo = () => {
+  return (
+    <div className="relative w-full h-[400px] bg-black flex items-center justify-center text-white">
+        <ClickSpark sparkColor="#ff3366" sparkSize={12} sparkRadius={20} sparkCount={10} duration={500}>
+            <div className='flex items-center justify-center h-full'>
+                <button className="px-6 py-3 bg-pink-600 rounded-lg hover:bg-pink-500 transition">
+                    Click Me
+                </button>
+            </div>
+        </ClickSpark>
+    </div>
+  );
+};`}
+>
+  <ClickSparkDemo />
+</Preview>
+
+## Installation
+
+<Tabs items={['pnpm', 'npm', 'yarn', 'bun']} defaultIndex="1">
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`pnpm dlx shadcn@latest add "https://raw.githubusercontent.com/AnshSinghSonkhia/pumki-ui/main/public/r/click-spark.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`npx shadcn@latest add "https://raw.githubusercontent.com/AnshSinghSonkhia/pumki-ui/main/public/r/click-spark.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`yarn dlx shadcn@latest add "https://raw.githubusercontent.com/AnshSinghSonkhia/pumki-ui/main/public/r/click-spark.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`bunx shadcn@latest add "https://raw.githubusercontent.com/AnshSinghSonkhia/pumki-ui/main/public/r/click-spark.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+</Tabs>
+
+## Usage
+
+<br />
+
+<CodeBlock language="typescript">
+{`import { ClickSpark } from '@/components/pumki-ui/animations/click-spark';`}
+</CodeBlock>
+
+Wrap your clickable area (e.g., button, div) inside `<ClickSpark>` to add burst animations:
+
+<br />
+
+<CodeBlock language="typescript">
+{`<ClickSpark sparkColor="#ff3366" sparkSize={12} sparkRadius={20} sparkCount={10} duration={500}>
+    <button>Click Me</button>
+</ClickSpark>`}
+</CodeBlock>
+
+## Props
+
+import { PumkiTable, PumkiTableStyles } from '@/components/docs/PumkiTable'
+
+<PumkiTableStyles />
+
+<PumkiTable>
+  <table className="pumki-table">
+    <thead>
+      <tr>
+        <th>Prop</th>
+        <th>Type</th>
+        <th>Default</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>sparkColor</code></td>
+        <td><code>string</code></td>
+        <td><code>"#fff"</code></td>
+        <td>Color of the sparks (HEX or CSS color).</td>
+      </tr>
+      <tr>
+        <td><code>sparkSize</code></td>
+        <td><code>number</code></td>
+        <td><code>10</code></td>
+        <td>Length of each spark line.</td>
+      </tr>
+      <tr>
+        <td><code>sparkRadius</code></td>
+        <td><code>number</code></td>
+        <td><code>15</code></td>
+        <td>Radius of spark spread from the click point.</td>
+      </tr>
+      <tr>
+        <td><code>sparkCount</code></td>
+        <td><code>number</code></td>
+        <td><code>8</code></td>
+        <td>Total number of sparks emitted per click.</td>
+      </tr>
+      <tr>
+        <td><code>duration</code></td>
+        <td><code>number</code></td>
+        <td><code>400</code></td>
+        <td>Duration of spark animation in milliseconds.</td>
+      </tr>
+      <tr>
+        <td><code>easing</code></td>
+        <td><code>"linear" | "ease-in" | "ease-out" | "ease-in-out"</code></td>
+        <td><code>"ease-out"</code></td>
+        <td>Easing function applied to spark motion.</td>
+      </tr>
+      <tr>
+        <td><code>extraScale</code></td>
+        <td><code>number</code></td>
+        <td><code>1.0</code></td>
+        <td>Additional scale multiplier for spark distance.</td>
+      </tr>
+      <tr>
+        <td><code>children</code></td>
+        <td><code>React.ReactNode</code></td>
+        <td><code>-</code></td>
+        <td>Any clickable content to wrap inside the spark animation.</td>
+      </tr>
+    </tbody>
+  </table>
+</PumkiTable>
