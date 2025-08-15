@@ -1,0 +1,117 @@
+---
+title: "Code Block - Pumki UI"
+description: A customizable code block component for displaying code snippets with syntax highlighting.
+---
+
+import { Tabs } from 'nextra/components'
+import { CodeBlock } from '@/components/docs/code-block'
+import { Preview, ResponsivePreview } from '@/components/docs/preview'
+import { LustrousText } from '@/components/pumki-ui/text/lustrous-text'
+import { Callout } from 'nextra/components'
+
+# Code Block
+
+A customizable code block component for displaying code snippets with syntax highlighting.
+
+
+
+## Installation
+
+<Tabs items={['pnpm', 'npm', 'yarn', 'bun']} defaultIndex="1">
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`pnpm dlx shadcn@latest add "https://pumki-ui.vercel.app/r/codeblock.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`npx shadcn@latest add "https://pumki-ui.vercel.app/r/codeblock.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`yarn dlx shadcn@latest add "https://pumki-ui.vercel.app/r/codeblock.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`bunx shadcn@latest add "https://pumki-ui.vercel.app/r/codeblock.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+</Tabs>
+
+## Usage
+
+<br/>
+
+<CodeBlock language="mdx" filename="example.mdx">
+    {`
+    import { CodeBlock } from '@/components/pumki-ui/codeblock';
+    
+<CodeBlock language="mdx" filename="example.mdx">Code to be shown in codeblock</CodeBlock>
+    `}
+</CodeBlock>
+
+
+## Props
+
+import { PumkiTable, PumkiTableStyles } from '@/components/docs/PumkiTable'
+
+<PumkiTableStyles />
+
+<PumkiTable>
+  <table className="pumki-table">
+    <thead>
+      <tr>
+        <th>Prop</th>
+        <th>Type</th>
+        <th>Default</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>children</code></td>
+        <td><code>string</code></td>
+        <td>-</td>
+        <td>The code to display inside the code block.</td>
+      </tr>
+      <tr>
+        <td><code>language?</code></td>
+        <td><code>string</code></td>
+        <td><code>"text"</code></td>
+        <td>Language for syntax highlighting.</td>
+      </tr>
+      <tr>
+        <td><code>filename?</code></td>
+        <td><code>string</code></td>
+        <td>-</td>
+        <td>Optional filename to display in the header.</td>
+      </tr>
+      <tr>
+        <td><code>highlight?</code></td>
+        <td><code>string</code></td>
+        <td>-</td>
+        <td>Lines or substring to highlight (e.g. "1,3-5" or "/text/").</td>
+      </tr>
+      <tr>
+        <td><code>copy?</code></td>
+        <td><code>boolean</code></td>
+        <td><code>true</code></td>
+        <td>Show copy-to-clipboard button.</td>
+      </tr>
+      <tr>
+        <td><code>showLineNumbers?</code></td>
+        <td><code>boolean</code></td>
+        <td><code>true</code></td>
+        <td>Show line numbers.</td>
+      </tr>
+      <tr>
+        <td><code>className?</code></td>
+        <td><code>string</code></td>
+        <td>-</td>
+        <td>Additional CSS classes for the code block container.</td>
+      </tr>
+    </tbody>
+  </table>
+</PumkiTable>

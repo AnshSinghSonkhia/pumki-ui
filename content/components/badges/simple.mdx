@@ -67,22 +67,22 @@ export const BadgeDemo = () => {
 
 <Tabs items={['pnpm', 'npm', 'yarn', 'bun']} defaultIndex="1">
   <Tabs.Tab>
-    <CodeBlock language="bash">
+    <CodeBlock language="bash" showLineNumbers={false}>
       {`pnpm dlx shadcn@latest add "https://pumki-ui.vercel.app/r/badge-simple.json"`}
     </CodeBlock>
   </Tabs.Tab>
   <Tabs.Tab>
-    <CodeBlock language="bash">
+    <CodeBlock language="bash" showLineNumbers={false}>
       {`npx shadcn@latest add "https://pumki-ui.vercel.app/r/badge-simple.json"`}
     </CodeBlock>
   </Tabs.Tab>
   <Tabs.Tab>
-    <CodeBlock language="bash">
+    <CodeBlock language="bash" showLineNumbers={false}>
       {`yarn dlx shadcn@latest add "https://pumki-ui.vercel.app/r/badge-simple.json"`}
     </CodeBlock>
   </Tabs.Tab>
   <Tabs.Tab>
-    <CodeBlock language="bash">
+    <CodeBlock language="bash" showLineNumbers={false}>
       {`bunx shadcn@latest add "https://pumki-ui.vercel.app/r/badge-simple.json"`}
     </CodeBlock>
   </Tabs.Tab>
@@ -92,13 +92,13 @@ export const BadgeDemo = () => {
 
 <br/>
 
-<CodeBlock language="typescript">
+<CodeBlock language="typescript" showLineNumbers={false}>
     {`import { SimpleBadge } from '@/components/pumki-ui/badges/simple';`}
 </CodeBlock>
 
 <br/>
 
-<CodeBlock language="typescript">
+<CodeBlock language="typescript" showLineNumbers={false}>
     {`<SimpleBadge>Pumki UI</SimpleBadge>`}
 </CodeBlock>
 

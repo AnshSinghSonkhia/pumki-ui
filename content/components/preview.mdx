@@ -1,0 +1,151 @@
+---
+title: "Code Preview Block - Pumki UI"
+description: A customizable code preview component for displaying code snippets with syntax highlighting.
+---
+
+import { Tabs } from 'nextra/components'
+import { CodeBlock } from '@/components/docs/code-block'
+import { Preview, ResponsivePreview } from '@/components/docs/preview'
+import { LustrousText } from '@/components/pumki-ui/text/lustrous-text'
+import { Callout } from 'nextra/components'
+
+# Show Code Preview to Users
+
+A customizable code preview component for displaying code snippets with syntax highlighting.
+
+<Preview 
+  code={`import { Preview, ResponsivePreview } from '@/components/pumki-ui/preview'`}>
+        <Preview
+            title="Working Preview"
+            code={`/* Code here is shown to users */
+            `}
+        >
+        <LustrousText
+            className="text-4xl font-semibold tracking-wide"
+            text="Ansh Singh Sonkhia India"
+            wave
+            lustrousColor="#FFD700"
+            color="#B8860B"
+            duration={1.5}
+        />
+        </Preview>
+</Preview>
+
+## Installation
+
+<Tabs items={['pnpm', 'npm', 'yarn', 'bun']} defaultIndex="1">
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`pnpm dlx shadcn@latest add "https://pumki-ui.vercel.app/r/code-preview.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`npx shadcn@latest add "https://pumki-ui.vercel.app/r/code-preview.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`yarn dlx shadcn@latest add "https://pumki-ui.vercel.app/r/code-preview.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`bunx shadcn@latest add "https://pumki-ui.vercel.app/r/code-preview.json"`}
+    </CodeBlock>
+  </Tabs.Tab>
+</Tabs>
+
+## Usage
+
+<br/>
+
+<CodeBlock language="typescript" showLineNumbers={false}>
+    {`import { Preview, ResponsivePreview } from '@/components/pumki-ui/preview';`}
+</CodeBlock>
+
+<br/>
+
+
+<CodeBlock language="mdx" showLineNumbers={false}>
+    {`<Preview>Code to be shown as preview</Preview>`}
+</CodeBlock>
+
+<Callout>Props</Callout>
+
+<CodeBlock language="mdx">
+    {`
+title=""
+code=""
+description=""
+`}
+</CodeBlock>
+
+## Props
+
+import { PumkiTable, PumkiTableStyles } from '@/components/docs/PumkiTable'
+
+<PumkiTableStyles />
+
+<PumkiTable>
+  <table className="pumki-table">
+    <thead>
+      <tr>
+        <th>Prop</th>
+        <th>Type</th>
+        <th>Default</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>children</code></td>
+        <td><code>React.ReactNode</code></td>
+        <td>-</td>
+        <td>Content to render inside the preview area.</td>
+      </tr>
+      <tr>
+        <td><code>code</code></td>
+        <td><code>string</code></td>
+        <td>-</td>
+        <td>Code string to display in the code tab.</td>
+      </tr>
+      <tr>
+        <td><code>title?</code></td>
+        <td><code>string</code></td>
+        <td>-</td>
+        <td>Title for the preview block.</td>
+      </tr>
+      <tr>
+        <td><code>description?</code></td>
+        <td><code>string</code></td>
+        <td>-</td>
+        <td>Description for the preview block.</td>
+      </tr>
+      <tr>
+        <td><code>className?</code></td>
+        <td><code>string</code></td>
+        <td>-</td>
+        <td>Additional CSS classes for the container.</td>
+      </tr>
+      <tr>
+        <td><code>showCode?</code></td>
+        <td><code>boolean</code></td>
+        <td><code>true</code></td>
+        <td>Show the code tab.</td>
+      </tr>
+      <tr>
+        <td><code>centered?</code></td>
+        <td><code>boolean</code></td>
+        <td><code>true</code></td>
+        <td>Center the preview content.</td>
+      </tr>
+      <tr>
+        <td><code>minHeight?</code></td>
+        <td><code>string</code></td>
+        <td><code>"200px"</code></td>
+        <td>Minimum height for the preview area.</td>
+      </tr>
+    </tbody>
+  </table>
+</PumkiTable>

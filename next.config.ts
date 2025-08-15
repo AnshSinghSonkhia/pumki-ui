@@ -19,7 +19,7 @@ const nextConfig: NextConfig = {
       },
       {
         source: '/docs/components',
-        destination: '/docs/components/buttons/copy',
+        destination: '/docs/components/carousels/stats-carousel',
         permanent: true,
       },
     ];

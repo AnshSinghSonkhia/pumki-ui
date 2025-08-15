@@ -511,4 +511,38 @@ export const component: Registry = [
             },
         ],
     },
+    {
+        name: "code-preview",
+        type: "registry:ui",
+        title: "Code Preview Block",
+        description:
+            "A customizable code preview component for displaying code snippets with syntax highlighting.",
+        author: "Ansh Singh Sonkhia",
+        dependencies: ["react"],
+        registryDependencies: ["https://pumki-ui.vercel.app/r/codeblock.json"],
+        files: [
+            {
+                path: "components/docs/preview.tsx",
+                type: "registry:ui",
+                target: "components/pumki-ui/preview.tsx",
+            },
+        ],
+    },
+    {
+        name: "codeblock",
+        type: "registry:ui",
+        title: "Code Block",
+        description:
+            "A customizable code preview component for displaying code snippets with syntax highlighting.",
+        author: "Ansh Singh Sonkhia",
+        dependencies: ["react"],
+        registryDependencies: [],
+        files: [
+            {
+                path: "components/docs/code-block.tsx",
+                type: "registry:ui",
+                target: "components/pumki-ui/codeblock.tsx",
+            },
+        ],
+    },
 ];
