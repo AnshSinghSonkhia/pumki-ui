@@ -13,7 +13,7 @@
     "lucide-react"
   ],
   "registryDependencies": [
-    "https://pumki-ui.vercel.app/r/button-simple.json"
+    "https://raw.githubusercontent.com/AnshSinghSonkhia/pumki-ui/main/public/r/button-simple.json"
   ],
   "files": [
     {

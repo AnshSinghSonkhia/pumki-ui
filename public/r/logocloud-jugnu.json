@@ -9,7 +9,7 @@
     "react"
   ],
   "registryDependencies": [
-    "https://pumki-ui.vercel.app/r/sparkles.json"
+    "https://raw.githubusercontent.com/AnshSinghSonkhia/pumki-ui/main/public/r/sparkles.json"
   ],
   "files": [
     {

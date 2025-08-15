@@ -196,7 +196,7 @@ export const component: Registry = [
             "An animated button that shows the number of stars a GitHub repository has.",
         author: "Ansh Singh Sonkhia",
         dependencies: ["react", "motion", "lucide-react"],
-        registryDependencies: ["https://pumki-ui.vercel.app/r/sliding-number.json"],
+        registryDependencies: ["https://raw.githubusercontent.com/AnshSinghSonkhia/pumki-ui/main/public/r/sliding-number.json"],
         files: [
             {
                 path: "components/pumki-ui/buttons/github-star.tsx",
@@ -502,7 +502,7 @@ export const component: Registry = [
             "A simple animated dropdown component.",
         author: "Ansh Singh Sonkhia",
         dependencies: ["react", "framer-motion", "motion", "@radix-ui/react-dropdown-menu", "lucide-react"],
-        registryDependencies: ["https://pumki-ui.vercel.app/r/button-simple.json"],
+        registryDependencies: ["https://raw.githubusercontent.com/AnshSinghSonkhia/pumki-ui/main/public/r/button-simple.json"],
         files: [
             {
                 path: "components/pumki-ui/dropdown/dd1.tsx",
@@ -519,7 +519,7 @@ export const component: Registry = [
             "A customizable code preview component for displaying code snippets with syntax highlighting.",
         author: "Ansh Singh Sonkhia",
         dependencies: ["react"],
-        registryDependencies: ["https://pumki-ui.vercel.app/r/codeblock.json"],
+        registryDependencies: ["https://raw.githubusercontent.com/AnshSinghSonkhia/pumki-ui/main/public/r/codeblock.json"],
         files: [
             {
                 path: "components/docs/preview.tsx",

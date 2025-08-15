@@ -9,7 +9,7 @@ export const block: Registry = [
             "A component that displays a sparkling effect with a smooth animation.",
         author: "Ansh Singh Sonkhia",
         dependencies: ["react"],
-        registryDependencies: ["https://pumki-ui.vercel.app/r/sparkles.json"],
+        registryDependencies: ["https://raw.githubusercontent.com/AnshSinghSonkhia/pumki-ui/main/public/r/sparkles.json"],
         files: [
             {
                 path: "components/pumki-ui/sections/logo-cloud/jugnu.tsx",

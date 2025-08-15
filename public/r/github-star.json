@@ -11,7 +11,7 @@
     "lucide-react"
   ],
   "registryDependencies": [
-    "https://pumki-ui.vercel.app/r/sliding-number.json"
+    "https://raw.githubusercontent.com/AnshSinghSonkhia/pumki-ui/main/public/r/sliding-number.json"
   ],
   "files": [
     {
