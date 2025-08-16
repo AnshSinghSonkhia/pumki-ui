@@ -9,6 +9,8 @@ import { generateDocsMetadata } from '@/lib/metadata'
 import 'nextra-theme-docs/style.css'
 // import '../globals.css'
 
+import LightRays from '@/components/pumki-ui/backgrounds/bg-light-rays'
+
 // ✅ Apply ISR to all docs pages
 // export const revalidate = 3600; // 1 hour
 export const revalidate = 86400; // 1 day
@@ -22,10 +24,18 @@ export const metadata = generateDocsMetadata({
 const banner = (
   <div className="relative overflow-hidden border-0">
     {/* Gradient Background - matching your purple theme */}
-    <div className="absolute inset-0 bg-gradient-to-r from-purple-900/90 via-violet-800/90 to-purple-900/90"></div>
+  <div className="absolute inset-0 bg-gradient-to-r from-[#1A0B2E] via-[#4C0C5C] to-[#1A0B2E]"></div>
     
     {/* Animated Gradient Overlay with magenta accents */}
-    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-pink-500/10 to-transparent animate-pulse"></div>
+    {/* <div className="absolute inset-0 bg-gradient-to-r from-transparent via-pink-500/10 to-transparent animate-pulse"></div> */}
+
+    {/* Soft overlay glow */}
+    <div className="absolute inset-0 bg-gradient-to-r 
+    from-fuchsia-500/10 via-pink-400/5 to-indigo-400/10 animate-pulse">
+    </div>
+
+    {/* Optional subtle glass effect */}
+    <div className="absolute inset-0 backdrop-blur-[2px]"></div>
     
     {/* Content */}
     <div className="relative z-10 flex items-center justify-center gap-4 py-2 px-4">
@@ -44,9 +54,12 @@ const banner = (
         <div className="w-1 h-1 bg-white/80 rounded-full"></div>
         <div className="w-1 h-1 bg-white/60 rounded-full"></div>
         <div className="w-1 h-1 bg-white/40 rounded-full"></div>
+        <div className="w-1 h-1 bg-white/40 rounded-full"></div>
+        <div className="w-1 h-1 bg-white/60 rounded-full"></div>
+        <div className="w-1 h-1 bg-white/80 rounded-full"></div>
       </div>
       
-      <span className="hidden lg:inline text-pink-200 text-sm font-medium" style={{ fontFamily: 'FreeSet' }}>
+      <span className="hidden lg:inline text-white text-sm font-medium" style={{ fontFamily: 'FreeSet' }}>
         Ship stunning UIs from one library, not ten
       </span>
     </div>
@@ -119,6 +132,21 @@ export default async function DocsLayout({ children }: { children: React.ReactNo
           backgroundImage: "repeating-linear-gradient(45deg, transparent, transparent 2px, rgba(243, 244, 246, 0.02) 2px, rgba(243, 244, 246, 0.02) 4px)",
         }}
       />
+        {/* LightRays Background Layer */}
+        <div className="fixed inset-0 z-[-1] pointer-events-none">
+          <LightRays
+            raysOrigin="top-center"
+            raysColor="#b21e4b"
+            raysSpeed={1.5}
+            lightSpread={3}
+            rayLength={2.5}
+            followMouse={true}
+            mouseInfluence={0.05}
+            noiseAmount={0.15}
+            distortion={0.08}
+            className="opacity-80"
+          />
+        </div>
       {/* Your Content/Components */}
       <Layout
         banner={banner}

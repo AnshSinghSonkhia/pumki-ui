@@ -2,6 +2,23 @@ import type { Registry } from "./schema";
 
 export const component: Registry = [
     {
+        name: "bg-lightrays",
+        type: "registry:ui",
+        title: "Ambient Aurora Background",
+        description:
+            "A serene and captivating background featuring slow-moving, ethereal gradients.",
+        author: "Ansh Singh Sonkhia",
+        dependencies: ["ogl", "react"],
+        registryDependencies: [],
+        files: [
+            {
+                path: "components/pumki-ui/backgrounds/bg-light-rays.tsx",
+                type: "registry:ui",
+                target: "components/pumki-ui/backgrounds/bg-lightrays.tsx",
+            },
+        ],
+    },
+    {
         name: "bg-ambient-aurora",
         type: "registry:ui",
         title: "Ambient Aurora Background",

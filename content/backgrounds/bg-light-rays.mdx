@@ -1,26 +1,40 @@
 ---
 title: "Light Rays Background - Pumki UI"
-description: An immersive futuristic gateway with animated grid perspective and glowing portal core.
+description: This component creates a mesmerizing light rays background effect, perfect for adding a dynamic and immersive atmosphere to your web applications.
 ---
 
 import { Tabs } from 'nextra/components'
+import { Callout } from 'nextra/components'
 import { CodeBlock } from '../../components/docs/code-block'
 import { Preview, ResponsivePreview } from '../../components/docs/preview'
 import { Button } from '../../components/ui/button'
-import { LightRays } from '@/components/pumki-ui/backgrounds/bg-light-rays'
+import LightRays from '@/components/pumki-ui/backgrounds/bg-light-rays'
 
 # Light Rays Background 🌌
 
-An immersive futuristic gateway with animated grid perspective and glowing portal core.
+This component creates a mesmerizing light rays background effect, perfect for adding a dynamic and immersive atmosphere to your web applications. 
+
+<Callout>The rays can be customized in terms of origin, color, speed, and more.</Callout>
 
 <Preview 
   code={`'use client';
 
-import { LightRays } from '@/components/pumki-ui/backgrounds/bg-light-rays'
+import LightRays from '@/components/pumki-ui/backgrounds/bg-light-rays'
 
 export const LightRaysDemo = () => {
     return (
-        <LightRays className="absolute inset-0 flex items-center justify-center rounded-xl" />
+        <LightRays
+            raysOrigin="top-center"
+            raysColor="#00ffff"
+            raysSpeed={1.5}
+            lightSpread={0.8}
+            rayLength={1.2}
+            followMouse={true}
+            mouseInfluence={0.1}
+            noiseAmount={0.1}
+            distortion={0.05}
+            className="custom-rays"
+        />
     );
 };`}
 >
@@ -45,22 +59,22 @@ export const LightRaysDemo = () => {
 <Tabs items={['pnpm', 'npm', 'yarn', 'bun']} defaultIndex="1">
   <Tabs.Tab>
     <CodeBlock language="bash">
-      {`pnpm dlx pumki add bg-wormhole`}
+      {`pnpm dlx pumki add bg-lightrays`}
     </CodeBlock>
   </Tabs.Tab>
   <Tabs.Tab>
     <CodeBlock language="bash">
-      {`npx pumki add bg-wormhole`}
+      {`npx pumki add bg-lightrays`}
     </CodeBlock>
   </Tabs.Tab>
   <Tabs.Tab>
     <CodeBlock language="bash">
-      {`yarn dlx pumki add bg-wormhole`}
+      {`yarn dlx pumki add bg-lightrays`}
     </CodeBlock>
   </Tabs.Tab>
   <Tabs.Tab>
     <CodeBlock language="bash">
-      {`bun x pumki add bg-wormhole`}
+      {`bun x pumki add bg-lightrays`}
     </CodeBlock>
   </Tabs.Tab>
 </Tabs>
@@ -70,13 +84,13 @@ export const LightRaysDemo = () => {
 <br/>
 
 <CodeBlock language="typescript">
-    {`import { WormholeBackground } from '@/components/pumki-ui/backgrounds/bg-wormhole';`}
+    {`import LightRays from '@/components/pumki-ui/backgrounds/bg-light-rays';`}
 </CodeBlock>
 
 <br/>
 
 <CodeBlock language="typescript">
-    {`<WormholeBackground />`}
+    {`<LightRays />`}
 </CodeBlock>
 
 ## Props
