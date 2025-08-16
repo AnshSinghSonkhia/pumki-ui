@@ -39,22 +39,22 @@ export const ClickSparkDemo = () => {
 <Tabs items={['pnpm', 'npm', 'yarn', 'bun']} defaultIndex="1">
   <Tabs.Tab>
     <CodeBlock language="bash">
-      {`pnpm dlx shadcn@latest add "https://raw.githubusercontent.com/AnshSinghSonkhia/pumki-ui/main/public/r/click-spark.json"`}
+      {`pnpm dlx pumki add click-spark`}
     </CodeBlock>
   </Tabs.Tab>
   <Tabs.Tab>
     <CodeBlock language="bash">
-      {`npx shadcn@latest add "https://raw.githubusercontent.com/AnshSinghSonkhia/pumki-ui/main/public/r/click-spark.json"`}
+      {`npx pumki add click-spark`}
     </CodeBlock>
   </Tabs.Tab>
   <Tabs.Tab>
     <CodeBlock language="bash">
-      {`yarn dlx shadcn@latest add "https://raw.githubusercontent.com/AnshSinghSonkhia/pumki-ui/main/public/r/click-spark.json"`}
+      {`yarn dlx pumki add click-spark`}
     </CodeBlock>
   </Tabs.Tab>
   <Tabs.Tab>
     <CodeBlock language="bash">
-      {`bunx shadcn@latest add "https://raw.githubusercontent.com/AnshSinghSonkhia/pumki-ui/main/public/r/click-spark.json"`}
+      {`bun x pumki add click-spark`}
     </CodeBlock>
   </Tabs.Tab>
 </Tabs>

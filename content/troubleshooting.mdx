@@ -1,0 +1,72 @@
+---
+title: "Troubleshooting - Pumki UI"
+description: Troubleshooting
+---
+
+import { Tabs } from 'nextra/components'
+import { Callout } from 'nextra/components'
+import { CodeBlock } from '../components/docs/code-block'
+import { Steps, Step } from '../components/docs/steps'
+
+# Troubleshooting
+
+## Frequently Asked Questions
+
+<br />
+
+<Steps>
+  <Step title="Command not found?">
+    <Callout>If installed globally, make sure you used:</Callout>
+
+    <br />
+
+    <CodeBlock language="bash" showLineNumbers={false}>
+      {`npm i -g pumki`}
+    </CodeBlock>
+    
+    <Callout>Then run:</Callout>
+
+    <br />
+
+    <CodeBlock language="bash" showLineNumbers={false}>
+      {`pumki add <component>`}
+    </CodeBlock>
+
+    <Callout>If installed locally, run with npx (or your package manager’s equivalent):</Callout>
+    
+    <br />
+
+    <CodeBlock language="bash" showLineNumbers={false}>
+      {`npx pumki add <component>`}
+    </CodeBlock>
+  </Step>
+  
+  <Step title="Permission errors on global install (macOS/Linux)">
+    Try:
+    
+    <CodeBlock language="bash" showLineNumbers={false}>
+      {`npm i -g pumki --unsafe-perm`}
+    </CodeBlock>
+
+    <Callout>Or use a Node version manager (nvm, fnm)</Callout>
+    
+  </Step>
+  
+  <Step title="Wrong package manager being used">
+    <Callout type="important">Pumki auto-detects, but you can ensure a lockfile (package-lock.json, pnpm-lock.yaml, yarn.lock, bun.lockb) exists before running.</Callout>
+
+    If none exist, it defaults to npm.
+  </Step>
+</Steps>
+
+<Callout type="info">If you hit an issue, please open an issue with your OS, Node version, package manager, and command used.</Callout>
+
+## Raise Issue
+
+#### CLI Related Issues
+
+https://github.com/AnshSinghSonkhia/pumki-cli/issues
+
+#### UI Related Issues
+
+https://github.com/AnshSinghSonkhia/pumki-ui/issues

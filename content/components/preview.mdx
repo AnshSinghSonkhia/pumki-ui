@@ -36,22 +36,22 @@ A customizable code preview component for displaying code snippets with syntax h
 <Tabs items={['pnpm', 'npm', 'yarn', 'bun']} defaultIndex="1">
   <Tabs.Tab>
     <CodeBlock language="bash">
-      {`pnpm dlx shadcn@latest add "https://raw.githubusercontent.com/AnshSinghSonkhia/pumki-ui/main/public/r/code-preview.json"`}
+      {`pnpm dlx pumki add code-preview`}
     </CodeBlock>
   </Tabs.Tab>
   <Tabs.Tab>
     <CodeBlock language="bash">
-      {`npx shadcn@latest add "https://raw.githubusercontent.com/AnshSinghSonkhia/pumki-ui/main/public/r/code-preview.json"`}
+      {`npx pumki add code-preview`}
     </CodeBlock>
   </Tabs.Tab>
   <Tabs.Tab>
     <CodeBlock language="bash">
-      {`yarn dlx shadcn@latest add "https://raw.githubusercontent.com/AnshSinghSonkhia/pumki-ui/main/public/r/code-preview.json"`}
+      {`yarn dlx pumki add code-preview`}
     </CodeBlock>
   </Tabs.Tab>
   <Tabs.Tab>
     <CodeBlock language="bash">
-      {`bunx shadcn@latest add "https://raw.githubusercontent.com/AnshSinghSonkhia/pumki-ui/main/public/r/code-preview.json"`}
+      {`bun x pumki add code-preview`}
     </CodeBlock>
   </Tabs.Tab>
 </Tabs>
@@ -145,6 +145,12 @@ import { PumkiTable, PumkiTableStyles } from '@/components/docs/PumkiTable'
         <td><code>string</code></td>
         <td><code>"200px"</code></td>
         <td>Minimum height for the preview area.</td>
+      </tr>
+      <tr>
+        <td><code>previewHeight?</code></td>
+        <td><code>string</code></td>
+        <td><code>"-"</code></td>
+        <td>Height for the preview area.</td>
       </tr>
     </tbody>
   </table>

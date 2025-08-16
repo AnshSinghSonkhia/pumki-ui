@@ -1,0 +1,113 @@
+---
+title: "Light Rays Background - Pumki UI"
+description: An immersive futuristic gateway with animated grid perspective and glowing portal core.
+---
+
+import { Tabs } from 'nextra/components'
+import { CodeBlock } from '../../components/docs/code-block'
+import { Preview, ResponsivePreview } from '../../components/docs/preview'
+import { Button } from '../../components/ui/button'
+import { LightRays } from '@/components/pumki-ui/backgrounds/bg-light-rays'
+
+# Light Rays Background 🌌
+
+An immersive futuristic gateway with animated grid perspective and glowing portal core.
+
+<Preview 
+  code={`'use client';
+
+import { LightRays } from '@/components/pumki-ui/backgrounds/bg-light-rays'
+
+export const LightRaysDemo = () => {
+    return (
+        <LightRays className="absolute inset-0 flex items-center justify-center rounded-xl" />
+    );
+};`}
+>
+
+    <LightRays
+    raysOrigin="top-center"
+    raysColor="#00ffff"
+    raysSpeed={1.5}
+    lightSpread={0.8}
+    rayLength={1.2}
+    followMouse={true}
+    mouseInfluence={0.1}
+    noiseAmount={0.1}
+    distortion={0.05}
+    className="custom-rays"
+  />
+
+</Preview>
+
+## Installation
+
+<Tabs items={['pnpm', 'npm', 'yarn', 'bun']} defaultIndex="1">
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`pnpm dlx pumki add bg-wormhole`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`npx pumki add bg-wormhole`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`yarn dlx pumki add bg-wormhole`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`bun x pumki add bg-wormhole`}
+    </CodeBlock>
+  </Tabs.Tab>
+</Tabs>
+
+## Usage
+
+<br/>
+
+<CodeBlock language="typescript">
+    {`import { WormholeBackground } from '@/components/pumki-ui/backgrounds/bg-wormhole';`}
+</CodeBlock>
+
+<br/>
+
+<CodeBlock language="typescript">
+    {`<WormholeBackground />`}
+</CodeBlock>
+
+## Props
+
+import { PumkiTable, PumkiTableStyles } from '../../components/docs/PumkiTable'
+
+<PumkiTableStyles />
+<PumkiTable>
+<table className="pumki-table">
+  <thead>
+    <tr>
+      <th>Prop</th>
+      <th>Type</th>
+      <th>Default</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td><code>raysOrigin</code></td><td><code>"top-center" | "top-left" | "top-right" | "right" | "left" | "bottom-center" | "bottom-right" | "bottom-left"</code></td><td><code>"top-center"</code></td><td>Where the light rays originate from.</td></tr>
+    <tr><td><code>raysColor</code></td><td><code>string</code></td><td><code>"#ffffff"</code></td><td>Hex color of the rays.</td></tr>
+    <tr><td><code>raysSpeed</code></td><td><code>number</code></td><td><code>1</code></td><td>Speed of the ray animation.</td></tr>
+    <tr><td><code>lightSpread</code></td><td><code>number</code></td><td><code>1</code></td><td>How widely the rays spread out.</td></tr>
+    <tr><td><code>rayLength</code></td><td><code>number</code></td><td><code>2</code></td><td>How far the rays extend.</td></tr>
+    <tr><td><code>pulsating</code></td><td><code>boolean</code></td><td><code>false</code></td><td>Whether the rays pulsate.</td></tr>
+    <tr><td><code>fadeDistance</code></td><td><code>number</code></td><td><code>1.0</code></td><td>Fade-out distance factor for the rays.</td></tr>
+    <tr><td><code>saturation</code></td><td><code>number</code></td><td><code>1.0</code></td><td>Color saturation adjustment (0 = grayscale, 1 = full color).</td></tr>
+    <tr><td><code>followMouse</code></td><td><code>boolean</code></td><td><code>true</code></td><td>If true, rays will follow the mouse movement.</td></tr>
+    <tr><td><code>mouseInfluence</code></td><td><code>number</code></td><td><code>0.1</code></td><td>How much the mouse influences ray direction.</td></tr>
+    <tr><td><code>noiseAmount</code></td><td><code>number</code></td><td><code>0.0</code></td><td>Amount of static/noise overlay on the rays.</td></tr>
+    <tr><td><code>distortion</code></td><td><code>number</code></td><td><code>0.0</code></td><td>Distortion intensity for ray angles.</td></tr>
+    <tr><td><code>className</code></td><td><code>string</code></td><td><code>""</code></td><td>Custom Tailwind classes for the wrapper container.</td></tr>
+  </tbody>
+  </table>
+</PumkiTable>

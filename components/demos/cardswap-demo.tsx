@@ -18,10 +18,11 @@ export const CardSwapDemo = () => {
         <div className="flex flex-col justify-center items-center lg:items-start text-center lg:text-left w-full lg:w-1/2 pt-8 pb-4 px-4">
           <div className="text-3xl md:text-4xl lg:text-5xl font-semibold mb-4 leading-tight pl-0 lg:pl-12">
             Card stacks have never{' '}
+            <span className="block lg:inline">looked so good</span>{' '}
             <span className="block lg:inline">looked so good</span>
           </div>
           <div className="text-lg lg:text-xl mb-4 font-normal leading-tight text-gray-400 pl-0 lg:pl-12">
-            Just look at it go!
+            Just look at it!
           </div>
         </div>
         <div className="w-full lg:w-1/2 h-[400px] relative">

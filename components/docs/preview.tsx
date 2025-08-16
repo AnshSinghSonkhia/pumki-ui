@@ -13,6 +13,7 @@ interface PreviewProps {
   showCode?: boolean;
   centered?: boolean;
   minHeight?: string;
+  previewHeight?: string;
 }
 
 export const Preview: React.FC<PreviewProps> = ({
@@ -23,7 +24,8 @@ export const Preview: React.FC<PreviewProps> = ({
   className,
   showCode = true,
   centered = true,
-  minHeight = "200px"
+  minHeight = "200px",
+  previewHeight,
 }) => {
   const [activeTab, setActiveTab] = React.useState<'preview' | 'code'>('preview');
   const [copied, setCopied] = React.useState(false);
@@ -120,11 +122,11 @@ export const Preview: React.FC<PreviewProps> = ({
                 "p-6",
                 centered && "flex items-center justify-center"
               )}
-              style={{ minHeight, backgroundColor: '#000' }}
+              style={{ minHeight: previewHeight || minHeight, backgroundColor: '#000' }}
             >
               <div 
                 className="mx-auto aspect-[16/10] w-full max-w-[900px] min-h-[360px] bg-black flex items-center justify-center rounded-lg overflow-hidden"
-                style={{ aspectRatio: '16/10' }}
+                style={{ aspectRatio: '16/10', minHeight: previewHeight }}
               >
                 {children}
               </div>
@@ -161,6 +163,8 @@ export const ResponsivePreview: React.FC<PreviewProps & {
     { name: 'Tablet', width: '768px' },
     { name: 'Desktop', width: '100%' },
   ],
+  previewHeight,
+  minHeight,
   ...props 
 }) => {
   const [activeSize, setActiveSize] = React.useState(sizes[sizes.length - 1]);
@@ -232,14 +236,14 @@ export const ResponsivePreview: React.FC<PreviewProps & {
         {/* Content */}
         <div className="relative">
           {activeTab === 'preview' ? (
-            <div className="p-6 flex justify-center min-h-[300px]" style={{ backgroundColor: '#000' }}>
+            <div className="p-6 flex justify-center min-h-[300px]" style={{ backgroundColor: '#000', minHeight: previewHeight || minHeight }}>
               <div 
                 className="border border-dashed border-border transition-all duration-200 bg-black flex items-center justify-center rounded-lg overflow-hidden"
                 style={{ 
                   width: activeSize.width,
                   maxWidth: '100%',
                   aspectRatio: '16/10',
-                  minHeight: '360px'
+                  minHeight: previewHeight || '360px'
                 }}
               >
                 <div className="w-full h-full flex items-center justify-center">

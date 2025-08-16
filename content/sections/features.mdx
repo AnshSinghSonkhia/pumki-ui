@@ -1,0 +1,62 @@
+---
+title: "Feature Sections - Pumki UI"
+description: Feature Sections are designed to showcase the unique capabilities and advantages of your product or service. They provide a structured way to highlight key features, benefits, and use cases, making it easier for potential customers to understand the value you offer.
+---
+
+import { Tabs } from 'nextra/components'
+import { CodeBlock } from '@/components/docs/code-block'
+import { Callout } from 'nextra/components'
+import { Preview, ResponsivePreview } from '@/components/docs/preview'
+import { Button } from '@/components/ui/button'
+import FeatureCardsSection from '@/components/pumki-ui/sections/features/responsive-cards'
+
+# Feature Sections
+
+Feature Sections are designed to showcase the unique capabilities and advantages of your product or service. They provide a structured way to highlight key features, benefits, and use cases, making it easier for potential customers to understand the value you offer.
+
+## Responsive Cards - Feature Section
+
+<Callout>Responsive cards that adapt to any screen size and provide an optimal viewing experience.</Callout>
+
+<Preview
+  previewHeight="1400px"
+  code={`import FeatureCardsSection from '@/components/pumki-ui/sections/features/responsive-cards'
+  
+  export const Demo = () => {
+  return (
+    <main>
+      <FeatureCardsSection />
+    </main> 
+  );
+};`}
+>
+    <main>
+      <FeatureCardsSection />
+    </main> 
+
+</Preview>
+
+### Installation
+
+<Tabs items={['pnpm', 'npm', 'yarn', 'bun']} defaultIndex="1">
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`pnpm dlx pumki add feature-responsive-cards`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`npx pumki add feature-responsive-cards`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`yarn dlx pumki add feature-responsive-cards`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`bun x pumki add feature-responsive-cards`}
+    </CodeBlock>
+  </Tabs.Tab>
+</Tabs>

@@ -6,8 +6,9 @@ export default {
         title: "Getting Started",
     },
     'getting-started': 'Introduction',
-    cli: 'CLI',
     installation: 'Installation',
+    contributing: 'Contributing',
+    troubleshooting: 'Troubleshooting',
     "###": {
         type: 'separator',
     },

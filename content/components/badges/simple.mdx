@@ -68,22 +68,22 @@ export const BadgeDemo = () => {
 <Tabs items={['pnpm', 'npm', 'yarn', 'bun']} defaultIndex="1">
   <Tabs.Tab>
     <CodeBlock language="bash" showLineNumbers={false}>
-      {`pnpm dlx shadcn@latest add "https://raw.githubusercontent.com/AnshSinghSonkhia/pumki-ui/main/public/r/badge-simple.json"`}
+      {`pnpm dlx pumki add badge-simple`}
     </CodeBlock>
   </Tabs.Tab>
   <Tabs.Tab>
     <CodeBlock language="bash" showLineNumbers={false}>
-      {`npx shadcn@latest add "https://raw.githubusercontent.com/AnshSinghSonkhia/pumki-ui/main/public/r/badge-simple.json"`}
+      {`npx pumki add badge-simple`}
     </CodeBlock>
   </Tabs.Tab>
   <Tabs.Tab>
     <CodeBlock language="bash" showLineNumbers={false}>
-      {`yarn dlx shadcn@latest add "https://raw.githubusercontent.com/AnshSinghSonkhia/pumki-ui/main/public/r/badge-simple.json"`}
+      {`yarn dlx pumki add badge-simple`}
     </CodeBlock>
   </Tabs.Tab>
   <Tabs.Tab>
     <CodeBlock language="bash" showLineNumbers={false}>
-      {`bunx shadcn@latest add "https://raw.githubusercontent.com/AnshSinghSonkhia/pumki-ui/main/public/r/badge-simple.json"`}
+      {`bun x pumki add badge-simple`}
     </CodeBlock>
   </Tabs.Tab>
 </Tabs>

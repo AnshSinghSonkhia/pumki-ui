@@ -34,22 +34,22 @@ export const WormholeBackgroundDemo = () => {
 <Tabs items={['pnpm', 'npm', 'yarn', 'bun']} defaultIndex="1">
   <Tabs.Tab>
     <CodeBlock language="bash">
-      {`pnpm dlx shadcn@latest add "https://raw.githubusercontent.com/AnshSinghSonkhia/pumki-ui/main/public/r/bg-wormhole.json"`}
+      {`pnpm dlx pumki add bg-wormhole`}
     </CodeBlock>
   </Tabs.Tab>
   <Tabs.Tab>
     <CodeBlock language="bash">
-      {`npx shadcn@latest add "https://raw.githubusercontent.com/AnshSinghSonkhia/pumki-ui/main/public/r/bg-wormhole.json"`}
+      {`npx pumki add bg-wormhole`}
     </CodeBlock>
   </Tabs.Tab>
   <Tabs.Tab>
     <CodeBlock language="bash">
-      {`yarn dlx shadcn@latest add "https://raw.githubusercontent.com/AnshSinghSonkhia/pumki-ui/main/public/r/bg-wormhole.json"`}
+      {`yarn dlx pumki add bg-wormhole`}
     </CodeBlock>
   </Tabs.Tab>
   <Tabs.Tab>
     <CodeBlock language="bash">
-      {`bunx shadcn@latest add "https://raw.githubusercontent.com/AnshSinghSonkhia/pumki-ui/main/public/r/bg-wormhole.json"`}
+      {`bun x pumki add bg-wormhole`}
     </CodeBlock>
   </Tabs.Tab>
 </Tabs>

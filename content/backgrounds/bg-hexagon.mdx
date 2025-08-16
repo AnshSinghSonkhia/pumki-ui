@@ -45,22 +45,22 @@ export const TinyHoneycombDemo = () => {
 <Tabs items={['pnpm', 'npm', 'yarn', 'bun']} defaultIndex="1">
   <Tabs.Tab>
     <CodeBlock language="bash">
-      {`pnpm dlx shadcn@latest add "https://raw.githubusercontent.com/AnshSinghSonkhia/pumki-ui/main/public/r/bg-hexagon.json"`}
+      {`pnpm dlx pumki add bg-hexagon`}
     </CodeBlock>
   </Tabs.Tab>
   <Tabs.Tab>
     <CodeBlock language="bash">
-      {`npx shadcn@latest add "https://raw.githubusercontent.com/AnshSinghSonkhia/pumki-ui/main/public/r/bg-hexagon.json"`}
+      {`npx pumki add bg-hexagon`}
     </CodeBlock>
   </Tabs.Tab>
   <Tabs.Tab>
     <CodeBlock language="bash">
-      {`yarn dlx shadcn@latest add "https://raw.githubusercontent.com/AnshSinghSonkhia/pumki-ui/main/public/r/bg-hexagon.json"`}
+      {`yarn dlx pumki add bg-hexagon`}
     </CodeBlock>
   </Tabs.Tab>
   <Tabs.Tab>
     <CodeBlock language="bash">
-      {`bunx shadcn@latest add "https://raw.githubusercontent.com/AnshSinghSonkhia/pumki-ui/main/public/r/bg-hexagon.json"`}
+      {`bun x pumki add bg-hexagon`}
     </CodeBlock>
   </Tabs.Tab>
 </Tabs>

@@ -35,4 +35,21 @@ export const block: Registry = [
             },
         ],
     },
+    {
+        name: "feature-responsive-cards",
+        type: "registry:block",
+        title: "Responsive Cards Feature Section",
+        description:
+            "Responsive cards that adapt to any screen size and provide an optimal viewing experience.",
+        author: "Ansh Singh Sonkhia",
+        dependencies: ["react"],
+        registryDependencies: [],
+        files: [
+            {
+                path: "components/pumki-ui/sections/features/responsive-cards.tsx",
+                type: "registry:block",
+                target: "components/pumki-ui/sections/features/responsive-cards.tsx",
+            },
+        ],
+    },
 ];

@@ -9,124 +9,107 @@ import { CodeBlock } from '../components/docs/code-block'
 
 # Installation
 
-<Callout type="warning">
-  This feature is not available right now. Please install shadcn/ui and follow the instructions in the ➡️ <a href="/docs/cli">CLI guide</a>.
-</Callout>
+## Installation Option 1
 
+<Callout>Use without installation (Recommended ✅)</Callout>
 
-<Callout>Install and configure PumkiUI Components</Callout>
+No installation needed — add components directly with your package manager:
 
-To get started with **Pumki UI**, install the core packages into your React or Next.js project.
-
-We recommend using `pnpm` for performance, but any package manager will work.
+<Callout type="info">Example: Let's add "stats-carousel" component</Callout>
 
 <Tabs items={['pnpm', 'npm', 'yarn', 'bun']} defaultIndex="1">
   <Tabs.Tab>
-    <CodeBlock language="bash" highlight="/pumki-ui/">
-      {`pnpm add pumki-ui`}
+    <CodeBlock language="bash" highlight="/pumki add/" showLineNumbers={false}>
+      {`pnpm dlx pumki add stats-carousel`}
     </CodeBlock>
   </Tabs.Tab>
   <Tabs.Tab>
-    <CodeBlock language="bash" highlight="/pumki-ui/">
-      {`npm install pumki-ui`}
+    <CodeBlock language="bash" highlight="/pumki add/" showLineNumbers={false}>
+      {`npx pumki add stats-carousel`}
     </CodeBlock>
   </Tabs.Tab>
   <Tabs.Tab>
-    <CodeBlock language="bash" highlight="/pumki-ui/">
-      {`yarn add pumki-ui`}
+    <CodeBlock language="bash" highlight="/pumki add/" showLineNumbers={false}>
+      {`yarn dlx pumki add stats-carousel`}
     </CodeBlock>
   </Tabs.Tab>
   <Tabs.Tab>
-    <CodeBlock language="bash" highlight="/pumki-ui/">
-      {`bun add pumki-ui`}
+    <CodeBlock language="bash" highlight="/pumki add/" showLineNumbers={true}>
+      {`# macOS/Linux
+bunx pumki add stats-carousel
+
+# or (works everywhere)
+bun x pumki add stats-carousel
+
+# Windows (PowerShell/CMD) — use this:
+bun x pumki add stats-carousel`}
     </CodeBlock>
   </Tabs.Tab>
 </Tabs>
 
-## Peer Dependencies
+<Callout type="important">Note: bunx is a symlink available on macOS/Linux. On Windows, use bun x.</Callout>
 
-Pumki UI depends on a few libraries you likely already use. Make sure these are installed in your project:
+## Installation Option 2
+
+<Callout>Global install (for convenience)</Callout>
+
+<Callout type="important">If you want to avoid typing npx every time:</Callout> 
 
 <Tabs items={['pnpm', 'npm', 'yarn', 'bun']} defaultIndex="1">
   <Tabs.Tab>
-    <CodeBlock language="bash">
-      {`pnpm add react react-dom`}
+    <CodeBlock language="bash" highlight="1" showLineNumbers={false}>
+      {`pnpm add -g pumki`}
     </CodeBlock>
   </Tabs.Tab>
   <Tabs.Tab>
-    <CodeBlock language="bash">
-      {`npm install react react-dom`}
+    <CodeBlock language="bash" highlight="1" showLineNumbers={false}>
+      {`npm i -g pumki`}
     </CodeBlock>
   </Tabs.Tab>
   <Tabs.Tab>
-    <CodeBlock language="bash">
-      {`yarn add react react-dom`}
+    <CodeBlock language="bash" highlight="1" showLineNumbers={false}>
+      {`yarn global add pumki`}
     </CodeBlock>
   </Tabs.Tab>
   <Tabs.Tab>
-    <CodeBlock language="bash">
-      {`bun add react react-dom`}
+    <CodeBlock language="bash" highlight="1" showLineNumbers={false}>
+      {`bun add -g pumki`}
     </CodeBlock>
   </Tabs.Tab>
 </Tabs>
 
-## Optional: Tailwind CSS
-
-Pumki UI works without Tailwind, but you can integrate it easily if you're already using Tailwind in your project.
-
-If not already installed:
-
-<Tabs items={['pnpm', 'npm', 'yarn', 'bun']} defaultIndex="1">
-  <Tabs.Tab>
-    <CodeBlock language="bash">
-      {`pnpm add -D tailwindcss postcss autoprefixer
-pnpm dlx tailwindcss init -p`}
-    </CodeBlock>
-  </Tabs.Tab>
-  <Tabs.Tab>
-    <CodeBlock language="bash">
-      {`npm install -D tailwindcss postcss autoprefixer
-npx tailwindcss init -p`}
-    </CodeBlock>
-  </Tabs.Tab>
-  <Tabs.Tab>
-    <CodeBlock language="bash">
-      {`yarn add -D tailwindcss postcss autoprefixer
-yarn dlx tailwindcss init -p`}
-    </CodeBlock>
-  </Tabs.Tab>
-  <Tabs.Tab>
-    <CodeBlock language="bash">
-      {`bun add -D tailwindcss postcss autoprefixer
-bunx tailwindcss init -p`}
-    </CodeBlock>
-  </Tabs.Tab>
-</Tabs>
-
-Then configure your `tailwind.config.js`:
+<Callout>Then you can add component like:</Callout>
 
 <br />
 
-<CodeBlock
-  language="javascript"
-  filename="tailwind.config.js"
-  highlight="6"
->
-{`/** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: [
-    './app/**/*.{js,ts,jsx,tsx}',
-    './components/**/*.{js,ts,jsx,tsx}',
-    './node_modules/pumki-ui/**/*.{js,ts,jsx,tsx}',
-  ],
-  theme: {
-    extend: {},
-  },
-  plugins: [],
-}`}
+<CodeBlock language="bash" highlight="1" showLineNumbers={false}>
+{`pumki add stats-carousel`}
+</CodeBlock>
+
+## Tailwind CSS
+
+Integrate Tailwind in your project to make it beautiful.
+
+<br />
+
+<CodeBlock showLineNumbers={false}>
+      {`https://tailwindcss.com/docs/installation/framework-guides/nextjs`}
 </CodeBlock>
 
 <Callout type="info">Make sure your app is already set up with Tailwind before using Pumki UI components with utility classes.</Callout>
+
+## Utility classes
+
+<CodeBlock filename="lib/utils.ts">
+      {`
+      import { clsx, type ClassValue } from "clsx"
+import { twMerge } from "tailwind-merge"
+
+export function cn(...inputs: ClassValue[]) {
+    return twMerge(clsx(inputs))
+}
+      `}
+</CodeBlock>
 
 ## Next Steps
 

@@ -10,7 +10,8 @@ import 'nextra-theme-docs/style.css'
 // import '../globals.css'
 
 // ✅ Apply ISR to all docs pages
-export const revalidate = 3600; // 1 hour
+// export const revalidate = 3600; // 1 hour
+export const revalidate = 86400; // 1 day
 
 export const metadata = generateDocsMetadata({
   title: 'Documentation',
