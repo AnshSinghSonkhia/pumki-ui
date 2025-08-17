@@ -27,12 +27,10 @@ const banner = (
   <div className="absolute inset-0 bg-gradient-to-r from-[#1A0B2E] via-[#4C0C5C] to-[#1A0B2E]"></div>
     
     {/* Animated Gradient Overlay with magenta accents */}
-    {/* <div className="absolute inset-0 bg-gradient-to-r from-transparent via-pink-500/10 to-transparent animate-pulse"></div> */}
+    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-pink-500/10 to-transparent animate-pulse"></div>
 
     {/* Soft overlay glow */}
-    <div className="absolute inset-0 bg-gradient-to-r 
-    from-fuchsia-500/10 via-pink-400/5 to-indigo-400/10 animate-pulse">
-    </div>
+    <div className="absolute inset-0 bg-gradient-to-r from-fuchsia-500/10 via-pink-400/5 to-fuchsia-500/10 animate-pulse"></div>
 
     {/* Optional subtle glass effect */}
     <div className="absolute inset-0 backdrop-blur-[2px]"></div>
@@ -65,7 +63,8 @@ const banner = (
     </div>
     
     {/* Shimmer Effect with purple/pink theme */}
-    <div className="absolute inset-0 -skew-x-12 bg-gradient-to-r from-transparent via-pink-400/20 to-transparent w-1/4 animate-shimmer"></div>
+    <div className="absolute inset-0 -skew-x-12 bg-gradient-to-r from-transparent via-pink-400/20 to-transparent w-full animate-shimmer"></div>
+    <div className="absolute inset-0 -skew-x-12 bg-gradient-to-l from-transparent via-pink-400/20 to-transparent w-full animate-shimmer delay-1000"></div>
   </div>
 )
 
