@@ -2,6 +2,23 @@ import type { Registry } from "./schema";
 
 export const component: Registry = [
     {
+        name: "bg-grid-distort",
+        type: "registry:ui",
+        title: "Grid Distort Background",
+        description:
+            "Get Grid Distort background",
+        author: "Ansh Singh Sonkhia",
+        dependencies: ["react", "three"],
+        registryDependencies: [],
+        files: [
+            {
+                path: "components/pumki-ui/backgrounds/bg-grid-distort.tsx",
+                type: "registry:ui",
+                target: "components/pumki-ui/backgrounds/bg-grid-distort.tsx",
+            },
+        ],
+    },
+    {
         name: "bg-moai",
         type: "registry:ui",
         title: "Moai Background",
