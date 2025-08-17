@@ -2,6 +2,23 @@ import type { Registry } from "./schema";
 
 export const animation: Registry = [
     {
+        name: "bg-galaxy",
+        type: "registry:ui",
+        title: "Galaxy Background",
+        description:
+            "A mesmerizing Dynamic 3D galaxy for your interactive background with twinkling stars and cosmic elements.",
+        author: "Ansh Singh Sonkhia",
+        dependencies: ["ogl", "react"],
+        registryDependencies: [],
+        files: [
+            {
+                path: "components/pumki-ui/animations/galaxy.tsx",
+                type: "registry:ui",
+                target: "components/pumki-ui/animations/galaxy.tsx",
+            },
+        ],
+    },
+    {
         name: "click-spark",
         type: "registry:ui",
         title: "Click Spark",

@@ -22,6 +22,26 @@ const nextConfig: NextConfig = {
         destination: '/docs/components/CardSwap',
         permanent: true,
       },
+      {
+        source: '/docs/sections',
+        destination: '/docs/sections/features',
+        permanent: true,
+      },
+      {
+        source: '/docs/animations',
+        destination: '/docs/animations/space-particles',
+        permanent: true,
+      },
+      {
+        source: '/docs/backgrounds',
+        destination: '/docs/backgrounds/bg-potion#example',
+        permanent: true,
+      },
+      {
+        source: '/docs/gradients',
+        destination: '/docs/gradients/green',
+        permanent: true,
+      },
     ];
   },
   pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],

@@ -1,0 +1,221 @@
+---
+title: "Galaxy Animation - Pumki UI"
+description: A mesmerizing Dynamic 3D galaxy for your interactive background with twinkling stars and cosmic elements.
+---
+
+import { Tabs } from 'nextra/components'
+import { CodeBlock } from '@/components/docs/code-block'
+import { Callout } from 'nextra/components'
+import { Preview, ResponsivePreview } from '@/components/docs/preview'
+import { Button } from '@/components/ui/button'
+import Galaxy from '@/components/pumki-ui/animations/galaxy'
+
+# Galaxy Animation
+
+A mesmerizing Dynamic 3D galaxy for your interactive background with twinkling stars and cosmic elements.
+
+<Preview
+  code={`import Galaxy from '@/components/pumki-ui/animations/galaxy';
+
+  export const GalaxyDemo = () => {
+    return (
+        <div className="relative w-full h-[800px]">
+            <Galaxy 
+                mouseRepulsion={true}
+                mouseInteraction={true}
+                density={1.5}
+                glowIntensity={0.5}
+                saturation={0.8}
+                hueShift={240}
+            />
+        </div>
+    );
+};`}
+>
+        <div className="relative w-full h-[800px]">
+            <Galaxy 
+                mouseRepulsion={true}
+                mouseInteraction={true}
+                density={1.5}
+                glowIntensity={0.5}
+                saturation={0.8}
+                hueShift={240}
+            />
+        </div>
+
+</Preview>
+
+## Installation
+
+<Tabs items={['pnpm', 'npm', 'yarn', 'bun']} defaultIndex="1">
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`pnpm dlx pumki add bg-galaxy`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`npx pumki add bg-galaxy`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`yarn dlx pumki add bg-galaxy`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`bun x pumki add bg-galaxy`}
+    </CodeBlock>
+  </Tabs.Tab>
+</Tabs>
+
+## Usage
+
+<br/>
+
+<CodeBlock language="typescript">
+    {`import Galaxy from '@/components/pumki-ui/animations/galaxy'`}
+</CodeBlock>
+
+<br/>
+
+<CodeBlock language="typescript">
+    {`<Galaxy />`}
+</CodeBlock>
+
+## Example
+
+<Preview
+  code={`import Galaxy from '@/components/pumki-ui/animations/galaxy';
+
+  export const GalaxyDemo = () => {
+    return (
+        <div className="relative w-full h-[800px]">
+            <Galaxy />
+        </div>
+    );
+};`}
+>
+        <div className="relative w-full h-[800px]">
+            <Galaxy />
+        </div>
+
+</Preview>
+
+## Props
+
+import { PumkiTable, PumkiTableStyles } from '@/components/docs/PumkiTable'
+
+<PumkiTableStyles />
+
+<PumkiTable>
+  <table className="pumki-table">
+    <thead>
+      <tr>
+        <th>Prop</th>
+        <th>Type</th>
+        <th>Default</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td><code>focal</code></td>
+            <td><code>[number, number]</code></td>
+            <td><code>[0.5, 0.5]</code></td>
+            <td>Sets the focal point of the galaxy effect as [x, y] coordinates from 0 to 1</td>
+          </tr>
+          <tr>
+            <td><code>rotation</code></td>
+            <td><code>[number, number]</code></td>
+            <td><code>[1.0, 0.0]</code></td>
+            <td>Controls the rotation matrix of the galaxy as [x, y] rotation values</td>
+          </tr>
+          <tr>
+            <td><code>starSpeed</code></td>
+            <td><code>number</code></td>
+            <td><code>0.5</code></td>
+            <td>Controls the speed of star movement and animation</td>
+          </tr>
+          <tr>
+            <td><code>density</code></td>
+            <td><code>number</code></td>
+            <td><code>1</code></td>
+            <td>Controls the density of stars in the galaxy</td>
+          </tr>
+          <tr>
+            <td><code>hueShift</code></td>
+            <td><code>number</code></td>
+            <td><code>140</code></td>
+            <td>Shifts the hue of all stars by the specified degrees (0-360)</td>
+          </tr>
+          <tr>
+            <td><code>disableAnimation</code></td>
+            <td><code>boolean</code></td>
+            <td><code>false</code></td>
+            <td>When true, stops all time-based animations</td>
+          </tr>
+          <tr>
+            <td><code>speed</code></td>
+            <td><code>number</code></td>
+            <td><code>1.0</code></td>
+            <td>Global speed multiplier for all animations</td>
+          </tr>
+          <tr>
+            <td><code>mouseInteraction</code></td>
+            <td><code>boolean</code></td>
+            <td><code>true</code></td>
+            <td>Enables or disables mouse interaction with the galaxy</td>
+          </tr>
+          <tr>
+            <td><code>glowIntensity</code></td>
+            <td><code>number</code></td>
+            <td><code>0.3</code></td>
+            <td>Controls the intensity of the star glow effect</td>
+          </tr>
+          <tr>
+            <td><code>saturation</code></td>
+            <td><code>number</code></td>
+            <td><code>0.0</code></td>
+            <td>Controls color saturation of stars (0 = grayscale, 1 = full color)</td>
+          </tr>
+          <tr>
+            <td><code>mouseRepulsion</code></td>
+            <td><code>boolean</code></td>
+            <td><code>true</code></td>
+            <td>When true, stars are repelled by the mouse cursor</td>
+          </tr>
+          <tr>
+            <td><code>twinkleIntensity</code></td>
+            <td><code>number</code></td>
+            <td><code>0.3</code></td>
+            <td>Controls how much stars twinkle (0 = no twinkle, 1 = maximum twinkle)</td>
+          </tr>
+          <tr>
+            <td><code>rotationSpeed</code></td>
+            <td><code>number</code></td>
+            <td><code>0.1</code></td>
+            <td>Speed of automatic galaxy rotation</td>
+          </tr>
+          <tr>
+            <td><code>repulsionStrength</code></td>
+            <td><code>number</code></td>
+            <td><code>2</code></td>
+            <td>Strength of mouse repulsion effect when mouseRepulsion is enabled</td>
+          </tr>
+          <tr>
+            <td><code>autoCenterRepulsion</code></td>
+            <td><code>number</code></td>
+            <td><code>0</code></td>
+            <td>Creates repulsion from center of canvas. Overrides mouse repulsion when &gt; 0</td>
+          </tr>
+          <tr>
+            <td><code>transparent</code></td>
+            <td><code>boolean</code></td>
+            <td><code>true</code></td>
+            <td>Makes the black background transparent, showing only stars</td>
+          </tr>
+    </tbody>
+  </table>
+</PumkiTable>

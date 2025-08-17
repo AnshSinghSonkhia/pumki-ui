@@ -597,6 +597,8 @@ button[title*="theme" i],
    To add badges to any navigation item, just add it to the appropriate section below */
 
    /* 1. BASE FLEX LAYOUT - Apply to all navigation items that need badges */
+.nextra-sidebar a[href*="bg-moai"], 
+.nextra-sidebar a[href*="logo-cloud"], 
 .nextra-sidebar a[href*="CardSwap"], 
 .nextra-sidebar a[href*="codeblock"], 
 .nextra-sidebar a[href*="preview"], 
@@ -617,8 +619,7 @@ button[title*="theme" i],
 .nextra-sidebar a[href*="cyan"], 
 .nextra-sidebar a[href*="brown"], 
 .nextra-sidebar a[href*="blue"], 
-.nextra-sidebar a[href*="black"], 
-.nextra-sidebar a[href*="ai"] {
+.nextra-sidebar a[href*="black"] {
   position: relative;
   display: flex !important;
   align-items: center !important;
@@ -627,6 +628,8 @@ button[title*="theme" i],
 
 /* 2. NUMBER BADGE STYLES - Shared styles for all number badges */
 /* These appear at the far right: "Buttons NEW 56" */
+.nextra-sidebar a[href*="bg-moai"]:after, 
+.nextra-sidebar a[href*="logo-cloud"]:after, 
 .nextra-sidebar a[href*="CardSwap"]:after, 
 .nextra-sidebar a[href*="codeblock"]:after, 
 .nextra-sidebar a[href*="preview"]:after, 
@@ -647,8 +650,7 @@ button[title*="theme" i],
 .nextra-sidebar a[href*="cyan"]:after, 
 .nextra-sidebar a[href*="brown"]:after, 
 .nextra-sidebar a[href*="blue"]:after, 
-.nextra-sidebar a[href*="black"]:after,
-.nextra-sidebar a[href*="ai"]:after {
+.nextra-sidebar a[href*="black"]:after {
   background-color: #14041c;
   color: white;
   font-size: 0.75rem;
@@ -663,9 +665,6 @@ button[title*="theme" i],
 }
 
 /* 3. NUMBER BADGE CONTENT - Add/edit individual badge numbers here */
-.nextra-sidebar a[href*="ai"]:after {
-  content: "30";
-}
 .nextra-sidebar a[href*="black"]:after {
   content: "133";
 }
@@ -708,9 +707,13 @@ button[title*="theme" i],
 .nextra-sidebar a[href*="silver"]:after {
   content: "9";
 }
+.nextra-sidebar a[href*="logo-cloud"]:after {
+  content: "2";
+}
 
 /* 4. "NEW" BADGE STYLES - Shared styles for all "new" badges */
 /* These appear between the text and the number badge: "Buttons NEW 56" */
+.nextra-sidebar a[href*="bg-moai"]:before,
 .nextra-sidebar a[href*="CardSwap"]:before,
 .nextra-sidebar a[href*="codeblock"]:before,
 .nextra-sidebar a[href*="preview"]:before,
@@ -718,8 +721,7 @@ button[title*="theme" i],
 .nextra-sidebar a[href*="buttons"][href*="copy"]:before,
 .nextra-sidebar a[href*="bg-potion"]:before,
 .nextra-sidebar a[href*="bg-fireworks"]:before,
-.nextra-sidebar a[href*="silver"]:before,
-.nextra-sidebar a[href*="ai"]:before {
+.nextra-sidebar a[href*="silver"]:before {
   content: "new";
   background-color: #640D5F;
   color: white;

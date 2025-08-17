@@ -1,0 +1,129 @@
+---
+title: "Moai Background - Pumki UI"
+description: Get Moai-Moai
+---
+
+import { Tabs } from 'nextra/components'
+import { Callout } from 'nextra/components'
+import { CodeBlock } from '../../components/docs/code-block'
+import { Preview, ResponsivePreview } from '../../components/docs/preview'
+import { Button } from '../../components/ui/button'
+import { MoaiParallaxBackground } from '@/components/pumki-ui/backgrounds/bg-moai'
+
+# Moai Background 
+
+Get Moai-Moai
+
+<Callout>The Moai statues can be customized in terms of count, speed, and more.</Callout>
+
+<Preview 
+  previewHeight='500px'
+  code={`'use client';
+
+import { MoaiParallaxBackground } from '@/components/pumki-ui/backgrounds/bg-moai';
+
+export const MoaiDemo = () => {
+    return (
+        <div className="flex items-center justify-center h-full w-full bg-black/95">
+            <div className="relative w-full max-w-3xl mx-auto rounded-3xl overflow-hidden shadow-2xl border border-white/10 backdrop-blur-lg" style={{ minHeight: 520 }}>
+                <MoaiParallaxBackground
+                    count={14}
+                    speed={1.15}
+                    interactive={true}
+                    zIndex={0}
+                    seed={43}
+                    className="absolute -left-10"
+                />
+                <div className="absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center z-10 px-8 py-12" style={{ pointerEvents: 'none' }}>
+                    <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 drop-shadow-lg">Moai Parallax Background</h2>
+                    <p className="text-lg md:text-xl text-white/80 max-w-xl text-center mb-2 drop-shadow">A modern, interactive background effect inspired by the iconic Moai statues of Easter Island.</p>
+                </div>
+            </div>
+        </div>
+    );
+};`}
+>
+
+    <div className="flex items-center justify-center h-full w-full bg-black/95">
+      <div className="relative w-full max-w-3xl mx-auto rounded-3xl overflow-hidden shadow-2xl border border-white/10 backdrop-blur-lg" style={{ minHeight: 520 }}>
+        <MoaiParallaxBackground
+          count={14}
+          speed={1.15}
+          interactive={true}
+          zIndex={0}
+          seed={43}
+          className="absolute -left-10"
+        />
+        <div className="absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center z-10 px-8 py-12" style={{ pointerEvents: 'none' }}>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 drop-shadow-lg">Moai Parallax Background</h2>
+          <p className="text-lg md:text-xl text-white/80 max-w-xl text-center mb-2 drop-shadow">A modern, interactive background effect inspired by the iconic Moai statues of Easter Island.</p>
+        </div>
+      </div>
+    </div>
+</Preview>
+
+## Installation
+
+<Tabs items={['pnpm', 'npm', 'yarn', 'bun']} defaultIndex="1">
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`pnpm dlx pumki add bg-moai`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`npx pumki add bg-moai`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`yarn dlx pumki add bg-moai`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`bun x pumki add bg-moai`}
+    </CodeBlock>
+  </Tabs.Tab>
+</Tabs>
+
+## Usage
+
+<br/>
+
+<CodeBlock language="typescript">
+    {`import { MoaiParallaxBackground } from '@/components/pumki-ui/backgrounds/bg-moai';`}
+</CodeBlock>
+
+<br/>
+
+<CodeBlock language="typescript">
+    {`<MoaiParallaxBackground />`}
+</CodeBlock>
+
+## Props
+
+import { PumkiTable, PumkiTableStyles } from '../../components/docs/PumkiTable'
+
+<PumkiTableStyles />
+<PumkiTable>
+<table className="pumki-table">
+  <thead>
+    <tr>
+      <th>Prop</th>
+      <th>Type</th>
+      <th>Default</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td><code>imageUrl</code></td><td><code>string</code></td><td><code>Moai PNG URL</code></td><td>Image source for the Moai statues.</td></tr>
+    <tr><td><code>count</code></td><td><code>number</code></td><td><code>12</code></td><td>Number of Moai statues displayed.</td></tr>
+    <tr><td><code>speed</code></td><td><code>number</code></td><td><code>1</code></td><td>Animation speed multiplier.</td></tr>
+    <tr><td><code>interactive</code></td><td><code>boolean</code></td><td><code>true</code></td><td>Enable mouse parallax effect.</td></tr>
+    <tr><td><code>zIndex</code></td><td><code>number</code></td><td><code>0</code></td><td>z-index for the background container.</td></tr>
+    <tr><td><code>className</code></td><td><code>string</code></td><td><code>""</code></td><td>Custom CSS classes for the wrapper.</td></tr>
+    <tr><td><code>seed</code></td><td><code>number</code></td><td><code>42</code></td><td>Seed for deterministic random placement.</td></tr>
+  </tbody>
+  </table>
+</PumkiTable>

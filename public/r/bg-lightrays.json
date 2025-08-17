@@ -2,7 +2,7 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "bg-lightrays",
   "type": "registry:ui",
-  "title": "Ambient Aurora Background",
+  "title": "Light Rays Background",
   "description": "A serene and captivating background featuring slow-moving, ethereal gradients.",
   "author": "Ansh Singh Sonkhia",
   "dependencies": [
