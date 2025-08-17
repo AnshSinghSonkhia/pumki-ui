@@ -52,4 +52,21 @@ export const animation: Registry = [
             },
         ],
     },
+    {
+        name: "ballpit",
+        type: "registry:ui",
+        title: "Ball Pit",
+        description:
+            "Interactive balls with custom colors and physics",
+        author: "Ansh Singh Sonkhia",
+        dependencies: ["react", "three", "gsap"],
+        registryDependencies: [],
+        files: [
+            {
+                path: "components/pumki-ui/animations/ballpit.tsx",
+                type: "registry:ui",
+                target: "components/pumki-ui/animations/ballpit.tsx",
+            },
+        ],
+    },
 ];

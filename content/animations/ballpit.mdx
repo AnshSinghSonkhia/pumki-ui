@@ -1,0 +1,188 @@
+---
+title: "Ballpit - Pumki UI"
+---
+
+import { Tabs } from 'nextra/components'
+import { Callout } from 'nextra/components'
+import { CodeBlock } from '../../components/docs/code-block'
+import { Preview, ResponsivePreview } from '../../components/docs/preview'
+import { Button } from '../../components/ui/button'
+import Ballpit from '@/components/pumki-ui/animations/ballpit.tsx'
+
+# Ballpit
+
+Interactive balls with custom colors and physics
+
+<Preview 
+  code={`'use client';
+
+import Ballpit from '@/components/pumki-ui/animations/ballpit.tsx'
+
+export const BallpitDemo = () => {
+    return (
+        <div style={{
+        position: 'absolute',
+        zIndex: 2,
+        top: '40px',
+        left: '50%',
+        transform: 'translateX(-50%)',
+        textAlign: 'center',
+        width: '100%',
+        pointerEvents: 'none'
+    }}>
+        <h2 style={{ fontSize: '2.5rem', margin: 0, color: 'whitesmoke', fontWeight: 800 }}>
+            Ballpit Demo
+        </h2>
+        <span style={{ fontSize: '1.2rem', color: 'whitesmoke', marginTop: '0.5rem', display: 'block' }}>
+            Interactive balls with custom colors and physics
+        </span>
+    </div>
+    <Ballpit
+            count={100}
+            gravity={0.01}
+            friction={0.9975}
+            wallBounce={0.95}
+            followCursor={false}
+            colors={[
+                    0xff6f61, // Coral
+                    0x6b5b95, // Indigo
+                    0x88b04b, // Olive Green
+                    0xf7cac9, // Pink
+                    0x92a8d1, // Light Blue
+                    0x955251, // Brown
+                    0xb565a7, // Purple
+                    0x009b77, // Teal
+                    0xffe156, // Yellow
+                    0x43bccd, // Cyan
+                    0xe94f37, // Red
+                    0x393e41  // Charcoal
+            ]}
+            minSize={0.7}
+            maxSize={1.3}
+            ambientColor={0xffffff}
+            ambientIntensity={1.2}
+            lightIntensity={250}
+    />
+    );
+};`}
+>
+    <div style={{
+        position: 'absolute',
+        zIndex: 2,
+        top: '40px',
+        left: '50%',
+        transform: 'translateX(-50%)',
+        textAlign: 'center',
+        width: '100%',
+        pointerEvents: 'none'
+    }}>
+        <h2 style={{ fontSize: '2.5rem', margin: 0, color: 'whitesmoke', fontWeight: 800 }}>
+            Ballpit Demo
+        </h2>
+        <span style={{ fontSize: '1.2rem', color: 'whitesmoke', marginTop: '0.5rem', display: 'block' }}>
+            Interactive balls with custom colors and physics
+        </span>
+    </div>
+    <Ballpit
+            count={100}
+            gravity={0.01}
+            friction={0.9975}
+            wallBounce={0.95}
+            followCursor={false}
+            colors={[
+                    0xff6f61, // Coral
+                    0x6b5b95, // Indigo
+                    0x88b04b, // Olive Green
+                    0xf7cac9, // Pink
+                    0x92a8d1, // Light Blue
+                    0x955251, // Brown
+                    0xb565a7, // Purple
+                    0x009b77, // Teal
+                    0xffe156, // Yellow
+                    0x43bccd, // Cyan
+                    0xe94f37, // Red
+                    0x393e41  // Charcoal
+            ]}
+            minSize={0.7}
+            maxSize={1.3}
+            ambientColor={0xffffff}
+            ambientIntensity={1.2}
+            lightIntensity={250}
+    />
+</Preview>
+
+## Installation
+
+<Tabs items={['pnpm', 'npm', 'yarn', 'bun']} defaultIndex="1">
+  <Tabs.Tab>
+    <CodeBlock language="bash" showLineNumbers={false}>
+      {`pnpm dlx pumki add ballpit`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash" showLineNumbers={false}>
+      {`npx pumki add ballpit`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash" showLineNumbers={false}>
+      {`yarn dlx pumki add ballpit`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash" showLineNumbers={false}>
+      {`bun x pumki add ballpit`}
+    </CodeBlock>
+  </Tabs.Tab>
+</Tabs>
+
+## Usage
+
+<br/>
+
+<CodeBlock language="typescript" showLineNumbers={false}>
+    {`import Ballpit from '@/components/pumki-ui/animations/ballpit.tsx';`}
+</CodeBlock>
+
+<br/>
+
+<CodeBlock language="typescript">
+    {`<Ballpit />`}
+</CodeBlock>
+
+## Props
+
+import { PumkiTable, PumkiTableStyles } from '../../components/docs/PumkiTable'
+
+<PumkiTableStyles />
+<PumkiTable>
+<table className="pumki-table">
+  <thead>
+    <tr>
+      <th>Prop</th>
+      <th>Type</th>
+      <th>Default</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td><code>className</code></td><td><code>string</code></td><td><code>""</code></td><td>Custom CSS classes for the canvas element.</td></tr>
+    <tr><td><code>followCursor</code></td><td><code>boolean</code></td><td><code>true</code></td><td>If true, the largest ball follows the mouse or touch position.</td></tr>
+    <tr><td><code>count</code></td><td><code>number</code></td><td><code>200</code></td><td>Number of balls in the simulation.</td></tr>
+    <tr><td><code>colors</code></td><td><code>number[]</code></td><td><code>[0, 0, 0]</code></td><td>Array of colors for the balls (as numbers).</td></tr>
+    <tr><td><code>ambientColor</code></td><td><code>number</code></td><td><code>0xffffff</code></td><td>Ambient light color.</td></tr>
+    <tr><td><code>ambientIntensity</code></td><td><code>number</code></td><td><code>1</code></td><td>Ambient light intensity.</td></tr>
+    <tr><td><code>lightIntensity</code></td><td><code>number</code></td><td><code>200</code></td><td>Point light intensity.</td></tr>
+    <tr><td><code>minSize</code></td><td><code>number</code></td><td><code>0.5</code></td><td>Minimum ball size.</td></tr>
+    <tr><td><code>maxSize</code></td><td><code>number</code></td><td><code>1</code></td><td>Maximum ball size.</td></tr>
+    <tr><td><code>size0</code></td><td><code>number</code></td><td><code>1</code></td><td>Size of the largest ball (the one that follows the cursor).</td></tr>
+    <tr><td><code>gravity</code></td><td><code>number</code></td><td><code>0.5</code></td><td>Gravity strength.</td></tr>
+    <tr><td><code>friction</code></td><td><code>number</code></td><td><code>0.9975</code></td><td>Friction factor for ball movement.</td></tr>
+    <tr><td><code>wallBounce</code></td><td><code>number</code></td><td><code>0.95</code></td><td>Bounciness when balls hit the wall.</td></tr>
+    <tr><td><code>maxVelocity</code></td><td><code>number</code></td><td><code>0.15</code></td><td>Maximum velocity for balls.</td></tr>
+    <tr><td><code>maxX</code></td><td><code>number</code></td><td><code>5</code></td><td>Horizontal boundary for ball movement.</td></tr>
+    <tr><td><code>maxY</code></td><td><code>number</code></td><td><code>5</code></td><td>Vertical boundary for ball movement.</td></tr>
+    <tr><td><code>maxZ</code></td><td><code>number</code></td><td><code>2</code></td><td>Depth boundary for ball movement.</td></tr>
+  </tbody>
+</table>
+</PumkiTable>

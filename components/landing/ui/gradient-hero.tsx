@@ -152,9 +152,9 @@ export default function GradientHero() {
                   {/* <div className="h-3 w-3 rounded-full bg-red-500"></div>
                   <div className="h-3 w-3 rounded-full bg-yellow-500"></div>
                   <div className="h-3 w-3 rounded-full bg-green-500"></div> */}
-                  <div className="h-3 w-3 rounded-full bg-pink-200"></div>
-                  <div className="h-3 w-3 rounded-full bg-pink-400"></div>
-                  <div className="h-3 w-3 rounded-full bg-pink-600"></div>
+                  <div className="h-3 w-3 rounded-full bg-[#2e0f3a]"></div>
+                  <div className="h-3 w-3 rounded-full bg-[#341142]"></div>
+                  <div className="h-3 w-3 rounded-full bg-[#3a1349]"></div>
                 </div>
                 <div className="bg-background/50 text-muted-foreground mx-auto flex items-center rounded-md px-3 py-1 text-xs">
                   https://pumki-ui.vercel.app/docs
