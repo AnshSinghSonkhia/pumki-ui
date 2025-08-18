@@ -60,8 +60,9 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between w-full gap-4 pb-24 pt-8">
         <div className="space-y-2">
           <ul className="flex flex-wrap gap-4">
-            <li><a href="/showcase" className="text-sm hover:text-pink-400">Showcase</a></li>
-            <li><a href="/sponsors" className="text-sm hover:text-pink-400">Sponsors</a></li>
+            <li><a href="/docs/animations" className="text-sm hover:text-pink-400">Animations</a></li>
+            <li><a href="/docs/backgrounds" className="text-sm hover:text-pink-400">Backgrounds</a></li>
+            <li><a href="/docs/gradients" className="text-sm hover:text-pink-400">Gradients</a></li>
           </ul>
           
           <p className="text-sm mt-4 text-gray-600 dark:text-gray-400 flex items-center gap-x-1">
@@ -75,7 +76,14 @@ const Footer = () => {
           <ul className="flex flex-wrap gap-4">
             <li><a href="/careers" className="text-sm hover:text-pink-400">Careers</a></li>
             <li><a href="/about" className="text-sm hover:text-pink-400">About</a></li>
-            <li><a href="/help" className="text-sm hover:text-pink-400">Help Center</a></li>
+            <li><a
+                href="https://github.com/AnshSinghSonkhia/pumki-ui/issues"
+                className="text-sm hover:text-pink-400"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Raise Issues
+            </a></li>
           </ul>
           <div className="text-right mt-4">
             <p className="text-sm text-gray-600 dark:text-gray-400">
@@ -98,17 +106,25 @@ const Footer = () => {
         {/* for Mobile & Small screens */}
       <div className="block md:hidden w-full max-w-7xl mx-auto px-4">
         <div className="flex flex-col items-center justify-center text-center space-y-4 pb-24 pt-8">
-          {/* Row 1: Showcase Sponsors */}
+          {/* Row 1: */}
           <div className="flex gap-6">
-            <a href="/showcase" className="text-sm hover:text-pink-400">Showcase</a>
-            <a href="/sponsors" className="text-sm hover:text-pink-400">Sponsors</a>
+            <a href="/docs/animations" className="text-sm hover:text-pink-400">Animations</a>
+            <a href="/docs/backgrounds" className="text-sm hover:text-pink-400">Backgrounds</a>
+            <a href="/docs/gradients" className="text-sm hover:text-pink-400">Gradients</a>
           </div>
           
-          {/* Row 2: Careers About Help Center */}
+          {/* Row 2: */}
           <div className="flex gap-6">
             <a href="/careers" className="text-sm hover:text-pink-400">Careers</a>
             <a href="/about" className="text-sm hover:text-pink-400">About</a>
-            <a href="/help" className="text-sm hover:text-pink-400">Help Center</a>
+            <a
+                href="https://github.com/AnshSinghSonkhia/pumki-ui/issues"
+                className="text-sm hover:text-pink-400"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Raise Issues
+            </a>
           </div>
           
           {/* Funny divider */}

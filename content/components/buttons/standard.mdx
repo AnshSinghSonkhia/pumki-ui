@@ -1,0 +1,363 @@
+---
+title: "Btn-standard - Pumki UI"
+---
+
+import { Tabs } from 'nextra/components'
+import { Callout } from 'nextra/components'
+import { CodeBlock } from '@/components/docs/code-block'
+import { Preview, ResponsivePreview } from '@/components/docs/preview'
+import { Button } from '@/components/ui/button'
+import Link from 'next/link';
+import { Button as Butt } from '@/components/pumki-ui/buttons/btn-standard.tsx'
+import { Mail, Settings, User, X, UserPen, CalendarCheck, Bell, Check, Calendar as CalendarIcon, CircleCheckBig, MailCheck } from 'lucide-react';
+import * as React from 'react';
+import { Calendar } from '@/components/ui/calendar';
+import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
+import { format } from 'date-fns';
+import DatePickerDemo from '@/components/demos/btn-input-demo';
+import { Badge } from '@/components/ui/badge';
+
+# Btn-standard
+
+<Preview 
+  previewHeight="1000px"
+  code={`'use client';
+
+import Link from 'next/link';
+import { Button as Butt } from '@/components/pumki-ui/buttons/btn-standard.tsx'
+import { Mail, Settings, User, X, UserPen, CalendarCheck, Bell, Check } from 'lucide-react';
+
+export const ButtDemo = () => {
+    return (
+        <div className="flex gap-4 text-white">
+        <div className="flex flex-col gap-2">
+            {/* Basic variants */}
+            <Butt className="bg-blue-500 hover:bg-blue-700">Default Butt</Butt>
+            <Butt variant="secondary">Secondary</Butt>
+            <Butt variant="mono">Mono</Butt>
+            <Butt variant="destructive" className="bg-red-600 hover:bg-red-800">Delete</Butt>
+            <Butt variant="outline">Outline</Butt>
+            <Butt variant="ghost">Ghost</Butt>
+            <Butt variant="dashed">Dashed</Butt>
+            <div className="flex items-center justify-center gap-4">
+                <Butt variant="primary" mode="icon">
+                    <User />
+                </Butt>
+                <Butt variant="outline" mode="icon">
+                    <Mail />
+                </Butt>
+                <Butt variant="ghost" mode="icon">
+                    <Settings />
+                </Butt>
+                <Butt variant="dim" mode="icon">
+                    <X />
+                </Butt>
+            </div>
+            <div className="flex flex-col items-center justify-center gap-6">
+                <div className="flex items-center justify-center gap-4">
+                    <Butt variant="outline" size="sm">
+                    <UserPen />
+                    Small
+                    </Butt>
+                    <Butt variant="outline">
+                    <UserPen />
+                    Medium
+                    </Butt>
+                    <Butt variant="outline" size="lg">
+                    <UserPen />
+                    Xsmall
+                    </Butt>
+                </div>
+                <div className="flex items-center gap-4">
+                    <Butt variant="outline" size="sm" mode="icon">
+                    <UserPen />
+                    </Butt>
+                    <Butt variant="outline" mode="icon">
+                    <UserPen />
+                    </Butt>
+                    <Butt variant="outline" size="lg" mode="icon">
+                    <UserPen />
+                    </Butt>
+                </div>
+            </div>
+            <div className="flex items-center justify-center gap-4">
+                <Butt variant="outline" shape="circle">
+                    Circle button
+                </Butt>
+                <Butt variant="outline" shape="circle" mode="icon">
+                    <CalendarCheck />
+                </Butt>
+            </div>
+            <div className="flex flex-col items-center gap-6 text-white">
+                <Butt mode="link" underline="solid" asChild>
+                    <Link href="#" className='text-white'>Link Solid</Link>
+                </Butt>
+                <Butt mode="link" underline="dashed">
+                    <Link href="#" className='text-white'>Link Dashed</Link>
+                </Butt>
+                <Butt mode="link" underlined="solid">
+                    <Link href="#" className='text-white'>Link Underlined - Solid</Link>
+                </Butt>
+                <Butt mode="link" underlined="dashed">
+                    <Link href="#" className='text-white'>Link Underlined - Dashed</Link>
+                </Butt>
+            </div>
+            <Butt variant="primary" className="mx-auto w-full max-w-96">
+                Primary Button - Full Width
+            </Butt>
+            <div className="flex items-center gap-4 text-white">
+                <Butt disabled>Primary Disabled</Butt>
+                <Butt variant="outline" disabled>
+                    Outline Disabled
+                </Butt>
+                <Butt mode="link" disabled className="text-white">
+                    Link Disabled
+                </Butt>
+            </div>
+            <h3 className="text-lg font-semibold">Buttons With Icon</h3>
+            <div className="flex items-center gap-4">
+                <Button variant="primary">
+                    <Check /> Primary
+                </Button>
+                <Button variant="outline">
+                    <Bell /> Outline
+                </Button>
+                <Button variant="ghost">
+                    <CalendarCheck /> Ghost
+                </Button>
+            </div>
+        </div>
+    </div>
+    );
+};`}
+>
+    <div className="flex gap-4 text-white">
+        <div className="flex flex-col gap-2">
+            {/* Basic variants */}
+            <Butt className="bg-blue-500 hover:bg-blue-700">Default Butt</Butt>
+            <Butt variant="secondary">Secondary</Butt>
+            <Butt variant="mono">Mono</Butt>
+            <Butt variant="destructive" className="bg-red-600 hover:bg-red-800">Delete</Butt>
+            <Butt variant="outline">Outline</Butt>
+            <Butt variant="ghost">Ghost</Butt>
+            <Butt variant="dashed">Dashed</Butt>
+            <div className="flex items-center justify-center gap-4">
+                <Butt variant="primary" mode="icon">
+                    <User />
+                </Butt>
+                <Butt variant="outline" mode="icon">
+                    <Mail />
+                </Butt>
+                <Butt variant="ghost" mode="icon">
+                    <Settings />
+                </Butt>
+                <Butt variant="dim" mode="icon">
+                    <X />
+                </Butt>
+            </div>
+            <div className="flex flex-col items-center justify-center gap-6">
+                <div className="flex items-center justify-center gap-4">
+                    <Butt variant="outline" size="sm">
+                    <UserPen />
+                    Small
+                    </Butt>
+                    <Butt variant="outline">
+                    <UserPen />
+                    Medium
+                    </Butt>
+                    <Butt variant="outline" size="lg">
+                    <UserPen />
+                    Xsmall
+                    </Butt>
+                </div>
+                <div className="flex items-center gap-4">
+                    <Butt variant="outline" size="sm" mode="icon">
+                    <UserPen />
+                    </Butt>
+                    <Butt variant="outline" mode="icon">
+                    <UserPen />
+                    </Butt>
+                    <Butt variant="outline" size="lg" mode="icon">
+                    <UserPen />
+                    </Butt>
+                </div>
+            </div>
+            <div className="flex items-center justify-center gap-4">
+                <Butt variant="outline" shape="circle">
+                    Circle button
+                </Butt>
+                <Butt variant="outline" shape="circle" mode="icon">
+                    <CalendarCheck />
+                </Butt>
+            </div>
+            <div className="flex flex-col items-center gap-6 text-white">
+                <Butt mode="link" underline="solid" asChild>
+                    <Link href="#" className='text-white'>Link Solid</Link>
+                </Butt>
+                <Butt mode="link" underline="dashed">
+                    <Link href="#" className='text-white'>Link Dashed</Link>
+                </Butt>
+                <Butt mode="link" underlined="solid">
+                    <Link href="#" className='text-white'>Link Underlined - Solid</Link>
+                </Butt>
+                <Butt mode="link" underlined="dashed">
+                    <Link href="#" className='text-white'>Link Underlined - Dashed</Link>
+                </Butt>
+            </div>
+            <Butt variant="primary" className="mx-auto w-full max-w-96">
+                Primary Button - Full Width
+            </Butt>
+            <div className="flex items-center gap-4 text-white">
+                <Butt disabled>Primary Disabled</Butt>
+                <Butt variant="outline" disabled>
+                    Outline Disabled
+                </Butt>
+                <Butt mode="link" disabled className="text-white">
+                    Link Disabled
+                </Butt>
+            </div>
+            <h3 className="text-lg font-semibold">Buttons With Icon</h3>
+            <div className="flex items-center justify-center gap-4">
+                <Button className="w-30 flex bg-green-600" variant="primary">
+                    <Check />{" "}
+                    <span className='font-bold pt-0.5'>Primary</span>
+                </Button>
+                <Button className="w-30 flex" variant="outline">
+                    <Bell />{" "}
+                    <span className='font-bold pt-0.5'>Outline</span>
+                </Button>
+                <Button className="w-30 flex" variant="ghost">
+                    <CalendarCheck />{" "}
+                    <span className='font-bold pt-0.5'>Ghost</span>
+                </Button>
+            </div>
+        </div>
+    </div>
+</Preview>
+
+## Installation
+
+<Tabs items={['pnpm', 'npm', 'yarn', 'bun']} defaultIndex="1">
+  <Tabs.Tab>
+    <CodeBlock language="bash" showLineNumbers={false}>
+      {`pnpm dlx pumki add btn-standard`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash" showLineNumbers={false}>
+      {`npx pumki add btn-standard`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash" showLineNumbers={false}>
+      {`yarn dlx pumki add btn-standard`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash" showLineNumbers={false}>
+      {`bun x pumki add btn-standard`}
+    </CodeBlock>
+  </Tabs.Tab>
+</Tabs>
+
+## Usage
+
+<br/>
+
+<CodeBlock language="typescript" showLineNumbers={false}>
+    {`import { Button } from '@/components/pumki-ui/buttons/btn-standard.tsx';`}
+</CodeBlock>
+
+<br/>
+
+<CodeBlock language="typescript" showLineNumbers={false}>
+    {`<Button />`}
+</CodeBlock>
+
+## Example
+
+<Preview
+  title="As Input" 
+  code={`"use client";
+
+    import { Button } from '@/components/pumki-ui/buttons/btn-standard.tsx'
+    import * as React from 'react';
+    import { Calendar } from '@/components/ui/calendar';
+    import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
+    import { format } from 'date-fns';
+    import { Calendar as CalendarIcon, X } from 'lucide-react';
+
+export const InputButtonDemo = () => {
+
+    const [date, setDate] = React.useState<Date>();
+    const handleReset = (e: React.MouseEvent<HTMLElement>) => {
+        setDate(undefined);
+        e.preventDefault();
+    };
+
+    return (
+        <Popover>
+            <PopoverTrigger asChild>
+                <div className="relative w-[250px]">
+                <Button type="button" variant="outline" mode="input" placeholder={!date} className="w-full">
+                    <CalendarIcon />
+                    {date ? format(date, 'PPP') : <span>Pick a date</span>}
+                </Button>
+                {date && (
+                    <Button
+                    type="button"
+                    variant="dim"
+                    size="sm"
+                    className="absolute top-1/2 -end-0 -translate-y-1/2"
+                    onClick={handleReset}
+                    >
+                    <X />
+                    </Button>
+                )}
+                </div>
+            </PopoverTrigger>
+            <PopoverContent className="w-auto p-0" align="start">
+                <Calendar mode="single" selected={date} onSelect={setDate} autoFocus />
+            </PopoverContent>
+        </Popover>
+    );
+};`}
+>
+    <DatePickerDemo />
+    
+</Preview>
+
+
+## Props
+
+import { PumkiTable, PumkiTableStyles } from '@/components/docs/PumkiTable'
+
+<PumkiTableStyles />
+<PumkiTable>
+<table className="pumki-table">
+  <thead>
+    <tr>
+      <th>Prop</th>
+      <th>Type</th>
+      <th>Default</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td><code>className</code></td><td><code>string</code></td><td>-</td><td>Custom CSS classes for the button.</td></tr>
+    <tr><td><code>selected</code></td><td><code>boolean</code></td><td>-</td><td>Marks the button as selected (sets <code>data-state="open"</code>).</td></tr>
+    <tr><td><code>variant</code></td><td><code>'primary' | 'mono' | 'destructive' | 'secondary' | 'outline' | 'dashed' | 'ghost' | 'dim' | 'foreground' | 'inverse'</code></td><td>'primary'</td><td>Visual style of the button.</td></tr>
+    <tr><td><code>shape</code></td><td><code>'default' | 'circle'</code></td><td>'default'</td><td>Shape of the button (default or circle).</td></tr>
+    <tr><td><code>appearance</code></td><td><code>'default' | 'ghost'</code></td><td>'default'</td><td>Appearance style of the button.</td></tr>
+    <tr><td><code>mode</code></td><td><code>'default' | 'icon' | 'link' | 'input'</code></td><td>'default'</td><td>Button mode (standard, icon, link, input).</td></tr>
+    <tr><td><code>size</code></td><td><code>'lg' | 'md' | 'sm' | 'icon'</code></td><td>'md'</td><td>Size of the button.</td></tr>
+    <tr><td><code>autoHeight</code></td><td><code>boolean</code></td><td>false</td><td>If true, button height is set to auto.</td></tr>
+    <tr><td><code>underlined</code></td><td><code>'solid' | 'dashed'</code></td><td>-</td><td>Underline style for link mode.</td></tr>
+    <tr><td><code>underline</code></td><td><code>'solid' | 'dashed'</code></td><td>-</td><td>Underline style for link mode (hover).</td></tr>
+    <tr><td><code>asChild</code></td><td><code>boolean</code></td><td>false</td><td>Renders as a child component (Radix Slot).</td></tr>
+    <tr><td><code>placeholder</code></td><td><code>boolean</code></td><td>false</td><td>Applies muted foreground color for input mode.</td></tr>
+    <tr><td><code>icon</code></td><td><code>LucideIcon</code></td><td>-</td><td>Lucide icon to display in the button (for ButtonArrow).</td></tr>
+    <tr><td><code>...props</code></td><td>All native button props</td><td>-</td><td>Any other props for the HTML <code>&lt;button&gt;</code> element.</td></tr>
+  </tbody>
+</table>
+</PumkiTable>

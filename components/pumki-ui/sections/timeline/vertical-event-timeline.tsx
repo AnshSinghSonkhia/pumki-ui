@@ -6,7 +6,7 @@ import { ChevronDown, Briefcase, Calendar, CheckCircle } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Events } from "@/types/events";
-import { events } from "@/data/events";
+import { events } from "@/lib/data/events";
 
 export default function VerticalEventTimeline() {
   const [expandedIndex, setExpandedIndex] = useState<number | null>(0);

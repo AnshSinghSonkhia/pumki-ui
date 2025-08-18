@@ -157,7 +157,7 @@ export default function DynamicNavbar({
             <NavigationMenu className="h-full *:h-full max-md:hidden">
               <NavigationMenuList className="h-full gap-2">
                 {navigationLinks.map((link, index) => (
-                  <NavigationMenuItem key={index} className="h-full">
+                  <NavigationMenuItem key={index} className="h-full mx-1.5">
                     <NavigationMenuLink
                       asChild
                       className={`text-muted-foreground hover:text-primary border-b-primary hover:border-b-primary h-full justify-center rounded-none border-y-2 border-transparent py-1.5 font-medium hover:bg-transparent transition-colors ${

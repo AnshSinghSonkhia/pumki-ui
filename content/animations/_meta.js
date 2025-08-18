@@ -6,4 +6,5 @@ export default {
     'galaxy': 'Galaxy Background',
     'noise': 'Noise',
     'space-particles': 'Space Particles',
+    'sparkles': 'Sparkles',
 }

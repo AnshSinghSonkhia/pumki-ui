@@ -86,6 +86,184 @@ export function TestimonialCard({
     </div>
   );
 }
+// const testimonials = [
+//     {
+//         name: 'Jordan Bayes',
+//         role: 'CTO at Quantum Innovations',
+//         img: 'https://randomuser.me/api/portraits/men/23.jpg',
+//         description: (
+//             <p>
+//                 Pumki UI has completely transformed our development workflow.
+//                 <Highlight>
+//                     The component system saved us weeks of custom coding and design work.
+//                 </Highlight>{' '}
+//                 Our team can now focus on business logic instead of UI details.
+//             </p>
+//         ),
+//     },
+//     {
+//         name: 'Chaya Rodriguez',
+//         role: 'Lead Developer at Skyline Digital',
+//         img: 'https://randomuser.me/api/portraits/women/34.jpg',
+//         description: (
+//             <p>
+//                 I was skeptical at first, but Pumki UI proved me wrong.
+//                 <Highlight>
+//                     The accessibility features and responsive design are top-notch.
+//                 </Highlight>{' '}
+//                 It&apos;s rare to find a framework that prioritizes both aesthetics and
+//                 functionality.
+//             </p>
+//         ),
+//     },
+//     {
+//         name: 'Ethan Parker',
+//         role: 'Startup Founder at Elevate Labs',
+//         img: 'https://randomuser.me/api/portraits/men/33.jpg',
+//         description: (
+//             <p>
+//                 As a non-technical founder, Pumki UI has been a game-changer for our MVP.
+//                 <Highlight>We launched three months ahead of schedule.</Highlight> The
+//                 modular components allowed us to iterate quickly based on user feedback.
+//             </p>
+//         ),
+//     },
+//     {
+//         name: 'Lui Bennett',
+//         role: 'UX Architect at Fusion Systems',
+//         img: 'https://randomuser.me/api/portraits/women/45.jpg',
+//         description: (
+//             <p>
+//                 Pumki UI&apos;s attention to detail is impressive.
+//                 <Highlight>
+//                     The micro-interactions and animations create a polished experience.
+//                 </Highlight>{' '}
+//                 It&apos;s become our go-to solution for client projects with tight
+//                 deadlines.
+//             </p>
+//         ),
+//     },
+//     {
+//         name: 'Vikram Saxena',
+//         role: 'Product Lead at FinEdge',
+//         img: 'https://randomuser.me/api/portraits/men/56.jpg',
+//         description: (
+//             <p>
+//                 Our financial dashboard needed a complete overhaul, and Pumki UI
+//                 delivered.
+//                 <Highlight>
+//                     The data visualization components are both beautiful and functional.
+//                 </Highlight>{' '}
+//                 User engagement has increased by 47% since the redesign.
+//             </p>
+//         ),
+//     },
+//     {
+//         name: 'Maria A. Johnson',
+//         role: 'Frontend Specialist at Nimbus Tech',
+//         img: 'https://randomuser.me/api/portraits/women/68.jpg',
+//         description: (
+//             <p>
+//                 The documentation for Pumki UI is exceptional.
+//                 <Highlight>
+//                     I was able to implement complex UI patterns in just a few hours.
+//                 </Highlight>{' '}
+//                 The TypeScript support is also a major productivity booster.
+//             </p>
+//         ),
+//     },
+//     {
+//         name: 'Teo Tanaka',
+//         role: 'Creative Technologist at Prism Agency',
+//         img: 'https://randomuser.me/api/portraits/men/79.jpg',
+//         description: (
+//             <p>
+//                 Pumki UI has the perfect balance of flexibility and structure.
+//                 <Highlight>
+//                     We can maintain brand consistency while still creating unique
+//                     experiences.
+//                 </Highlight>{' '}
+//                 Our clients are consistently impressed with the results.
+//             </p>
+//         ),
+//     },
+//     {
+//         name: 'Sogia Markinez',
+//         role: 'E-commerce Director at StyleHub',
+//         img: 'https://randomuser.me/api/portraits/women/90.jpg',
+//         description: (
+//             <p>
+//                 Our conversion rates have increased by 28% since implementing Pumki UI.
+//                 <Highlight>
+//                     The checkout flow components are optimized for both desktop and
+//                     mobile.
+//                 </Highlight>{' '}
+//                 The dark mode support was also a huge hit with our customers.
+//             </p>
+//         ),
+//     },
+//     {
+//         name: 'Airen Carse',
+//         role: 'Healthcare Solutions Architect',
+//         img: 'https://randomuser.me/api/portraits/men/93.jpg',
+//         description: (
+//             <p>
+//                 Pumki UI&apos;s accessibility features were crucial for our healthcare
+//                 platform.
+//                 <Highlight>
+//                     We passed compliance requirements with minimal additional work.
+//                 </Highlight>{' '}
+//                 The form components are especially well-designed for complex data entry.
+//             </p>
+//         ),
+//     },
+//     {
+//         name: 'Berny Angelo',
+//         role: 'EdTech Product Manager at LearnSphere',
+//         img: 'https://randomuser.me/api/portraits/women/31.jpg',
+//         description: (
+//             <p>
+//                 Our educational platform needed to work for students of all ages and
+//                 abilities.
+//                 <Highlight>
+//                     Pumki UI&apos;s inclusive design principles made this possible without
+//                     compromise.
+//                 </Highlight>{' '}
+//                 The interactive components have significantly improved student
+//                 engagement.
+//             </p>
+//         ),
+//     },
+//     {
+//         name: 'Mohit Chawla',
+//         role: 'Mobile App Developer at AppVantage',
+//         img: 'https://randomuser.me/api/portraits/men/46.jpg',
+//         description: (
+//             <p>
+//                 Integrating Pumki UI into our mobile projects was seamless.
+//                 <Highlight>
+//                     The cross-platform consistency is unmatched.
+//                 </Highlight>{' '}
+//                 Our apps look and feel professional with minimal effort.
+//             </p>
+//         ),
+//     },
+//     {
+//         name: 'Emily Fischer',
+//         role: 'Design Lead at PixelForge',
+//         img: 'https://randomuser.me/api/portraits/women/60.jpg',
+//         description: (
+//             <p>
+//                 Pumki UI empowers our designers and developers to collaborate efficiently.
+//                 <Highlight>
+//                     The design tokens and theming options are incredibly flexible.
+//                 </Highlight>{' '}
+//                 We can quickly prototype and deliver polished interfaces every time.
+//             </p>
+//         ),
+//     },
+// ];
+
 const testimonials = [
     {
         name: 'Jordan Bayes',
@@ -93,11 +271,11 @@ const testimonials = [
         img: 'https://randomuser.me/api/portraits/men/23.jpg',
         description: (
             <p>
-                PumkiUI has completely transformed our development workflow.
+                Pumki UI streamlines complex UI development, its robust suite of components and clean API let us ship features rapidly.
                 <Highlight>
-                    The component system saved us weeks of custom coding and design work.
-                </Highlight>{' '}
-                Our team can now focus on business logic instead of UI details.
+                    The flexibility to customize every detail saved our engineers countless hours.
+                </Highlight>
+                It’s the heartbeat of our modern web stack. The documentation is clear, and the design system feels thoughtfully crafted for real-world needs.
             </p>
         ),
     },
@@ -107,12 +285,11 @@ const testimonials = [
         img: 'https://randomuser.me/api/portraits/women/34.jpg',
         description: (
             <p>
-                I was skeptical at first, but PumkiUI proved me wrong.
+                Switching to Pumki UI was a revelation. 
                 <Highlight>
-                    The accessibility features and responsive design are top-notch.
-                </Highlight>{' '}
-                It&apos;s rare to find a framework that prioritizes both aesthetics and
-                functionality.
+                    Built-in accessibility and responsive layouts work out-of-the-box.
+                </Highlight>
+                We finally deliver elegant, inclusive user experiences for every device.
             </p>
         ),
     },
@@ -122,9 +299,11 @@ const testimonials = [
         img: 'https://randomuser.me/api/portraits/men/33.jpg',
         description: (
             <p>
-                As a non-technical founder, PumkiUI has been a game-changer for our MVP.
-                <Highlight>We launched three months ahead of schedule.</Highlight> The
-                modular components allowed us to iterate quickly based on user feedback.
+                Pumki UI empowered us to launch and iterate like true Silicon Valley insiders.
+                <Highlight>
+                    Rapid prototyping with reusable components means we spend our time building what matters.
+                </Highlight>
+                Users noticed the polish right away.
             </p>
         ),
     },
@@ -134,12 +313,11 @@ const testimonials = [
         img: 'https://randomuser.me/api/portraits/women/45.jpg',
         description: (
             <p>
-                PumkiUI&apos;s attention to detail is impressive.
+                Every detail in Pumki UI, from micro animations to thoughtful theming, delivers a refined user experience.
                 <Highlight>
-                    The micro-interactions and animations create a polished experience.
-                </Highlight>{' '}
-                It&apos;s become our go-to solution for client projects with tight
-                deadlines.
+                    Our clients consistently rate our interfaces as more engaging.
+                </Highlight>
+                Hitting tight deadlines has never been easier.
             </p>
         ),
     },
@@ -149,12 +327,11 @@ const testimonials = [
         img: 'https://randomuser.me/api/portraits/men/56.jpg',
         description: (
             <p>
-                Our financial dashboard needed a complete overhaul, and PumkiUI
-                delivered.
+                Pumki UI’s animations and backgrounds set our product apart visually.
                 <Highlight>
-                    The data visualization components are both beautiful and functional.
-                </Highlight>{' '}
-                User engagement has increased by 47% since the redesign.
+                    The dynamic effects and subtle transitions create an immersive, modern feel.
+                </Highlight>
+                Users consistently praise the lively interface and engaging atmosphere.
             </p>
         ),
     },
@@ -164,11 +341,11 @@ const testimonials = [
         img: 'https://randomuser.me/api/portraits/women/68.jpg',
         description: (
             <p>
-                The documentation for PumkiUI is exceptional.
+                Pumki UI’s documentation is as good as it gets.
                 <Highlight>
-                    I was able to implement complex UI patterns in just a few hours.
-                </Highlight>{' '}
-                The TypeScript support is also a major productivity booster.
+                    I implemented advanced patterns with TypeScript in mere hours.
+                </Highlight>
+                Productivity and code quality saw a measurable boost for our team.
             </p>
         ),
     },
@@ -178,12 +355,11 @@ const testimonials = [
         img: 'https://randomuser.me/api/portraits/men/79.jpg',
         description: (
             <p>
-                PumkiUI has the perfect balance of flexibility and structure.
+                Pumki UI gives us freedom to iterate creatively while maintaining visual consistency.
                 <Highlight>
-                    We can maintain brand consistency while still creating unique
-                    experiences.
-                </Highlight>{' '}
-                Our clients are consistently impressed with the results.
+                    Our brand identity shines through adaptations, nothing feels generic.
+                </Highlight>
+                Our clients love the premium feel.
             </p>
         ),
     },
@@ -193,12 +369,11 @@ const testimonials = [
         img: 'https://randomuser.me/api/portraits/women/90.jpg',
         description: (
             <p>
-                Our conversion rates have increased by 28% since implementing PumkiUI.
+                Integrating our logo-cloud with Pumki UI was seamless.
                 <Highlight>
-                    The checkout flow components are optimized for both desktop and
-                    mobile.
-                </Highlight>{' '}
-                The dark mode support was also a huge hit with our customers.
+                    The logo-cloud and features section highlighted our partners and product strengths beautifully.
+                </Highlight>
+                It quickly boosted trust and conversions.
             </p>
         ),
     },
@@ -208,12 +383,11 @@ const testimonials = [
         img: 'https://randomuser.me/api/portraits/men/93.jpg',
         description: (
             <p>
-                PumkiUI&apos;s accessibility features were crucial for our healthcare
-                platform.
+                Accessibility is baked into every Pumki UI component, making our healthcare workflow fully compliant.
                 <Highlight>
-                    We passed compliance requirements with minimal additional work.
-                </Highlight>{' '}
-                The form components are especially well-designed for complex data entry.
+                    Forms and data entry are far easier for all users.
+                </Highlight>
+                Compliance checks became a breeze.
             </p>
         ),
     },
@@ -223,14 +397,11 @@ const testimonials = [
         img: 'https://randomuser.me/api/portraits/women/31.jpg',
         description: (
             <p>
-                Our educational platform needed to work for students of all ages and
-                abilities.
+                Our student engagement soared with Pumki UI’s interactive components.
                 <Highlight>
-                    PumkiUI&apos;s inclusive design principles made this possible without
-                    compromise.
-                </Highlight>{' '}
-                The interactive components have significantly improved student
-                engagement.
+                    Inclusive design principles let us reach every learner without barriers.
+                </Highlight>
+                Implementation was straightforward for our team.
             </p>
         ),
     },
@@ -240,11 +411,11 @@ const testimonials = [
         img: 'https://randomuser.me/api/portraits/men/46.jpg',
         description: (
             <p>
-                Integrating PumkiUI into our mobile projects was seamless.
+                Pumki UI brought pixel-perfect consistency to all our mobile apps.
                 <Highlight>
-                    The cross-platform consistency is unmatched.
-                </Highlight>{' '}
-                Our apps look and feel professional with minimal effort.
+                    Cross-platform support reduced bugs and testing overhead.
+                </Highlight>
+                Our team delivers polished experiences in record time.
             </p>
         ),
     },
@@ -254,11 +425,11 @@ const testimonials = [
         img: 'https://randomuser.me/api/portraits/women/60.jpg',
         description: (
             <p>
-                PumkiUI empowers our designers and developers to collaborate efficiently.
+                Pumki UI’s animated backgrounds and gradients library unlocks stunning visual effects with zero effort.
                 <Highlight>
-                    The design tokens and theming options are incredibly flexible.
-                </Highlight>{' '}
-                We can quickly prototype and deliver polished interfaces every time.
+                    Our team quickly creates immersive, modern interfaces that wow clients.
+                </Highlight>
+                The built-in customization options make every project feel unique.
             </p>
         ),
     },

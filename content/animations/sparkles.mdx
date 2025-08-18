@@ -1,0 +1,151 @@
+---
+title: "Sparkles - Pumki UI"
+---
+
+import { Tabs } from 'nextra/components'
+import { Callout } from 'nextra/components'
+import { CodeBlock } from '@/components/docs/code-block'
+import { Preview, ResponsivePreview } from '@/components/docs/preview'
+import { Button } from '@/components/ui/button'
+import { SparklesCore } from '@/components/pumki-ui/ui/sparkles.tsx'
+
+# Sparkles
+
+<Preview 
+  code={`'use client';
+
+import { SparklesCore } from '@/components/pumki-ui/animations/sparkles.tsx'
+
+export const SparklesDemo = () => {
+    return (
+        <div style={{ width: '100%', height: '600px', position: 'relative' }}>
+            <SparklesCore
+                id="tsparticles"
+                background="transparent"
+                particleDensity={500}
+                className="absolute inset-x-0 bottom-0 h-full w-full [mask-image:radial-gradient(50%_50%,white,transparent_85%)]"
+            />
+        </div>
+    );
+};`}
+>
+    <SparklesCore
+        id="tsparticles"
+        background="transparent"
+        particleDensity={500}
+        className="absolute inset-x-0 bottom-0 h-full w-full [mask-image:radial-gradient(50%_50%,white,transparent_85%)]"
+    />
+</Preview>
+
+## Installation
+
+<Tabs items={['pnpm', 'npm', 'yarn', 'bun']} defaultIndex="1">
+  <Tabs.Tab>
+    <CodeBlock language="bash" showLineNumbers={false}>
+      {`pnpm dlx pumki add sparkles`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash" showLineNumbers={false}>
+      {`npx pumki add sparkles`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash" showLineNumbers={false}>
+      {`yarn dlx pumki add sparkles`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash" showLineNumbers={false}>
+      {`bun x pumki add sparkles`}
+    </CodeBlock>
+  </Tabs.Tab>
+</Tabs>
+
+## Usage
+
+<br/>
+
+<CodeBlock language="typescript" showLineNumbers={false}>
+    {`import { SparklesCore } from '@/components/pumki-ui/animations/sparkles.tsx';`}
+</CodeBlock>
+
+<br/>
+
+<CodeBlock language="typescript" showLineNumbers={false}>
+    {`<SparklesCore />`}
+</CodeBlock>
+
+## Props
+
+import { PumkiTable, PumkiTableStyles } from '@/components/docs/PumkiTable'
+
+<PumkiTableStyles />
+<PumkiTable>
+<table className="pumki-table">
+  <thead>
+    <tr>
+      <th>Prop</th>
+      <th>Type</th>
+      <th>Default</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>id</td>
+      <td>string</td>
+      <td>auto-generated</td>
+      <td>Unique ID for the particles container.</td>
+    </tr>
+    <tr>
+      <td>className</td>
+      <td>string</td>
+      <td>-</td>
+      <td>Custom CSS classes for the wrapper div.</td>
+    </tr>
+    <tr>
+      <td>background</td>
+      <td>string</td>
+      <td>#0d47a1</td>
+      <td>Background color of the animation.</td>
+    </tr>
+    <tr>
+      <td>particleSize</td>
+      <td>number</td>
+      <td>-</td>
+      <td>Size of the particles (overrides min/max).</td>
+    </tr>
+    <tr>
+      <td>minSize</td>
+      <td>number</td>
+      <td>1</td>
+      <td>Minimum particle size.</td>
+    </tr>
+    <tr>
+      <td>maxSize</td>
+      <td>number</td>
+      <td>3</td>
+      <td>Maximum particle size.</td>
+    </tr>
+    <tr>
+      <td>speed</td>
+      <td>number</td>
+      <td>4</td>
+      <td>Speed of the opacity animation.</td>
+    </tr>
+    <tr>
+      <td>particleColor</td>
+      <td>string</td>
+      <td>#ffffff</td>
+      <td>Color of the particles.</td>
+    </tr>
+    <tr>
+      <td>particleDensity</td>
+      <td>number</td>
+      <td>120</td>
+      <td>Number of particles rendered.</td>
+    </tr>
+  </tbody>
+</table>
+</PumkiTable>

@@ -6,6 +6,8 @@ export const navigationConfigs = {
   home: [
     { href: "/docs", label: "Docs" },
     { href: "/docs/components", label: "Components" },
+    { href: "/docs/animations", label: "Animations" },
+    { href: "/docs/gradients", label: "Gradients" },
     { href: "/about", label: "About" },
     { href: "/careers", label: "Careers" },
   ] as NavLink[],
@@ -14,6 +16,8 @@ export const navigationConfigs = {
   about: [
     { href: "/docs", label: "Docs" },
     { href: "/docs/components", label: "Components" },
+    { href: "/docs/animations", label: "Animations" },
+    { href: "/docs/gradients", label: "Gradients" },
     { href: "/careers", label: "Careers" },
   ] as NavLink[],
 
@@ -21,6 +25,8 @@ export const navigationConfigs = {
   careers: [
     { href: "/docs", label: "Docs" },
     { href: "/docs/components", label: "Components" },
+    { href: "/docs/animations", label: "Animations" },
+    { href: "/docs/gradients", label: "Gradients" },
     { href: "/about", label: "About" },
   ] as NavLink[],
 

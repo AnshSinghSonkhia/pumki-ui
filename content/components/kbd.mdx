@@ -1,0 +1,180 @@
+---
+title: "Kbd - Pumki UI"
+---
+
+import { Tabs } from 'nextra/components'
+import { Callout } from 'nextra/components'
+import { CodeBlock } from '@/components/docs/code-block'
+import { Preview, ResponsivePreview } from '@/components/docs/preview'
+import { Button } from '@/components/ui/button'
+import { Kbd, kbdVariants } from '@/components/pumki-ui/kbd.tsx'
+import { ArrowDown, ArrowUp, Command } from 'lucide-react';
+
+# Kbd
+
+<Preview 
+  code={`'use client';
+
+import { Kbd } from '@/components/pumki-ui/kbd.tsx'
+import { ArrowDown, ArrowUp, Command } from 'lucide-react';
+
+export const KbdDemo = () => {
+    return (
+        <div style={{ width: '100%', height: '600px', position: 'relative' }}>
+            <div className="flex flex-col items-center gap-4">
+                <h3 className="text-lg font-semibold">Default</h3>
+                <div className="flex items-center gap-4">
+                    <Kbd>
+                        <ArrowUp />
+                    </Kbd>
+                    <Kbd>
+                        <ArrowDown />
+                    </Kbd>
+                    <Kbd className="w-35">space</Kbd>
+                    <Kbd className="w-20 flex">
+                        <Command /> <span className='font-bold pt-0.5'> + K</span>
+                    </Kbd>
+                </div>
+                <h3 className="text-lg font-semibold">Outline</h3>
+                <div className="flex items-center gap-4">
+                    <Kbd variant="outline">
+                        <ArrowUp />
+                    </Kbd>
+                    <Kbd variant="outline">
+                        <ArrowDown />
+                    </Kbd>
+                    <Kbd variant="outline" className="w-35">space</Kbd>
+                    <Kbd variant="outline" className="w-20 flex">
+                        <Command /> <span className='font-bold pt-0.5'> + K</span>
+                    </Kbd>
+                </div>
+            </div>
+        </div>
+    );
+};`}
+>
+    <div className="flex flex-col items-center gap-6">
+        <h3 className="text-lg font-semibold">Default</h3>
+        <div className="flex items-center gap-4">
+            <Kbd>
+                <ArrowUp />
+            </Kbd>
+            <Kbd>
+                <ArrowDown />
+            </Kbd>
+            <Kbd className="w-35">space</Kbd>
+            <Kbd className="w-20 flex">
+                <Command /> <span className='font-bold pt-0.5'> + K</span>
+            </Kbd>
+        </div>
+        <h3 className="text-lg font-semibold">Outline</h3>
+        <div className="flex items-center gap-4">
+            <Kbd variant="outline">
+                <ArrowUp />
+            </Kbd>
+            <Kbd variant="outline">
+                <ArrowDown />
+            </Kbd>
+            <Kbd variant="outline" className="w-35">space</Kbd>
+            <Kbd variant="outline" className="w-20 flex">
+                <Command /> <span className='font-bold pt-0.5'> + K</span>
+            </Kbd>
+        </div>
+        <h3 className="text-lg font-semibold">Custom</h3>
+        <div className="flex items-center gap-4">
+            <Kbd className="bg-white text-black">
+                <ArrowUp />
+            </Kbd>
+            <Kbd className="bg-white text-black">
+                <ArrowDown />
+            </Kbd>
+            <Kbd className="w-35 bg-white text-black">space</Kbd>
+            <Kbd className="w-20 flex bg-white text-black">
+                <Command /> <span className='font-bold pt-0.5'> + K</span>
+            </Kbd>
+        </div>
+    </div>
+</Preview>
+
+## Installation
+
+<Tabs items={['pnpm', 'npm', 'yarn', 'bun']} defaultIndex="1">
+  <Tabs.Tab>
+    <CodeBlock language="bash" showLineNumbers={false}>
+      {`pnpm dlx pumki add kbd`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash" showLineNumbers={false}>
+      {`npx pumki add kbd`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash" showLineNumbers={false}>
+      {`yarn dlx pumki add kbd`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash" showLineNumbers={false}>
+      {`bun x pumki add kbd`}
+    </CodeBlock>
+  </Tabs.Tab>
+</Tabs>
+
+## Usage
+
+<br/>
+
+<CodeBlock language="typescript" showLineNumbers={false}>
+    {`import { Kbd } from '@/components/pumki-ui/kbd.tsx';`}
+</CodeBlock>
+
+<br/>
+
+<CodeBlock language="typescript" showLineNumbers={false}>
+    {`<Kbd />`}
+</CodeBlock>
+
+## Props
+
+import { PumkiTable, PumkiTableStyles } from '@/components/docs/PumkiTable'
+
+<PumkiTableStyles />
+<PumkiTable>
+<table className="pumki-table">
+  <thead>
+    <tr>
+      <th>Prop</th>
+      <th>Type</th>
+      <th>Default</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>className</td>
+      <td>string</td>
+      <td>-</td>
+      <td>Custom CSS classes for the kbd element.</td>
+    </tr>
+    <tr>
+      <td>variant</td>
+      <td>'default' | 'outline'</td>
+      <td>'default'</td>
+      <td>Visual style of the kbd (default or outline).</td>
+    </tr>
+    <tr>
+      <td>size</td>
+      <td>'xl' | 'lg' | 'md' | 'sm' | 'xs'</td>
+      <td>'md'</td>
+      <td>Size of the kbd (medium, small, extra small).</td>
+    </tr>
+    <tr>
+      <td>...props</td>
+      <td>All native kbd props</td>
+      <td>-</td>
+      <td>Any other props for the HTML {`<kbd>`}element.</td>
+    </tr>
+  </tbody>
+</table>
+</PumkiTable>

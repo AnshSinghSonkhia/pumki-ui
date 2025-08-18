@@ -732,4 +732,38 @@ export const component: Registry = [
             },
         ],
     },
+    {
+        name: "kbd",
+        type: "registry:ui",
+        title: "Kbd",
+        description:
+            "A component for displaying keyboard shortcuts.",
+        author: "Ansh Singh Sonkhia",
+        dependencies: ["react", "class-variance-authority", "lucide-react"],
+        registryDependencies: [],
+        files: [
+            {
+                path: "components/pumki-ui/kbd.tsx",
+                type: "registry:ui",
+                target: "components/pumki-ui/kbd.tsx",
+            },
+        ],
+    },
+    {
+        name: "btn-standard",
+        type: "registry:ui",
+        title: "Button Standard",
+        description:
+            "A standard button component.",
+        author: "Ansh Singh Sonkhia",
+        dependencies: ["react", "@radix-ui/react-slot", "lucide-react", "class-variance-authority"],
+        registryDependencies: [],
+        files: [
+            {
+                path: "components/pumki-ui/buttons/btn-standard.tsx",
+                type: "registry:ui",
+                target: "components/pumki-ui/buttons/btn-standard.tsx",
+            },
+        ],
+    },
 ];
