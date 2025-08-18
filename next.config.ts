@@ -50,10 +50,16 @@ const nextConfig: NextConfig = {
     ];
   },
   images: {
-    domains: ["github.com"],
+    remotePatterns: [
+        {
+            protocol: "https",
+            hostname: "github.com",
+            pathname: "/**",
+        },
+    ],
   },
   pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
-  outputFileTracingIncludes:{"/**":["components/pumki-ui/**/*"]},
+  outputFileTracingIncludes: { "/**": ["components/pumki-ui/**/*"] },
   async headers() {
         return [
             {

@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "searchfield",
+  "type": "registry:ui",
+  "title": "Search Field",
+  "description": "A component for searching content.",
+  "author": "Ansh Singh Sonkhia",
+  "dependencies": [
+    "react",
+    "react-aria-components"
+  ],
+  "registryDependencies": [
+    "https://raw.githubusercontent.com/AnshSinghSonkhia/pumki-ui/main/public/r/textfield.json"
+  ],
+  "files": [
+    {
+      "type": "registry:ui",
+      "content": "\"use client\"\r\n\r\nimport { SearchIcon, XIcon } from \"lucide-react\"\r\nimport {\r\n  Button as AriaButton,\r\n  ButtonProps as AriaButtonProps,\r\n  Group as AriaGroup,\r\n  GroupProps as AriaGroupProps,\r\n  Input as AriaInput,\r\n  InputProps as AriaInputProps,\r\n  SearchField as AriaSearchField,\r\n  SearchFieldProps as AriaSearchFieldProps,\r\n  ValidationResult as AriaValidationResult,\r\n  composeRenderProps,\r\n  Text,\r\n} from \"react-aria-components\"\r\n\r\nimport { cn } from \"@/lib/utils\"\r\n\r\nimport { FieldError, FieldGroup, Label } from \"./textfield\"\r\n\r\nfunction SearchField({ className, ...props }: AriaSearchFieldProps) {\r\n  return (\r\n    <AriaSearchField\r\n      className={composeRenderProps(className, (className) =>\r\n        cn(\"group\", className)\r\n      )}\r\n      {...props}\r\n    />\r\n  )\r\n}\r\n\r\nfunction SearchFieldInput({ className, ...props }: AriaInputProps) {\r\n  return (\r\n    <AriaInput\r\n      className={composeRenderProps(className, (className) =>\r\n        cn(\r\n          \"min-w-0 flex-1 bg-background px-2 py-1.5 outline-0 placeholder:text-muted-foreground [&::-webkit-search-cancel-button]:hidden\",\r\n          className\r\n        )\r\n      )}\r\n      {...props}\r\n    />\r\n  )\r\n}\r\n\r\nfunction SearchFieldGroup({ className, ...props }: AriaGroupProps) {\r\n  return (\r\n    <AriaGroup\r\n      className={composeRenderProps(className, (className) =>\r\n        cn(\r\n          \"flex h-10 w-full items-center overflow-hidden rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background\",\r\n          /* Focus Within */\r\n          \"data-[focus-within]:outline-none data-[focus-within]:ring-2 data-[focus-within]:ring-ring data-[focus-within]:ring-offset-2\",\r\n          /* Disabled */\r\n          \"data-[disabled]:opacity-50\",\r\n          className\r\n        )\r\n      )}\r\n      {...props}\r\n    />\r\n  )\r\n}\r\n\r\nfunction SearchFieldClear({ className, ...props }: AriaButtonProps) {\r\n  return (\r\n    <AriaButton\r\n      className={composeRenderProps(className, (className) =>\r\n        cn(\r\n          \"mr-1 rounded-sm opacity-70 ring-offset-background transition-opacity\",\r\n          /* Hover */\r\n          \"data-[hovered]:opacity-100\",\r\n          /* Disabled */\r\n          \"data-[disabled]:pointer-events-none\",\r\n          /* Empty */\r\n          \"group-data-[empty]:invisible\",\r\n          className\r\n        )\r\n      )}\r\n      {...props}\r\n    />\r\n  )\r\n}\r\n\r\ninterface JollySearchFieldProps extends AriaSearchFieldProps {\r\n  label?: string\r\n  description?: string\r\n  errorMessage?: string | ((validation: AriaValidationResult) => string)\r\n}\r\n\r\nfunction JollySearchField({\r\n  label,\r\n  description,\r\n  className,\r\n  errorMessage,\r\n  ...props\r\n}: JollySearchFieldProps) {\r\n  return (\r\n    <SearchField\r\n      className={composeRenderProps(className, (className) =>\r\n        cn(\"group flex flex-col gap-2\", className)\r\n      )}\r\n      {...props}\r\n    >\r\n      <Label>{label}</Label>\r\n      <FieldGroup>\r\n        <SearchIcon aria-hidden className=\"size-4 text-muted-foreground\" />\r\n        <SearchFieldInput placeholder=\"Search...\" />\r\n        <SearchFieldClear>\r\n          <XIcon aria-hidden className=\"size-4\" />\r\n        </SearchFieldClear>\r\n      </FieldGroup>\r\n      {description && (\r\n        <Text className=\"text-sm text-muted-foreground\" slot=\"description\">\r\n          {description}\r\n        </Text>\r\n      )}\r\n      <FieldError>{errorMessage}</FieldError>\r\n    </SearchField>\r\n  )\r\n}\r\n\r\nexport {\r\n  SearchField,\r\n  SearchFieldGroup,\r\n  SearchFieldInput,\r\n  SearchFieldClear,\r\n  JollySearchField,\r\n}\r\nexport type { JollySearchFieldProps }\r\n",
+      "path": "components/pumki-ui/form/searchfield.tsx",
+      "target": "components/pumki-ui/form/searchfield.tsx"
+    }
+  ]
+}

@@ -1,14 +1,15 @@
 export default {
     CardSwap: 'Card Swap',
-    codeblock: 'CodeBlock',
-    preview: 'Preview Block',
     badges: 'Badges',
     buttons: 'Buttons',
     carousels: 'Carousels',
+    codeblock: 'CodeBlock',
     disclosure: 'Disclosures',
     dropdown: 'Dropdowns',
     glassicons: 'Glass Icons',
+    preview: 'Preview Block',
     stepper: 'Stepper',
+    switch: 'Switch',
     text: 'Text',
     tooltips: 'Tooltips',
 }

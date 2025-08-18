@@ -1,0 +1,127 @@
+---
+title: "Searchfield - Pumki UI"
+---
+
+import { Tabs } from 'nextra/components'
+import { Callout } from 'nextra/components'
+import { CodeBlock } from '@/components/docs/code-block'
+import { Preview, ResponsivePreview } from '@/components/docs/preview'
+import { Button } from '@/components/ui/button'
+import { SearchField, SearchFieldClear, SearchFieldInput } from '@/components/pumki-ui/form/searchfield.tsx'
+
+import { FieldGroup, Label } from '@/components/pumki-ui/form/textfield.tsx'
+import { SearchIcon, XIcon } from "lucide-react"
+
+# Searchfield
+
+<Preview 
+  code={`'use client';
+
+import { SearchField, SearchFieldClear, SearchFieldInput } from '@/components/pumki-ui/form/searchfield.tsx'
+import { FieldGroup, Label } from '@/components/pumki-ui/form/textfield.tsx'
+
+export const SearchfieldDemo = () => {
+    return (
+        <div style={{ width: '100%', height: '600px', position: 'relative' }}>
+            <SearchField className="max-w-[200px]">
+                <Label>Search</Label>
+                <FieldGroup>
+                    <SearchIcon aria-hidden className="size-4 text-muted-foreground" />
+                    <SearchFieldInput placeholder="Search..." />
+                    <SearchFieldClear>
+                    <XIcon aria-hidden className="size-4" />
+                    </SearchFieldClear>
+                </FieldGroup>
+            </SearchField>
+        </div>
+    );
+};`}
+>
+    <SearchField className="max-w-[200px]">
+      <Label>Search</Label>
+      <FieldGroup>
+        <SearchIcon aria-hidden className="size-4 text-muted-foreground" />
+        <SearchFieldInput placeholder="Search..." />
+        <SearchFieldClear>
+          <XIcon aria-hidden className="size-4" />
+        </SearchFieldClear>
+      </FieldGroup>
+    </SearchField>
+</Preview>
+
+## Installation
+
+<Tabs items={['pnpm', 'npm', 'yarn', 'bun']} defaultIndex="1">
+  <Tabs.Tab>
+    <CodeBlock language="bash" showLineNumbers={false}>
+      {`pnpm dlx pumki add searchfield`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash" showLineNumbers={false}>
+      {`npx pumki add searchfield`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash" showLineNumbers={false}>
+      {`yarn dlx pumki add searchfield`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash" showLineNumbers={false}>
+      {`bun x pumki add searchfield`}
+    </CodeBlock>
+  </Tabs.Tab>
+</Tabs>
+
+## Usage
+
+<br/>
+
+<CodeBlock language="typescript" showLineNumbers={false}>
+    {`import { SearchField, SearchFieldClear, SearchFieldInput } from '@/components/pumki-ui/form/searchfield.tsx';`}
+</CodeBlock>
+
+<br/>
+
+<CodeBlock language="typescript" showLineNumbers={false}>
+    {`<Searchfield />`}
+</CodeBlock>
+
+## Props
+
+import { PumkiTable, PumkiTableStyles } from '@/components/docs/PumkiTable'
+
+<PumkiTableStyles />
+<PumkiTable>
+<table className="pumki-table">
+  <thead>
+    <tr>
+      <th>Prop</th>
+      <th>Type</th>
+      <th>Default</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+<tbody>
+    <tr>
+        <td><code>label</code></td>
+        <td><code>string</code></td>
+        <td><code>—</code></td>
+        <td>The text label displayed above the search field, describing its purpose.</td>
+    </tr>
+    <tr>
+        <td><code>description</code></td>
+        <td><code>string</code></td>
+        <td><code>—</code></td>
+        <td>Additional information or instructions displayed below the label to help users understand the search field.</td>
+    </tr>
+    <tr>
+        <td><code>errorMessage</code></td>
+        <td><code>string | {`((validation: ValidationResult) => string)`}</code></td>
+        <td><code>—</code></td>
+        <td>The error message shown when validation fails. Can be a static string or a function that returns a string based on the validation result.</td>
+    </tr>
+</tbody>
+</table>
+</PumkiTable>

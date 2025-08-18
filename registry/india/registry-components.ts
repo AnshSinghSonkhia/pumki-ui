@@ -698,4 +698,38 @@ export const component: Registry = [
             },
         ],
     },
+    {
+        name: "searchfield",
+        type: "registry:ui",
+        title: "Search Field",
+        description:
+            "A component for searching content.",
+        author: "Ansh Singh Sonkhia",
+        dependencies: ["react", "react-aria-components"],
+        registryDependencies: ["https://raw.githubusercontent.com/AnshSinghSonkhia/pumki-ui/main/public/r/textfield.json"],
+        files: [
+            {
+                path: "components/pumki-ui/form/searchfield.tsx",
+                type: "registry:ui",
+                target: "components/pumki-ui/form/searchfield.tsx",
+            },
+        ],
+    },
+    {
+        name: "switch",
+        type: "registry:ui",
+        title: "Switch",
+        description:
+            "A component for toggling between two states.",
+        author: "Ansh Singh Sonkhia",
+        dependencies: ["react", "react-aria-components"],
+        registryDependencies: [],
+        files: [
+            {
+                path: "components/pumki-ui/switch.tsx",
+                type: "registry:ui",
+                target: "components/pumki-ui/switch.tsx",
+            },
+        ],
+    },
 ];

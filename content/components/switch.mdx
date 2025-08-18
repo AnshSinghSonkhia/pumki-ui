@@ -1,0 +1,129 @@
+---
+title: "Switch - Pumki UI"
+---
+
+import { Tabs } from 'nextra/components'
+import { Callout } from 'nextra/components'
+import { CodeBlock } from '@/components/docs/code-block'
+import { Preview, ResponsivePreview } from '@/components/docs/preview'
+import { Button } from '@/components/ui/button'
+import { Switch } from '@/components/pumki-ui/switch.tsx'
+
+# Switch
+
+<Preview 
+  code={`'use client';
+
+import Switch from '@/components/pumki-ui/switch.tsx'
+
+export const SwitchDemo = () => {
+    return (
+        <div style={{ width: '100%', height: '600px', position: 'relative' }}>
+            <Switch>High power mode</Switch>
+        </div>
+    );
+};`}
+>
+    <Switch>High power mode</Switch>
+</Preview>
+
+## Installation
+
+<Tabs items={['pnpm', 'npm', 'yarn', 'bun']} defaultIndex="1">
+  <Tabs.Tab>
+    <CodeBlock language="bash" showLineNumbers={false}>
+      {`pnpm dlx pumki add switch`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash" showLineNumbers={false}>
+      {`npx pumki add switch`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash" showLineNumbers={false}>
+      {`yarn dlx pumki add switch`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash" showLineNumbers={false}>
+      {`bun x pumki add switch`}
+    </CodeBlock>
+  </Tabs.Tab>
+</Tabs>
+
+## Usage
+
+<br/>
+
+<CodeBlock language="typescript" showLineNumbers={false}>
+    {`import { Switch } from '@/components/pumki-ui/switch.tsx';`}
+</CodeBlock>
+
+<br/>
+
+<CodeBlock language="typescript" showLineNumbers={false}>
+    {`<Switch />`}
+</CodeBlock>
+
+## Props
+
+import { PumkiTable, PumkiTableStyles } from '@/components/docs/PumkiTable'
+
+<PumkiTableStyles />
+<PumkiTable>
+<table className="pumki-table">
+  <thead>
+    <tr>
+      <th>Prop</th>
+      <th>Type</th>
+      <th>Default</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>children</code></td>
+      <td><code>ReactNode</code></td>
+      <td><code>—</code></td>
+      <td>Label or content to display next to the switch.</td>
+    </tr>
+    <tr>
+      <td><code>className</code></td>
+      <td><code>string</code></td>
+      <td><code>—</code></td>
+      <td>Custom CSS classes for the switch container.</td>
+    </tr>
+    <tr>
+      <td><code>isSelected</code></td>
+      <td><code>boolean</code></td>
+      <td><code>false</code></td>
+      <td>Whether the switch is on (controlled).</td>
+    </tr>
+    <tr>
+      <td><code>defaultSelected</code></td>
+      <td><code>boolean</code></td>
+      <td><code>false</code></td>
+      <td>Initial selected state (uncontrolled).</td>
+    </tr>
+    <tr>
+      <td><code>isDisabled</code></td>
+      <td><code>boolean</code></td>
+      <td><code>false</code></td>
+      <td>Whether the switch is disabled.</td>
+    </tr>
+    <tr>
+      <td><code>isReadOnly</code></td>
+      <td><code>boolean</code></td>
+      <td><code>false</code></td>
+      <td>Whether the switch is read-only.</td>
+    </tr>
+    <tr>
+      <td><code>onChange</code></td>
+      <td><code>(isSelected: boolean) =&gt; void</code></td>
+      <td><code>—</code></td>
+      <td>Callback when the switch value changes.</td>
+    </tr>
+  </tbody>
+</table>
+</PumkiTable>

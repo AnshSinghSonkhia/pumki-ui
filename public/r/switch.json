@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "switch",
+  "type": "registry:ui",
+  "title": "Switch",
+  "description": "A component for toggling between two states.",
+  "author": "Ansh Singh Sonkhia",
+  "dependencies": [
+    "react",
+    "react-aria-components"
+  ],
+  "registryDependencies": [],
+  "files": [
+    {
+      "type": "registry:ui",
+      "content": "\"use client\"\r\n\r\nimport * as React from \"react\"\r\nimport {\r\n  Switch as AriaSwitch,\r\n  SwitchProps as AriaSwitchProps,\r\n  composeRenderProps,\r\n} from \"react-aria-components\"\r\n\r\nimport { cn } from \"@/lib/utils\"\r\n\r\nconst Switch = ({ children, className, ...props }: AriaSwitchProps) => (\r\n  <AriaSwitch\r\n    className={composeRenderProps(className, (className) =>\r\n      cn(\r\n        \"group inline-flex items-center gap-2 text-sm font-medium leading-none data-[disabled]:cursor-not-allowed data-[disabled]:opacity-70\",\r\n        className\r\n      )\r\n    )}\r\n    {...props}\r\n  >\r\n    {composeRenderProps(children, (children) => (\r\n      <>\r\n        <div\r\n          className={cn(\r\n            \"peer inline-flex h-6 w-11 shrink-0 cursor-pointer items-center rounded-full border-2 border-transparent transition-colors\",\r\n            /* Focus Visible */\r\n            \"group-data-[focus-visible]:outline-none group-data-[focus-visible]:ring-2 group-data-[focus-visible]:ring-ring group-data-[focus-visible]:ring-offset-2 group-data-[focus-visible]:ring-offset-background\",\r\n            /* Disabled */\r\n            \"group-data-[disabled]:cursor-not-allowed group-data-[disabled]:opacity-50\",\r\n            /* Selected */\r\n            \"bg-input group-data-[selected]:bg-primary\",\r\n            /* Readonly */\r\n            \"group-data-[readonly]:cursor-default\",\r\n            /* Resets */\r\n            \"focus-visible:outline-none\"\r\n          )}\r\n        >\r\n          <div\r\n            className={cn(\r\n              \"pointer-events-none block size-5 rounded-full bg-background shadow-lg ring-0 transition-transform\",\r\n              /* Selected */\r\n              \"translate-x-0 group-data-[selected]:translate-x-5\"\r\n            )}\r\n          />\r\n        </div>\r\n        {children}\r\n      </>\r\n    ))}\r\n  </AriaSwitch>\r\n)\r\n\r\nexport { Switch }\r\n",
+      "path": "components/pumki-ui/switch.tsx",
+      "target": "components/pumki-ui/switch.tsx"
+    }
+  ]
+}
