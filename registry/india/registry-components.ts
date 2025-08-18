@@ -613,4 +613,89 @@ export const component: Registry = [
             },
         ],
     },
+    {
+        name: "glassicons",
+        type: "registry:ui",
+        title: "Glass Icons",
+        description:
+            "A collection of glassmorphic icons with various styles and sizes.",
+        author: "Ansh Singh Sonkhia",
+        dependencies: ["react"],
+        registryDependencies: [],
+        files: [
+            {
+                path: "components/pumki-ui/GlassIcons.tsx",
+                type: "registry:ui",
+                target: "components/pumki-ui/GlassIcons.tsx",
+            },
+        ],
+    },
+    {
+        name: "stepper",
+        type: "registry:ui",
+        title: "Stepper",
+        description:
+            "A multi-step form component with a progress indicator.",
+        author: "Ansh Singh Sonkhia",
+        dependencies: ["react", "motion"],
+        registryDependencies: [],
+        files: [
+            {
+                path: "components/pumki-ui/Stepper.tsx",
+                type: "registry:ui",
+                target: "components/pumki-ui/Stepper.tsx",
+            },
+        ],
+    },
+    {
+        name: "disclosure",
+        type: "registry:ui",
+        title: "Disclosure",
+        description:
+            "A component for showing and hiding content.",
+        author: "Ansh Singh Sonkhia",
+        dependencies: ["react", "react-aria-components", "lucide-react"],
+        registryDependencies: [],
+        files: [
+            {
+                path: "components/pumki-ui/Disclosure.tsx",
+                type: "registry:ui",
+                target: "components/pumki-ui/Disclosure.tsx",
+            },
+        ],
+    },
+    {
+        name: "textfield",
+        type: "registry:ui",
+        title: "Text Field",
+        description:
+            "A component for showing and hiding content.",
+        author: "Ansh Singh Sonkhia",
+        dependencies: ["react", "react-aria-components", "class-variance-authority"],
+        registryDependencies: [],
+        files: [
+            {
+                path: "components/pumki-ui/form/textfield.tsx",
+                type: "registry:ui",
+                target: "components/pumki-ui/form/textfield.tsx",
+            },
+        ],
+    },
+    {
+        name: "datefield",
+        type: "registry:ui",
+        title: "Text Field",
+        description:
+            "A component for showing and hiding content.",
+        author: "Ansh Singh Sonkhia",
+        dependencies: ["react", "react-aria-components", "class-variance-authority"],
+        registryDependencies: ["https://raw.githubusercontent.com/AnshSinghSonkhia/pumki-ui/main/public/r/textfield.json"],
+        files: [
+            {
+                path: "components/pumki-ui/date-time/datefield.tsx",
+                type: "registry:ui",
+                target: "components/pumki-ui/date-time/datefield.tsx",
+            },
+        ],
+    },
 ];

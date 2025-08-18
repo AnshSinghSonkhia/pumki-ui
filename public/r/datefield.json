@@ -1,0 +1,24 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "datefield",
+  "type": "registry:ui",
+  "title": "Text Field",
+  "description": "A component for showing and hiding content.",
+  "author": "Ansh Singh Sonkhia",
+  "dependencies": [
+    "react",
+    "react-aria-components",
+    "class-variance-authority"
+  ],
+  "registryDependencies": [
+    "https://raw.githubusercontent.com/AnshSinghSonkhia/pumki-ui/main/public/r/textfield.json"
+  ],
+  "files": [
+    {
+      "type": "registry:ui",
+      "content": "\"use client\"\r\n\r\nimport { VariantProps } from \"class-variance-authority\"\r\nimport {\r\n  DateField as AriaDateField,\r\n  DateFieldProps as AriaDateFieldProps,\r\n  DateInput as AriaDateInput,\r\n  DateInputProps as AriaDateInputProps,\r\n  DateSegment as AriaDateSegment,\r\n  DateSegmentProps as AriaDateSegmentProps,\r\n  DateValue as AriaDateValue,\r\n  TimeField as AriaTimeField,\r\n  TimeFieldProps as AriaTimeFieldProps,\r\n  TimeValue as AriaTimeValue,\r\n  ValidationResult as AriaValidationResult,\r\n  composeRenderProps,\r\n  Text,\r\n} from \"react-aria-components\"\r\n\r\nimport { cn } from \"@/lib/utils\"\r\n\r\nimport { FieldError, fieldGroupVariants, Label } from \"../form/textfield\"\r\n\r\nconst DateField = AriaDateField\r\n\r\nconst TimeField = AriaTimeField\r\n\r\nfunction DateSegment({ className, ...props }: AriaDateSegmentProps) {\r\n  return (\r\n    <AriaDateSegment\r\n      className={composeRenderProps(className, (className) =>\r\n        cn(\r\n          \"type-literal:px-0 inline rounded p-0.5 caret-transparent outline-0\",\r\n          /* Placeholder */\r\n          \"data-[placeholder]:text-muted-foreground\",\r\n          /* Disabled */\r\n          \"data-[disabled]:cursor-not-allowed data-[disabled]:opacity-50\",\r\n          /* Focused */\r\n          \"data-[focused]:bg-accent data-[focused]:text-accent-foreground\",\r\n          /* Invalid */\r\n          \"data-[invalid]:data-[focused]:bg-destructive data-[invalid]:data-[focused]:data-[placeholder]:text-destructive-foreground data-[invalid]:data-[focused]:text-destructive-foreground data-[invalid]:data-[placeholder]:text-destructive data-[invalid]:text-destructive\",\r\n          className\r\n        )\r\n      )}\r\n      {...props}\r\n    />\r\n  )\r\n}\r\n\r\ninterface DateInputProps\r\n  extends AriaDateInputProps,\r\n    VariantProps<typeof fieldGroupVariants> {}\r\n\r\nfunction DateInput({\r\n  className,\r\n  variant,\r\n  ...props\r\n}: Omit<DateInputProps, \"children\">) {\r\n  return (\r\n    <AriaDateInput\r\n      className={composeRenderProps(className, (className) =>\r\n        cn(fieldGroupVariants({ variant }), \"text-sm\", className)\r\n      )}\r\n      {...props}\r\n    >\r\n      {(segment) => <DateSegment segment={segment} />}\r\n    </AriaDateInput>\r\n  )\r\n}\r\n\r\ninterface JollyDateFieldProps<T extends AriaDateValue>\r\n  extends AriaDateFieldProps<T> {\r\n  label?: string\r\n  description?: string\r\n  errorMessage?: string | ((validation: AriaValidationResult) => string)\r\n}\r\n\r\nfunction JollyDateField<T extends AriaDateValue>({\r\n  label,\r\n  description,\r\n  className,\r\n  errorMessage,\r\n  ...props\r\n}: JollyDateFieldProps<T>) {\r\n  return (\r\n    <DateField\r\n      className={composeRenderProps(className, (className) =>\r\n        cn(\"group flex flex-col gap-2\", className)\r\n      )}\r\n      {...props}\r\n    >\r\n      <Label>{label}</Label>\r\n      <DateInput />\r\n      {description && (\r\n        <Text className=\"text-sm text-muted-foreground\" slot=\"description\">\r\n          {description}\r\n        </Text>\r\n      )}\r\n      <FieldError>{errorMessage}</FieldError>\r\n    </DateField>\r\n  )\r\n}\r\n\r\ninterface JollyTimeFieldProps<T extends AriaTimeValue>\r\n  extends AriaTimeFieldProps<T> {\r\n  label?: string\r\n  description?: string\r\n  errorMessage?: string | ((validation: AriaValidationResult) => string)\r\n}\r\n\r\nfunction JollyTimeField<T extends AriaTimeValue>({\r\n  label,\r\n  description,\r\n  errorMessage,\r\n  className,\r\n  ...props\r\n}: JollyTimeFieldProps<T>) {\r\n  return (\r\n    <TimeField\r\n      className={composeRenderProps(className, (className) =>\r\n        cn(\"group flex flex-col gap-2\", className)\r\n      )}\r\n      {...props}\r\n    >\r\n      <Label>{label}</Label>\r\n      <DateInput />\r\n      {description && <Text slot=\"description\">{description}</Text>}\r\n      <FieldError>{errorMessage}</FieldError>\r\n    </TimeField>\r\n  )\r\n}\r\n\r\nexport {\r\n  DateField,\r\n  DateSegment,\r\n  DateInput,\r\n  TimeField,\r\n  JollyDateField,\r\n  JollyTimeField,\r\n}\r\nexport type { DateInputProps, JollyDateFieldProps, JollyTimeFieldProps }\r\n",
+      "path": "components/pumki-ui/date-time/datefield.tsx",
+      "target": "components/pumki-ui/date-time/datefield.tsx"
+    }
+  ]
+}

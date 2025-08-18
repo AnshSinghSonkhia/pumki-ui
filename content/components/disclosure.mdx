@@ -1,0 +1,138 @@
+---
+title: "Disclosure - Pumki UI"
+---
+
+import { Tabs } from 'nextra/components'
+import { Callout } from 'nextra/components'
+import { CodeBlock } from '../../components/docs/code-block'
+import { Preview, ResponsivePreview } from '../../components/docs/preview'
+import { Button } from '../../components/ui/button'
+import { Disclosure, DisclosureGroup, DisclosureHeader, DisclosurePanel } from '@/components/pumki-ui/disclosure.tsx'
+
+# Disclosure
+
+<Preview 
+  code={`'use client';
+
+import { Disclosure, DisclosureGroup, DisclosureHeader, DisclosurePanel } from '@/components/pumki-ui/disclosure.tsx'
+
+export const DisclosureDemo = () => {
+    return (
+        <DisclosureGroup defaultExpandedKeys={["personal"]}>
+            <Disclosure id="personal">
+                <DisclosureHeader>Personal Information</DisclosureHeader>
+                <DisclosurePanel>
+                <p>Personal information form here.</p>
+                </DisclosurePanel>
+            </Disclosure>
+            <Disclosure id="billing">
+                <DisclosureHeader>Billing Address</DisclosureHeader>
+                <DisclosurePanel>
+                <p>Billing address form here.</p>
+                </DisclosurePanel>
+            </Disclosure>
+        </DisclosureGroup>
+    );
+};`}
+>
+    <DisclosureGroup defaultExpandedKeys={["personal"]}>
+      <Disclosure id="personal">
+        <DisclosureHeader className="cursor-pointer">Personal Information</DisclosureHeader>
+        <DisclosurePanel>
+          <p>Personal information form here.</p>
+        </DisclosurePanel>
+      </Disclosure>
+    <Disclosure id="billing">
+      <DisclosureHeader className="cursor-pointer">Billing Address</DisclosureHeader>
+      <DisclosurePanel>
+        <p>Billing address form here.</p>
+      </DisclosurePanel>
+    </Disclosure>
+    <Disclosure id="shipping">
+      <DisclosureHeader className="cursor-pointer">Shipping Address</DisclosureHeader>
+      <DisclosurePanel>
+        <p>Shipping address form here.</p>
+      </DisclosurePanel>
+    </Disclosure>
+    <Disclosure id="preferences">
+      <DisclosureHeader className="cursor-pointer">Preferences</DisclosureHeader>
+      <DisclosurePanel>
+        <p>User preferences form here.</p>
+      </DisclosurePanel>
+    </Disclosure>
+    <Disclosure id="notifications">
+      <DisclosureHeader className="cursor-pointer">Notifications</DisclosureHeader>
+      <DisclosurePanel>
+        <p>Notification settings form here.</p>
+      </DisclosurePanel>
+    </Disclosure>
+    <Disclosure id="security">
+      <DisclosureHeader className="cursor-pointer">Security</DisclosureHeader>
+      <DisclosurePanel>
+        <p>Security options form here.</p>
+      </DisclosurePanel>
+    </Disclosure>
+    <Disclosure id="account">
+      <DisclosureHeader className="cursor-pointer">Account</DisclosureHeader>
+      <DisclosurePanel>
+        <p>Account details form here.</p>
+      </DisclosurePanel>
+    </Disclosure>
+    </DisclosureGroup>
+</Preview>
+
+## Installation
+
+<Tabs items={['pnpm', 'npm', 'yarn', 'bun']} defaultIndex="1">
+  <Tabs.Tab>
+    <CodeBlock language="bash" showLineNumbers={false}>
+      {`pnpm dlx pumki add disclosure`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash" showLineNumbers={false}>
+      {`npx pumki add disclosure`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash" showLineNumbers={false}>
+      {`yarn dlx pumki add disclosure`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash" showLineNumbers={false}>
+      {`bun x pumki add disclosure`}
+    </CodeBlock>
+  </Tabs.Tab>
+</Tabs>
+
+## Usage
+
+<br/>
+
+<CodeBlock language="typescript" showLineNumbers={false}>
+    {`import { Disclosure, DisclosureGroup, DisclosureHeader, DisclosurePanel } from '@/components/pumki-ui/disclosure.tsx';`}
+</CodeBlock>
+
+## Props
+
+import { PumkiTable, PumkiTableStyles } from '../../components/docs/PumkiTable'
+
+<PumkiTableStyles />
+<PumkiTable>
+<table className="pumki-table">
+  <thead>
+    <tr>
+      <th>Prop</th>
+      <th>Type</th>
+      <th>Default</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td><code>children</code></td><td><code>React.ReactNode</code></td><td><code>required</code></td><td>Content to display inside the disclosure.</td></tr>
+    <tr><td><code>className</code></td><td><code>string</code></td><td><code>undefined</code></td><td>Custom CSS classes for the disclosure container.</td></tr>
+    <tr><td><code>...aria props</code></td><td><code>AriaDisclosureProps</code></td><td><code>—</code></td><td>All props from <code>react-aria-components</code> Disclosure {`(e.g., <code>isOpen</code>, <code>defaultOpen</code>, <code>onOpenChange</code>)`}.</td></tr>
+  </tbody>
+</table>
+</PumkiTable>

@@ -69,4 +69,21 @@ export const animation: Registry = [
             },
         ],
     },
+    {
+        name: "noise",
+        type: "registry:ui",
+        title: "Noise",
+        description:
+            "A component that renders a dynamic noise effect.",
+        author: "Ansh Singh Sonkhia",
+        dependencies: ["react"],
+        registryDependencies: [],
+        files: [
+            {
+                path: "components/pumki-ui/animations/noise.tsx",
+                type: "registry:ui",
+                target: "components/pumki-ui/animations/noise.tsx",
+            },
+        ],
+    },
 ];

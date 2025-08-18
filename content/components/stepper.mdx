@@ -1,0 +1,130 @@
+---
+title: "Stepper - Pumki UI"
+---
+
+import { Tabs } from 'nextra/components'
+import { Callout } from 'nextra/components'
+import { CodeBlock } from '../../components/docs/code-block'
+import { Preview, ResponsivePreview } from '../../components/docs/preview'
+import { Button } from '../../components/ui/button'
+import Stepper, { Step } from '@/components/pumki-ui/stepper.tsx'
+import { StepperDemo } from '@/components/demos/stepper-demo.tsx'
+
+# Stepper
+
+A multi-step form component with a progress indicator.
+
+<Preview 
+  code={`'use client';
+
+import Stepper, { Step } from '@/components/pumki-ui/stepper.tsx'
+
+export const StepperDemo = () => {
+    return (
+        <div style={{ width: '100%', height: '600px', position: 'relative' }}>
+            <Stepper
+                initialStep={1}
+                onStepChange={(step) => {
+                    console.log(step);
+                }}
+                onFinalStepCompleted={() => console.log("All steps completed!")}
+                backButtonText="Previous"
+                nextButtonText="Next"
+            >
+                <Step>
+                    <h2>Welcome to the React Bits stepper!</h2>
+                    <p>Check out the next step!</p>
+                </Step>
+                <Step>
+                    <h2>Step 2</h2>
+                    <img style={{ height: '100px', width: '100%', objectFit: 'cover', objectPosition: 'center -70px', borderRadius: '15px', marginTop: '1em' }} src="https://www.purrfectcatgifts.co.uk/cdn/shop/collections/Funny_Cat_Cards_640x640.png?v=1663150894" />
+                    <p>Custom step content!</p>
+                </Step>
+                <Step>
+                    <h2>How about an input?</h2>
+                    <input value={name} onChange={(e) => setName(e.target.value)} placeholder="Your name?" />
+                </Step>
+                <Step>
+                    <h2>Final Step</h2>
+                    <p>You made it!</p>
+                </Step>
+            </Stepper>
+        </div>
+    );
+};`}
+>
+    <StepperDemo />
+</Preview>
+
+## Installation
+
+<Tabs items={['pnpm', 'npm', 'yarn', 'bun']} defaultIndex="1">
+  <Tabs.Tab>
+    <CodeBlock language="bash" showLineNumbers={false}>
+      {`pnpm dlx pumki add stepper`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash" showLineNumbers={false}>
+      {`npx pumki add stepper`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash" showLineNumbers={false}>
+      {`yarn dlx pumki add stepper`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash" showLineNumbers={false}>
+      {`bun x pumki add stepper`}
+    </CodeBlock>
+  </Tabs.Tab>
+</Tabs>
+
+## Usage
+
+<br/>
+
+<CodeBlock language="typescript" showLineNumbers={false}>
+    {`import Stepper, { Step } from '@/components/pumki-ui/stepper.tsx';`}
+</CodeBlock>
+
+<br/>
+
+<CodeBlock language="typescript" showLineNumbers={false}>
+    {`<Stepper />`}
+</CodeBlock>
+
+## Props
+
+import { PumkiTable, PumkiTableStyles } from '../../components/docs/PumkiTable'
+
+<PumkiTableStyles />
+<PumkiTable>
+<table className="pumki-table">
+  <thead>
+    <tr>
+      <th>Prop</th>
+      <th>Type</th>
+      <th>Default</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td><code>children</code></td><td><code>React.ReactNode</code></td><td><code>required</code></td><td>Step content. Each child is a step.</td></tr>
+    <tr><td><code>initialStep</code></td><td><code>number</code></td><td><code>1</code></td><td>Initial step index (1-based).</td></tr>
+    <tr><td><code>onStepChange</code></td><td><code>(step: number) =&gt; void</code></td><td><code>() =&gt; {}</code></td><td>Callback when the step changes.</td></tr>
+    <tr><td><code>onFinalStepCompleted</code></td><td><code>() =&gt; void</code></td><td><code>() =&gt; {}</code></td><td>Callback when the last step is completed.</td></tr>
+    <tr><td><code>stepCircleContainerClassName</code></td><td><code>string</code></td><td><code>""</code></td><td>Custom class for the step indicator container.</td></tr>
+    <tr><td><code>stepContainerClassName</code></td><td><code>string</code></td><td><code>""</code></td><td>Custom class for the step indicator row.</td></tr>
+    <tr><td><code>contentClassName</code></td><td><code>string</code></td><td><code>""</code></td><td>Custom class for the step content area.</td></tr>
+    <tr><td><code>footerClassName</code></td><td><code>string</code></td><td><code>""</code></td><td>Custom class for the footer area.</td></tr>
+    <tr><td><code>backButtonProps</code></td><td><code>React.ButtonHTMLAttributes&lt;HTMLButtonElement&gt;</code></td><td><code>{}</code></td><td>Props for the back button.</td></tr>
+    <tr><td><code>nextButtonProps</code></td><td><code>React.ButtonHTMLAttributes&lt;HTMLButtonElement&gt;</code></td><td><code>{}</code></td><td>Props for the next/complete button.</td></tr>
+    <tr><td><code>backButtonText</code></td><td><code>string</code></td><td><code>"Back"</code></td><td>Text for the back button.</td></tr>
+    <tr><td><code>nextButtonText</code></td><td><code>string</code></td><td><code>"Continue"</code></td><td>Text for the next button.</td></tr>
+    <tr><td><code>disableStepIndicators</code></td><td><code>boolean</code></td><td><code>false</code></td><td>If true, disables clicking step indicators.</td></tr>
+    <tr><td><code>renderStepIndicator</code></td><td><code>{`(props: { step: number; currentStep: number; onStepClick: (clicked: number) =&gt; void; })`} =&gt; React.ReactNode</code></td><td><code>undefined</code></td><td>Custom render function for step indicators.</td></tr>
+  </tbody>
+</table>
+</PumkiTable>

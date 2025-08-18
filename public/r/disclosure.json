@@ -1,0 +1,22 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "disclosure",
+  "type": "registry:ui",
+  "title": "Disclosure",
+  "description": "A component for showing and hiding content.",
+  "author": "Ansh Singh Sonkhia",
+  "dependencies": [
+    "react",
+    "react-aria-components",
+    "lucide-react"
+  ],
+  "registryDependencies": [],
+  "files": [
+    {
+      "type": "registry:ui",
+      "content": "\"use client\"\r\n\r\nimport React, { useContext } from \"react\"\r\nimport { ChevronDownIcon } from \"lucide-react\"\r\nimport {\r\n  Disclosure as AriaDisclosure,\r\n  DisclosureGroup as AriaDisclosureGroup,\r\n  DisclosureGroupProps as AriaDisclosureGroupProps,\r\n  DisclosurePanel as AriaDisclosurePanel,\r\n  DisclosurePanelProps as AriaDisclosurePanelProps,\r\n  DisclosureProps as AriaDisclosureProps,\r\n  Button,\r\n  ButtonProps,\r\n  composeRenderProps,\r\n  DisclosureGroupStateContext,\r\n  Heading,\r\n} from \"react-aria-components\"\r\n\r\nimport { cn } from \"@/lib/utils\"\r\n\r\nexport interface DisclosureProps extends AriaDisclosureProps {\r\n  children: React.ReactNode\r\n}\r\n\r\nfunction Disclosure({ children, className, ...props }: DisclosureProps) {\r\n  let isInGroup = useContext(DisclosureGroupStateContext) !== null\r\n  return (\r\n    <AriaDisclosure\r\n      {...props}\r\n      className={composeRenderProps(className, (className, renderProps) =>\r\n        cn(\r\n          \"group min-w-64\",\r\n          isInGroup && \"border-0 border-b last:border-b-0\",\r\n          className\r\n        )\r\n      )}\r\n    >\r\n      {children}\r\n    </AriaDisclosure>\r\n  )\r\n}\r\n\r\nexport interface DisclosureHeaderProps {\r\n  children: React.ReactNode\r\n  className?: ButtonProps[\"className\"]\r\n}\r\n\r\nfunction DisclosureHeader({ children, className }: DisclosureHeaderProps) {\r\n  return (\r\n    <Heading className=\"flex\">\r\n      <Button\r\n        slot=\"trigger\"\r\n        className={composeRenderProps(className, (className) => {\r\n          return cn(\r\n            \"group flex flex-1 items-center justify-between rounded-md py-4 font-medium ring-offset-background transition-all hover:underline\",\r\n            \"data-[disabled]:pointer-events-none data-[disabled]:opacity-50\",\r\n            \"data-[focus-visible]:outline-none data-[focus-visible]:ring-2 data-[focus-visible]:ring-ring data-[focus-visible]:ring-offset-2\",\r\n            \"outline-none\",\r\n            className\r\n          )\r\n        })}\r\n      >\r\n        {children}\r\n        <ChevronDownIcon\r\n          aria-hidden\r\n          className={cn(\r\n            \"size-4 shrink-0 transition-transform duration-200\",\r\n            \"group-data-[expanded]:rotate-180\",\r\n            \"group-data-[disabled]:opacity-50\"\r\n          )}\r\n        />\r\n      </Button>\r\n    </Heading>\r\n  )\r\n}\r\n\r\nexport interface DisclosurePanelProps extends AriaDisclosurePanelProps {\r\n  children: React.ReactNode\r\n}\r\n\r\nfunction DisclosurePanel({\r\n  children,\r\n  className,\r\n  ...props\r\n}: DisclosurePanelProps) {\r\n  return (\r\n    <AriaDisclosurePanel\r\n      {...props}\r\n      className={\"overflow-hidden text-sm transition-all\"}\r\n    >\r\n      <div className={cn(\"pb-4 pt-0\", className)}>{children}</div>\r\n    </AriaDisclosurePanel>\r\n  )\r\n}\r\n\r\nexport interface DisclosureGroupProps extends AriaDisclosureGroupProps {\r\n  children: React.ReactNode\r\n}\r\n\r\nfunction DisclosureGroup({\r\n  children,\r\n  className,\r\n  ...props\r\n}: DisclosureGroupProps) {\r\n  return (\r\n    <AriaDisclosureGroup\r\n      {...props}\r\n      className={composeRenderProps(className, (className, renderProps) =>\r\n        cn(\"\", className)\r\n      )}\r\n    >\r\n      {children}\r\n    </AriaDisclosureGroup>\r\n  )\r\n}\r\n\r\nexport { Disclosure, DisclosureHeader, DisclosurePanel, DisclosureGroup }\r\n",
+      "path": "components/pumki-ui/Disclosure.tsx",
+      "target": "components/pumki-ui/Disclosure.tsx"
+    }
+  ]
+}

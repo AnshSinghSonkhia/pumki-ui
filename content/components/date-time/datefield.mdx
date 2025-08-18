@@ -1,0 +1,113 @@
+---
+title: "Datefield - Pumki UI"
+---
+
+import { Tabs } from 'nextra/components'
+import { Callout } from 'nextra/components'
+import { CodeBlock } from '@/components/docs/code-block'
+import { Preview, ResponsivePreview } from '@/components/docs/preview'
+import { Button } from '@/components/ui/button'
+import { DateField, DateInput } from "@/components/pumki-ui/date-time/datefield"
+import { Label } from "@/components/pumki-ui/form/textfield"
+
+# Datefield
+
+<Preview 
+  code={`'use client';
+
+import { DateField, DateInput } from "@/components/pumki-ui/date-time/datefield"
+import { Label } from "@/components/pumki-ui/form/textfield"
+
+export const DatefieldDemo = () => {
+    return (
+        <div style={{ width: '100%', height: '600px', position: 'relative' }}>
+            <DateField className={"min-w-[150px] space-y-1"}>
+                <Label>Birth date</Label>
+                <DateInput />
+            </DateField>
+        </div>
+    );
+};`}
+>
+    <DateField className={"min-w-[150px] space-y-1"}>
+      <Label>Birth date</Label>
+      <DateInput />
+    </DateField>
+</Preview>
+
+## Installation
+
+<Tabs items={['pnpm', 'npm', 'yarn', 'bun']} defaultIndex="1">
+  <Tabs.Tab>
+    <CodeBlock language="bash" showLineNumbers={false}>
+      {`pnpm dlx pumki add datefield`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash" showLineNumbers={false}>
+      {`npx pumki add datefield`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash" showLineNumbers={false}>
+      {`yarn dlx pumki add datefield`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash" showLineNumbers={false}>
+      {`bun x pumki add datefield`}
+    </CodeBlock>
+  </Tabs.Tab>
+</Tabs>
+
+## Usage
+
+<br/>
+
+<CodeBlock language="typescript" showLineNumbers={false}>
+    {`import { DateField, DateInput } from "@/components/pumki-ui/date-time/datefield";`}
+</CodeBlock>
+
+<br/>
+
+<CodeBlock language="typescript" showLineNumbers={false}>
+    {`<Datefield />`}
+</CodeBlock>
+
+## Props
+
+import { PumkiTable, PumkiTableStyles } from '@/components/docs/PumkiTable'
+
+<PumkiTableStyles />
+<PumkiTable>
+<table className="pumki-table">
+  <thead>
+    <tr>
+      <th>Prop</th>
+      <th>Type</th>
+      <th>Default</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>label</code></td>
+      <td><code>string</code></td>
+      <td><code>—</code></td>
+      <td>The label for the field, displayed above the input segments.</td>
+    </tr>
+    <tr>
+      <td><code>description</code></td>
+      <td><code>string</code></td>
+      <td><code>—</code></td>
+      <td>Optional description text shown below the input segments.</td>
+    </tr>
+    <tr>
+      <td><code>errorMessage</code></td>
+      <td><code>string | {`((validation: ValidationResult) => string)`}</code></td>
+      <td><code>—</code></td>
+      <td>Error message to display below the field, or a function returning a message based on validation.</td>
+    </tr>
+  </tbody>
+</table>
+</PumkiTable>
