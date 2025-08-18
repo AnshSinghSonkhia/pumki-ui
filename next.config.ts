@@ -42,7 +42,15 @@ const nextConfig: NextConfig = {
         destination: '/docs/gradients/green',
         permanent: true,
       },
+      {
+        source: '/docs/custom-assets',
+        destination: '/docs/custom-assets/curved-arrow',
+        permanent: true,
+      },
     ];
+  },
+  images: {
+    domains: ["github.com"],
   },
   pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
   outputFileTracingIncludes:{"/**":["components/pumki-ui/**/*"]},

@@ -1,0 +1,182 @@
+---
+title: "Custom Curved Arrow - Pumki UI"
+---
+
+import { Tabs } from 'nextra/components'
+import { Callout } from 'nextra/components'
+import { CodeBlock } from '../../components/docs/code-block'
+import { Preview, ResponsivePreview } from '../../components/docs/preview'
+import { Button } from '../../components/ui/button'
+import { CustomCurvedArrow } from '@/components/pumki-ui/sections/timeline/custom-curved-arrow.tsx'
+
+# Custom Curved Arrow
+
+<Preview 
+  previewHeight='200px'
+  code={`'use client';
+
+import { CustomCurvedArrow } from '@/components/pumki-ui/sections/timeline/custom-curved-arrow.tsx'
+
+export const CustomCurvedArrowDemo = () => {
+    return (
+        <div style={{ width: '100%', height: '500px', display: 'flex', justifyContent: 'center', alignItems: 'center', position: 'relative' }}>
+            <CustomCurvedArrow />
+        </div>
+    );
+};`}
+>
+    <div style={{ width: '100%', height: '200px', display: 'flex', justifyContent: 'center', alignItems: 'center', position: 'relative' }}>
+            <CustomCurvedArrow />
+    </div>
+</Preview>
+
+## Installation
+
+<Tabs items={['pnpm', 'npm', 'yarn', 'bun']} defaultIndex="1">
+  <Tabs.Tab>
+    <CodeBlock language="bash" showLineNumbers={false}>
+      {`pnpm dlx pumki add custom-curved-arrow`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash" showLineNumbers={false}>
+      {`npx pumki add custom-curved-arrow`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash" showLineNumbers={false}>
+      {`yarn dlx pumki add custom-curved-arrow`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash" showLineNumbers={false}>
+      {`bun x pumki add custom-curved-arrow`}
+    </CodeBlock>
+  </Tabs.Tab>
+</Tabs>
+
+## Usage
+
+<br/>
+
+<CodeBlock language="typescript" showLineNumbers={false}>
+    {`import { CustomCurvedArrow } from '@/components/pumki-ui/sections/timeline/custom-curved-arrow.tsx';`}
+</CodeBlock>
+
+<br/>
+
+<CodeBlock language="typescript">
+    {`<CustomCurvedArrow />`}
+</CodeBlock>
+
+## Example
+
+<Preview 
+  previewHeight='200px'
+  code={`'use client';
+
+import { CustomCurvedArrow } from '@/components/pumki-ui/sections/timeline/custom-curved-arrow.tsx'
+
+export const CustomCurvedArrowDemo = () => {
+    return (
+        <div style={{ width: '100%', height: '500px', display: 'flex', justifyContent: 'center', alignItems: 'center', position: 'relative' }}>
+            <CustomCurvedArrow
+                startElement={null} endElement={null}
+                startPosition="bottom"
+                endPosition={"right"}
+                curveIntensity={0.6}
+                curveType={"elegant"}
+                curveDirection={"right"}
+                strokeWidth={15}
+                arrowSize={30}
+            />
+        </div>
+    );
+};`}
+>
+    <div style={{ width: '100%', height: '200px', display: 'flex', justifyContent: 'center', alignItems: 'center', position: 'relative' }}>
+            <CustomCurvedArrow
+                startElement={null} endElement={null}
+                startPosition="bottom"
+                endPosition={"right"}
+                curveIntensity={0.6}
+                curveType={"elegant"}
+                curveDirection={"right"}
+                strokeWidth={15}
+                arrowSize={30}
+            />
+    </div>
+</Preview>
+
+<Preview 
+  previewHeight='200px'
+  code={`'use client';
+
+import { CustomCurvedArrow } from '@/components/pumki-ui/sections/timeline/custom-curved-arrow.tsx'
+
+export const CustomCurvedArrowDemo = () => {
+    return (
+        <div style={{ width: '100%', height: '500px', display: 'flex', justifyContent: 'center', alignItems: 'center', position: 'relative' }}>
+            <CustomCurvedArrow
+                startElement={null} endElement={null}
+                startPosition="bottom"
+                endPosition={"right"}
+                curveIntensity={0.6}
+                curveType={"spring"}
+                curveDirection={"left"}
+                strokeWidth={15}
+                arrowSize={30}
+            />
+        </div>
+    );
+};`}
+>
+    <div style={{ width: '100%', height: '200px', display: 'flex', justifyContent: 'center', alignItems: 'center', position: 'relative' }}>
+            <CustomCurvedArrow
+                startElement={null} endElement={null}
+                startPosition="bottom"
+                endPosition={"right"}
+                curveIntensity={0.6}
+                curveType={"spring"}
+                curveDirection={"left"}
+                strokeWidth={15}
+                arrowSize={30}
+            />
+    </div>
+</Preview>
+
+## Props
+
+import { PumkiTable, PumkiTableStyles } from '../../components/docs/PumkiTable'
+
+<PumkiTableStyles />
+<PumkiTable>
+<table className="pumki-table">
+  <thead>
+    <tr>
+      <th>Prop</th>
+      <th>Type</th>
+      <th>Default</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td><code>startElement</code></td><td><code>React.RefObject&lt;HTMLElement&gt; | null</code></td><td><code>required</code></td><td>Reference to the element where the arrow starts.</td></tr>
+    <tr><td><code>endElement</code></td><td><code>React.RefObject&lt;HTMLElement&gt; | null</code></td><td><code>required</code></td><td>Reference to the element where the arrow ends.</td></tr>
+    <tr><td><code>obstacleElement</code></td><td><code>React.RefObject&lt;HTMLElement&gt; | null</code></td><td><code>undefined</code></td><td>Optional reference to an obstacle element for path calculation.</td></tr>
+    <tr><td><code>startX</code></td><td><code>number</code></td><td><code>0</code></td><td>Manual X coordinate for the start point (overrides element if provided).</td></tr>
+    <tr><td><code>startY</code></td><td><code>number</code></td><td><code>0</code></td><td>Manual Y coordinate for the start point (overrides element if provided).</td></tr>
+    <tr><td><code>endX</code></td><td><code>number</code></td><td><code>100</code></td><td>Manual X coordinate for the end point (overrides element if provided).</td></tr>
+    <tr><td><code>endY</code></td><td><code>number</code></td><td><code>100</code></td><td>Manual Y coordinate for the end point (overrides element if provided).</td></tr>
+    <tr><td><code>curveIntensity</code></td><td><code>number</code></td><td><code>0.4</code></td><td>Controls the strength of the curve between start and end.</td></tr>
+    <tr><td><code>curveType</code></td><td><code>"smooth" | "dramatic" | "s-curve" | "wave" | "spiral" | "elegant" | "shortest-path" | "around-obstacle"</code></td><td><code>"smooth"</code></td><td>Type of curve used for the arrow path.</td></tr>
+    <tr><td><code>curveDirection</code></td><td><code>"auto" | "up" | "down" | "left" | "right"</code></td><td><code>"auto"</code></td><td>Direction preference for the curve.</td></tr>
+    <tr><td><code>strokeWidth</code></td><td><code>number</code></td><td><code>4</code></td><td>Width of the arrow stroke.</td></tr>
+    <tr><td><code>arrowSize</code></td><td><code>number</code></td><td><code>20</code></td><td>Size of the arrow head.</td></tr>
+    <tr><td><code>className</code></td><td><code>string</code></td><td><code>""</code></td><td>Custom CSS classes for the container.</td></tr>
+    <tr><td><code>animated</code></td><td><code>boolean</code></td><td><code>undefined</code></td><td>If true, enables arrow animation (not implemented in current code).</td></tr>
+    <tr><td><code>startPosition</code></td><td><code>"top" | "bottom" | "left" | "right" | "center" | "top-left" | "top-right" | "bottom-left" | "bottom-right"</code></td><td><code>"bottom"</code></td><td>Anchor position on the start element.</td></tr>
+    <tr><td><code>endPosition</code></td><td><code>"top" | "bottom" | "left" | "right" | "center" | "top-left" | "top-right" | "bottom-left" | "bottom-right"</code></td><td><code>"top"</code></td><td>Anchor position on the end element.</td></tr>
+  </tbody>
+</table>
+</PumkiTable>

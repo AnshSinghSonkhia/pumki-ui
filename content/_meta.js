@@ -35,6 +35,12 @@ export default {
             collapsed: true
         }
     },
+    'custom-assets': {
+        title: "Custom Assets",
+        theme: {
+            collapsed: true
+        }
+    },
     gradients: {
         title: "Gradients",
         theme: {

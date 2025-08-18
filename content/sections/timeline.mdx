@@ -1,0 +1,154 @@
+---
+title: "Timeline Sections - Pumki UI"
+---
+
+import { Tabs } from 'nextra/components'
+import { Callout } from 'nextra/components'
+import { CodeBlock } from '../../components/docs/code-block'
+import { Preview, ResponsivePreview } from '../../components/docs/preview'
+import { Button } from '../../components/ui/button'
+import VerticalEventTimeline  from '@/components/pumki-ui/sections/timeline/vertical-event-timeline.tsx'
+import VerDyTL  from '@/components/pumki-ui/sections/timeline/vertical-dynamic-timeline.tsx'
+
+# Timeline Sections
+
+## Vertical Event Timeline
+
+<Preview 
+  previewHeight='2500px'
+  code={`'use client';
+
+import VerticalEventTimeline  from '@/components/pumki-ui/sections/timeline/vertical-event-timeline.tsx'
+
+export const VerticalEventTimelineDemo = () => {
+    return (
+        <div style={{ width: '100%', height: '600px', position: 'relative' }}>
+            <VerticalEventTimeline />
+        </div>
+    );
+};`}
+>
+    <VerticalEventTimeline />
+</Preview>
+
+### Installation
+
+<Tabs items={['pnpm', 'npm', 'yarn', 'bun']} defaultIndex="1">
+  <Tabs.Tab>
+    <CodeBlock language="bash" showLineNumbers={false}>
+      {`pnpm dlx pumki add vertical-event-timeline`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash" showLineNumbers={false}>
+      {`npx pumki add vertical-event-timeline`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash" showLineNumbers={false}>
+      {`yarn dlx pumki add vertical-event-timeline`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash" showLineNumbers={false}>
+      {`bun x pumki add vertical-event-timeline`}
+    </CodeBlock>
+  </Tabs.Tab>
+</Tabs>
+
+### Usage
+
+<br/>
+
+<CodeBlock language="typescript" showLineNumbers={false}>
+    {`import VerticalEventTimeline  from '@/components/pumki-ui/sections/timeline/vertical-event-timeline.tsx';`}
+</CodeBlock>
+
+<br/>
+
+<CodeBlock language="typescript">
+    {`<VerticalEventTimeline />`}
+</CodeBlock>
+
+## Vertical Dynamic Timeline
+
+<Preview 
+  previewHeight='2500px'
+  code={`'use client';
+
+import VerDyTL  from '@/components/pumki-ui/sections/timeline/vertical-dynamic-timeline.tsx'
+
+export const VerticalEventTimelineDemo = () => {
+    return (
+        <div style={{ width: '100%', height: '600px', position: 'relative' }}>
+            <VerDyTL />
+        </div>
+    );
+};`}
+>
+    <VerDyTL />
+</Preview>
+
+### Installation
+
+<Tabs items={['pnpm', 'npm', 'yarn', 'bun']} defaultIndex="1">
+  <Tabs.Tab>
+    <CodeBlock language="bash" showLineNumbers={false}>
+      {`pnpm dlx pumki add vertical-dynamic-timeline`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash" showLineNumbers={false}>
+      {`npx pumki add vertical-dynamic-timeline`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash" showLineNumbers={false}>
+      {`yarn dlx pumki add vertical-dynamic-timeline`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash" showLineNumbers={false}>
+      {`bun x pumki add vertical-dynamic-timeline`}
+    </CodeBlock>
+  </Tabs.Tab>
+</Tabs>
+
+### Usage
+
+<br/>
+
+<CodeBlock language="typescript" showLineNumbers={false}>
+    {`import VerDyTL  from '@/components/pumki-ui/sections/timeline/vertical-dynamic-timeline.tsx';`}
+</CodeBlock>
+
+<br/>
+
+<CodeBlock language="typescript">
+    {`<VerDyTL />`}
+</CodeBlock>
+
+### Props
+
+import { PumkiTable, PumkiTableStyles } from '../../components/docs/PumkiTable'
+
+<PumkiTableStyles />
+<PumkiTable>
+<table className="pumki-table">
+  <thead>
+    <tr>
+      <th>Prop</th>
+      <th>Type</th>
+      <th>Default</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td colSpan="4" style={{ textAlign: 'center', color: '#888' }}>
+        <em>This component does not accept any props.</em>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</PumkiTable>

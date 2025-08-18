@@ -52,4 +52,55 @@ export const block: Registry = [
             },
         ],
     },
+    {
+        name: "vertical-event-timeline",
+        type: "registry:block",
+        title: "Vertical Event Timeline Section",
+        description:
+            "A vertical timeline component for displaying events in a chronological order.",
+        author: "Ansh Singh Sonkhia",
+        dependencies: ["react", "framer-motion", "lucide-react"],
+        registryDependencies: ["card", "badge"],
+        files: [
+            {
+                path: "components/pumki-ui/sections/timeline/vertical-event-timeline.tsx",
+                type: "registry:block",
+                target: "components/pumki-ui/sections/timeline/vertical-event-timeline.tsx",
+            },
+        ],
+    },
+    {
+        name: "vertical-dynamic-timeline",
+        type: "registry:block",
+        title: "Vertical Dynamic Timeline Section",
+        description:
+            "A vertical timeline component for displaying events in a chronological order.",
+        author: "Ansh Singh Sonkhia",
+        dependencies: ["react"],
+        registryDependencies: ["button", "https://raw.githubusercontent.com/AnshSinghSonkhia/pumki-ui/main/public/r/custom-curved-arrow.json"],
+        files: [
+            {
+                path: "components/pumki-ui/sections/timeline/vertical-dynamic-timeline.tsx",
+                type: "registry:block",
+                target: "components/pumki-ui/sections/timeline/vertical-dynamic-timeline.tsx",
+            },
+        ],
+    },
+    {
+        name: "custom-curved-arrow",
+        type: "registry:block",
+        title: "Custom Curved Arrow",
+        description:
+            "A component for displaying a custom curved arrow between two elements.",
+        author: "Ansh Singh Sonkhia",
+        dependencies: ["react"],
+        registryDependencies: ["button"],
+        files: [
+            {
+                path: "components/pumki-ui/sections/timeline/custom-curved-arrow.tsx",
+                type: "registry:block",
+                target: "components/pumki-ui/sections/timeline/custom-curved-arrow.tsx",
+            },
+        ],
+    },
 ];
