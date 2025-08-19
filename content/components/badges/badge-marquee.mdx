@@ -1,0 +1,259 @@
+---
+title: "Badge Marquee - Pumki UI"
+---
+
+import { Tabs } from 'nextra/components'
+import { Callout } from 'nextra/components'
+import { CodeBlock } from '@/components/docs/code-block'
+import { Preview, ResponsivePreview } from '@/components/docs/preview'
+import { Button } from '@/components/ui/button'
+import { SimpleBadge } from '@/components/pumki-ui/badges/simple'
+import { BadgeMarquee } from '@/components/pumki-ui/badges/badge-marquee.tsx'
+
+# Badge Marquee
+
+<Preview 
+  code={`'use client';
+
+import { BadgeMarquee } from '@/components/pumki-ui/badges/badge-marquee.tsx'
+
+export const BadgeMarqueeDemo = () => {
+    return (
+        <div className='flex flex-col items-center justify-center w-full h-full gap-4'>
+        <BadgeMarquee
+            items={["Fast", "Reliable", "Secure", "Made in India"]}
+        />
+        <BadgeMarquee
+            items={["Centralized Finance", "Multi-Entity", "Built for Scale", "Made in India"]}
+            speed={2}
+            background="linear-gradient(to right, #2563eb, #60a5fa)"
+            color="#fff"
+            padding="16px 0"
+        />
+
+        <BadgeMarquee
+            items={["Open Source", "Community Driven", "MIT Licensed", "Contributions Welcome"]}
+            speed={3}
+            background="linear-gradient(90deg, #ff7e5f, #feb47b)"
+            color="#222"
+            padding="12px 0"
+        />
+
+        <BadgeMarquee
+            items={["Lightning Fast", "Zero Config", "Plug & Play", "Modern UI"]}
+            speed={2.5}
+            background="linear-gradient(90deg, #43cea2, #185a9d)"
+            color="#fff"
+            padding="14px 0"
+        />
+
+        <BadgeMarquee
+            items={["Accessibility First", "Responsive", "Customizable", "Elegant Design"]}
+            speed={2}
+            background="linear-gradient(90deg, #f7971e, #ffd200)"
+            color="#333"
+            padding="16px 0"
+        />
+
+        <BadgeMarquee
+            items={["Dark Mode", "Light Mode", "Seamless Experience", "User Friendly"]}
+            speed={2.2}
+            background="linear-gradient(90deg, #232526, #414345)"
+            color="#fafafa"
+            padding="15px 0"
+        />
+    </div>
+    );
+};`}
+>
+    <div className='flex flex-col items-center justify-center w-full h-full gap-4'>
+        <BadgeMarquee
+            items={["Fast", "Reliable", "Secure", "Made in India","Fast", "Reliable", "Secure", "Made in India","Fast", "Reliable", "Secure", "Made in India"]}
+        />
+        <BadgeMarquee
+            items={["Centralized Finance", "Multi-Entity", "Built for Scale", "Made in India","Centralized Finance", "Multi-Entity", "Built for Scale", "Made in India","Centralized Finance", "Multi-Entity", "Built for Scale", "Made in India"]}
+            speed={2}
+            background="linear-gradient(to right, #2563eb, #60a5fa)"
+            color="#fff"
+            padding="16px 0"
+        />
+
+        <BadgeMarquee
+            items={["Open Source", "Community Driven", "MIT Licensed", "Contributions Welcome","Open Source", "Community Driven", "MIT Licensed", "Contributions Welcome","Open Source", "Community Driven", "MIT Licensed", "Contributions Welcome"]}
+            speed={3}
+            background="linear-gradient(90deg, #ff7e5f, #feb47b)"
+            color="#222"
+            padding="12px 0"
+        />
+
+        <BadgeMarquee
+            items={["Lightning Fast", "Zero Config", "Plug & Play", "Modern UI","Lightning Fast", "Zero Config", "Plug & Play", "Modern UI","Lightning Fast", "Zero Config", "Plug & Play", "Modern UI"]}
+            speed={2.5}
+            background="linear-gradient(90deg, #43cea2, #185a9d)"
+            color="#fff"
+            padding="14px 0"
+        />
+
+        <BadgeMarquee
+            items={["Accessibility First", "Responsive", "Customizable", "Elegant Design","Accessibility First", "Responsive", "Customizable", "Elegant Design","Accessibility First", "Responsive", "Customizable", "Elegant Design"]}
+            speed={2}
+            background="linear-gradient(90deg, #f7971e, #ffd200)"
+            color="#333"
+            padding="16px 0"
+        />
+
+        <BadgeMarquee
+            items={["Dark Mode", "Light Mode", "Seamless Experience", "User Friendly","Dark Mode", "Light Mode", "Seamless Experience", "User Friendly","Dark Mode", "Light Mode", "Seamless Experience", "User Friendly"]}
+            speed={4}
+            background="linear-gradient(90deg, #232526, #414345)"
+            color="#fafafa"
+            padding="15px 0"
+        />
+    </div>
+</Preview>
+
+## Installation
+
+<Tabs items={['pnpm', 'npm', 'yarn', 'bun']} defaultIndex="1">
+  <Tabs.Tab>
+    <CodeBlock language="bash" showLineNumbers={false}>
+      {`pnpm dlx pumki add badge-marquee`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash" showLineNumbers={false}>
+      {`npx pumki add badge-marquee`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash" showLineNumbers={false}>
+      {`yarn dlx pumki add badge-marquee`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash" showLineNumbers={false}>
+      {`bun x pumki add badge-marquee`}
+    </CodeBlock>
+  </Tabs.Tab>
+</Tabs>
+
+## Usage
+
+<br/>
+
+<CodeBlock language="typescript" showLineNumbers={false}>
+    {`import { BadgeMarquee } from '@/components/pumki-ui/badges/badge-marquee.tsx';`}
+</CodeBlock>
+
+<br/>
+
+<CodeBlock language="typescript" showLineNumbers={false}>
+    {`<BadgeMarquee />`}
+</CodeBlock>
+
+## Example
+
+<Callout>This example needs "Badge Simple"</Callout>
+
+<Preview 
+  code={`'use client';
+
+import { BadgeMarquee } from '@/components/pumki-ui/badges/badge-marquee.tsx'
+import { SimpleBadge } from '@/components/pumki-ui/badges/simple'
+
+export const BadgeMarqueeDemo = () => {
+    return (
+        <div className='flex flex-col items-center justify-center gap-4 rounded-xl bg-white'>
+            <SimpleBadge variant="secondary" className="rounded-xl">
+                <BadgeMarquee
+                    items={["Centralized Finance", "Multi-Entity", "Built for Scale", "Made in India"]}
+                    speed={1.5}
+                    background="transparent"
+                    color="#FF0000"
+                    padding="0"
+                    className="w-[10%] rounded-xl"
+                    size={256}
+                    dotColor="#000000"
+                />
+            </SimpleBadge>
+        </div>
+    );
+};`}
+>
+    <div className='flex flex-col items-center justify-center gap-4 rounded-xl bg-white'>
+        <SimpleBadge variant="secondary" className="rounded-xl">
+            <BadgeMarquee
+                items={["Centralized Finance", "Multi-Entity", "Built for Scale", "Made in India","Centralized Finance", "Multi-Entity", "Built for Scale", "Made in India","Centralized Finance", "Multi-Entity", "Built for Scale", "Made in India"]}
+                speed={1.5}
+                background="transparent"
+                color="#FF0000"
+                padding="0"
+                className="w-[10%] rounded-xl"
+                size={256}
+                dotColor="#000000"
+            />
+        </SimpleBadge>
+    </div>
+</Preview>
+
+## Props
+
+import { PumkiTable, PumkiTableStyles } from '@/components/docs/PumkiTable'
+
+<PumkiTableStyles />
+<PumkiTable>
+<table className="pumki-table">
+  <thead>
+    <tr>
+      <th>Prop</th>
+      <th>Type</th>
+      <th>Default</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>speed</code></td>
+      <td><code>number</code></td>
+      <td><code>1.2</code></td>
+      <td>Controls the scroll speed of the marquee (higher = faster).</td>
+    </tr>
+    <tr>
+      <td><code>background</code></td>
+      <td><code>string</code></td>
+      <td><code>linear-gradient(rgb(82, 100, 77) -43.73%, rgba(82, 100, 77, 0) 129.91%)</code></td>
+      <td>Background style for the marquee container.</td>
+    </tr>
+    <tr>
+      <td><code>color</code></td>
+      <td><code>string</code></td>
+      <td><code>rgb(134, 156, 128)</code></td>
+      <td>Text color for the marquee items.</td>
+    </tr>
+    <tr>
+      <td><code>padding</code></td>
+      <td><code>string</code></td>
+      <td><code>8px 0</code></td>
+      <td>Padding for the marquee container.</td>
+    </tr>
+    <tr>
+      <td><code>items</code></td>
+      <td><code>string[]</code></td>
+      <td><code>Required</code></td>
+      <td>Array of strings to display and scroll in the marquee.</td>
+    </tr>
+    <tr>
+      <td><code>size</code></td>
+      <td><code>number</code></td>
+      <td><code>128</code></td>
+      <td>Height of the marquee container in pixels.</td>
+    </tr>
+    <tr>
+      <td><code>dotColor</code></td>
+      <td><code>string</code></td>
+      <td><code>#fff</code></td>
+      <td>Color of the separator dots between marquee items.</td>
+    </tr>
+  </tbody>
+</table>
+</PumkiTable>

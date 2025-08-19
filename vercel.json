@@ -1,0 +1,10 @@
+{
+  "ignoreCommand": "rm -rf public/r",
+  "redirects": [
+    {
+      "source": "/r/:path*",
+      "destination": "/404",
+      "permanent": false
+    }
+  ]
+}

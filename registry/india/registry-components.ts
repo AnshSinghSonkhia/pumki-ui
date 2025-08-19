@@ -800,4 +800,21 @@ export const component: Registry = [
             },
         ],
     },
+    {
+        name: "badge-marquee",
+        type: "registry:ui",
+        title: "Badge Marquee",
+        description:
+            "A component for displaying a scrolling marquee of badges.",
+        author: "Ansh Singh Sonkhia",
+        dependencies: ["react"],
+        registryDependencies: [],
+        files: [
+            {
+                path: "components/pumki-ui/badges/badge-marquee.tsx",
+                type: "registry:ui",
+                target: "components/pumki-ui/badges/badge-marquee.tsx",
+            },
+        ],
+    },
 ];
