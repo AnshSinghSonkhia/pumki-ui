@@ -766,4 +766,38 @@ export const component: Registry = [
             },
         ],
     },
+    {
+        name: "gift-ribbon-divider",
+        type: "registry:ui",
+        title: "Gift Ribbon Divider",
+        description:
+            "A decorative divider component with a gift ribbon style.",
+        author: "Ansh Singh Sonkhia",
+        dependencies: ["react"],
+        registryDependencies: [],
+        files: [
+            {
+                path: "components/pumki-ui/custom-assets/gift-ribbon-divider.tsx",
+                type: "registry:ui",
+                target: "components/pumki-ui/custom-assets/gift-ribbon-divider.tsx",
+            },
+        ],
+    },
+    {
+        name: "bg-ocean",
+        type: "registry:ui",
+        title: "Background Ocean",
+        description:
+            "A background component depicting an ocean scene.",
+        author: "Ansh Singh Sonkhia",
+        dependencies: ["react", "framer-motion"],
+        registryDependencies: [],
+        files: [
+            {
+                path: "components/pumki-ui/backgrounds/bg-ocean.tsx",
+                type: "registry:ui",
+                target: "components/pumki-ui/backgrounds/bg-ocean.tsx",
+            },
+        ],
+    },
 ];

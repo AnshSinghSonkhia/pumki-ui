@@ -5,6 +5,7 @@ export default {
     'bg-hexagon': 'Hexagon',
     'bg-light-rays': 'Light Rays',
     'bg-moai': 'Moai',
+    'bg-ocean': 'Ocean',
     'bg-potion': 'Potion Magic',
     'bg-wormhole': 'Wormhole',
 }

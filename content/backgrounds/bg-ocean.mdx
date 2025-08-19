@@ -1,0 +1,67 @@
+---
+title: "Bg-ocean - Pumki UI"
+---
+
+import { Tabs } from 'nextra/components'
+import { Callout } from 'nextra/components'
+import { CodeBlock } from '@/components/docs/code-block'
+import { Preview, ResponsivePreview } from '@/components/docs/preview'
+import { Button } from '@/components/ui/button'
+import BgOcean from '@/components/pumki-ui/backgrounds/bg-ocean.tsx'
+
+# Bg-ocean
+
+<Preview 
+  code={`'use client';
+
+import BgOcean from '@/components/pumki-ui/backgrounds/bg-ocean.tsx'
+
+export const BgOceanDemo = () => {
+    return (
+        <div style={{ width: '100%', height: '600px', position: 'relative' }}>
+            <BgOcean />
+        </div>
+    );
+};`}
+>
+    <BgOcean />
+</Preview>
+
+## Installation
+
+<Tabs items={['pnpm', 'npm', 'yarn', 'bun']} defaultIndex="1">
+  <Tabs.Tab>
+    <CodeBlock language="bash" showLineNumbers={false}>
+      {`pnpm dlx pumki add bg-ocean`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash" showLineNumbers={false}>
+      {`npx pumki add bg-ocean`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash" showLineNumbers={false}>
+      {`yarn dlx pumki add bg-ocean`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash" showLineNumbers={false}>
+      {`bun x pumki add bg-ocean`}
+    </CodeBlock>
+  </Tabs.Tab>
+</Tabs>
+
+## Usage
+
+<br/>
+
+<CodeBlock language="typescript" showLineNumbers={false}>
+    {`import BgOcean from '@/components/pumki-ui/backgrounds/bg-ocean.tsx';`}
+</CodeBlock>
+
+<br/>
+
+<CodeBlock language="typescript" showLineNumbers={false}>
+    {`<BgOcean />`}
+</CodeBlock>

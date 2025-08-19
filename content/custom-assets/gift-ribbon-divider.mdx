@@ -1,0 +1,115 @@
+---
+title: "Gift Ribbon Divider - Pumki UI"
+---
+
+import { Tabs } from 'nextra/components'
+import { Callout } from 'nextra/components'
+import { CodeBlock } from '@/components/docs/code-block'
+import { Preview, ResponsivePreview } from '@/components/docs/preview'
+import { Button } from '@/components/ui/button'
+import { RibbonDivider } from '@/components/pumki-ui/custom-assets/gift-ribbon-divider.tsx'
+
+# Gift Ribbon Divider
+
+<Preview 
+  code={`'use client';
+
+import { RibbonDivider } from '@/components/pumki-ui/custom-assets/gift-ribbon-divider.tsx'
+
+export const GiftRibbonDividerDemo = () => {
+    return (
+        <div style={{ width: '100%', height: '600px', position: 'relative' }}>
+            <div className="flex flex-col items-center">
+                <h1 className="text-3xl font-bold">🎉 Welcome to Pumki</h1>
+                
+                <div className="mt-2 mb-6">
+                    <span className="text-lg text-gray-700">
+                    Here’s our amazing collection of gifts waiting for you...
+                    </span>
+                </div>
+
+                {/* The ribbon divider */}
+                <RibbonDivider />
+            </div>
+        </div>
+    );
+};`}
+>
+    <div className="flex flex-col items-center">
+      <h1 className="text-3xl font-bold">🎉 Welcome to Pumki</h1>
+      
+      <div className="mt-2 mb-6">
+        <span className="text-lg text-gray-700">
+          Here’s our amazing collection of gifts waiting for you...
+        </span>
+      </div>
+
+      {/* The ribbon divider */}
+      <RibbonDivider />
+    </div>
+</Preview>
+
+## Installation
+
+<Tabs items={['pnpm', 'npm', 'yarn', 'bun']} defaultIndex="1">
+  <Tabs.Tab>
+    <CodeBlock language="bash" showLineNumbers={false}>
+      {`pnpm dlx pumki add gift-ribbon-divider`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash" showLineNumbers={false}>
+      {`npx pumki add gift-ribbon-divider`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash" showLineNumbers={false}>
+      {`yarn dlx pumki add gift-ribbon-divider`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash" showLineNumbers={false}>
+      {`bun x pumki add gift-ribbon-divider`}
+    </CodeBlock>
+  </Tabs.Tab>
+</Tabs>
+
+## Usage
+
+<br/>
+
+<CodeBlock language="typescript" showLineNumbers={false}>
+    {`import { RibbonDivider } from '@/components/pumki-ui/custom-assets/gift-ribbon-divider.tsx';`}
+</CodeBlock>
+
+<br/>
+
+<CodeBlock language="typescript" showLineNumbers={false}>
+    {`<RibbonDivider />`}
+</CodeBlock>
+
+## Props
+
+import { PumkiTable, PumkiTableStyles } from '@/components/docs/PumkiTable'
+
+<PumkiTableStyles />
+<PumkiTable>
+<table className="pumki-table">
+  <thead>
+    <tr>
+      <th>Prop</th>
+      <th>Type</th>
+      <th>Default</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>showBadge</code></td>
+        <td><code>boolean</code></td>
+        <td><code>false</code></td>
+        <td>If <code>true</code>, displays a badge on the ribbon divider.</td>
+      </tr>
+  </tbody>
+</table>
+</PumkiTable>

@@ -171,7 +171,7 @@ Contributions are welcome!
 3. Commit your changes
 4. Push and open a PR 🎉
 
-See [contribution guidelines](https://github.com/AnshSinghSonkhia/pumki-ui/blob/main/content/contributing.mdx).
+See [contribution guidelines](http://pumki-ui.vercel.app/docs/contributing).
 
 ---
 
