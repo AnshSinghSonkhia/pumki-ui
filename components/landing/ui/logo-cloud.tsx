@@ -133,14 +133,24 @@ export function BlurredInfiniteSlider({
 
 // these are 56x16 size svg
 const LOGOS = [
-    { src: "https://html.tailus.io/blocks/customers/openai.svg", alt: "OpenAI Logo", height: 24 },
-    { src: "https://html.tailus.io/blocks/customers/nvidia.svg", alt: "Nvidia Logo", height: 20 },
-    { src: "https://html.tailus.io/blocks/customers/column.svg", alt: "Column Logo", height: 16 },
-    { src: "https://html.tailus.io/blocks/customers/github.svg", alt: "GitHub Logo", height: 16 },
-    { src: "https://html.tailus.io/blocks/customers/nike.svg", alt: "Nike Logo", height: 20 },
-    { src: "https://html.tailus.io/blocks/customers/lemonsqueezy.svg", alt: "Lemon Squeezy Logo", height: 20 },
-    { src: "https://html.tailus.io/blocks/customers/laravel.svg", alt: "Laravel Logo", height: 16 },
-    { src: "https://html.tailus.io/blocks/customers/lilly.svg", alt: "Lilly Logo", height: 28 },
+    // { src: "https://html.tailus.io/blocks/customers/openai.svg", alt: "OpenAI Logo", height: 24 },
+    { src: "/inspired-team-logos/nvidia-white.svg", alt: "NVIDIA Logo", height: 22 },
+    { src: "/inspired-team-logos/openai-white.svg", alt: "OpenAI Logo", height: 24 },
+    { src: "/inspired-team-logos/AssetPanda.svg", alt: "Asset Panda Logo", height: 80 },
+    { src: "/inspired-team-logos/Lucidchart.svg", alt: "LucidChart Logo", height: 90 },
+    { src: "/inspired-team-logos/GitHub_Copilot_logo.svg", alt: "Copilot Logo", height: 20 },
+    { src: "/inspired-team-logos/Birdview.svg", alt: "BirdView Logo", height: 80 },
+    { src: "/inspired-team-logos/HappyLoop.svg", alt: "HappyLoop Logo", height: 80 },
+    { src: "/inspired-team-logos/Hubstaff.svg", alt: "Hubstaff Logo", height: 80 },
+    { src: "/inspired-team-logos/Laravel.svg", alt: "Laravel Logo", height: 80 },
+    { src: "/inspired-team-logos/Rocketlane.svg", alt: "Rocketlane Logo", height: 80 },
+    // { src: "https://html.tailus.io/blocks/customers/nvidia.svg", alt: "Nvidia Logo", height: 20 },
+    // { src: "https://html.tailus.io/blocks/customers/column.svg", alt: "Column Logo", height: 16 },
+    // { src: "https://html.tailus.io/blocks/customers/github.svg", alt: "GitHub Logo", height: 16 },
+    // { src: "https://html.tailus.io/blocks/customers/nike.svg", alt: "Nike Logo", height: 20 },
+    // { src: "https://html.tailus.io/blocks/customers/lemonsqueezy.svg", alt: "Lemon Squeezy Logo", height: 20 },
+    // { src: "https://html.tailus.io/blocks/customers/laravel.svg", alt: "Laravel Logo", height: 16 },
+    // { src: "https://html.tailus.io/blocks/customers/lilly.svg", alt: "Lilly Logo", height: 28 },
 ];
 
 export default function LogoCloud() {
@@ -170,9 +180,10 @@ export default function LogoCloud() {
                         <div className="w-full py-6 md:w-auto md:flex-1">
                             <BlurredInfiniteSlider speedOnHover={20} speed={40} gap={112} fadeWidth={80}>
                                 {LOGOS.map((logo) => (
-                                    <div key={logo.src} className="flex">
+                                    <div key={logo.src} className="h-20 flex items-center">
                                         <img
-                                            className="mx-auto w-fit dark:invert"
+                                            // className="flex flex-wrap justify-center items-end gap-6"
+                                            className="mx-auto w-fit"
                                             src={logo.src}
                                             alt={logo.alt}
                                             style={{ height: `${logo.height}px` }}
