@@ -73,9 +73,9 @@ const nextConfig: NextConfig = {
             }
         ]
     },
-    eslint: {
-        ignoreDuringBuilds: true,
-    },
+    // eslint: {
+    //     ignoreDuringBuilds: true,
+    // },
     webpack: (config: Configuration) => {
     if (!config.plugins) {
       config.plugins = [];
