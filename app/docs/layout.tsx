@@ -13,7 +13,7 @@ import LightRays from '@/components/pumki-ui/backgrounds/bg-light-rays'
 
 // ✅ Apply ISR to all docs pages
 // export const revalidate = 3600; // 1 hour
-export const revalidate = 86400; // 1 day
+// export const revalidate = 86400; // 1 day
 
 export const metadata = generateDocsMetadata({
   title: 'Documentation',
