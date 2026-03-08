@@ -391,8 +391,16 @@ html, html[data-theme="light"], html[class*="light"] {
   font-size: 1.1rem !important;
 }
 
-.nextra-sidebar button:contains("Getting Started"),
-.nextra-sidebar *:contains("Getting Started") {
+/* <---------------------- */
+
+/* .nextra-sidebar button:has-text("Getting Started"),
+.nextra-sidebar *:has-text("Getting Started") {
+  font-weight: 700 !important;
+  font-size: 1.1rem !important;
+  color: #ffffff !important;
+} */
+
+.getting-started-title {
   font-weight: 700 !important;
   font-size: 1.1rem !important;
   color: #ffffff !important;
@@ -527,14 +535,14 @@ button[title*="theme" i],
   position: relative;
 }
 
-/* Style text that contains [number] pattern as badges */
-.nextra-sidebar a:has-text(/\[\d+\]/),
-.nextra-sidebar span:has-text(/\[\d+\]/) {
+/* Style text that contains [number] pattern as badges <---------------------- */   
+/* .nextra-sidebar a::has-text(/\[\d+\]/),
+.nextra-sidebar span::has-text(/\[\d+\]/) {
   display: flex !important;
   justify-content: space-between !important;
   align-items: center !important;
   width: 100% !important;
-}
+} */
 
 /* Test by looking for the parent of the purple items --- SUCCESS */
 /* .nextra-sidebar li:has(a[href*="buttons/copy"]) {

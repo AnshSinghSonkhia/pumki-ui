@@ -3,7 +3,7 @@ import { Collapse } from "nextra/components";
 export default {
     "#": {
         type: 'separator',
-        title: "Getting Started",
+        title: <span className="getting-started-title">Getting Started</span>,
     },
     'getting-started': 'Introduction',
     installation: 'Installation',
