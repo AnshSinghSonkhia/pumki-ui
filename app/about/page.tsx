@@ -197,13 +197,13 @@ export default function About() {
           <div className="border-border/60 relative ml-4 border-l pl-8 md:ml-0 md:border-none md:pl-0">
             {[
               {
-                year: 'Aug, 2025',
+                year: 'Mar, 2026',
                 title: 'Launched MVP',
                 description:
                   'We released the first version of Pumki UI, empowering developers to build beautiful interfaces faster and more efficiently.',
               },
               {
-                year: 'Jul, 2025',
+                year: 'Dec, 2025',
                 title: 'Research & Development Phase',
                 description:
                   'Pumki UI was founded with a mission to help teams ship stunning UIs from one library, not ten.',

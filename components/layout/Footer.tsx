@@ -69,7 +69,7 @@ const Footer = () => {
             <svg className="size-3" viewBox="0 0 80 80">
               <path fill="currentColor" d="M67.4307 11.5693C52.005...Z" />
             </svg>
-                2025 © PumkiUI
+                2026 © PumkiUI
           </p>
         </div>
         <div className="space-y-4">
@@ -136,12 +136,12 @@ const Footer = () => {
             <span className="text-xs">✨</span>
           </div>
           
-          {/* Row 3: @ 2025 PumkiUI */}
+          {/* Row 3: @ 2026 PumkiUI */}
           <p className="text-sm text-gray-600 dark:text-gray-400 flex items-center justify-center gap-x-1">
             {/* <svg className="size-3" viewBox="0 0 80 80">
               <path fill="currentColor" d="M67.4307 11.5693C52.005...Z" />
             </svg> */}
-            2025 © PumkiUI
+            2026 © PumkiUI
           </p>
           
           {/* Row 4: A project by... */}

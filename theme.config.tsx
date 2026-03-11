@@ -171,7 +171,7 @@ export default {
   },
   docsRepositoryBase: 'https://github.com/AnshSinghSonkhia/pumki-ui/tree/main/app/docs',
   footer: {
-    text: <span style={{ fontFamily: 'FreeSet' }}>2025 © Pumki UI.</span>
+    text: <span style={{ fontFamily: 'FreeSet' }}>2026 © Pumki UI.</span>
   },
   editLink: {
     text: 'Edit this page on GitHub →'
