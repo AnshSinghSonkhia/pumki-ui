@@ -817,4 +817,21 @@ export const component: Registry = [
             },
         ],
     },
+    {
+        name: "animated-search",
+        type: "registry:ui",
+        title: "Animated Search",
+        description:
+            "A component for displaying an animated search input.",
+        author: "Ansh Singh Sonkhia",
+        dependencies: ["react", "styled-components"],
+        registryDependencies: [],
+        files: [
+            {
+                path: "components/pumki-ui/form/animated-search.tsx",
+                type: "registry:ui",
+                target: "components/pumki-ui/form/animated-search.tsx",
+            },
+        ],
+    },
 ];

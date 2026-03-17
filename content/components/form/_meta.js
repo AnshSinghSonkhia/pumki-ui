@@ -1,4 +1,5 @@
 export default {
-    textfield: 'Text Field',
+    'animated-search': 'Animated',
     searchfield: 'Search Field',
+    textfield: 'Text Field',
 }
