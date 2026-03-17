@@ -86,4 +86,21 @@ export const animation: Registry = [
             },
         ],
     },
+    {
+        name: "japan-matrix",
+        type: "registry:ui",
+        title: "Japan Matrix",
+        description:
+            "get a Japanese-inspired matrix in the background.",
+        author: "Ansh Singh Sonkhia",
+        dependencies: ["react", "styled-components"],
+        registryDependencies: [],
+        files: [
+            {
+                path: "components/pumki-ui/animations/japan-matrix.tsx",
+                type: "registry:ui",
+                target: "components/pumki-ui/animations/japan-matrix.tsx",
+            },
+        ],
+    },
 ];

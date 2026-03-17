@@ -1,0 +1,165 @@
+---
+title: "Japan Matrix Animation - Pumki UI"
+description: A stylish animated Japanese Matrix effect for backgrounds and hero sections.
+---
+
+import { Tabs } from 'nextra/components'
+import { CodeBlock } from '@/components/docs/code-block'
+import { Callout } from 'nextra/components'
+import { Preview } from '@/components/docs/preview'
+import JapanMatrix from '@/components/pumki-ui/animations/japan-matrix'
+
+# Japan Matrix Animation
+
+A stylish animated Japanese Matrix effect featuring multiple scrolling patterns with interactive speed control. Perfect for backgrounds and hero sections.
+
+<Preview
+  code={`import JapanMatrix from '@/components/pumki-ui/animations/japan-matrix';
+
+export const JapanMatrixDemo = () => {
+  return (
+    <div className="relative w-full h-[600px]">
+      <JapanMatrix />
+    </div>
+  );
+};`}
+>
+  <div className="relative w-full h-[600px]">
+    <JapanMatrix />
+  </div>
+</Preview>
+
+## Installation
+
+<Tabs items={['pnpm', 'npm', 'yarn', 'bun']} defaultIndex="1">
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`pnpm dlx pumki add japan-matrix`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`npx pumki add japan-matrix`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`yarn dlx pumki add japan-matrix`}
+    </CodeBlock>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <CodeBlock language="bash">
+      {`bun x pumki add japan-matrix`}
+    </CodeBlock>
+  </Tabs.Tab>
+</Tabs>
+
+## Usage
+
+<br/>
+
+<CodeBlock language="typescript">
+    {`import JapanMatrix from '@/components/pumki-ui/animations/japan-matrix'`}
+</CodeBlock>
+
+<br/>
+
+<CodeBlock language="typescript">
+    {`<JapanMatrix />`}
+</CodeBlock>
+
+## Example
+
+Here are some examples showing different use cases and speed variations:
+
+### Slow Speed
+
+<Preview
+  code={`import JapanMatrix from '@/components/pumki-ui/animations/japan-matrix';
+
+export const JapanMatrixSlowDemo = () => {
+  return (
+    <div className="relative w-full h-[600px]">
+      <JapanMatrix speed={0.5} showSpeedControl={false} />
+    </div>
+  );
+};`}
+>
+  <div className="relative w-full h-[600px]">
+    <JapanMatrix speed={0.5} showSpeedControl={false} />
+  </div>
+</Preview>
+
+### Fast Speed
+
+<Preview
+  code={`import JapanMatrix from '@/components/pumki-ui/animations/japan-matrix';
+
+export const JapanMatrixFastDemo = () => {
+  return (
+    <div className="relative w-full h-[600px]">
+      <JapanMatrix speed={2} showSpeedControl={false} />
+    </div>
+  );
+};`}
+>
+  <div className="relative w-full h-[600px]">
+    <JapanMatrix speed={2} showSpeedControl={false} />
+  </div>
+</Preview>
+
+### In a Full Page Section
+
+<Preview
+  code={`import JapanMatrix from '@/components/pumki-ui/animations/japan-matrix';
+
+export const JapanMatrixFullPageDemo = () => {
+  return (
+    <section className="relative w-full h-screen overflow-hidden">
+      <JapanMatrix showSpeedControl={false} />
+      <div className="absolute inset-0 flex items-center justify-center">
+        <h1 className="text-4xl font-bold text-white z-10">
+          Your Content Here
+        </h1>
+      </div>
+    </section>
+  );
+};`}
+>
+  <div className="relative w-full h-[600px]">
+    <JapanMatrix showSpeedControl={false} />
+    <div className="absolute inset-0 flex items-center justify-center">
+      <h1 className="text-4xl font-bold text-white z-10">
+        Your Content Here
+      </h1>
+    </div>
+  </div>
+</Preview>
+
+## Features
+
+- **Speed Control**: Built-in slider to adjust animation speed from 0.5x to 2x
+- **Multi-Pattern Layout**: 5 repeating matrix patterns for continuous horizontal scrolling effect
+- **Varied Characters**: Different character sets for odd/even columns using `:nth-child` selectors
+- **Smooth Gradient**: Beautiful gradient effect from white to green to transparent
+- **Responsive**: Optimized font sizes and dimensions for mobile devices
+- **Performance**: Uses CSS animations and variables for smooth 60fps performance
+
+## Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `speed` | `number` | `1` | Animation speed multiplier (0.5 = fast, 2 = slow) |
+| `showSpeedControl` | `boolean` | `true` | Show/hide the speed control slider |
+
+## Customization
+
+<Callout type="info">
+The component includes a speed control slider that allows users to adjust the animation speed interactively. The speed factor ranges from 0.5x (fastest) to 2x (slowest).
+</Callout>
+
+You can customize the component by modifying:
+- `columnTimings`: Adjust animation delays and durations for each column
+- Default `speed` value in `useState(1)`: Change the initial animation speed
+- Gradient colors: Modify the background gradient in `.matrix-column::before`
+- Character content: Update the content in the `:nth-child` selectors for different characters
