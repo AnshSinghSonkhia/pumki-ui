@@ -75,75 +75,14 @@ code that renders should be here, while the one that is shown to users should be
 
 ## Props
 
-import { PumkiTable, PumkiTableStyles } from '@/components/docs/PumkiTable'
-
-<PumkiTableStyles />
-
-<PumkiTable>
-  <table className="pumki-table">
-    <thead>
-      <tr>
-        <th>Prop</th>
-        <th>Type</th>
-        <th>Default</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><code>children</code></td>
-        <td><code>React.ReactNode</code></td>
-        <td>-</td>
-        <td>Content to render inside the preview area.</td>
-      </tr>
-      <tr>
-        <td><code>code</code></td>
-        <td><code>string</code></td>
-        <td>-</td>
-        <td>Code string to display in the code tab.</td>
-      </tr>
-      <tr>
-        <td><code>title?</code></td>
-        <td><code>string</code></td>
-        <td>-</td>
-        <td>Title for the preview block.</td>
-      </tr>
-      <tr>
-        <td><code>description?</code></td>
-        <td><code>string</code></td>
-        <td>-</td>
-        <td>Description for the preview block.</td>
-      </tr>
-      <tr>
-        <td><code>className?</code></td>
-        <td><code>string</code></td>
-        <td>-</td>
-        <td>Additional CSS classes for the container.</td>
-      </tr>
-      <tr>
-        <td><code>showCode?</code></td>
-        <td><code>boolean</code></td>
-        <td><code>true</code></td>
-        <td>Show the code tab.</td>
-      </tr>
-      <tr>
-        <td><code>centered?</code></td>
-        <td><code>boolean</code></td>
-        <td><code>true</code></td>
-        <td>Center the preview content.</td>
-      </tr>
-      <tr>
-        <td><code>minHeight?</code></td>
-        <td><code>string</code></td>
-        <td><code>"200px"</code></td>
-        <td>Minimum height for the preview area.</td>
-      </tr>
-      <tr>
-        <td><code>previewHeight?</code></td>
-        <td><code>string</code></td>
-        <td><code>"-"</code></td>
-        <td>Height for the preview area.</td>
-      </tr>
-    </tbody>
-  </table>
-</PumkiTable>
+| Prop           | Type            | Default | Description                                |
+| -------------- | --------------- | ------- | ------------------------------------------ |
+| children       | React.ReactNode | -       | Content to render inside the preview area. |
+| code           | string          | -       | Code string to display in the code tab.    |
+| title?         | string          | -       | Title for the preview block.               |
+| description?   | string          | -       | Description for the preview block.         |
+| className?     | string          | -       | Additional CSS classes for the container.  |
+| showCode?      | boolean         | true    | Show the code tab.                         |
+| centered?      | boolean         | true    | Center the preview content.                |
+| minHeight?     | string          | "200px" | Minimum height for the preview area.       |
+| previewHeight? | string          | "-"     | Height for the preview area.               |

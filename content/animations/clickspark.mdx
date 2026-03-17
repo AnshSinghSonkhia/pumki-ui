@@ -79,69 +79,13 @@ Wrap your clickable area (e.g., button, div) inside `<ClickSpark>` to add burst 
 
 ## Props
 
-import { PumkiTable, PumkiTableStyles } from '@/components/docs/PumkiTable'
-
-<PumkiTableStyles />
-
-<PumkiTable>
-  <table className="pumki-table">
-    <thead>
-      <tr>
-        <th>Prop</th>
-        <th>Type</th>
-        <th>Default</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><code>sparkColor</code></td>
-        <td><code>string</code></td>
-        <td><code>"#fff"</code></td>
-        <td>Color of the sparks (HEX or CSS color).</td>
-      </tr>
-      <tr>
-        <td><code>sparkSize</code></td>
-        <td><code>number</code></td>
-        <td><code>10</code></td>
-        <td>Length of each spark line.</td>
-      </tr>
-      <tr>
-        <td><code>sparkRadius</code></td>
-        <td><code>number</code></td>
-        <td><code>15</code></td>
-        <td>Radius of spark spread from the click point.</td>
-      </tr>
-      <tr>
-        <td><code>sparkCount</code></td>
-        <td><code>number</code></td>
-        <td><code>8</code></td>
-        <td>Total number of sparks emitted per click.</td>
-      </tr>
-      <tr>
-        <td><code>duration</code></td>
-        <td><code>number</code></td>
-        <td><code>400</code></td>
-        <td>Duration of spark animation in milliseconds.</td>
-      </tr>
-      <tr>
-        <td><code>easing</code></td>
-        <td><code>"linear" | "ease-in" | "ease-out" | "ease-in-out"</code></td>
-        <td><code>"ease-out"</code></td>
-        <td>Easing function applied to spark motion.</td>
-      </tr>
-      <tr>
-        <td><code>extraScale</code></td>
-        <td><code>number</code></td>
-        <td><code>1.0</code></td>
-        <td>Additional scale multiplier for spark distance.</td>
-      </tr>
-      <tr>
-        <td><code>children</code></td>
-        <td><code>React.ReactNode</code></td>
-        <td><code>-</code></td>
-        <td>Any clickable content to wrap inside the spark animation.</td>
-      </tr>
-    </tbody>
-  </table>
-</PumkiTable>
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `sparkColor` | `string` | `"#fff"` | Color of the sparks (HEX or CSS color). |
+| `sparkSize` | `number` | `10` | Length of each spark line. |
+| `sparkRadius` | `number` | `15` | Radius of spark spread from the click point. |
+| `sparkCount` | `number` | `8` | Total number of sparks emitted per click. |
+| `duration` | `number` | `400` | Duration of spark animation in milliseconds. |
+| `easing` | `"linear" \| "ease-in" \| "ease-out" \| "ease-in-out"` | `"ease-out"` | Easing function applied to spark motion. |
+| `extraScale` | `number` | `1.0` | Additional scale multiplier for spark distance. |
+| `children` | `React.ReactNode` | `-` | Any clickable content to wrap inside the spark animation. |

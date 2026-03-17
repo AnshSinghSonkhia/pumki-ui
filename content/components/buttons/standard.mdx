@@ -330,34 +330,19 @@ export const InputButtonDemo = () => {
 
 ## Props
 
-import { PumkiTable, PumkiTableStyles } from '@/components/docs/PumkiTable'
-
-<PumkiTableStyles />
-<PumkiTable>
-<table className="pumki-table">
-  <thead>
-    <tr>
-      <th>Prop</th>
-      <th>Type</th>
-      <th>Default</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr><td><code>className</code></td><td><code>string</code></td><td>-</td><td>Custom CSS classes for the button.</td></tr>
-    <tr><td><code>selected</code></td><td><code>boolean</code></td><td>-</td><td>Marks the button as selected (sets <code>data-state="open"</code>).</td></tr>
-    <tr><td><code>variant</code></td><td><code>'primary' | 'mono' | 'destructive' | 'secondary' | 'outline' | 'dashed' | 'ghost' | 'dim' | 'foreground' | 'inverse'</code></td><td>'primary'</td><td>Visual style of the button.</td></tr>
-    <tr><td><code>shape</code></td><td><code>'default' | 'circle'</code></td><td>'default'</td><td>Shape of the button (default or circle).</td></tr>
-    <tr><td><code>appearance</code></td><td><code>'default' | 'ghost'</code></td><td>'default'</td><td>Appearance style of the button.</td></tr>
-    <tr><td><code>mode</code></td><td><code>'default' | 'icon' | 'link' | 'input'</code></td><td>'default'</td><td>Button mode (standard, icon, link, input).</td></tr>
-    <tr><td><code>size</code></td><td><code>'lg' | 'md' | 'sm' | 'icon'</code></td><td>'md'</td><td>Size of the button.</td></tr>
-    <tr><td><code>autoHeight</code></td><td><code>boolean</code></td><td>false</td><td>If true, button height is set to auto.</td></tr>
-    <tr><td><code>underlined</code></td><td><code>'solid' | 'dashed'</code></td><td>-</td><td>Underline style for link mode.</td></tr>
-    <tr><td><code>underline</code></td><td><code>'solid' | 'dashed'</code></td><td>-</td><td>Underline style for link mode (hover).</td></tr>
-    <tr><td><code>asChild</code></td><td><code>boolean</code></td><td>false</td><td>Renders as a child component (Radix Slot).</td></tr>
-    <tr><td><code>placeholder</code></td><td><code>boolean</code></td><td>false</td><td>Applies muted foreground color for input mode.</td></tr>
-    <tr><td><code>icon</code></td><td><code>LucideIcon</code></td><td>-</td><td>Lucide icon to display in the button (for ButtonArrow).</td></tr>
-    <tr><td><code>...props</code></td><td>All native button props</td><td>-</td><td>Any other props for the HTML <code>&lt;button&gt;</code> element.</td></tr>
-  </tbody>
-</table>
-</PumkiTable>
+| Prop        | Type                                                                                                                 | Default   | Description                                             |
+| ----------- | -------------------------------------------------------------------------------------------------------------------- | --------- | ------------------------------------------------------- |
+| className   | string                                                                                                               | -         | Custom CSS classes for the button.                      |
+| selected    | boolean                                                                                                              | -         | Marks the button as selected (sets data-state="open").  |
+| variant     | 'primary' | 'mono' | 'destructive' | 'secondary' | 'outline' | 'dashed' | 'ghost' | 'dim' | 'foreground' | 'inverse' | 'primary' | Visual style of the button.                             |
+| shape       | 'default' | 'circle'                                                                                                 | 'default' | Shape of the button (default or circle).                |
+| appearance  | 'default' | 'ghost'                                                                                                  | 'default' | Appearance style of the button.                         |
+| mode        | 'default' | 'icon' | 'link' | 'input'                                                                                | 'default' | Button mode (standard, icon, link, input).              |
+| size        | 'lg' | 'md' | 'sm' | 'icon'                                                                                          | 'md'      | Size of the button.                                     |
+| autoHeight  | boolean                                                                                                              | false     | If true, button height is set to auto.                  |
+| underlined  | 'solid' | 'dashed'                                                                                                   | -         | Underline style for link mode.                          |
+| underline   | 'solid' | 'dashed'                                                                                                   | -         | Underline style for link mode (hover).                  |
+| asChild     | boolean                                                                                                              | false     | Renders as a child component (Radix Slot).              |
+| placeholder | boolean                                                                                                              | false     | Applies muted foreground color for input mode.          |
+| icon        | LucideIcon                                                                                                           | -         | Lucide icon to display in the button (for ButtonArrow). |
+| ...props    | All native button props                                                                                              | -         | Any other props for the HTML `<button>` element.          |

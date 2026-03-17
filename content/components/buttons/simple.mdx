@@ -153,63 +153,12 @@ export const ButtonDemo = () => {
 
 ## Props
 
-import { PumkiTable, PumkiTableStyles } from '@/components/docs/PumkiTable'
-
-<PumkiTableStyles />
-
-<PumkiTable>
-  <table className="pumki-table">
-    <thead>
-      <tr>
-        <th>Prop</th>
-        <th>Type</th>
-        <th>Default</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><code>variant?</code></td>
-        <td><code>'default' | 'destructive' | 'outline' | 'secondary' | 'ghost' | 'link' | 'success' | 'warning' | 'info' | 'dark' | 'light' | 'gradient' | 'glass'</code></td>
-        <td><code>"default"</code></td>
-        <td>Style variant for the button.</td>
-      </tr>
-      <tr>
-        <td><code>size?</code></td>
-        <td><code>'default' | 'sm' | 'lg' | 'icon'</code></td>
-        <td><code>"default"</code></td>
-        <td>Size of the button.</td>
-      </tr>
-      <tr>
-        <td><code>asChild?</code></td>
-        <td><code>boolean</code></td>
-        <td><code>false</code></td>
-        <td>If true, renders children directly with button styles.</td>
-      </tr>
-      <tr>
-        <td><code>className?</code></td>
-        <td><code>string</code></td>
-        <td>-</td>
-        <td>Additional CSS classes for the button.</td>
-      </tr>
-      <tr>
-        <td><code>children?</code></td>
-        <td><code>React.ReactNode</code></td>
-        <td>-</td>
-        <td>Button content.</td>
-      </tr>
-      <tr>
-        <td><code>type?</code></td>
-        <td><code>'button' | 'submit' | 'reset'</code></td>
-        <td><code>"button"</code></td>
-        <td>Button type attribute.</td>
-      </tr>
-      <tr>
-        <td><code>...props</code></td>
-        <td><code>HTMLButtonElement attributes</code></td>
-        <td>-</td>
-        <td>Any other props for the button element.</td>
-      </tr>
-    </tbody>
-  </table>
-</PumkiTable>
+| Prop       | Type                                                                                                                                              | Default   | Description                                            |
+| ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | --------- | ------------------------------------------------------ |
+| variant?   | 'default' | 'destructive' | 'outline' | 'secondary' | 'ghost' | 'link' | 'success' | 'warning' | 'info' | 'dark' | 'light' | 'gradient' | 'glass' | "default" | Style variant for the button.                          |
+| size?      | 'default' | 'sm' | 'lg' | 'icon'                                                                                                                  | "default" | Size of the button.                                    |
+| asChild?   | boolean                                                                                                                                           | false     | If true, renders children directly with button styles. |
+| className? | string                                                                                                                                            | -         | Additional CSS classes for the button.                 |
+| children?  | React.ReactNode                                                                                                                                   | -         | Button content.                                        |
+| type?      | 'button' | 'submit' | 'reset'                                                                                                                     | "button"  | Button type attribute.                                 |
+| ...props   | HTMLButtonElement attributes                                                                                                                      | -         | Any other props for the button element.                |

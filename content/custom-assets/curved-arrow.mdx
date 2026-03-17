@@ -147,36 +147,21 @@ export const CustomCurvedArrowDemo = () => {
 
 ## Props
 
-import { PumkiTable, PumkiTableStyles } from '../../components/docs/PumkiTable'
-
-<PumkiTableStyles />
-<PumkiTable>
-<table className="pumki-table">
-  <thead>
-    <tr>
-      <th>Prop</th>
-      <th>Type</th>
-      <th>Default</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr><td><code>startElement</code></td><td><code>React.RefObject&lt;HTMLElement&gt; | null</code></td><td><code>required</code></td><td>Reference to the element where the arrow starts.</td></tr>
-    <tr><td><code>endElement</code></td><td><code>React.RefObject&lt;HTMLElement&gt; | null</code></td><td><code>required</code></td><td>Reference to the element where the arrow ends.</td></tr>
-    <tr><td><code>obstacleElement</code></td><td><code>React.RefObject&lt;HTMLElement&gt; | null</code></td><td><code>undefined</code></td><td>Optional reference to an obstacle element for path calculation.</td></tr>
-    <tr><td><code>startX</code></td><td><code>number</code></td><td><code>0</code></td><td>Manual X coordinate for the start point (overrides element if provided).</td></tr>
-    <tr><td><code>startY</code></td><td><code>number</code></td><td><code>0</code></td><td>Manual Y coordinate for the start point (overrides element if provided).</td></tr>
-    <tr><td><code>endX</code></td><td><code>number</code></td><td><code>100</code></td><td>Manual X coordinate for the end point (overrides element if provided).</td></tr>
-    <tr><td><code>endY</code></td><td><code>number</code></td><td><code>100</code></td><td>Manual Y coordinate for the end point (overrides element if provided).</td></tr>
-    <tr><td><code>curveIntensity</code></td><td><code>number</code></td><td><code>0.4</code></td><td>Controls the strength of the curve between start and end.</td></tr>
-    <tr><td><code>curveType</code></td><td><code>"smooth" | "dramatic" | "s-curve" | "wave" | "spiral" | "elegant" | "shortest-path" | "around-obstacle"</code></td><td><code>"smooth"</code></td><td>Type of curve used for the arrow path.</td></tr>
-    <tr><td><code>curveDirection</code></td><td><code>"auto" | "up" | "down" | "left" | "right"</code></td><td><code>"auto"</code></td><td>Direction preference for the curve.</td></tr>
-    <tr><td><code>strokeWidth</code></td><td><code>number</code></td><td><code>4</code></td><td>Width of the arrow stroke.</td></tr>
-    <tr><td><code>arrowSize</code></td><td><code>number</code></td><td><code>20</code></td><td>Size of the arrow head.</td></tr>
-    <tr><td><code>className</code></td><td><code>string</code></td><td><code>""</code></td><td>Custom CSS classes for the container.</td></tr>
-    <tr><td><code>animated</code></td><td><code>boolean</code></td><td><code>undefined</code></td><td>If true, enables arrow animation (not implemented in current code).</td></tr>
-    <tr><td><code>startPosition</code></td><td><code>"top" | "bottom" | "left" | "right" | "center" | "top-left" | "top-right" | "bottom-left" | "bottom-right"</code></td><td><code>"bottom"</code></td><td>Anchor position on the start element.</td></tr>
-    <tr><td><code>endPosition</code></td><td><code>"top" | "bottom" | "left" | "right" | "center" | "top-left" | "top-right" | "bottom-left" | "bottom-right"</code></td><td><code>"top"</code></td><td>Anchor position on the end element.</td></tr>
-  </tbody>
-</table>
-</PumkiTable>
+| Prop            | Type                                                                                                       | Default   | Description                                                              |
+| --------------- | ---------------------------------------------------------------------------------------------------------- | --------- | ------------------------------------------------------------------------ |
+| startElement    | `React.RefObject<HTMLElement>` | null                                                                        | required  | Reference to the element where the arrow starts.                         |
+| endElement      | `React.RefObject<HTMLElement>` | null                                                                        | required  | Reference to the element where the arrow ends.                           |
+| obstacleElement | `React.RefObject<HTMLElement>` | null                                                                        | undefined | Optional reference to an obstacle element for path calculation.          |
+| startX          | number                                                                                                     | 0         | Manual X coordinate for the start point (overrides element if provided). |
+| startY          | number                                                                                                     | 0         | Manual Y coordinate for the start point (overrides element if provided). |
+| endX            | number                                                                                                     | 100       | Manual X coordinate for the end point (overrides element if provided).   |
+| endY            | number                                                                                                     | 100       | Manual Y coordinate for the end point (overrides element if provided).   |
+| curveIntensity  | number                                                                                                     | 0.4       | Controls the strength of the curve between start and end.                |
+| curveType       | "smooth" | "dramatic" | "s-curve" | "wave" | "spiral" | "elegant" | "shortest-path" | "around-obstacle"    | "smooth"  | Type of curve used for the arrow path.                                   |
+| curveDirection  | "auto" | "up" | "down" | "left" | "right"                                                                  | "auto"    | Direction preference for the curve.                                      |
+| strokeWidth     | number                                                                                                     | 4         | Width of the arrow stroke.                                               |
+| arrowSize       | number                                                                                                     | 20        | Size of the arrow head.                                                  |
+| className       | string                                                                                                     | ""        | Custom CSS classes for the container.                                    |
+| animated        | boolean                                                                                                    | undefined | If true, enables arrow animation (not implemented in current code).      |
+| startPosition   | "top" | "bottom" | "left" | "right" | "center" | "top-left" | "top-right" | "bottom-left" | "bottom-right" | "bottom"  | Anchor position on the start element.                                    |
+| endPosition     | "top" | "bottom" | "left" | "right" | "center" | "top-left" | "top-right" | "bottom-left" | "bottom-right" | "top"     | Anchor position on the end element.                                      |

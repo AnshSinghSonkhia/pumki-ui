@@ -55,63 +55,12 @@ A customizable code block component for displaying code snippets with syntax hig
 
 ## Props
 
-import { PumkiTable, PumkiTableStyles } from '@/components/docs/PumkiTable'
-
-<PumkiTableStyles />
-
-<PumkiTable>
-  <table className="pumki-table">
-    <thead>
-      <tr>
-        <th>Prop</th>
-        <th>Type</th>
-        <th>Default</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><code>children</code></td>
-        <td><code>string</code></td>
-        <td>-</td>
-        <td>The code to display inside the code block.</td>
-      </tr>
-      <tr>
-        <td><code>language?</code></td>
-        <td><code>string</code></td>
-        <td><code>"text"</code></td>
-        <td>Language for syntax highlighting.</td>
-      </tr>
-      <tr>
-        <td><code>filename?</code></td>
-        <td><code>string</code></td>
-        <td>-</td>
-        <td>Optional filename to display in the header.</td>
-      </tr>
-      <tr>
-        <td><code>highlight?</code></td>
-        <td><code>string</code></td>
-        <td>-</td>
-        <td>Lines or substring to highlight (e.g. "1,3-5" or "/text/").</td>
-      </tr>
-      <tr>
-        <td><code>copy?</code></td>
-        <td><code>boolean</code></td>
-        <td><code>true</code></td>
-        <td>Show copy-to-clipboard button.</td>
-      </tr>
-      <tr>
-        <td><code>showLineNumbers?</code></td>
-        <td><code>boolean</code></td>
-        <td><code>true</code></td>
-        <td>Show line numbers.</td>
-      </tr>
-      <tr>
-        <td><code>className?</code></td>
-        <td><code>string</code></td>
-        <td>-</td>
-        <td>Additional CSS classes for the code block container.</td>
-      </tr>
-    </tbody>
-  </table>
-</PumkiTable>
+| Prop           | Type      | Default | Description |
+|----------------|----------|---------|-------------|
+| `children`     | `string`  | -       | The code to display inside the code block. |
+| `language`     | `string`  | "text" | Language for syntax highlighting. |
+| `filename`     | `string`  | -       | Optional filename to display in the header. |
+| `highlight`    | `string`  | -       | Lines or substring to highlight (e.g. "1,3-5" or "/text/"). |
+| `copy`         | `boolean` | true    | Show copy-to-clipboard button. |
+| `showLineNumbers`| `boolean`| true   | Show line numbers. |
+| `className`    | `string`  | -       | Additional CSS classes for the code block container. |

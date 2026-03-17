@@ -289,197 +289,49 @@ export const PotionBackgroundDemo = () => {
 
 ## Props
 
-import { PumkiTable, PumkiTableStyles } from '../../components/docs/PumkiTable'
-
-<PumkiTableStyles />
-
-
 ### PotionBackground Props
 
-<PumkiTable>
-  <table className="pumki-table">
-    <thead>
-      <tr>
-        <th>Prop</th>
-        <th>Type</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><code>glitterCount?</code></td>
-        <td><code>{`{ mobile?: number; desktop?: number }`}</code></td>
-        <td><code>{`{ mobile: 250, desktop: 500 }`}</code></td>
-      </tr>
-      <tr>
-        <td><code>sparkCount?</code></td>
-        <td><code>{`{ mobile?: number; desktop?: number }`}</code></td>
-        <td><code>{`{ mobile: 200, desktop: 350 }`}</code></td>
-      </tr>
-      <tr>
-        <td><code>colors?</code></td>
-        <td><code>ColorConfig</code></td>
-        <td>See ColorConfig defaults</td>
-      </tr>
-      <tr>
-        <td><code>animations?</code></td>
-        <td><code>AnimationConfig</code></td>
-        <td>See AnimationConfig defaults</td>
-      </tr>
-      <tr>
-        <td><code>particleConfig?</code></td>
-        <td><code>ParticleConfig</code></td>
-        <td>See ParticleConfig defaults</td>
-      </tr>
-      <tr>
-        <td><code>features?</code></td>
-        <td><code>FeatureConfig</code></td>
-        <td>See FeatureConfig defaults</td>
-      </tr>
-      <tr>
-        <td><code>className?</code></td>
-        <td><code>string</code></td>
-        <td><code>""</code></td>
-      </tr>
-    </tbody>
-  </table>
-</PumkiTable>
- 
+| Prop           | Type                                 | Default                          |
+|----------------|--------------------------------------|-----------------------------------|
+| `glitterCount` | `{ mobile?: number; desktop?: number }` | `{ mobile: 250, desktop: 500 }`  |
+| `sparkCount`   | `{ mobile?: number; desktop?: number }` | `{ mobile: 200, desktop: 350 }`  |
+| `colors`       | `ColorConfig`                        | See ColorConfig defaults          |
+| `animations`   | `AnimationConfig`                    | See AnimationConfig defaults      |
+| `particleConfig`| `ParticleConfig`                    | See ParticleConfig defaults       |
+| `features`     | `FeatureConfig`                      | See FeatureConfig defaults        |
+| `className`    | `string`                             | ""                              |
+
 ### ColorConfig Props
 
-<PumkiTable>
-  <table className="pumki-table">
-    <thead>
-      <tr>
-        <th>Prop</th>
-        <th>Type</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><code>gradient?</code></td>
-        <td><code>string[]</code></td>
-        <td><code>{`['#faf398', '#f9f295', '#e0aa3e', '#b88a44', '#8b6f47']`}</code></td>
-      </tr>
-      <tr>
-        <td><code>glitterParticle?</code></td>
-        <td><code>{`{ inner?: string; middle?: string; outer?: string }`}</code></td>
-        <td><code>{`{ inner: '#ffffff', middle: '#faf398', outer: '#e0aa3e' }`}</code></td>
-      </tr>
-      <tr>
-        <td><code>sparkParticle?</code></td>
-        <td><code>{`{ inner?: string; middle?: string; outer?: string }`}</code></td>
-        <td><code>{`{ inner: '#fff', middle: 'rgba(255, 255, 255, 0.9)', outer: 'rgba(224, 170, 62, 0.9)' }`}</code></td>
-      </tr>
-      <tr>
-        <td><code>highlights?</code></td>
-        <td><code>{`{ primary?: string; secondary?: string; accent?: string }`}</code></td>
-        <td><code>{`{ primary: 'rgba(255, 255, 255, 0.1)', secondary: 'rgba(255, 255, 255, 0.15)', accent: 'rgba(212, 175, 55, 0.1)' }`}</code></td>
-      </tr>
-    </tbody>
-  </table>
-</PumkiTable>
+| Prop              | Type                                      | Default                                                        |
+|-------------------|-------------------------------------------|----------------------------------------------------------------|
+| `gradient`        | `string[]`                                | `['#faf398', '#f9f295', '#e0aa3e', '#b88a44', '#8b6f47']`      |
+| `glitterParticle` | `{ inner?: string; middle?: string; outer?: string }` | `{ inner: '#ffffff', middle: '#faf398', outer: '#e0aa3e' }`   |
+| `sparkParticle`   | `{ inner?: string; middle?: string; outer?: string }` | `{ inner: '#fff', middle: 'rgba(255, 255, 255, 0.9)', outer: 'rgba(224, 170, 62, 0.9)' }` |
+| `highlights`      | `{ primary?: string; secondary?: string; accent?: string }` | `{ primary: 'rgba(255, 255, 255, 0.1)', secondary: 'rgba(255, 255, 255, 0.15)', accent: 'rgba(212, 175, 55, 0.1)' }` |
 
 ### AnimationConfig Props
 
-<PumkiTable>
-  <table className="pumki-table">
-    <thead>
-      <tr>
-        <th>Prop</th>
-        <th>Type</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><code>liquidShiftDuration?</code></td>
-        <td><code>number</code></td>
-        <td><code>8</code></td>
-      </tr>
-      <tr>
-        <td><code>surfaceRippleDuration?</code></td>
-        <td><code>number</code></td>
-        <td><code>6</code></td>
-      </tr>
-      <tr>
-        <td><code>shimmerSweepDuration?</code></td>
-        <td><code>number</code></td>
-        <td><code>10</code></td>
-      </tr>
-      <tr>
-        <td><code>particleFloatDuration?</code></td>
-        <td><code>{`{ min?: number; max?: number }`}</code></td>
-        <td><code>{`{ min: 3, max: 7 }`}</code></td>
-      </tr>
-    </tbody>
-  </table>
-</PumkiTable>
+| Prop                  | Type                                 | Default                |
+|-----------------------|--------------------------------------|------------------------|
+| `liquidShiftDuration` | `number`                             | 8                      |
+| `surfaceRippleDuration`| `number`                            | 6                      |
+| `shimmerSweepDuration`| `number`                             | 10                     |
+| `particleFloatDuration`| `{ min?: number; max?: number }`    | `{ min: 3, max: 7 }`   |
 
 ### ParticleConfig Props
 
-<PumkiTable>
-  <table className="pumki-table">
-    <thead>
-      <tr>
-        <th>Prop</th>
-        <th>Type</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><code>glitterSize?</code></td>
-        <td><code>number</code></td>
-        <td><code>4</code></td>
-      </tr>
-      <tr>
-        <td><code>sparkSize?</code></td>
-        <td><code>number</code></td>
-        <td><code>2</code></td>
-      </tr>
-      <tr>
-        <td><code>opacity?</code></td>
-        <td><code>{`{ min?: number; max?: number }`}</code></td>
-        <td><code>{`{ min: 0.5, max: 1.0 }`}</code></td>
-      </tr>
-    </tbody>
-  </table>
-</PumkiTable>
+| Prop         | Type                                 | Default                |
+|--------------|--------------------------------------|------------------------|
+| `glitterSize`| `number`                             | 4                      |
+| `sparkSize`  | `number`                             | 2                      |
+| `opacity`    | `{ min?: number; max?: number }`      | `{ min: 0.5, max: 1.0 }`|
 
 ### FeatureConfig Props
 
-<PumkiTable>
-  <table className="pumki-table">
-    <thead>
-      <tr>
-        <th>Prop</th>
-        <th>Type</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><code>showGlitter?</code></td>
-        <td><code>boolean</code></td>
-        <td><code>true</code></td>
-      </tr>
-      <tr>
-        <td><code>showSparks?</code></td>
-        <td><code>boolean</code></td>
-        <td><code>true</code></td>
-      </tr>
-      <tr>
-        <td><code>showSurfaceHighlights?</code></td>
-        <td><code>boolean</code></td>
-        <td><code>true</code></td>
-      </tr>
-      <tr>
-        <td><code>showShimmer?</code></td>
-        <td><code>boolean</code></td>
-        <td><code>true</code></td>
-      </tr>
-    </tbody>
-  </table>
-</PumkiTable>
+| Prop                  | Type      | Default |
+|-----------------------|-----------|---------|
+| `showGlitter`         | `boolean` | true    |
+| `showSparks`          | `boolean` | true    |
+| `showSurfaceHighlights`| `boolean`| true    |
+| `showShimmer`         | `boolean` | true    |

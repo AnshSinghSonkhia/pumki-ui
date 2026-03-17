@@ -86,26 +86,11 @@ export const GDDemo = () => {
 
 ## Props
 
-import { PumkiTable, PumkiTableStyles } from '../../components/docs/PumkiTable'
-
-<PumkiTableStyles />
-<PumkiTable>
-<table className="pumki-table">
-  <thead>
-    <tr>
-      <th>Prop</th>
-      <th>Type</th>
-      <th>Default</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr><td><code>imageSrc</code></td><td><code>string</code></td><td><code>required</code></td><td>Image URL to be distorted.</td></tr>
-    <tr><td><code>grid</code></td><td><code>number</code></td><td><code>15</code></td><td>Grid resolution for distortion mesh.</td></tr>
-    <tr><td><code>mouse</code></td><td><code>number</code></td><td><code>0.1</code></td><td>Mouse influence radius.</td></tr>
-    <tr><td><code>strength</code></td><td><code>number</code></td><td><code>0.15</code></td><td>Distortion strength.</td></tr>
-    <tr><td><code>relaxation</code></td><td><code>number</code></td><td><code>0.9</code></td><td>Relaxation factor for grid movement.</td></tr>
-    <tr><td><code>className</code></td><td><code>string</code></td><td><code>""</code></td><td>Custom CSS classes for the wrapper.</td></tr>
-  </tbody>
-  </table>
-</PumkiTable>
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `imageSrc`   | `string` | required   | Image URL to be distorted. |
+| `grid`       | `number` | 15         | Grid resolution for distortion mesh. |
+| `mouse`      | `number` | 0.1        | Mouse influence radius. |
+| `strength`   | `number` | 0.15       | Distortion strength. |
+| `relaxation` | `number` | 0.9        | Relaxation factor for grid movement. |
+| `className`  | `string` | ""        | Custom CSS classes for the wrapper. |

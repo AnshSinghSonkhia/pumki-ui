@@ -152,37 +152,22 @@ export const BallpitDemo = () => {
 
 ## Props
 
-import { PumkiTable, PumkiTableStyles } from '../../components/docs/PumkiTable'
-
-<PumkiTableStyles />
-<PumkiTable>
-<table className="pumki-table">
-  <thead>
-    <tr>
-      <th>Prop</th>
-      <th>Type</th>
-      <th>Default</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr><td><code>className</code></td><td><code>string</code></td><td><code>""</code></td><td>Custom CSS classes for the canvas element.</td></tr>
-    <tr><td><code>followCursor</code></td><td><code>boolean</code></td><td><code>true</code></td><td>If true, the largest ball follows the mouse or touch position.</td></tr>
-    <tr><td><code>count</code></td><td><code>number</code></td><td><code>200</code></td><td>Number of balls in the simulation.</td></tr>
-    <tr><td><code>colors</code></td><td><code>number[]</code></td><td><code>[0, 0, 0]</code></td><td>Array of colors for the balls (as numbers).</td></tr>
-    <tr><td><code>ambientColor</code></td><td><code>number</code></td><td><code>0xffffff</code></td><td>Ambient light color.</td></tr>
-    <tr><td><code>ambientIntensity</code></td><td><code>number</code></td><td><code>1</code></td><td>Ambient light intensity.</td></tr>
-    <tr><td><code>lightIntensity</code></td><td><code>number</code></td><td><code>200</code></td><td>Point light intensity.</td></tr>
-    <tr><td><code>minSize</code></td><td><code>number</code></td><td><code>0.5</code></td><td>Minimum ball size.</td></tr>
-    <tr><td><code>maxSize</code></td><td><code>number</code></td><td><code>1</code></td><td>Maximum ball size.</td></tr>
-    <tr><td><code>size0</code></td><td><code>number</code></td><td><code>1</code></td><td>Size of the largest ball (the one that follows the cursor).</td></tr>
-    <tr><td><code>gravity</code></td><td><code>number</code></td><td><code>0.5</code></td><td>Gravity strength.</td></tr>
-    <tr><td><code>friction</code></td><td><code>number</code></td><td><code>0.9975</code></td><td>Friction factor for ball movement.</td></tr>
-    <tr><td><code>wallBounce</code></td><td><code>number</code></td><td><code>0.95</code></td><td>Bounciness when balls hit the wall.</td></tr>
-    <tr><td><code>maxVelocity</code></td><td><code>number</code></td><td><code>0.15</code></td><td>Maximum velocity for balls.</td></tr>
-    <tr><td><code>maxX</code></td><td><code>number</code></td><td><code>5</code></td><td>Horizontal boundary for ball movement.</td></tr>
-    <tr><td><code>maxY</code></td><td><code>number</code></td><td><code>5</code></td><td>Vertical boundary for ball movement.</td></tr>
-    <tr><td><code>maxZ</code></td><td><code>number</code></td><td><code>2</code></td><td>Depth boundary for ball movement.</td></tr>
-  </tbody>
-</table>
-</PumkiTable>
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `className` | `string` | `""` | Custom CSS classes for the canvas element. |
+| `followCursor` | `boolean` | `true` | If true, the largest ball follows the mouse or touch position. |
+| `count` | `number` | `200` | Number of balls in the simulation. |
+| `colors` | `number[]` | `[0, 0, 0]` | Array of colors for the balls (as numbers). |
+| `ambientColor` | `number` | `0xffffff` | Ambient light color. |
+| `ambientIntensity` | `number` | `1` | Ambient light intensity. |
+| `lightIntensity` | `number` | `200` | Point light intensity. |
+| `minSize` | `number` | `0.5` | Minimum ball size. |
+| `maxSize` | `number` | `1` | Maximum ball size. |
+| `size0` | `number` | `1` | Size of the largest ball (the one that follows the cursor). |
+| `gravity` | `number` | `0.5` | Gravity strength. |
+| `friction` | `number` | `0.9975` | Friction factor for ball movement. |
+| `wallBounce` | `number` | `0.95` | Bounciness when balls hit the wall. |
+| `maxVelocity` | `number` | `0.15` | Maximum velocity for balls. |
+| `maxX` | `number` | `5` | Horizontal boundary for ball movement. |
+| `maxY` | `number` | `5` | Vertical boundary for ball movement. |
+| `maxZ` | `number` | `2` | Depth boundary for ball movement. |

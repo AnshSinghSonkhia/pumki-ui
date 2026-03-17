@@ -198,62 +198,12 @@ export const BadgeMarqueeDemo = () => {
 
 ## Props
 
-import { PumkiTable, PumkiTableStyles } from '@/components/docs/PumkiTable'
-
-<PumkiTableStyles />
-<PumkiTable>
-<table className="pumki-table">
-  <thead>
-    <tr>
-      <th>Prop</th>
-      <th>Type</th>
-      <th>Default</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>speed</code></td>
-      <td><code>number</code></td>
-      <td><code>1.2</code></td>
-      <td>Controls the scroll speed of the marquee (higher = faster).</td>
-    </tr>
-    <tr>
-      <td><code>background</code></td>
-      <td><code>string</code></td>
-      <td><code>linear-gradient(rgb(82, 100, 77) -43.73%, rgba(82, 100, 77, 0) 129.91%)</code></td>
-      <td>Background style for the marquee container.</td>
-    </tr>
-    <tr>
-      <td><code>color</code></td>
-      <td><code>string</code></td>
-      <td><code>rgb(134, 156, 128)</code></td>
-      <td>Text color for the marquee items.</td>
-    </tr>
-    <tr>
-      <td><code>padding</code></td>
-      <td><code>string</code></td>
-      <td><code>8px 0</code></td>
-      <td>Padding for the marquee container.</td>
-    </tr>
-    <tr>
-      <td><code>items</code></td>
-      <td><code>string[]</code></td>
-      <td><code>Required</code></td>
-      <td>Array of strings to display and scroll in the marquee.</td>
-    </tr>
-    <tr>
-      <td><code>size</code></td>
-      <td><code>number</code></td>
-      <td><code>128</code></td>
-      <td>Height of the marquee container in pixels.</td>
-    </tr>
-    <tr>
-      <td><code>dotColor</code></td>
-      <td><code>string</code></td>
-      <td><code>#fff</code></td>
-      <td>Color of the separator dots between marquee items.</td>
-    </tr>
-  </tbody>
-</table>
-</PumkiTable>
+| Prop       | Type     | Default                                                                 | Description                                                 |
+| ---------- | -------- | ----------------------------------------------------------------------- | ----------------------------------------------------------- |
+| speed      | number   | 1.2                                                                     | Controls the scroll speed of the marquee (higher = faster). |
+| background | string   | linear-gradient(rgb(82, 100, 77) -43.73%, rgba(82, 100, 77, 0) 129.91%) | Background style for the marquee container.                 |
+| color      | string   | rgb(134, 156, 128)                                                      | Text color for the marquee items.                           |
+| padding    | string   | 8px 0                                                                   | Padding for the marquee container.                          |
+| items      | string[] | Required                                                                | Array of strings to display and scroll in the marquee.      |
+| size       | number   | 128                                                                     | Height of the marquee container in pixels.                  |
+| dotColor   | string   | #fff                                                                    | Color of the separator dots between marquee items.          |

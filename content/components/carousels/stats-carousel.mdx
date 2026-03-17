@@ -105,45 +105,9 @@ A smooth carousel effect for displaying statistics.
 
 ## Props
 
-import { PumkiTable, PumkiTableStyles } from '@/components/docs/PumkiTable'
-
-<PumkiTableStyles />
-
-<PumkiTable>
-  <table className="pumki-table">
-    <thead>
-      <tr>
-        <th>Prop</th>
-        <th>Type</th>
-        <th>Default</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><code>stats</code></td>
-        <td><code>{`{ value: number; suffix?: string; label: string; id?: number; }[]`}</code></td>
-        <td><code>optional</code></td>
-        <td>Array of stats with value, suffix, label, and optional id.</td>
-      </tr>
-      <tr>
-        <td><code>title</code></td>
-        <td><code>string</code></td>
-        <td><code>optional</code></td>
-        <td>Optional title above the carousel.</td>
-      </tr>
-      <tr>
-        <td><code>className</code></td>
-        <td><code>string</code></td>
-        <td><code>""</code></td>
-        <td>Extra classes for the wrapper.</td>
-      </tr>
-      <tr>
-        <td><code>cardClassName</code></td>
-        <td><code>string</code></td>
-        <td><code>""</code></td>
-        <td>Extra classes for stat cards.</td>
-      </tr>
-    </tbody>
-  </table>
-</PumkiTable>
+| Prop          | Type                                                              | Default  | Description                                                |
+| ------------- | ----------------------------------------------------------------- | -------- | ---------------------------------------------------------- |
+| stats         | `{ value: number; suffix?: string; label: string; id?: number; }[]` | optional | Array of stats with value, suffix, label, and optional id. |
+| title         | string                                                            | optional | Optional title above the carousel.                         |
+| className     | string                                                            | ""       | Extra classes for the wrapper.                             |
+| cardClassName | string                                                            | ""       | Extra classes for stat cards.                              |

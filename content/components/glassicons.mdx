@@ -83,22 +83,8 @@ export const GlassIconsDemo = () => {
 
 ## Props
 
-import { PumkiTable, PumkiTableStyles } from '../../components/docs/PumkiTable'
+| Prop      | Type             | Default  | Description                                                                                                                                                   |
+| --------- | ---------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| items     | GlassIconsItem[] | required | Array of icon objects to display. Each item includes icon (React element), color (string or gradient key), label (string), and optional customClass (string). |
+| className | string           | ""       | Custom CSS classes for the grid container.                                                                                                                    |
 
-<PumkiTableStyles />
-<PumkiTable>
-<table className="pumki-table">
-  <thead>
-    <tr>
-      <th>Prop</th>
-      <th>Type</th>
-      <th>Default</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr><td><code>items</code></td><td><code>GlassIconsItem[]</code></td><td><code>required</code></td><td>Array of icon objects to display. Each item includes <code>icon</code> (React element), <code>color</code> (string or gradient key), <code>label</code> (string), and optional <code>customClass</code> (string).</td></tr>
-    <tr><td><code>className</code></td><td><code>string</code></td><td><code>""</code></td><td>Custom CSS classes for the grid container.</td></tr>
-  </tbody>
-</table>
-</PumkiTable>

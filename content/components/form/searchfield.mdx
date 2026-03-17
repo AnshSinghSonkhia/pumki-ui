@@ -90,38 +90,8 @@ export const SearchfieldDemo = () => {
 
 ## Props
 
-import { PumkiTable, PumkiTableStyles } from '@/components/docs/PumkiTable'
-
-<PumkiTableStyles />
-<PumkiTable>
-<table className="pumki-table">
-  <thead>
-    <tr>
-      <th>Prop</th>
-      <th>Type</th>
-      <th>Default</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-<tbody>
-    <tr>
-        <td><code>label</code></td>
-        <td><code>string</code></td>
-        <td><code>—</code></td>
-        <td>The text label displayed above the search field, describing its purpose.</td>
-    </tr>
-    <tr>
-        <td><code>description</code></td>
-        <td><code>string</code></td>
-        <td><code>—</code></td>
-        <td>Additional information or instructions displayed below the label to help users understand the search field.</td>
-    </tr>
-    <tr>
-        <td><code>errorMessage</code></td>
-        <td><code>string | {`((validation: ValidationResult) => string)`}</code></td>
-        <td><code>—</code></td>
-        <td>The error message shown when validation fails. Can be a static string or a function that returns a string based on the validation result.</td>
-    </tr>
-</tbody>
-</table>
-</PumkiTable>
+| Prop         | Type                                              | Default | Description                                                                                                                               |
+| ------------ | ------------------------------------------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| label        | string                                            | —       | The text label displayed above the search field, describing its purpose.                                                                  |
+| description  | string                                            | —       | Additional information or instructions displayed below the label to help users understand the search field.                               |
+| errorMessage | string | (validation: ValidationResult) => string | —       | The error message shown when validation fails. Can be a static string or a function that returns a string based on the validation result. |

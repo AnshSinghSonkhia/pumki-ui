@@ -95,33 +95,18 @@ export const LightRaysDemo = () => {
 
 ## Props
 
-import { PumkiTable, PumkiTableStyles } from '../../components/docs/PumkiTable'
-
-<PumkiTableStyles />
-<PumkiTable>
-<table className="pumki-table">
-  <thead>
-    <tr>
-      <th>Prop</th>
-      <th>Type</th>
-      <th>Default</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr><td><code>raysOrigin</code></td><td><code>"top-center" | "top-left" | "top-right" | "right" | "left" | "bottom-center" | "bottom-right" | "bottom-left"</code></td><td><code>"top-center"</code></td><td>Where the light rays originate from.</td></tr>
-    <tr><td><code>raysColor</code></td><td><code>string</code></td><td><code>"#ffffff"</code></td><td>Hex color of the rays.</td></tr>
-    <tr><td><code>raysSpeed</code></td><td><code>number</code></td><td><code>1</code></td><td>Speed of the ray animation.</td></tr>
-    <tr><td><code>lightSpread</code></td><td><code>number</code></td><td><code>1</code></td><td>How widely the rays spread out.</td></tr>
-    <tr><td><code>rayLength</code></td><td><code>number</code></td><td><code>2</code></td><td>How far the rays extend.</td></tr>
-    <tr><td><code>pulsating</code></td><td><code>boolean</code></td><td><code>false</code></td><td>Whether the rays pulsate.</td></tr>
-    <tr><td><code>fadeDistance</code></td><td><code>number</code></td><td><code>1.0</code></td><td>Fade-out distance factor for the rays.</td></tr>
-    <tr><td><code>saturation</code></td><td><code>number</code></td><td><code>1.0</code></td><td>Color saturation adjustment (0 = grayscale, 1 = full color).</td></tr>
-    <tr><td><code>followMouse</code></td><td><code>boolean</code></td><td><code>true</code></td><td>If true, rays will follow the mouse movement.</td></tr>
-    <tr><td><code>mouseInfluence</code></td><td><code>number</code></td><td><code>0.1</code></td><td>How much the mouse influences ray direction.</td></tr>
-    <tr><td><code>noiseAmount</code></td><td><code>number</code></td><td><code>0.0</code></td><td>Amount of static/noise overlay on the rays.</td></tr>
-    <tr><td><code>distortion</code></td><td><code>number</code></td><td><code>0.0</code></td><td>Distortion intensity for ray angles.</td></tr>
-    <tr><td><code>className</code></td><td><code>string</code></td><td><code>""</code></td><td>Custom Tailwind classes for the wrapper container.</td></tr>
-  </tbody>
-  </table>
-</PumkiTable>
+| Prop            | Type                                                                 | Default      | Description |
+|-----------------|----------------------------------------------------------------------|--------------|-------------|
+| `raysOrigin`    | "top-center" \| "top-left" \| "top-right" \| "right" \| "left" \| "bottom-center" \| "bottom-right" \| "bottom-left" | "top-center" | Where the light rays originate from. |
+| `raysColor`     | `string`                                                             | "#ffffff"   | Hex color of the rays. |
+| `raysSpeed`     | `number`                                                             | 1            | Speed of the ray animation. |
+| `lightSpread`   | `number`                                                             | 1            | How widely the rays spread out. |
+| `rayLength`     | `number`                                                             | 2            | How far the rays extend. |
+| `pulsating`     | `boolean`                                                            | false        | Whether the rays pulsate. |
+| `fadeDistance`  | `number`                                                             | 1.0          | Fade-out distance factor for the rays. |
+| `saturation`    | `number`                                                             | 1.0          | Color saturation adjustment (0 = grayscale, 1 = full color). |
+| `followMouse`   | `boolean`                                                            | true         | If true, rays will follow the mouse movement. |
+| `mouseInfluence`| `number`                                                             | 0.1          | How much the mouse influences ray direction. |
+| `noiseAmount`   | `number`                                                             | 0.0          | Amount of static/noise overlay on the rays. |
+| `distortion`    | `number`                                                             | 0.0          | Distortion intensity for ray angles. |
+| `className`     | `string`                                                             | ""          | Custom Tailwind classes for the wrapper container. |

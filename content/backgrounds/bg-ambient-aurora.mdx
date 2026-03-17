@@ -146,40 +146,9 @@ export const ContentOverlayDemo = () => {
 
 ## Props
 
-import { PumkiTable, PumkiTableStyles } from '../../components/docs/PumkiTable'
-
-<PumkiTableStyles />
-
-<PumkiTable>
-  <table className="pumki-table">
-    <thead>
-      <tr>
-        <th>Prop</th>
-        <th>Type</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><code>colors?</code></td>
-        <td><code>object</code></td>
-        <td><code>{`{ first: '18,113,255', second: '221,74,255', third: '0,220,255', fourth: '200,50,50', fifth: '180,180,50', sixth: '140,100,255', }`}</code></td>
-      </tr>
-      <tr>
-        <td><code>transition?</code></td>
-        <td><code>SpringOptions</code></td>
-        <td><code>{`{ stiffness: 100, damping: 20 }`}</code></td>
-      </tr>
-      <tr>
-        <td><code>interactive?</code></td>
-        <td><code>boolean</code></td>
-        <td><code>false</code></td>
-      </tr>
-      <tr>
-        <td><code>children?</code></td>
-        <td><code>React.ReactNode</code></td>
-        <td>-</td>
-      </tr>
-    </tbody>
-  </table>
-</PumkiTable>
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `colors?` | `object` | `{ first: '18,113,255', second: '221,74,255', third: '0,220,255', fourth: '200,50,50', fifth: '180,180,50', sixth: '140,100,255' }` | Color palette for the bubbles. |
+| `transition?` | `SpringOptions` | `{ stiffness: 100, damping: 20 }` | Spring animation options for transitions. |
+| `interactive?` | `boolean` | `false` | Enable bubble interactivity. |
+| `children?` | `React.ReactNode` | `-` | Content overlay for the background. |

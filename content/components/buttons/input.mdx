@@ -161,70 +161,18 @@ A button that flips between two states with an accompanying animation.
 
 ## Props
 
-import { PumkiTable, PumkiTableStyles } from '@/components/docs/PumkiTable'
-
-<PumkiTableStyles />
-
 ### InputButton Props
 
-<PumkiTable>
-  <table className="pumki-table">
-    <thead>
-      <tr>
-        <th>Prop</th>
-        <th>Type</th>
-        <th>Default</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><code>id?</code></td>
-        <td><code>string</code></td>
-        <td><code>-</code></td>
-        <td>Input/button id</td>
-      </tr>
-      <tr>
-        <td><code>setShowInput?</code></td>
-        <td><code>{`React.Dispatch<React.SetStateAction<boolean>>`}</code></td>
-        <td>-</td>
-        <td>Set input visibility</td>
-      </tr>
-      <tr>
-        <td><code>showInput?</code></td>
-        <td><code>boolean</code></td>
-        <td>false</td>
-        <td>Show input field</td>
-      </tr>
-      <tr>
-        <td><code>transition?</code></td>
-        <td><code>Transition</code></td>
-        <td>{`{ type: 'spring', stiffness: 300, damping: 20 }`}</td>
-        <td>Animation config</td>
-      </tr>
-    </tbody>
-  </table>
-</PumkiTable>
+| Prop          | Type                                          | Default                                         | Description          |
+| ------------- | --------------------------------------------- | ----------------------------------------------- | -------------------- |
+| id?           | string                                        | -                                               | Input/button id      |
+| setShowInput? | `React.Dispatch<React.SetStateAction<boolean>>` | -                                               | Set input visibility |
+| showInput?    | boolean                                       | false                                           | Show input field     |
+| transition?   | Transition                                    | `{ type: 'spring', stiffness: 300, damping: 20 }` | Animation config     |
+
 
 ### SubmitButton Props
 
-<PumkiTable>
-  <table className="pumki-table">
-    <thead>
-      <tr>
-        <th>Prop</th>
-        <th>Type</th>
-        <th>Default</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><code>icon?</code></td>
-        <td><code>{`React.ElementType`}</code></td>
-        <td><code>ArrowRight</code></td>
-        <td>Icon for submit button</td>
-      </tr>
-    </tbody>
-  </table>
-</PumkiTable>
+| Prop  | Type              | Default    | Description            |
+| ----- | ----------------- | ---------- | ---------------------- |
+| icon? | React.ElementType | ArrowRight | Icon for submit button |

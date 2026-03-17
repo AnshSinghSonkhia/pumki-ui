@@ -88,51 +88,10 @@ A lively tooltip component that follows the cursor with smooth spring-based moti
 
 ## Props
 
-import { PumkiTable, PumkiTableStyles } from '@/components/docs/PumkiTable'
-
-<PumkiTableStyles />
-
-<PumkiTable>
-  <table className="pumki-table">
-    <thead>
-      <tr>
-        <th>Prop</th>
-        <th>Type</th>
-        <th>Default</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><code>items?</code></td>
-        <td><code>{`{id: number, name: string, designation: string, image: string}`}</code></td>
-        <td><code>{`[]`}</code></td>
-        <td>Array of team member objects to display in the tooltip.</td>
-      </tr>
-      <tr>
-        <td><code>id?</code></td>
-        <td><code>number</code></td>
-        <td><code>-</code></td>
-        <td>Unique identifier for each team member.</td>
-      </tr>
-      <tr>
-        <td><code>name?</code></td>
-        <td><code>string</code></td>
-        <td><code>-</code></td>
-        <td>Name of the team member.</td>
-      </tr>
-      <tr>
-        <td><code>designation?</code></td>
-        <td><code>string</code></td>
-        <td><code>-</code></td>
-        <td>Designation of the team member.</td>
-      </tr>
-      <tr>
-        <td><code>image?</code></td>
-        <td><code>string</code></td>
-        <td><code>-</code></td>
-        <td>Image URL of the team member.</td>
-      </tr>
-    </tbody>
-  </table>
-</PumkiTable>
+| Prop         | Type                                                             | Default | Description                                             |
+| ------------ | ---------------------------------------------------------------- | ------- | ------------------------------------------------------- |
+| items?       | `{ id: number, name: string, designation: string, image: string }` | []      | Array of team member objects to display in the tooltip. |
+| id?          | number                                                           | -       | Unique identifier for each team member.                 |
+| name?        | string                                                           | -       | Name of the team member.                                |
+| designation? | string                                                           | -       | Designation of the team member.                         |
+| image?       | string                                                           | -       | Image URL of the team member.                           |

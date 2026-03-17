@@ -167,76 +167,15 @@ export default function FireworksBackgroundSizeSpeedDemo() {
 
 ## Props
 
-import { PumkiTable, PumkiTableStyles } from '../../components/docs/PumkiTable'
-
-<PumkiTableStyles />
-
-<PumkiTable>
-  <table className="pumki-table">
-    <thead>
-      <tr>
-        <th>Prop</th>
-        <th>Type</th>
-        <th>Default</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><code>particleSize?</code></td>
-        <td><code>{`{ min: number; max: number } | number`}</code></td>
-        <td><code>{`{ min: 1, max: 5 }`}</code></td>
-        <td>Size of each particle (range or fixed).</td>
-      </tr>
-      <tr>
-        <td><code>particleSpeed?</code></td>
-        <td><code>{`{ min: number; max: number } | number`}</code></td>
-        <td><code>{`{ min: 2, max: 7 }`}</code></td>
-        <td>Speed of each particle (range or fixed).</td>
-      </tr>
-      <tr>
-        <td><code>fireworkSize?</code></td>
-        <td><code>{`{ min: number; max: number } | number`}</code></td>
-        <td><code>{`{ min: 2, max: 5 }`}</code></td>
-        <td>Size of the firework burst (range or fixed).</td>
-      </tr>
-      <tr>
-        <td><code>fireworkSpeed?</code></td>
-        <td><code>{`{ min: number; max: number } | number`}</code></td>
-        <td><code>{`{ min: 4, max: 8 }`}</code></td>
-        <td>Speed of the firework burst (range or fixed).</td>
-      </tr>
-      <tr>
-        <td><code>population?</code></td>
-        <td><code>number</code></td>
-        <td><code>1</code></td>
-        <td>Number of fireworks on screen.</td>
-      </tr>
-      <tr>
-        <td><code>color?</code></td>
-        <td><code>string | string[]</code></td>
-        <td><code>randColor()</code></td>
-        <td>Color(s) of the fireworks.</td>
-      </tr>
-      <tr>
-        <td><code>canvasProps?</code></td>
-        <td><code>React.HTMLAttributes&lt;HTMLCanvasElement&gt;</code></td>
-        <td>-</td>
-        <td>Props passed to the canvas element.</td>
-      </tr>
-      <tr>
-        <td><code>className?</code></td>
-        <td><code>string</code></td>
-        <td>-</td>
-        <td>Custom class names for the container.</td>
-      </tr>
-      <tr>
-        <td><code>children?</code></td>
-        <td><code>React.ReactNode</code></td>
-        <td>-</td>
-        <td>Custom children to render inside.</td>
-      </tr>
-    </tbody>
-  </table>
-</PumkiTable>
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `particleSize?` | `{ min: number; max: number } \| number` | `{ min: 1, max: 5 }` | Size of each particle (range or fixed). |
+| `particleSpeed?` | `{ min: number; max: number } \| number` | `{ min: 2, max: 7 }` | Speed of each particle (range or fixed). |
+| `fireworkSize?` | `{ min: number; max: number } \| number` | `{ min: 2, max: 5 }` | Size of the firework burst (range or fixed). |
+| `fireworkSpeed?` | `{ min: number; max: number } \| number` | `{ min: 4, max: 8 }` | Speed of the firework burst (range or fixed). |
+| `population?` | `number` | `1` | Number of fireworks on screen. |
+| `color?` | `string \| string[]` | `randColor()` | Color(s) of the fireworks. |
+| `canvasProps?` | `React.HTMLAttributes<HTMLCanvasElement>` | `-` | Props passed to the canvas element. |
+| `className?` | `string` | `-` | Custom class names for the container. |
+| `children?` | `React.ReactNode` | `-` | Custom children to render inside. |
 

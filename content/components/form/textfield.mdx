@@ -75,44 +75,9 @@ export const TextfieldDemo = () => {
 
 ## Props
 
-import { PumkiTable, PumkiTableStyles } from '@/components/docs/PumkiTable'
-
-<PumkiTableStyles />
-<PumkiTable>
-<table className="pumki-table">
-  <thead>
-    <tr>
-      <th>Prop</th>
-      <th>Type</th>
-      <th>Default</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>label</code></td>
-      <td><code>string</code></td>
-      <td><code>—</code></td>
-      <td>The label for the field, displayed above the input or textarea.</td>
-    </tr>
-    <tr>
-      <td><code>description</code></td>
-      <td><code>string</code></td>
-      <td><code>—</code></td>
-      <td>Optional description text shown below the input or textarea.</td>
-    </tr>
-    <tr>
-      <td><code>errorMessage</code></td>
-      <td><code>string | ((validation: ValidationResult) => string)</code></td>
-      <td><code>—</code></td>
-      <td>Error message to display below the field, or a function returning a message based on validation.</td>
-    </tr>
-    <tr>
-      <td><code>textArea</code></td>
-      <td><code>boolean</code></td>
-      <td><code>false</code></td>
-      <td>If true, renders a textarea instead of an input.</td>
-    </tr>
-  </tbody>
-</table>
-</PumkiTable>
+| Prop         | Type                                                | Default | Description                                                                                      |
+| ------------ | --------------------------------------------------- | ------- | ------------------------------------------------------------------------------------------------ |
+| label        | string                                              | —       | The label for the field, displayed above the input or textarea.                                  |
+| description  | string                                              | —       | Optional description text shown below the input or textarea.                                     |
+| errorMessage | string | ((validation: ValidationResult) => string) | —       | Error message to display below the field, or a function returning a message based on validation. |
+| textArea     | boolean                                             | false   | If true, renders a textarea instead of an input.                                                 |

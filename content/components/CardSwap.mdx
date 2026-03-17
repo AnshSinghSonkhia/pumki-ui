@@ -77,118 +77,25 @@ Wrap multiple `<Card>` elements inside `<CardSwap>` to create a rotating stack e
 
 ## Props
 
-import { PumkiTable, PumkiTableStyles } from '@/components/docs/PumkiTable'
-
-<PumkiTableStyles />
-
 ### CardSwap Props
 
-<PumkiTable>
-  <table className="pumki-table">
-    <thead>
-      <tr>
-        <th>Prop</th>
-        <th>Type</th>
-        <th>Default</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><code>width</code></td>
-        <td><code>number | string</code></td>
-        <td><code>500</code></td>
-        <td>Width of each card in pixels or CSS units.</td>
-      </tr>
-      <tr>
-        <td><code>height</code></td>
-        <td><code>number | string</code></td>
-        <td><code>400</code></td>
-        <td>Height of each card in pixels or CSS units.</td>
-      </tr>
-      <tr>
-        <td><code>cardDistance</code></td>
-        <td><code>number</code></td>
-        <td><code>60</code></td>
-        <td>Horizontal offset distance between cards in the stack.</td>
-      </tr>
-      <tr>
-        <td><code>verticalDistance</code></td>
-        <td><code>number</code></td>
-        <td><code>70</code></td>
-        <td>Vertical offset distance between cards in the stack.</td>
-      </tr>
-      <tr>
-        <td><code>delay</code></td>
-        <td><code>number</code></td>
-        <td><code>5000</code></td>
-        <td>Delay in milliseconds between card swaps.</td>
-      </tr>
-      <tr>
-        <td><code>pauseOnHover</code></td>
-        <td><code>boolean</code></td>
-        <td><code>false</code></td>
-        <td>Pauses the card swap animation when hovered.</td>
-      </tr>
-      <tr>
-        <td><code>onCardClick</code></td>
-        <td><code>(idx: number) =&gt; void</code></td>
-        <td><code>-</code></td>
-        <td>Callback triggered when a card is clicked, passing its index.</td>
-      </tr>
-      <tr>
-        <td><code>skewAmount</code></td>
-        <td><code>number</code></td>
-        <td><code>6</code></td>
-        <td>Skew value applied to cards for perspective effect.</td>
-      </tr>
-      <tr>
-        <td><code>easing</code></td>
-        <td><code>"linear" | "elastic"</code></td>
-        <td><code>"elastic"</code></td>
-        <td>Animation easing style for swaps.</td>
-      </tr>
-      <tr>
-        <td><code>children</code></td>
-        <td><code>ReactNode</code></td>
-        <td><code>-</code></td>
-        <td>List of <code>&lt;Card&gt;</code> elements to display in the swap animation.</td>
-      </tr>
-    </tbody>
-  </table>
-</PumkiTable>
+| Prop             | Type                        | Default   | Description |
+|------------------|-----------------------------|-----------|-------------|
+| `width`          | `number | string`           | 500       | Width of each card in pixels or CSS units. |
+| `height`         | `number | string`           | 400       | Height of each card in pixels or CSS units. |
+| `cardDistance`   | `number`                    | 60        | Horizontal offset distance between cards in the stack. |
+| `verticalDistance`| `number`                   | 70        | Vertical offset distance between cards in the stack. |
+| `delay`          | `number`                    | 5000      | Delay in milliseconds between card swaps. |
+| `pauseOnHover`   | `boolean`                   | false     | Pauses the card swap animation when hovered. |
+| `onCardClick`    | `(idx: number) => void`     | -         | Callback triggered when a card is clicked, passing its index. |
+| `skewAmount`     | `number`                    | 6         | Skew value applied to cards for perspective effect. |
+| `easing`         | `"linear" | "elastic"`    | "elastic"| Animation easing style for swaps. |
+| `children`       | `ReactNode`                 | -         | List of `<Card>` elements to display in the swap animation. |
 
 ### Card Props
 
-<PumkiTable>
-  <table className="pumki-table">
-    <thead>
-      <tr>
-        <th>Prop</th>
-        <th>Type</th>
-        <th>Default</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><code>customClass</code></td>
-        <td><code>string</code></td>
-        <td><code>-</code></td>
-        <td>Additional custom class names for the card element.</td>
-      </tr>
-      <tr>
-        <td><code>className</code></td>
-        <td><code>string</code></td>
-        <td><code>-</code></td>
-        <td>Optional extra class names passed directly to the card element.</td>
-      </tr>
-      <tr>
-        <td><code>...rest</code></td>
-        <td><code>HTMLDivElement props</code></td>
-        <td><code>-</code></td>
-        <td>Any other standard <code>div</code> attributes.</td>
-      </tr>
-    </tbody>
-  </table>
-</PumkiTable>
+| Prop         | Type                | Default | Description |
+|--------------|---------------------|---------|-------------|
+| `customClass`| `string`            | -       | Additional custom class names for the card element. |
+| `className`  | `string`            | -       | Optional extra class names passed directly to the card element. |
+| `...rest`    | `HTMLDivElement props`| -     | Any other standard `div` attributes. |

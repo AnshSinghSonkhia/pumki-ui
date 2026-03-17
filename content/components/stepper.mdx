@@ -97,34 +97,19 @@ export const StepperDemo = () => {
 
 ## Props
 
-import { PumkiTable, PumkiTableStyles } from '../../components/docs/PumkiTable'
-
-<PumkiTableStyles />
-<PumkiTable>
-<table className="pumki-table">
-  <thead>
-    <tr>
-      <th>Prop</th>
-      <th>Type</th>
-      <th>Default</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr><td><code>children</code></td><td><code>React.ReactNode</code></td><td><code>required</code></td><td>Step content. Each child is a step.</td></tr>
-    <tr><td><code>initialStep</code></td><td><code>number</code></td><td><code>1</code></td><td>Initial step index (1-based).</td></tr>
-    <tr><td><code>onStepChange</code></td><td><code>(step: number) =&gt; void</code></td><td><code>() =&gt; {}</code></td><td>Callback when the step changes.</td></tr>
-    <tr><td><code>onFinalStepCompleted</code></td><td><code>() =&gt; void</code></td><td><code>() =&gt; {}</code></td><td>Callback when the last step is completed.</td></tr>
-    <tr><td><code>stepCircleContainerClassName</code></td><td><code>string</code></td><td><code>""</code></td><td>Custom class for the step indicator container.</td></tr>
-    <tr><td><code>stepContainerClassName</code></td><td><code>string</code></td><td><code>""</code></td><td>Custom class for the step indicator row.</td></tr>
-    <tr><td><code>contentClassName</code></td><td><code>string</code></td><td><code>""</code></td><td>Custom class for the step content area.</td></tr>
-    <tr><td><code>footerClassName</code></td><td><code>string</code></td><td><code>""</code></td><td>Custom class for the footer area.</td></tr>
-    <tr><td><code>backButtonProps</code></td><td><code>React.ButtonHTMLAttributes&lt;HTMLButtonElement&gt;</code></td><td><code>{}</code></td><td>Props for the back button.</td></tr>
-    <tr><td><code>nextButtonProps</code></td><td><code>React.ButtonHTMLAttributes&lt;HTMLButtonElement&gt;</code></td><td><code>{}</code></td><td>Props for the next/complete button.</td></tr>
-    <tr><td><code>backButtonText</code></td><td><code>string</code></td><td><code>"Back"</code></td><td>Text for the back button.</td></tr>
-    <tr><td><code>nextButtonText</code></td><td><code>string</code></td><td><code>"Continue"</code></td><td>Text for the next button.</td></tr>
-    <tr><td><code>disableStepIndicators</code></td><td><code>boolean</code></td><td><code>false</code></td><td>If true, disables clicking step indicators.</td></tr>
-    <tr><td><code>renderStepIndicator</code></td><td><code>{`(props: { step: number; currentStep: number; onStepClick: (clicked: number) =&gt; void; })`} =&gt; React.ReactNode</code></td><td><code>undefined</code></td><td>Custom render function for step indicators.</td></tr>
-  </tbody>
-</table>
-</PumkiTable>
+| Prop                         | Type                                                                                                       | Default    | Description                                    |
+| ---------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------- | ---------------------------------------------- |
+| children                     | React.ReactNode                                                                                            | required   | Step content. Each child is a step.            |
+| initialStep                  | number                                                                                                     | 1          | Initial step index (1-based).                  |
+| onStepChange                 | (step: number) => void                                                                                     | () => {}   | Callback when the step changes.                |
+| onFinalStepCompleted         | () => void                                                                                                 | () => {}   | Callback when the last step is completed.      |
+| stepCircleContainerClassName | string                                                                                                     | ""         | Custom class for the step indicator container. |
+| stepContainerClassName       | string                                                                                                     | ""         | Custom class for the step indicator row.       |
+| contentClassName             | string                                                                                                     | ""         | Custom class for the step content area.        |
+| footerClassName              | string                                                                                                     | ""         | Custom class for the footer area.              |
+| backButtonProps              | `React.ButtonHTMLAttributes<HTMLButtonElement>`                                                              | {}         | Props for the back button.                     |
+| nextButtonProps              | `React.ButtonHTMLAttributes<HTMLButtonElement>`                                                              | {}         | Props for the next/complete button.            |
+| backButtonText               | string                                                                                                     | "Back"     | Text for the back button.                      |
+| nextButtonText               | string                                                                                                     | "Continue" | Text for the next button.                      |
+| disableStepIndicators        | boolean                                                                                                    | false      | If true, disables clicking step indicators.    |
+| renderStepIndicator          | `(props: { step: number; currentStep: number; onStepClick: (clicked: number) => void; })` => React.ReactNode | undefined  | Custom render function for step indicators.    |

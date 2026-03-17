@@ -69,63 +69,12 @@ A button component that displays the number of stars a GitHub repository has, wi
 
 ## Props
 
-import { PumkiTable, PumkiTableStyles } from '@/components/docs/PumkiTable'
-
-<PumkiTableStyles />
-
-<PumkiTable>
-  <table className="pumki-table">
-  <thead>
-    <tr>
-      <th>Prop</th>
-      <th>Type</th>
-      <th>Default</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>inViewOnce?</code></td>
-      <td><code>boolean</code></td>
-      <td><code>true</code></td>
-      <td>Animate only the first time the button enters the viewport</td>
-    </tr>
-    <tr>
-      <td><code>inViewMargin?</code></td>
-      <td><code>string</code></td>
-      <td><code>0px</code></td>
-      <td>Margin for viewport detection</td>
-    </tr>
-    <tr>
-      <td><code>inView?</code></td>
-      <td><code>boolean</code></td>
-      <td><code>false</code></td>
-      <td>Enable viewport-based animation</td>
-    </tr>
-    <tr>
-      <td><code>formatted?</code></td>
-      <td><code>boolean</code></td>
-      <td><code>false</code></td>
-      <td>Show compact number format (e.g. 1.2k)</td>
-    </tr>
-    <tr>
-      <td><code>transition?</code></td>
-      <td><code>object</code></td>
-      <td><code>{`{ stiffness: 90, damping: 50 }`}</code></td>
-      <td>Spring animation config</td>
-    </tr>
-    <tr>
-      <td><code>repo</code></td>
-      <td><code>string</code></td>
-      <td>-</td>
-      <td>GitHub repository name</td>
-    </tr>
-    <tr>
-      <td><code>username</code></td>
-      <td><code>string</code></td>
-      <td>-</td>
-      <td>GitHub username or organization</td>
-    </tr>
-  </tbody>
-</table>
-</PumkiTable>
+| Prop          | Type    | Default                        | Description                                                |
+| ------------- | ------- | ------------------------------ | ---------------------------------------------------------- |
+| inViewOnce?   | boolean | true                           | Animate only the first time the button enters the viewport |
+| inViewMargin? | string  | 0px                            | Margin for viewport detection                              |
+| inView?       | boolean | false                          | Enable viewport-based animation                            |
+| formatted?    | boolean | false                          | Show compact number format (e.g. 1.2k)                     |
+| transition?   | object  | `{ stiffness: 90, damping: 50 }` | Spring animation config                                    |
+| repo          | string  | -                              | GitHub repository name                                     |
+| username      | string  | -                              | GitHub username or organization                            |
