@@ -193,63 +193,12 @@ A component that applies a splitting animation to text, perfect for emphasizing 
 
 ## Props
 
-import { PumkiTable, PumkiTableStyles } from '@/components/docs/PumkiTable'
-
-<PumkiTableStyles />
-
-<PumkiTable>
-  <table className="pumki-table">
-    <thead>
-      <tr>
-        <th>Prop</th>
-        <th>Type</th>
-        <th>Default</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><code>inViewOnce?</code></td>
-        <td><code>boolean</code></td>
-        <td><code>true</code></td>
-        <td>Animate only once when in view</td>
-      </tr>
-      <tr>
-        <td><code>inViewMargin?</code></td>
-        <td><code>string</code></td>
-        <td><code>0px</code></td>
-        <td>Margin for in-view detection</td>
-      </tr>
-      <tr>
-        <td><code>inView?</code></td>
-        <td><code>boolean</code></td>
-        <td><code>false</code></td>
-        <td>Force animation in view</td>
-      </tr>
-      <tr>
-        <td><code>motionVariants?</code></td>
-        <td><code>Variants</code></td>
-        <td><code>-</code></td>
-        <td>Custom Framer Motion variants</td>
-      </tr>
-      <tr>
-        <td><code>type?</code></td>
-        <td><code>'chars' | 'words' | 'lines'</code></td>
-        <td><code>chars</code></td>
-        <td>How to split the text</td>
-      </tr>
-      <tr>
-        <td><code>text</code></td>
-        <td><code>string | string[]</code></td>
-        <td><code>-</code></td>
-        <td>Text to animate or array of strings</td>
-      </tr>
-      <tr>
-        <td><code>className?</code></td>
-        <td><code>string</code></td>
-        <td><code>-</code></td>
-        <td>Custom class name</td>
-      </tr>
-    </tbody>
-  </table>
-</PumkiTable>
+| Prop            | Type                        | Default | Description                         |
+| --------------- | --------------------------- | ------- | ----------------------------------- |
+| text            | string | string[]           | -       | Text to animate or array of strings |
+| type?           | 'chars' | 'words' | 'lines' | chars   | How to split the text               |
+| motionVariants? | Variants                    | -       | Custom Framer Motion variants       |
+| inViewOnce?     | boolean                     | true    | Animate only once when in view      |
+| inViewMargin?   | string                      | 0px     | Margin for in-view detection        |
+| inView?         | boolean                     | false   | Force animation in view             |
+| className?      | string                      | -       | Custom class name                   |

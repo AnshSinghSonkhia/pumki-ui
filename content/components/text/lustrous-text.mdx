@@ -106,51 +106,10 @@ A component that animates the lustrous effect on text.
 
 ## Props
 
-import { PumkiTable, PumkiTableStyles } from '@/components/docs/PumkiTable'
-
-<PumkiTableStyles />
-
-<PumkiTable>
-  <table className="pumki-table">
-    <thead>
-      <tr>
-        <th>Prop</th>
-        <th>Type</th>
-        <th>Default</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><code>lustrousColor?</code></td>
-        <td><code>string</code></td>
-        <td><code>{`var(--color-neutral-300)`}</code></td>
-        <td>The color of the lustrous effect</td>
-      </tr>
-      <tr>
-        <td><code>color?</code></td>
-        <td><code>string</code></td>
-        <td><code>{`var(--color-neutral-500)`}</code></td>
-        <td>The color of the text.</td>
-      </tr>
-      <tr>
-        <td><code>wave?</code></td>
-        <td><code>boolean</code></td>
-        <td><code>false</code></td>
-        <td>Enable wave animation</td>
-      </tr>
-      <tr>
-        <td><code>duration?</code></td>
-        <td><code>number</code></td>
-        <td><code>1</code></td>
-        <td>Animation duration in seconds</td>
-      </tr>
-      <tr>
-        <td><code>text</code></td>
-        <td><code>string</code></td>
-        <td><code>-</code></td>
-        <td>Text to animate</td>
-      </tr>
-    </tbody>
-  </table>
-</PumkiTable>
+| Prop           | Type    | Default                    | Description                   |
+| -------------- | ------- | -------------------------- | ----------------------------- |
+| lustrousColor? | string  | `var(--color-neutral-300)` | Color of the lustrous effect  |
+| color          | string  | `var(--color-neutral-500)` | Text color                    |
+| wave           | boolean | false                      | Enable wave animation         |
+| duration       | number  | 1                          | Animation duration in seconds |
+| text           | string  | -                          | Text to animate               |

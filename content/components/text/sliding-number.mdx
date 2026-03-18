@@ -110,75 +110,14 @@ A component that animates the transition between numbers.
 
 ## Props
 
-import { PumkiTable, PumkiTableStyles } from '@/components/docs/PumkiTable'
-
-<PumkiTableStyles />
-
-<PumkiTable>
-  <table className="pumki-table">
-    <thead>
-      <tr>
-        <th>Prop</th>
-        <th>Type</th>
-        <th>Default</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><code>transition?</code></td>
-        <td><code>SpringOptions</code></td>
-        <td><code>{`{ stiffness: 200, damping: 20, mass: 0.4 }`}</code></td>
-        <td>Animation config</td>
-      </tr>
-      <tr>
-        <td><code>decimalPlaces?</code></td>
-        <td><code>number</code></td>
-        <td><code>0</code></td>
-        <td>Number of decimal places</td>
-      </tr>
-      <tr>
-        <td><code>decimalSeparator?</code></td>
-        <td><code>string</code></td>
-        <td><code>.</code></td>
-        <td>Decimal separator character</td>
-      </tr>
-      <tr>
-        <td><code>padStart?</code></td>
-        <td><code>boolean</code></td>
-        <td><code>false</code></td>
-        <td>Pad with leading zeros</td>
-      </tr>
-      <tr>
-        <td><code>inViewOnce?</code></td>
-        <td><code>boolean</code></td>
-        <td><code>true</code></td>
-        <td>Animate only once in view</td>
-      </tr>
-      <tr>
-        <td><code>inViewMargin?</code></td>
-        <td><code>string</code></td>
-        <td><code>0px</code></td>
-        <td>Margin for viewport detection</td>
-      </tr>
-      <tr>
-        <td><code>inView?</code></td>
-        <td><code>boolean</code></td>
-        <td><code>false</code></td>
-        <td>Enable viewport-based animation</td>
-      </tr>
-      <tr>
-        <td><code>number</code></td>
-        <td><code>number | string</code></td>
-        <td>-</td>
-        <td>Value to animate</td>
-      </tr>
-      <tr>
-        <td><code>className?</code></td>
-        <td><code>string</code></td>
-        <td>-</td>
-        <td>Class for root element</td>
-      </tr>
-    </tbody>
-  </table>
-</PumkiTable>
+| Prop              | Type            | Default                                      | Description                     |
+| ----------------- | --------------- | -------------------------------------------- | ------------------------------- |
+| transition?       | SpringOptions   | `{ stiffness: 200, damping: 20, mass: 0.4 }` | Animation config                |
+| decimalPlaces?    | number          | 0                                            | Number of decimal places        |
+| decimalSeparator? | string          | "."                                          | Decimal separator               |
+| padStart?         | boolean         | false                                        | Pad with leading zeros          |
+| inViewOnce?       | boolean         | true                                         | Animate only once in view       |
+| inViewMargin?     | string          | 0px                                          | Margin for viewport detection   |
+| inView?           | boolean         | false                                        | Enable viewport-based animation |
+| number            | number | string | -                                            | Value to animate                |
+| className?        | string          | -                                            | Class for root element          |

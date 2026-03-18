@@ -73,51 +73,10 @@ A dynamic text animation that smoothly rotates through words or phrases, adding 
 
 ## Props
 
-import { PumkiTable, PumkiTableStyles } from '@/components/docs/PumkiTable'
-
-<PumkiTableStyles />
-
-<PumkiTable>
-  <table className="pumki-table">
-    <thead>
-      <tr>
-        <th>Prop</th>
-        <th>Type</th>
-        <th>Default</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><code>containerClassName?</code></td>
-        <td><code>string</code></td>
-        <td>-</td>
-        <td>Class for container element</td>
-      </tr>
-      <tr>
-        <td><code>y?</code></td>
-        <td><code>number</code></td>
-        <td><code>-50</code></td>
-        <td>Y offset for animation</td>
-      </tr>
-      <tr>
-        <td><code>transition?</code></td>
-        <td><code>Transition</code></td>
-        <td><code>{`duration: 0.3, ease: "easeOut"`}</code></td>
-        <td>Animation config</td>
-      </tr>
-      <tr>
-        <td><code>duration?</code></td>
-        <td><code>number</code></td>
-        <td><code>2000</code></td>
-        <td>Time between rotations (ms)</td>
-      </tr>
-      <tr>
-        <td><code>text</code></td>
-        <td><code>string | string[]</code></td>
-        <td>-</td>
-        <td>Text or array to rotate</td>
-      </tr>
-    </tbody>
-  </table>
-</PumkiTable>
+| Prop                | Type              | Default                              | Description                 |
+| ------------------- | ----------------- | ------------------------------------ | --------------------------- |
+| containerClassName? | string            | -                                    | Class for container element |
+| y?                  | number            | -50                                  | Y offset for animation      |
+| transition?         | Transition        | `{ duration: 0.3, ease: "easeOut" }` | Animation config            |
+| duration?           | number            | 2000                                 | Time between rotations (ms) |
+| text                | string | string[] | -                                    | Text or array to rotate     |

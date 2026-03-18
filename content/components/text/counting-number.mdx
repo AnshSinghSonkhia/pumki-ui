@@ -120,75 +120,14 @@ A number display component that animates values with a smooth counting effect, p
 
 ## Props
 
-import { PumkiTable, PumkiTableStyles } from '@/components/docs/PumkiTable'
-
-<PumkiTableStyles />
-
-<PumkiTable>
-  <table className="pumki-table">
-    <thead>
-      <tr>
-        <th>Prop</th>
-        <th>Type</th>
-        <th>Default</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><code>decimalPlaces?</code></td>
-        <td><code>number</code></td>
-        <td><code>0</code></td>
-        <td>Number of decimal places</td>
-      </tr>
-      <tr>
-        <td><code>transition?</code></td>
-        <td><code>object</code></td>
-        <td><code>{`{ stiffness: 90, damping: 50 }`}</code></td>
-        <td>Animation transition config</td>
-      </tr>
-      <tr>
-        <td><code>decimalSeparator?</code></td>
-        <td><code>string</code></td>
-        <td><code>.</code></td>
-        <td>Decimal separator character</td>
-      </tr>
-      <tr>
-        <td><code>inViewOnce?</code></td>
-        <td><code>boolean</code></td>
-        <td><code>true</code></td>
-        <td>Animate only once when in view</td>
-      </tr>
-      <tr>
-        <td><code>inViewMargin?</code></td>
-        <td><code>string</code></td>
-        <td><code>0px</code></td>
-        <td>Margin for in-view detection</td>
-      </tr>
-      <tr>
-        <td><code>inView?</code></td>
-        <td><code>boolean</code></td>
-        <td><code>false</code></td>
-        <td>Force animation in view</td>
-      </tr>
-      <tr>
-        <td><code>padStart?</code></td>
-        <td><code>boolean</code></td>
-        <td><code>false</code></td>
-        <td>Pad with zeros at start</td>
-      </tr>
-      <tr>
-        <td><code>fromNumber?</code></td>
-        <td><code>number</code></td>
-        <td><code>0</code></td>
-        <td>Start counting from this number</td>
-      </tr>
-      <tr>
-        <td><code>number</code></td>
-        <td><code>number</code></td>
-        <td><code>-</code></td>
-        <td>Target number to animate</td>
-      </tr>
-    </tbody>
-  </table>
-</PumkiTable>
+| Prop              | Type    | Default                        | Description                     |
+| ----------------- | ------- | ------------------------------ | ------------------------------- |
+| decimalPlaces?    | number  | 0                              | Number of decimal places        |
+| transition?       | object  | `{ stiffness: 90, damping: 50 }` | Animation transition config     |
+| decimalSeparator? | string  | "."                            | Decimal separator character     |
+| inViewOnce?       | boolean | true                           | Animate only once when in view  |
+| inViewMargin?     | string  | 0px                            | Margin for in-view detection    |
+| inView?           | boolean | false                          | Force animation in view         |
+| padStart?         | boolean | false                          | Pad with zeros at start         |
+| fromNumber?       | number  | 0                              | Start counting from this number |
+| number            | number  | -                              | Target number to animate        |
