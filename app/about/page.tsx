@@ -171,7 +171,7 @@ export default function About() {
             </div>
             <div className="text-muted-foreground text-base leading-relaxed space-y-4">
               <p>
-                PumkiUI exists to simplify how developers build beautiful, modern interfaces.
+                Pumki UI exists to simplify how developers build beautiful, modern interfaces.
                 Built by a solo developer, the mission is simple:
                 Ship stunning UIs from one library, not ten.
 
@@ -252,7 +252,7 @@ export default function About() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="from-primary/10 via-foreground/85 to-foreground/50 bg-gradient-to-tl bg-clip-text text-center text-4xl tracking-tighter text-balance text-transparent sm:text-5xl md:text-6xl lg:text-7xl mb-16"
           >
-            Team PumkiUI
+            Team Pumki UI
           </motion.h3>
 
           <div className="grid gap-8 md:grid-cols-2">
@@ -298,12 +298,12 @@ export default function About() {
 
               {/* Position */}
               <p className="mb-4 text-sm font-medium text-blue-500">
-                Founder & Creator, PumkiUI
+                Founder & Creator, Pumki UI
               </p>
 
               {/* About */}
               <p className="text-muted-foreground text-sm leading-relaxed">
-                A solopreneur software engineer who loves building things that feel as good as they look. Ansh created PumkiUI to help developers ship stunning UIs without juggling ten different libraries. Clean code, thoughtful design, and fast shipping, that's his thing.
+                A solopreneur software engineer who loves building things that feel as good as they look. Ansh created Pumki UI to help developers ship stunning UIs without juggling ten different libraries. Clean code, thoughtful design, and fast shipping, that's his thing.
               </p>
             </motion.div>
 

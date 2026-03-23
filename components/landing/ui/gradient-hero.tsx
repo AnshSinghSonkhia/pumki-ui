@@ -101,7 +101,7 @@ export default function GradientHero() {
             stunning web applications with minimal effort. Fully customizable,
             responsive, and accessible. */}
 
-            PumkiUI is a modern UI library that blends the best components and animations from top libraries — with fresh originals — so you build stunning, consistent apps in minutes, not days.
+            Pumki UI is a modern UI library that blends the best components and animations from top libraries — with fresh originals — so you build stunning, consistent apps in minutes, not days.
           </motion.p>
 
           {/* CTA Buttons */}
